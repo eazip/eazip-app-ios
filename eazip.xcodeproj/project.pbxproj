@@ -85,7 +85,6 @@
 			children = (
 				0C57C3BB21FA5690007343C7 /* Classes */,
 				0C57C3BA21FA55BE007343C7 /* Resources */,
-				0C57C39021F92090007343C7 /* AppDelegate.swift */,
 				0C57C39921F92090007343C7 /* LaunchScreen.storyboard */,
 				0C57C39C21F92090007343C7 /* Info.plist */,
 			);
@@ -130,6 +129,7 @@
 		0C57C3BB21FA5690007343C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0C57C39021F92090007343C7 /* AppDelegate.swift */,
 				0C57C3B021F9209F007343C7 /* UI */,
 			);
 			path = Classes;
