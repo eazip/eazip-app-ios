@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  eazip
+//  Eazip
 //
-//  Created by Marie on 23/01/2019.
-//  Copyright © 2019 eazip. All rights reserved.
+//  Created by Marie on 26/01/2019.
+//  Copyright © 2019 Eazip. All rights reserved.
 //
 
 import UIKit
@@ -15,13 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let firstScreen = LoginViewController()
-        let navigationController = UINavigationController(rootViewController: firstScreen)
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        
+        // Override point for customization after application launch.
         return true
     }
 

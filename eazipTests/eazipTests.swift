@@ -1,15 +1,15 @@
 //
-//  eazipTests.swift
-//  eazipTests
+//  EazipTests.swift
+//  EazipTests
 //
-//  Created by Marie on 23/01/2019.
-//  Copyright © 2019 eazip. All rights reserved.
+//  Created by Marie on 26/01/2019.
+//  Copyright © 2019 Eazip. All rights reserved.
 //
 
 import XCTest
-@testable import eazip
+@testable import Eazip
 
-class eazipTests: XCTestCase {
+class EazipTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

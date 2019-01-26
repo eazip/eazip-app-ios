@@ -1,5 +1,5 @@
 //
-//  MainActionButton.swift
+//  EazipButton.swift
 //  Eazip
 //
 //  Created by Marie on 26/01/2019.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MainActionButton: EazipButton {
+class EazipButton: UIButton {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -23,13 +24,8 @@ class MainActionButton: EazipButton {
         setUp()
     }
     
-    override func setUp() {
-        self.backgroundColor = UIColor(named: "eazipDarkBlue")
-        self.setTitleColor(.white, for: .normal)
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 1
-        self.layer.cornerRadius = 25
-        self.layer.shadowOffset = CGSize.zero
+    func setUp() {
+        self.titleLabel?.font = FontHelper.eazipDefaultRegularFontWithSize(size: 20)
     }
-}
 
+}

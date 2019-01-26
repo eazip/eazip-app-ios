@@ -7,52 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C57C39121F92090007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C39021F92090007343C7 /* AppDelegate.swift */; };
-		0C57C39821F92090007343C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C39721F92090007343C7 /* Assets.xcassets */; };
-		0C57C39B21F92090007343C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C39921F92090007343C7 /* LaunchScreen.storyboard */; };
-		0C57C3A621F92090007343C7 /* eazipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C3A521F92090007343C7 /* eazipTests.swift */; };
-		0C57C3B721F92472007343C7 /* MainActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C3B621F92472007343C7 /* MainActionButton.swift */; };
-		0C57C3C021FA5904007343C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C3BF21FA5904007343C7 /* HomeViewController.swift */; };
-		0C57C3C421FA59AC007343C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C3C321FA59AC007343C7 /* LoginViewController.swift */; };
-		0C57C3C721FA5B1C007343C7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C3C621FA5B1C007343C7 /* Colors.xcassets */; };
-		0C57C3C921FA5B43007343C7 /* Medias.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C3C821FA5B43007343C7 /* Medias.xcassets */; };
+		0C1095B021FCA408004F742A /* FrankRuhlLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1095AF21FCA408004F742A /* FrankRuhlLibre-Regular.ttf */; };
+		0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B121FCA454004F742A /* EazipLabel.swift */; };
+		0C1095B421FCA571004F742A /* EazipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B321FCA571004F742A /* EazipButton.swift */; };
+		0C1095B621FCB340004F742A /* FrankRuhlLibre-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C1095B521FCB340004F742A /* FrankRuhlLibre-Black.ttf */; };
+		0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B921FCB7DA004F742A /* FontHelper.swift */; };
+		0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BC21FCBC6D004F742A /* LoginPageController.swift */; };
+		0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BF21FCBC99004F742A /* WelcomePageController.swift */; };
+		0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C41321FC8AF7007343C7 /* AppDelegate.swift */; };
+		0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41721FC8AF7007343C7 /* Main.storyboard */; };
+		0C57C41B21FC8AF7007343C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41A21FC8AF7007343C7 /* Assets.xcassets */; };
+		0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */; };
+		0C57C42921FC8AF7007343C7 /* EazipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C42821FC8AF7007343C7 /* EazipTests.swift */; };
+		0C57C43C21FC8BE8007343C7 /* MainActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C43B21FC8BE8007343C7 /* MainActionButton.swift */; };
+		0C57C44021FC8C46007343C7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C43F21FC8C46007343C7 /* Colors.xcassets */; };
+		0C57C44221FC8C67007343C7 /* Medias.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C44121FC8C67007343C7 /* Medias.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C57C3A221F92090007343C7 /* PBXContainerItemProxy */ = {
+		0C57C42521FC8AF7007343C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0C57C38521F92090007343C7 /* Project object */;
+			containerPortal = 0C57C40821FC8AF7007343C7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0C57C38C21F92090007343C7;
-			remoteInfo = eazip;
+			remoteGlobalIDString = 0C57C40F21FC8AF7007343C7;
+			remoteInfo = Eazip;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C57C38D21F92090007343C7 /* eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C57C39021F92090007343C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C57C39721F92090007343C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0C57C39A21F92090007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0C57C39C21F92090007343C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C57C3A121F92090007343C7 /* eazipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eazipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C57C3A521F92090007343C7 /* eazipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eazipTests.swift; sourceTree = "<group>"; };
-		0C57C3A721F92090007343C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C57C3B621F92472007343C7 /* MainActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionButton.swift; sourceTree = "<group>"; };
-		0C57C3BF21FA5904007343C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		0C57C3C321FA59AC007343C7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0C57C3C621FA5B1C007343C7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		0C57C3C821FA5B43007343C7 /* Medias.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Medias.xcassets; sourceTree = "<group>"; };
+		0C1095AF21FCA408004F742A /* FrankRuhlLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FrankRuhlLibre-Regular.ttf"; sourceTree = "<group>"; };
+		0C1095B121FCA454004F742A /* EazipLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazipLabel.swift; sourceTree = "<group>"; };
+		0C1095B321FCA571004F742A /* EazipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazipButton.swift; sourceTree = "<group>"; };
+		0C1095B521FCB340004F742A /* FrankRuhlLibre-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FrankRuhlLibre-Black.ttf"; sourceTree = "<group>"; };
+		0C1095B921FCB7DA004F742A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		0C1095BC21FCBC6D004F742A /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
+		0C1095BF21FCBC99004F742A /* WelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
+		0C57C41021FC8AF7007343C7 /* Eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C57C41321FC8AF7007343C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C57C41821FC8AF7007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C57C41A21FC8AF7007343C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C57C41D21FC8AF7007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C57C41F21FC8AF7007343C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C57C42421FC8AF7007343C7 /* EazipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EazipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C57C42821FC8AF7007343C7 /* EazipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazipTests.swift; sourceTree = "<group>"; };
+		0C57C42A21FC8AF7007343C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C57C43B21FC8BE8007343C7 /* MainActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionButton.swift; sourceTree = "<group>"; };
+		0C57C43F21FC8C46007343C7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0C57C44121FC8C67007343C7 /* Medias.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Medias.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C57C38A21F92090007343C7 /* Frameworks */ = {
+		0C57C40D21FC8AF7007343C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C57C39E21F92090007343C7 /* Frameworks */ = {
+		0C57C42121FC8AF7007343C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,189 +74,211 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C57C38421F92090007343C7 = {
+		0C1095AE21FCA3F8004F742A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C38F21F92090007343C7 /* eazip */,
-				0C57C3A421F92090007343C7 /* eazipTests */,
-				0C57C38E21F92090007343C7 /* Products */,
+				0C1095AF21FCA408004F742A /* FrankRuhlLibre-Regular.ttf */,
+				0C1095B521FCB340004F742A /* FrankRuhlLibre-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0C1095B821FCB7C1004F742A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0C1095B921FCB7DA004F742A /* FontHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0C1095BB21FCBC3C004F742A /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				0C57C43821FC8B3E007343C7 /* Views */,
+			);
+			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		0C1095BE21FCBC75004F742A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C57C40721FC8AF7007343C7 = {
+			isa = PBXGroup;
+			children = (
+				0C57C41221FC8AF7007343C7 /* Eazip */,
+				0C57C42721FC8AF7007343C7 /* EazipTests */,
+				0C57C41121FC8AF7007343C7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0C57C38E21F92090007343C7 /* Products */ = {
+		0C57C41121FC8AF7007343C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C38D21F92090007343C7 /* eazip.app */,
-				0C57C3A121F92090007343C7 /* eazipTests.xctest */,
+				0C57C41021FC8AF7007343C7 /* Eazip.app */,
+				0C57C42421FC8AF7007343C7 /* EazipTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C57C38F21F92090007343C7 /* eazip */ = {
+		0C57C41221FC8AF7007343C7 /* Eazip */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C3BB21FA5690007343C7 /* Classes */,
-				0C57C3BA21FA55BE007343C7 /* Resources */,
-				0C57C39921F92090007343C7 /* LaunchScreen.storyboard */,
-				0C57C39C21F92090007343C7 /* Info.plist */,
+				0C57C43D21FC8C1D007343C7 /* Resources */,
+				0C57C43421FC8B0D007343C7 /* Classes */,
+				0C57C41321FC8AF7007343C7 /* AppDelegate.swift */,
+				0C57C41721FC8AF7007343C7 /* Main.storyboard */,
+				0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */,
+				0C57C41F21FC8AF7007343C7 /* Info.plist */,
 			);
-			path = eazip;
+			path = Eazip;
 			sourceTree = "<group>";
 		};
-		0C57C3A421F92090007343C7 /* eazipTests */ = {
+		0C57C42721FC8AF7007343C7 /* EazipTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C3A521F92090007343C7 /* eazipTests.swift */,
-				0C57C3A721F92090007343C7 /* Info.plist */,
+				0C57C42821FC8AF7007343C7 /* EazipTests.swift */,
+				0C57C42A21FC8AF7007343C7 /* Info.plist */,
 			);
-			path = eazipTests;
+			path = EazipTests;
 			sourceTree = "<group>";
 		};
-		0C57C3B021F9209F007343C7 /* UI */ = {
+		0C57C43321FC8B07007343C7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C3C521FA59DF007343C7 /* UIComponents */,
-				0C57C3B321F923A9007343C7 /* UIPages */,
+				0C57C43621FC8B2C007343C7 /* UIPages */,
+				0C57C43521FC8B1D007343C7 /* UIComponents */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		0C57C3B321F923A9007343C7 /* UIPages */ = {
+		0C57C43421FC8B0D007343C7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C3BE21FA58B9007343C7 /* Login */,
-				0C57C3BD21FA58AC007343C7 /* Home */,
-			);
-			path = UIPages;
-			sourceTree = "<group>";
-		};
-		0C57C3BA21FA55BE007343C7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3BC21FA5853007343C7 /* Assets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0C57C3BB21FA5690007343C7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C39021F92090007343C7 /* AppDelegate.swift */,
-				0C57C3B021F9209F007343C7 /* UI */,
+				0C1095B821FCB7C1004F742A /* Helper */,
+				0C57C43321FC8B07007343C7 /* UI */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		0C57C3BC21FA5853007343C7 /* Assets */ = {
+		0C57C43521FC8B1D007343C7 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C39721F92090007343C7 /* Assets.xcassets */,
-				0C57C3C621FA5B1C007343C7 /* Colors.xcassets */,
-				0C57C3C821FA5B43007343C7 /* Medias.xcassets */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		0C57C3BD21FA58AC007343C7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3C121FA594C007343C7 /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		0C57C3BE21FA58B9007343C7 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3C221FA5983007343C7 /* Views */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		0C57C3C121FA594C007343C7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3BF21FA5904007343C7 /* HomeViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		0C57C3C221FA5983007343C7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3C321FA59AC007343C7 /* LoginViewController.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		0C57C3C521FA59DF007343C7 /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				0C57C3B621F92472007343C7 /* MainActionButton.swift */,
+				0C57C43B21FC8BE8007343C7 /* MainActionButton.swift */,
+				0C1095B121FCA454004F742A /* EazipLabel.swift */,
+				0C1095B321FCA571004F742A /* EazipButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		0C57C43621FC8B2C007343C7 /* UIPages */ = {
+			isa = PBXGroup;
+			children = (
+				0C1095BB21FCBC3C004F742A /* WelcomePage */,
+				0C57C43721FC8B34007343C7 /* LoginPage */,
+			);
+			path = UIPages;
+			sourceTree = "<group>";
+		};
+		0C57C43721FC8B34007343C7 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C1095BE21FCBC75004F742A /* Views */,
+				0C1095BC21FCBC6D004F742A /* LoginPageController.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		0C57C43821FC8B3E007343C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C1095BF21FCBC99004F742A /* WelcomePageController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C57C43D21FC8C1D007343C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C1095AE21FCA3F8004F742A /* Fonts */,
+				0C57C43E21FC8C26007343C7 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0C57C43E21FC8C26007343C7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0C57C41A21FC8AF7007343C7 /* Assets.xcassets */,
+				0C57C43F21FC8C46007343C7 /* Colors.xcassets */,
+				0C57C44121FC8C67007343C7 /* Medias.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C57C38C21F92090007343C7 /* eazip */ = {
+		0C57C40F21FC8AF7007343C7 /* Eazip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C57C3AA21F92090007343C7 /* Build configuration list for PBXNativeTarget "eazip" */;
+			buildConfigurationList = 0C57C42D21FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "Eazip" */;
 			buildPhases = (
-				0C57C38921F92090007343C7 /* Sources */,
-				0C57C38A21F92090007343C7 /* Frameworks */,
-				0C57C38B21F92090007343C7 /* Resources */,
+				0C57C40C21FC8AF7007343C7 /* Sources */,
+				0C57C40D21FC8AF7007343C7 /* Frameworks */,
+				0C57C40E21FC8AF7007343C7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = eazip;
-			productName = eazip;
-			productReference = 0C57C38D21F92090007343C7 /* eazip.app */;
+			name = Eazip;
+			productName = Eazip;
+			productReference = 0C57C41021FC8AF7007343C7 /* Eazip.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0C57C3A021F92090007343C7 /* eazipTests */ = {
+		0C57C42321FC8AF7007343C7 /* EazipTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C57C3AD21F92090007343C7 /* Build configuration list for PBXNativeTarget "eazipTests" */;
+			buildConfigurationList = 0C57C43021FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "EazipTests" */;
 			buildPhases = (
-				0C57C39D21F92090007343C7 /* Sources */,
-				0C57C39E21F92090007343C7 /* Frameworks */,
-				0C57C39F21F92090007343C7 /* Resources */,
+				0C57C42021FC8AF7007343C7 /* Sources */,
+				0C57C42121FC8AF7007343C7 /* Frameworks */,
+				0C57C42221FC8AF7007343C7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0C57C3A321F92090007343C7 /* PBXTargetDependency */,
+				0C57C42621FC8AF7007343C7 /* PBXTargetDependency */,
 			);
-			name = eazipTests;
-			productName = eazipTests;
-			productReference = 0C57C3A121F92090007343C7 /* eazipTests.xctest */;
+			name = EazipTests;
+			productName = EazipTests;
+			productReference = 0C57C42421FC8AF7007343C7 /* EazipTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0C57C38521F92090007343C7 /* Project object */ = {
+		0C57C40821FC8AF7007343C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = eazip;
+				ORGANIZATIONNAME = Eazip;
 				TargetAttributes = {
-					0C57C38C21F92090007343C7 = {
+					0C57C40F21FC8AF7007343C7 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					0C57C3A021F92090007343C7 = {
+					0C57C42321FC8AF7007343C7 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 0C57C38C21F92090007343C7;
+						TestTargetID = 0C57C40F21FC8AF7007343C7;
 					};
 				};
 			};
-			buildConfigurationList = 0C57C38821F92090007343C7 /* Build configuration list for PBXProject "eazip" */;
+			buildConfigurationList = 0C57C40B21FC8AF7007343C7 /* Build configuration list for PBXProject "Eazip" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -252,30 +286,33 @@
 				en,
 				Base,
 			);
-			mainGroup = 0C57C38421F92090007343C7;
-			productRefGroup = 0C57C38E21F92090007343C7 /* Products */;
+			mainGroup = 0C57C40721FC8AF7007343C7;
+			productRefGroup = 0C57C41121FC8AF7007343C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C57C38C21F92090007343C7 /* eazip */,
-				0C57C3A021F92090007343C7 /* eazipTests */,
+				0C57C40F21FC8AF7007343C7 /* Eazip */,
+				0C57C42321FC8AF7007343C7 /* EazipTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C57C38B21F92090007343C7 /* Resources */ = {
+		0C57C40E21FC8AF7007343C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C57C39B21F92090007343C7 /* LaunchScreen.storyboard in Resources */,
-				0C57C3C721FA5B1C007343C7 /* Colors.xcassets in Resources */,
-				0C57C39821F92090007343C7 /* Assets.xcassets in Resources */,
-				0C57C3C921FA5B43007343C7 /* Medias.xcassets in Resources */,
+				0C1095B021FCA408004F742A /* FrankRuhlLibre-Regular.ttf in Resources */,
+				0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */,
+				0C57C44021FC8C46007343C7 /* Colors.xcassets in Resources */,
+				0C1095B621FCB340004F742A /* FrankRuhlLibre-Black.ttf in Resources */,
+				0C57C41B21FC8AF7007343C7 /* Assets.xcassets in Resources */,
+				0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */,
+				0C57C44221FC8C67007343C7 /* Medias.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C57C39F21F92090007343C7 /* Resources */ = {
+		0C57C42221FC8AF7007343C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,40 +322,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C57C38921F92090007343C7 /* Sources */ = {
+		0C57C40C21FC8AF7007343C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C57C3B721F92472007343C7 /* MainActionButton.swift in Sources */,
-				0C57C39121F92090007343C7 /* AppDelegate.swift in Sources */,
-				0C57C3C421FA59AC007343C7 /* LoginViewController.swift in Sources */,
-				0C57C3C021FA5904007343C7 /* HomeViewController.swift in Sources */,
+				0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */,
+				0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */,
+				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
+				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
+				0C1095B421FCA571004F742A /* EazipButton.swift in Sources */,
+				0C57C43C21FC8BE8007343C7 /* MainActionButton.swift in Sources */,
+				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C57C39D21F92090007343C7 /* Sources */ = {
+		0C57C42021FC8AF7007343C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C57C3A621F92090007343C7 /* eazipTests.swift in Sources */,
+				0C57C42921FC8AF7007343C7 /* EazipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C57C3A321F92090007343C7 /* PBXTargetDependency */ = {
+		0C57C42621FC8AF7007343C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C57C38C21F92090007343C7 /* eazip */;
-			targetProxy = 0C57C3A221F92090007343C7 /* PBXContainerItemProxy */;
+			target = 0C57C40F21FC8AF7007343C7 /* Eazip */;
+			targetProxy = 0C57C42521FC8AF7007343C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0C57C39921F92090007343C7 /* LaunchScreen.storyboard */ = {
+		0C57C41721FC8AF7007343C7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0C57C39A21F92090007343C7 /* Base */,
+				0C57C41821FC8AF7007343C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C57C41D21FC8AF7007343C7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -326,7 +374,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0C57C3A821F92090007343C7 /* Debug */ = {
+		0C57C42B21FC8AF7007343C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,7 +431,7 @@
 			};
 			name = Debug;
 		};
-		0C57C3A921F92090007343C7 /* Release */ = {
+		0C57C42C21FC8AF7007343C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -433,97 +481,97 @@
 			};
 			name = Release;
 		};
-		0C57C3AB21F92090007343C7 /* Debug */ = {
+		0C57C42E21FC8AF7007343C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = eazip/Info.plist;
+				INFOPLIST_FILE = Eazip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.eazip;
+				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.Eazip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0C57C3AC21F92090007343C7 /* Release */ = {
+		0C57C42F21FC8AF7007343C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = eazip/Info.plist;
+				INFOPLIST_FILE = Eazip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.eazip;
+				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.Eazip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		0C57C3AE21F92090007343C7 /* Debug */ = {
+		0C57C43121FC8AF7007343C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = eazipTests/Info.plist;
+				INFOPLIST_FILE = EazipTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.eazipTests;
+				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.EazipTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eazip.app/eazip";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eazip.app/Eazip";
 			};
 			name = Debug;
 		};
-		0C57C3AF21F92090007343C7 /* Release */ = {
+		0C57C43221FC8AF7007343C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = eazipTests/Info.plist;
+				INFOPLIST_FILE = EazipTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.eazipTests;
+				PRODUCT_BUNDLE_IDENTIFIER = eazip.com.EazipTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eazip.app/eazip";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eazip.app/Eazip";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C57C38821F92090007343C7 /* Build configuration list for PBXProject "eazip" */ = {
+		0C57C40B21FC8AF7007343C7 /* Build configuration list for PBXProject "Eazip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C57C3A821F92090007343C7 /* Debug */,
-				0C57C3A921F92090007343C7 /* Release */,
+				0C57C42B21FC8AF7007343C7 /* Debug */,
+				0C57C42C21FC8AF7007343C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C57C3AA21F92090007343C7 /* Build configuration list for PBXNativeTarget "eazip" */ = {
+		0C57C42D21FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "Eazip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C57C3AB21F92090007343C7 /* Debug */,
-				0C57C3AC21F92090007343C7 /* Release */,
+				0C57C42E21FC8AF7007343C7 /* Debug */,
+				0C57C42F21FC8AF7007343C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C57C3AD21F92090007343C7 /* Build configuration list for PBXNativeTarget "eazipTests" */ = {
+		0C57C43021FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "EazipTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C57C3AE21F92090007343C7 /* Debug */,
-				0C57C3AF21F92090007343C7 /* Release */,
+				0C57C43121FC8AF7007343C7 /* Debug */,
+				0C57C43221FC8AF7007343C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0C57C38521F92090007343C7 /* Project object */;
+	rootObject = 0C57C40821FC8AF7007343C7 /* Project object */;
 }
