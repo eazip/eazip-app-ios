@@ -10,7 +10,8 @@ import UIKit
 
 class loginPageController: UIViewController {
     
-    @IBOutlet weak var signInButton = MainActionButton()
+    
+    @IBOutlet weak var signInButton = WhiteActionButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class loginPageController: UIViewController {
 
     
     func setUpSignInButton()  {
-        signInButton?.setTitle("SIGN IN", for: .normal)
+        signInButton?.setTitle("Login", for: .normal)
     }
     
     
