@@ -37,7 +37,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-y6-jeO">
                                 <rect key="frame" x="67" y="487" width="240" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="MainActionButton" customModule="Eazip" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="-150" y="90" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Dkg-MP-3up"/>
@@ -45,7 +45,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="MainActionButton" customModule="Eazip" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="-150" y="20" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="2jB-12-rd1"/>
@@ -79,8 +79,8 @@
                     </view>
                     <connections>
                         <outlet property="mainTitle" destination="zmu-h2-Aa8" id="v0G-tj-dS1"/>
-                        <outlet property="signInButton" destination="Hwt-wr-vkZ" id="VWc-dD-gcd"/>
-                        <outlet property="signUpButton" destination="qMe-4l-1zN" id="J5L-HJ-WN6"/>
+                        <outlet property="signInButton" destination="qMe-4l-1zN" id="QDZ-UA-avB"/>
+                        <outlet property="signUpButton" destination="Hwt-wr-vkZ" id="iJo-ZC-hd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
