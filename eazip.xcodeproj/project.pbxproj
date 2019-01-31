@@ -14,6 +14,7 @@
 		0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BC21FCBC6D004F742A /* LoginPageController.swift */; };
 		0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BF21FCBC99004F742A /* WelcomePageController.swift */; };
 		0C1095C221FF0434004F742A /* GradientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095C121FF0434004F742A /* GradientHelper.swift */; };
+		0C49594C22030E3500EB638E /* Sewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49594B22030E3500EB638E /* Sewer.swift */; };
 		0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C41321FC8AF7007343C7 /* AppDelegate.swift */; };
 		0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41721FC8AF7007343C7 /* Main.storyboard */; };
 		0C57C41B21FC8AF7007343C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41A21FC8AF7007343C7 /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 		0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */; };
 		0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA562200523C00400BD2 /* ColoredActionButton.swift */; };
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
+		0C93BA612200639B00400BD2 /* SewersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA602200639B00400BD2 /* SewersViewController.swift */; };
+		0C93BA6A2201DF7200400BD2 /* SewerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA682201DF7200400BD2 /* SewerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		0C1095BC21FCBC6D004F742A /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		0C1095BF21FCBC99004F742A /* WelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		0C1095C121FF0434004F742A /* GradientHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHelper.swift; sourceTree = "<group>"; };
+		0C49594B22030E3500EB638E /* Sewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sewer.swift; sourceTree = "<group>"; };
 		0C57C41021FC8AF7007343C7 /* Eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C57C41321FC8AF7007343C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C57C41821FC8AF7007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButtonHelper.swift; sourceTree = "<group>"; };
 		0C93BA562200523C00400BD2 /* ColoredActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredActionButton.swift; sourceTree = "<group>"; };
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
+		0C93BA602200639B00400BD2 /* SewersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewersViewController.swift; sourceTree = "<group>"; };
+		0C93BA682201DF7200400BD2 /* SewerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		0C1095B821FCB7C1004F742A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0C57C43D21FC8C1D007343C7 /* Resources */,
 				0C1095B921FCB7DA004F742A /* FontHelper.swift */,
 				0C1095C121FF0434004F742A /* GradientHelper.swift */,
 				0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */,
@@ -133,7 +140,6 @@
 		0C57C41221FC8AF7007343C7 /* Eazip */ = {
 			isa = PBXGroup;
 			children = (
-				0C57C43D21FC8C1D007343C7 /* Resources */,
 				0C57C43421FC8B0D007343C7 /* Classes */,
 				0C57C41321FC8AF7007343C7 /* AppDelegate.swift */,
 				0C57C41721FC8AF7007343C7 /* Main.storyboard */,
@@ -183,6 +189,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0C93BA5A2200621500400BD2 /* SewersPage */,
 				0C1095BB21FCBC3C004F742A /* WelcomePage */,
 				0C57C43721FC8B34007343C7 /* LoginPage */,
 			);
@@ -223,6 +230,32 @@
 				0C57C44121FC8C67007343C7 /* Medias.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		0C93BA5A2200621500400BD2 /* SewersPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C93BA5D2200630F00400BD2 /* Layouts */,
+				0C93BA5B2200629200400BD2 /* Views */,
+				0C49594B22030E3500EB638E /* Sewer.swift */,
+			);
+			path = SewersPage;
+			sourceTree = "<group>";
+		};
+		0C93BA5B2200629200400BD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C93BA602200639B00400BD2 /* SewersViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C93BA5D2200630F00400BD2 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0C93BA682201DF7200400BD2 /* SewerViewCell.swift */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +368,10 @@
 				0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */,
 				0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */,
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
+				0C93BA612200639B00400BD2 /* SewersViewController.swift in Sources */,
+				0C49594C22030E3500EB638E /* Sewer.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
+				0C93BA6A2201DF7200400BD2 /* SewerViewCell.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,
 				0C1095C221FF0434004F742A /* GradientHelper.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
