@@ -1,15 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kFg-d4-kdK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Cloth Picking List Screen-->
+        <scene sceneID="ZAS-wd-JMU">
+            <objects>
+                <viewController id="QRw-DC-WiO" customClass="ClothPickingListScreen" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dTc-8c-35T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-d9-YWa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClothPickingCell" id="DhN-AC-Cbh" customClass="ClothPickingCell" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DhN-AC-Cbh" id="y6m-3r-Kv2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nPX-n2-3Ex">
+                                                    <rect key="frame" x="40" y="10" width="40" height="69.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="69.5" id="7nt-rL-qAa"/>
+                                                        <constraint firstAttribute="width" constant="40" id="9dA-nO-Q0C"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-KR-cSV">
+                                                    <rect key="frame" x="130" y="34.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GQh-KR-cSV" firstAttribute="centerY" secondItem="y6m-3r-Kv2" secondAttribute="centerY" id="EKx-LM-W2t"/>
+                                                <constraint firstItem="GQh-KR-cSV" firstAttribute="leading" secondItem="nPX-n2-3Ex" secondAttribute="trailing" constant="50" id="fCe-Ab-ctM"/>
+                                                <constraint firstItem="nPX-n2-3Ex" firstAttribute="centerY" secondItem="y6m-3r-Kv2" secondAttribute="centerY" id="oTw-q1-3Wb"/>
+                                                <constraint firstItem="nPX-n2-3Ex" firstAttribute="leading" secondItem="y6m-3r-Kv2" secondAttribute="leading" constant="40" id="yK6-za-9pC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="clothPickingIconView" destination="nPX-n2-3Ex" id="iHy-YA-h1a"/>
+                                            <outlet property="clothPickingTitleLabel" destination="GQh-KR-cSV" id="63O-pl-g4m"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b5B-QZ-k77" firstAttribute="bottom" secondItem="p7l-d9-YWa" secondAttribute="bottom" id="1dt-iZ-Q2J"/>
+                            <constraint firstItem="b5B-QZ-k77" firstAttribute="trailing" secondItem="p7l-d9-YWa" secondAttribute="trailing" id="eMp-rz-s7i"/>
+                            <constraint firstItem="p7l-d9-YWa" firstAttribute="leading" secondItem="b5B-QZ-k77" secondAttribute="leading" id="tLa-aN-C2c"/>
+                            <constraint firstItem="p7l-d9-YWa" firstAttribute="top" secondItem="b5B-QZ-k77" secondAttribute="top" id="vN9-Ko-HwI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b5B-QZ-k77"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NZs-qc-jYI"/>
+                    <connections>
+                        <outlet property="tableView" destination="p7l-d9-YWa" id="0bB-Oy-jVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzE-Ah-Dcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="32"/>
+        </scene>
         <!--Welcome Page Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="loginPageMainTitle" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-h2-Aa8" customClass="EazipLabel" customModule="Eazip">
-                                <rect key="frame" x="12" y="70" width="350" height="20.5"/>
+                                <rect key="frame" x="12.5" y="70" width="350" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="dEw-CL-IGb"/>
                                 </constraints>
@@ -28,7 +94,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginPageMedia" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-g5-n15">
-                                <rect key="frame" x="-38" y="17" width="450" height="500"/>
+                                <rect key="frame" x="-37.5" y="17" width="450" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="450" id="1Cb-ca-jnb"/>
                                     <constraint firstAttribute="height" constant="500" id="7lJ-Gs-bcf"/>
@@ -37,7 +103,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-y6-jeO">
                                 <rect key="frame" x="67" y="487" width="240" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="-150" y="90" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="Dkg-MP-3up"/>
@@ -45,7 +111,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="-150" y="20" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="2jB-12-rd1"/>
@@ -85,6 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="31.934032983508249"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vfg-hz-qhd">
@@ -120,10 +187,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlu-aw-5Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="32"/>
+            <point key="canvasLocation" x="1824.8" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bcu-5I-r3I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kFg-d4-kdK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2SA-ze-ZjL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QRw-DC-WiO" kind="relationship" relationship="rootViewController" id="PGH-9t-Ige"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvv-0z-fqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>
-        <image name="loginPageMedia" width="562" height="616"/>
+        <image name="loginPageMedia" width="1125" height="1232"/>
     </resources>
 </document>
