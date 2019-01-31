@@ -11,28 +11,26 @@ import UIKit
 class WelcomePageController: UIViewController {
     
     @IBOutlet weak var mainTitle = EazipLabel()
-    @IBOutlet weak var signInButton = MainActionButton()
-    @IBOutlet weak var signUpButton = MainActionButton()
+    @IBOutlet weak var signInButton = WhiteActionButton()
+    @IBOutlet weak var signUpButton = ColoredActionButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMainTitle()
-        setUpSignInButton()
         setUpSignUpButton()
+        setUpSignInButton()
     }
     
     func setUpMainTitle()  {
         mainTitle?.text = "Aequaliterque ipse pariter termini qui benevolentiae."
     }
     
-    func setUpSignInButton()  {
-        signInButton?.setTitle("SIGN IN", for: .normal)
+    func setUpSignUpButton()  {
+        signUpButton?.setTitle("Register", for: .normal)
     }
     
-    func setUpSignUpButton()  {
-        signUpButton?.setTitle("SIGN UP", for: .normal)
-        signUpButton?.backgroundColor = UIColor.white
-        signUpButton?.self.setTitleColor(.black, for: .normal)
+    func setUpSignInButton()  {
+        signInButton?.setTitle("Login", for: .normal)
     }
     
     override func didReceiveMemoryWarning() {

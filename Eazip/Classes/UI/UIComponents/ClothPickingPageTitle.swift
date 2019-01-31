@@ -1,14 +1,14 @@
 //
-//  EazipButton.swift
+//  ClothPickingPageTitle.swift
 //  Eazip
 //
-//  Created by Marie on 26/01/2019.
+//  Created by Quentin Michalet on 29/01/2019.
 //  Copyright © 2019 Eazip. All rights reserved.
 //
 
 import UIKit
 
-class EazipButton: UIButton {
+class ClothPickingPageTitle: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,13 +19,8 @@ class EazipButton: UIButton {
         super.init(coder: aDecoder)
         setUp()
     }
-    
-    override func prepareForInterfaceBuilder() {
-        setUp()
-    }
-    
-    func setUp() {
-        self.titleLabel?.font = FontHelper.eazipDefaultRegularFontWithSize(size: 20)
-    }
 
+    func setUp() {
+        self.backgroundColor = UIColor.white
+    }
 }
