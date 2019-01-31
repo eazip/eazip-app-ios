@@ -17,5 +17,4 @@ class ClothPickingCell: UITableViewCell {
         clothPickingIconView.image = clothItem.icon
         clothPickingTitleLabel.text = clothItem.title
     }
-    
 }
