@@ -127,39 +127,52 @@
         <scene sceneID="HrH-iI-Yhp">
             <objects>
                 <viewController id="ZcN-0M-wCV" customClass="SewersViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bHf-cm-X6i">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bHf-cm-X6i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-Hw-tai">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="20" y="8" width="300" height="651"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lec-Rp-nAr">
-                                    <size key="itemSize" width="177" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AyU-QM-d4Q"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="lec-Rp-nAr">
+                                    <size key="itemSize" width="177" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="188"/>
+                                        <rect key="frame" x="62" y="0.0" width="177" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="177" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHS-hD-hdH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="165"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L0t-9I-Pbj">
+                                                    <rect key="frame" x="0.0" y="5" width="177" height="133"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHS-hD-hdH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="177" height="133"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="sewerCellNameLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-Z0-UJJ" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                                    <rect key="frame" x="5" y="162" width="42" height="21"/>
+                                                    <rect key="frame" x="5" y="179.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWh-Hf-FRy">
-                                                    <rect key="frame" x="130" y="162" width="42" height="21"/>
+                                                    <rect key="frame" x="130" y="194.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-sI-ZfS">
+                                                    <rect key="frame" x="5" y="199.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -167,15 +180,22 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="L0t-9I-Pbj" secondAttribute="trailing" id="58I-uK-CUw"/>
+                                            <constraint firstItem="dgT-sI-ZfS" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" constant="5" id="5KW-Fj-AcU"/>
                                             <constraint firstAttribute="trailing" secondItem="RWh-Hf-FRy" secondAttribute="trailing" constant="5" id="B9Y-Ta-IOg"/>
                                             <constraint firstItem="mIC-Z0-UJJ" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" constant="5" id="BWC-7e-70C"/>
-                                            <constraint firstAttribute="bottom" secondItem="mIC-Z0-UJJ" secondAttribute="bottom" constant="5" id="l4O-aS-flD"/>
+                                            <constraint firstItem="L0t-9I-Pbj" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" id="VRA-fL-IZ9"/>
+                                            <constraint firstItem="L0t-9I-Pbj" firstAttribute="centerX" secondItem="P4C-09-HoN" secondAttribute="centerX" id="VeS-qY-djp"/>
+                                            <constraint firstAttribute="bottom" secondItem="dgT-sI-ZfS" secondAttribute="bottom" id="asH-aJ-3eQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="mIC-Z0-UJJ" secondAttribute="bottom" constant="20" id="l4O-aS-flD"/>
                                             <constraint firstAttribute="bottom" secondItem="RWh-Hf-FRy" secondAttribute="bottom" constant="5" id="l9k-o3-hjM"/>
                                         </constraints>
+                                        <viewLayoutGuide key="safeArea" id="YjY-u0-wTf"/>
                                         <connections>
                                             <outlet property="sewerNameLabel" destination="mIC-Z0-UJJ" id="uMX-bt-k86"/>
                                             <outlet property="sewerPicture" destination="SHS-hD-hdH" id="dap-bf-7ye"/>
                                             <outlet property="sewerRankLabel" destination="RWh-Hf-FRy" id="D2K-6F-vgx"/>
+                                            <outlet property="sewerWorksNbLabel" destination="dgT-sI-ZfS" id="CX7-Rt-FdZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -186,13 +206,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uB4-HF-XtO" firstAttribute="bottom" secondItem="tN0-Hw-tai" secondAttribute="bottom" constant="8" id="3V3-Qp-cUX"/>
-                            <constraint firstItem="tN0-Hw-tai" firstAttribute="top" secondItem="uB4-HF-XtO" secondAttribute="top" constant="8" id="B0C-hl-1PW"/>
-                            <constraint firstItem="uB4-HF-XtO" firstAttribute="trailing" secondItem="tN0-Hw-tai" secondAttribute="trailing" constant="8" id="JcG-r8-UqA"/>
-                            <constraint firstItem="tN0-Hw-tai" firstAttribute="leading" secondItem="uB4-HF-XtO" secondAttribute="leading" constant="8" id="rJc-tI-5tS"/>
+                            <constraint firstAttribute="bottom" secondItem="tN0-Hw-tai" secondAttribute="bottom" constant="8" id="3V3-Qp-cUX"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="top" secondItem="bHf-cm-X6i" secondAttribute="top" constant="8" id="B0C-hl-1PW"/>
+                            <constraint firstAttribute="trailing" secondItem="tN0-Hw-tai" secondAttribute="trailing" constant="20" id="Jsk-Hg-XSh"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="centerX" secondItem="bHf-cm-X6i" secondAttribute="centerX" id="O3I-P1-ANE"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" constant="20" id="u9E-eQ-nEQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="uB4-HF-XtO"/>
                     </view>
+                    <connections>
+                        <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibD-WY-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

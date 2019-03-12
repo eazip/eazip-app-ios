@@ -14,12 +14,16 @@ class SewerViewCell: UICollectionViewCell {
     
     @IBOutlet weak var sewerNameLabel: UILabel!
     @IBOutlet weak var sewerRankLabel: UILabel!
+    @IBOutlet weak var sewerWorksNbLabel: UILabel!
     @IBOutlet weak var sewerPicture: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(0, 0, 0, 0))
-        sewerPicture.layer.cornerRadius = 20
+        sewerPicture.layer.cornerRadius = 7
+        sewerPicture.layer.masksToBounds = true
+        sewerRankLabel.font = FontHelper.eazipDefaultRegularFontWithSize(size: 16)
+        sewerWorksNbLabel.font = FontHelper.eazipDefaultRegularFontWithSize(size: 16)
     }
 
 }

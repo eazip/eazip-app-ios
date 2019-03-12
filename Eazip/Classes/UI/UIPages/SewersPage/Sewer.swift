@@ -13,10 +13,12 @@ class Sewer {
     var sewerPicture : UIImage
     var sewerName : String
     var sewerRank : String
+    var sewerWorksNb : String
     
-    init(img: UIImage, name: String, rank: String ) {
+    init(img: UIImage, name: String, rank: String, works: String ) {
         self.sewerPicture = img
         self.sewerName = name
         self.sewerRank = rank
+        self.sewerWorksNb = works
     }
 }
