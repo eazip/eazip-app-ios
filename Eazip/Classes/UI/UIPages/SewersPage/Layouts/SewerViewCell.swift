@@ -20,10 +20,10 @@ class SewerViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(0, 0, 0, 0))
-        sewerPicture.layer.cornerRadius = 7
+        sewerPicture.layer.cornerRadius = 5
         sewerPicture.layer.masksToBounds = true
-        sewerRankLabel.font = FontHelper.eazipDefaultRegularFontWithSize(size: 16)
-        sewerWorksNbLabel.font = FontHelper.eazipDefaultRegularFontWithSize(size: 16)
+        sewerRankLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
+        sewerWorksNbLabel.font = FontHelper.avenirBookFontWithSize(size: 14)
     }
 
 }

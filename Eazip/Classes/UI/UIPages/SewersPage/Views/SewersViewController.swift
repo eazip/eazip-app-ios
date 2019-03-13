@@ -29,7 +29,7 @@ class SewersViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: screenWidth / 2, height: screenWidth / 2)
+        layout.itemSize = CGSize(width: screenWidth / 2 , height: screenWidth / 2)
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 1
         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
