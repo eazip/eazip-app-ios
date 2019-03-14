@@ -70,8 +70,8 @@ class SewersViewController: UIViewController, UICollectionViewDataSource, UIColl
         sewerCell.sewerRankLabel.text = dataSewers[indexPath.item].sewerRank
         sewerCell.sewerWorksNbLabel.text = dataSewers[indexPath.item].sewerWorksNb + " prestations"
         sewerCell.sewerPicture.image = dataSewers[indexPath.item].sewerPicture
-        return sewerCell
         
+        return sewerCell
     }
 
 

@@ -19,24 +19,33 @@ class SewerViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(0, 0, 0, 0))
+        setUpSewerPicture()
+        setUpSewerName()
+        setupSewerWorksNb()
+        setupSewerRank()
+    }
+    
+    func setUpSewerPicture() {
         sewerPicture.layer.cornerRadius = 5
         sewerPicture.layer.masksToBounds = true
+    }
+    
+    func setUpSewerName() {
+        sewerNameLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
         sewerNameLabel.textAlignment = .left
-        
-        let sewerNameWidth : CGFloat = sewerPicture.bounds.width * 0.6
-        sewerNameLabel.frame.size.width = sewerNameWidth
         sewerNameLabel.numberOfLines = 0
         sewerNameLabel.lineBreakMode = .byWordWrapping
         sewerNameLabel.sizeToFit()
-        sewerRankLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
-        sewerWorksNbLabel.font = FontHelper.avenirBookFontWithSize(size: 14)
+    }
     
-        if (sewerNameLabel.text?.count ?? 0 > 6) {
-            sewerNameLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
-        } else {
-            sewerNameLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
-        }
+    func setupSewerWorksNb() {
+        sewerWorksNbLabel.font = FontHelper.avenirBookFontWithSize(size: 14)
+    }
+    
+    func setupSewerRank() {
+        sewerRankLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
     }
 
 }
