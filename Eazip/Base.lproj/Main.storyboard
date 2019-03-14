@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Enf-si-2ty">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZcN-0M-wCV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="31.934032983508249"/>
+            <point key="canvasLocation" x="97" y="32"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vfg-hz-qhd">
@@ -260,6 +260,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlu-aw-5Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1824.8" y="31.934032983508249"/>
+        </scene>
+        <!--Sewers View Controller-->
+        <scene sceneID="HrH-iI-Yhp">
+            <objects>
+                <viewController id="ZcN-0M-wCV" customClass="SewersViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bHf-cm-X6i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-Hw-tai">
+                                <rect key="frame" x="25" y="8" width="295" height="651"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="AyU-QM-d4Q"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="lec-Rp-nAr">
+                                    <size key="itemSize" width="170" height="210"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="0.0" width="170" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="210"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L0t-9I-Pbj">
+                                                    <rect key="frame" x="0.0" y="5" width="170" height="180"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHS-hD-hdH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="sewerCellNameLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-Z0-UJJ" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="169.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWh-Hf-FRy">
+                                                    <rect key="frame" x="113" y="189.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-sI-ZfS">
+                                                    <rect key="frame" x="0.0" y="189.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starRank" translatesAutoresizingMaskIntoConstraints="NO" id="rG7-lG-Ods">
+                                                    <rect key="frame" x="160" y="195" width="10" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="4g6-Ze-Vp0"/>
+                                                        <constraint firstAttribute="height" constant="10" id="eu9-SY-VNa"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="L0t-9I-Pbj" secondAttribute="trailing" id="58I-uK-CUw"/>
+                                            <constraint firstItem="dgT-sI-ZfS" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" id="5KW-Fj-AcU"/>
+                                            <constraint firstAttribute="trailing" secondItem="RWh-Hf-FRy" secondAttribute="trailing" constant="15" id="B9Y-Ta-IOg"/>
+                                            <constraint firstItem="mIC-Z0-UJJ" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" id="BWC-7e-70C"/>
+                                            <constraint firstAttribute="trailing" secondItem="rG7-lG-Ods" secondAttribute="trailing" id="UVe-Nz-6LX"/>
+                                            <constraint firstItem="L0t-9I-Pbj" firstAttribute="leading" secondItem="P4C-09-HoN" secondAttribute="leading" id="VRA-fL-IZ9"/>
+                                            <constraint firstItem="L0t-9I-Pbj" firstAttribute="centerX" secondItem="P4C-09-HoN" secondAttribute="centerX" id="VeS-qY-djp"/>
+                                            <constraint firstAttribute="bottom" secondItem="dgT-sI-ZfS" secondAttribute="bottom" id="asH-aJ-3eQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="mIC-Z0-UJJ" secondAttribute="bottom" constant="20" id="l4O-aS-flD"/>
+                                            <constraint firstAttribute="bottom" secondItem="RWh-Hf-FRy" secondAttribute="bottom" id="l9k-o3-hjM"/>
+                                            <constraint firstAttribute="bottom" secondItem="rG7-lG-Ods" secondAttribute="bottom" constant="5" id="t5w-OH-Gav"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="YjY-u0-wTf"/>
+                                        <connections>
+                                            <outlet property="sewerNameLabel" destination="mIC-Z0-UJJ" id="uMX-bt-k86"/>
+                                            <outlet property="sewerPicture" destination="SHS-hD-hdH" id="dap-bf-7ye"/>
+                                            <outlet property="sewerRankLabel" destination="RWh-Hf-FRy" id="D2K-6F-vgx"/>
+                                            <outlet property="sewerWorksNbLabel" destination="dgT-sI-ZfS" id="CX7-Rt-FdZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZcN-0M-wCV" id="KXg-OG-vi7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tN0-Hw-tai" secondAttribute="bottom" constant="8" id="3V3-Qp-cUX"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="top" secondItem="bHf-cm-X6i" secondAttribute="top" constant="8" id="B0C-hl-1PW"/>
+                            <constraint firstAttribute="trailing" secondItem="tN0-Hw-tai" secondAttribute="trailing" constant="25" id="Jsk-Hg-XSh"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="centerX" secondItem="bHf-cm-X6i" secondAttribute="centerX" id="O3I-P1-ANE"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" constant="25" id="u9E-eQ-nEQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibD-WY-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>
