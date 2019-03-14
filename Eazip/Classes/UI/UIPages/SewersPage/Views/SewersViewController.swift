@@ -42,7 +42,7 @@ class SewersViewController: UIViewController, UICollectionViewDataSource, UIColl
         let sewer2 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Joseph", rank: "4,5/5", works: "20")
         let sewer3 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Nina", rank: "4,5/5", works: "20")
         let sewer4 = Sewer(img: UIImage(named:"sewerPicture4")!, name: "Alice", rank: "4,5/5", works: "20")
-        let sewer5 = Sewer(img: UIImage(named:"sewerPicture5")!, name: "Jean-Paul", rank: "4,0/5", works: "20")
+        let sewer5 = Sewer(img: UIImage(named:"sewerPicture5")!, name: "Pierre-Emanuel", rank: "4,0/5", works: "20")
         let sewer6 = Sewer(img: UIImage(named:"sewerPicture6")!, name: "Julie", rank: "4,5/5", works: "20")
         
         sewerList.append(sewer1)
