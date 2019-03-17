@@ -33,7 +33,7 @@ class ColoredActionButton: UIButton {
     
     func setUp() {
         self.setEazipButtonProperties()
-        self.setEazipGradient(colors: [UIColor(named: "eazipPeachColor")!, UIColor(named: "eazipLightPeachColor")!])
+        self.setEazipGradient(colors: [UIColor(named: "peachColor")!, UIColor(named: "lightPeachColor")!])
         self.setTitleColor(.white, for: .normal)
     }
 }

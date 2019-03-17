@@ -22,4 +22,14 @@ extension UIView {
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
         self.layer.insertSublayer(gradient, at: 0)
     }
+    
+    func setPictureGradient(picture : UIImage, locations: [NSNumber]?) -> Void {
+        let gradient : CAGradientLayer = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.locations = locations
+        gradient.startPoint = CGPoint(x: 0.0, y:1.0)
+        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
+        self.layer.insertSublayer(gradient, at: 0)
+    }
 }
