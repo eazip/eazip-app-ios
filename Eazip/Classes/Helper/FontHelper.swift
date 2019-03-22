@@ -20,4 +20,9 @@ struct FontHelper {
     static func avenirBookFontWithSize(size: CGFloat) -> UIFont {
         return UIFont(name: "avenir-book", size: size)!
     }
+    
+    static func avenirBlackFontWithSize(size: CGFloat) -> UIFont {
+        return UIFont(name: "Avenir-Black", size: size)!
+    }
+
 }

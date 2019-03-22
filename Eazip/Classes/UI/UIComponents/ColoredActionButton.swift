@@ -35,5 +35,6 @@ class ColoredActionButton: UIButton {
         self.setEazipButtonProperties()
         self.setEazipGradient(colors: [UIColor(named: "peachColor")!, UIColor(named: "lightPeachColor")!])
         self.setTitleColor(.white, for: .normal)
+        self.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 20)
     }
 }
