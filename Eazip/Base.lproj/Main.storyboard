@@ -255,7 +255,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-hg-1a8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-hg-1a8" customClass="LightLabel" customModule="Eazip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="352" width="375" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -332,6 +332,7 @@
                         <outlet property="descriptionContent" destination="lgc-do-aCc" id="s7g-Rm-VZ4"/>
                         <outlet property="descriptionTitle" destination="LPn-If-OiK" id="5SP-z2-ZAg"/>
                         <outlet property="lastWorksTitle" destination="lYk-cD-QTa" id="NfO-cb-qc0"/>
+                        <outlet property="rankLabel" destination="idy-hg-1a8" id="Yub-ka-mQF"/>
                         <outlet property="sewerName" destination="TuD-y6-xzg" id="sBD-Lg-guE"/>
                         <outlet property="sewerPictureView" destination="17f-AQ-aCA" id="ysF-0K-C7H"/>
                         <outlet property="showAvailabilityBtn" destination="tsV-FR-c0c" id="wuz-k9-8jg"/>
@@ -365,7 +366,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="230"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="230"/>

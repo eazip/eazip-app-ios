@@ -34,6 +34,7 @@ class SewerProfileController: UIViewController {
         sewerName?.text = "Tamère"
         sewerName?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 30)
         sewerName?.textColor = UIColor.white
+        rankLabel?.text = "4.0"
         
         let sewerPicture = UIImage(named:"sewerPicture2")!
         sewerPictureView.image = sewerPicture
@@ -60,7 +61,16 @@ class SewerProfileController: UIViewController {
 
         view.addSubview(sewerName!)
         view.bringSubview(toFront: sewerName!)
-        sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant:-45).isActive = true
+        view.addSubview(rankLabel!)
+        view.bringSubview(toFront: rankLabel!)
+        sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -45).isActive = true
+        rankLabel?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -15).isActive = true
+        
+        setUpRank()
+    }
+    
+    func setUpRank() {
+       
     }
     
     func setUpDescription() {

@@ -30,6 +30,7 @@
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
 		0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C988BEA223EF9FD0079727C /* DefaultLightText.swift */; };
 		0C988BED22404B510079727C /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C988BEC22404B510079727C /* Avenir-Black.ttf */; };
+		0C988BF12245A8A70079727C /* LightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C988BF02245A8A70079727C /* LightLabel.swift */; };
 		2E5C60DC2200B48E00DEA84A /* ClothPickingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */; };
 		2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */; };
 		2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E42200D15600DEA84A /* ClothsList.swift */; };
@@ -73,6 +74,7 @@
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
 		0C988BEA223EF9FD0079727C /* DefaultLightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightText.swift; sourceTree = "<group>"; };
 		0C988BEC22404B510079727C /* Avenir-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Black.ttf"; sourceTree = "<group>"; };
+		0C988BF02245A8A70079727C /* LightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLabel.swift; sourceTree = "<group>"; };
 		2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingPageController.swift; sourceTree = "<group>"; };
 		2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingCell.swift; sourceTree = "<group>"; };
 		2E5C60E42200D15600DEA84A /* ClothsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsList.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				0C93BA562200523C00400BD2 /* ColoredActionButton.swift */,
 				0C93BA582200535500400BD2 /* WhiteActionButton.swift */,
 				0C988BEA223EF9FD0079727C /* DefaultLightText.swift */,
+				0C988BF02245A8A70079727C /* LightLabel.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
+				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,
 				0C1095C221FF0434004F742A /* GradientHelper.swift in Sources */,
 				2E5C60DC2200B48E00DEA84A /* ClothPickingPageController.swift in Sources */,
