@@ -9,7 +9,6 @@
 import UIKit
 
 class SewerProfileController: UIViewController {
-    
     @IBOutlet var sewerName : UILabel?
     @IBOutlet var rankLabel : UILabel?
     @IBOutlet var descriptionTitle : UILabel?
@@ -17,12 +16,18 @@ class SewerProfileController: UIViewController {
     @IBOutlet weak var sewerPictureView : UIImageView!
     @IBOutlet var showAvailabilityBtn : ColoredActionButton?
     @IBOutlet var lastWorksTitle : UILabel?
+    @IBOutlet var reviewsTitle : UILabel?
+    @IBOutlet var reviewsTableView : UITableView?
+    var sewerReviewsList: [SewerReview] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSewerPicture()
         setUpDescription()
         setUpLastWorks()
+        reviewsTableView?.delegate = self
+        reviewsTableView?.dataSource = self
+        
         
         showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
     }
@@ -66,10 +71,10 @@ class SewerProfileController: UIViewController {
         sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -45).isActive = true
         rankLabel?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -15).isActive = true
         
-        setUpRank()
+        setUpRating()
     }
     
-    func setUpRank() {
+    func setUpRating() {
        
     }
     
@@ -82,4 +87,33 @@ class SewerProfileController: UIViewController {
         lastWorksTitle?.text = "Dernières retouches"
     }
     
+    func setUpReviews() -> [SewerReview] {
+        reviewsTitle?.text = "Avis (4)"
+        var tempReviews: [SewerReview] = []
+        
+        let reviewOne = SewerReview(author: "Toto", textContent: "sqsfsqfqfs")
+        let reviewTwo = SewerReview(author: "Titi", textContent: "sqsfsqfqfs")
+        
+        tempReviews.append(reviewOne)
+        tempReviews.append(reviewTwo)
+        
+        return tempReviews
+    }
+}
+
+extension sewersReviewsListView: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sewerReviewsList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sewerReview = sewerReviewsList[indexPath.row]
+        
+        let cell = reviewsTableView.dequeueReusableCell(withIdentifier: "SewerReviewCell") as! SewerReviewCell
+        
+        cell.setSewerReview(sewerReview: SewerReview)
+        
+        return cell
+    }
 }
