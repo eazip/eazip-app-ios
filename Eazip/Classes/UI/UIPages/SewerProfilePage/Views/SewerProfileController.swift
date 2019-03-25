@@ -101,8 +101,7 @@ class SewerProfileController: UIViewController {
     }
 }
 
-extension sewersReviewsListView: UITableViewDataSource, UITableViewDelegate {
-    
+extension SewerProfileController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sewerReviewsList.count
     }
@@ -110,9 +109,9 @@ extension sewersReviewsListView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sewerReview = sewerReviewsList[indexPath.row]
         
-        let cell = reviewsTableView.dequeueReusableCell(withIdentifier: "SewerReviewCell") as! SewerReviewCell
+        let cell = reviewsTableView?.dequeueReusableCell(withIdentifier: "SewerReviewCell") as! SewerReviewCell
         
-        cell.setSewerReview(sewerReview: SewerReview)
+        cell.setSewerReview(review: sewerReview)
         
         return cell
     }

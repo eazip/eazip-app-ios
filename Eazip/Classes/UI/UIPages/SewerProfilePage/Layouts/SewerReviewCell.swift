@@ -19,8 +19,8 @@ class SewerReviewCell: UITableViewCell {
         self.layer.borderWidth = 1
         self.layer.borderColor = borderColor.cgColor
       
-        reviewTextContent.text = SewerReview.textContent
-        reviewAuthor.text = SewerReview.author
+        reviewTextContent.text = review.textContent
+        reviewAuthor.text = review.author
     }
 }
 
