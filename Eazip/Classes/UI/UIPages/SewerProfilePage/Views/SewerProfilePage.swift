@@ -11,6 +11,7 @@ import UIKit
 class SewersViewPageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var sewerProfileCollectionView : UICollectionView?
+    
     var profileViewCategories : Array<Any> = []
     var screenSize: CGRect!
     var screenWidth: CGFloat!
@@ -24,7 +25,6 @@ class SewersViewPageController: UIViewController, UICollectionViewDataSource, UI
         
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: screenWidth , height: screenWidth / 2)
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 1
         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
@@ -33,6 +33,8 @@ class SewersViewPageController: UIViewController, UICollectionViewDataSource, UI
         let dataSewer : SewerProfile = getSewer()
         let pictureView = setUpPictureView(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
         profileViewCategories.append(pictureView)
+        
+        sewerProfileCollectionView?.register(PictureViewCell.self, forCellWithReuseIdentifier: "PictureViewCell")
     }
     
     func getSewer() -> SewerProfile {
@@ -54,10 +56,25 @@ class SewersViewPageController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return profileViewCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let categoryIndex = indexPath.row
+        let categoryData = profileViewCategories[categoryIndex]
+        
+        switch(categoryIndex) {
+            case 0:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
+                cell.setData()
+                return cell
+        
+            default:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
+                cell.setData()
+                return cell
+        }
+    
+        
     }
 }
