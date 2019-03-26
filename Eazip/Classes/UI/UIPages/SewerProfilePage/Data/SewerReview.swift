@@ -12,11 +12,11 @@ import UIKit
 class SewerReview {
     var author: String
     var textContent: String
-    //var rating: int
+    var rating: Int
     
-    init(author: String, textContent: String) {
+    init(author: String, textContent: String, rating: Int ) {
         self.author = author
         self.textContent = textContent
-        //self.rating = rating
+        self.rating = rating
     }
 }

@@ -176,6 +176,7 @@
 			children = (
 				0C60F22C2249639700E4B5F2 /* Data */,
 				0C60F22722483A9600E4B5F2 /* Layouts */,
+				0C60F234224AD57B00E4B5F2 /* DescriptionView */,
 				0C1B938B223A9DAC00EC60B1 /* Views */,
 			);
 			path = SewerProfilePage;
@@ -311,6 +312,9 @@
 		0C60F22722483A9600E4B5F2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				0C60F236224AD5BF00E4B5F2 /* New Group */,
+				0C60F235224AD5B200E4B5F2 /* LastWorksView */,
+				0C60F233224AD57000E4B5F2 /* PictureView */,
 				0C60F22822483ADA00E4B5F2 /* SewerReviewCell.swift */,
 			);
 			path = Layouts;
@@ -323,6 +327,34 @@
 				0C60F231224AA65500E4B5F2 /* SewerProfile.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		0C60F233224AD57000E4B5F2 /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
+		0C60F234224AD57B00E4B5F2 /* DescriptionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DescriptionView;
+			sourceTree = "<group>";
+		};
+		0C60F235224AD5B200E4B5F2 /* LastWorksView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LastWorksView;
+			sourceTree = "<group>";
+		};
+		0C60F236224AD5BF00E4B5F2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2E5C60D72200B43700DEA84A /* ClothPickingPage */ = {
