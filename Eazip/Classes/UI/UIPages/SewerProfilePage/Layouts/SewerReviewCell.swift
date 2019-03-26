@@ -14,9 +14,10 @@ class SewerReviewCell: UITableViewCell {
     @IBOutlet weak var reviewAuthor: UILabel!
     
     func setSewerReview(review: SewerReview) {
-        let borderColor : UIColor = UIColor(named: "lightGrey")!
-        self.layer.masksToBounds = true
+        let borderColor : UIColor = UIColor(named: "borderLightGrey")!
+        self.layer.masksToBounds = false
         self.layer.borderWidth = 1
+        self.layer.cornerRadius = 5
         self.layer.borderColor = borderColor.cgColor
       
         reviewTextContent.text = review.textContent

@@ -17,7 +17,7 @@ class SewerProfileController: UIViewController {
     @IBOutlet var showAvailabilityBtn : ColoredActionButton?
     @IBOutlet var lastWorksTitle : UILabel?
     @IBOutlet var reviewsTitle : UILabel?
-    @IBOutlet var reviewsTableView : UITableView?
+    @IBOutlet var tableView : UITableView?
     var sewerReviewsList: [SewerReview] = []
 
     override func viewDidLoad() {
@@ -25,10 +25,13 @@ class SewerProfileController: UIViewController {
         setUpSewerPicture()
         setUpDescription()
         setUpLastWorks()
-        reviewsTableView?.delegate = self
-        reviewsTableView?.dataSource = self
-        
-        
+        sewerReviewsList = setUpReviews()
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.estimatedRowHeight = UITableViewAutomaticDimension
+        tableView?.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
+    
         showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
     }
     
@@ -48,15 +51,8 @@ class SewerProfileController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         sewerPictureView.addSubview(view)
         sewerPictureView.bringSubview(toFront: view)
-        
         view.frame.size.width = screenWidth
        
-        view.leftAnchor.constraint(equalTo:sewerPictureView.leftAnchor).isActive = true
-        view.rightAnchor.constraint(equalTo:sewerPictureView.rightAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo:sewerPictureView.trailingAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo:sewerPictureView.leadingAnchor).isActive = true
-        view.widthAnchor.constraint(equalTo:sewerPictureView.widthAnchor).isActive = true
-        
         let gradient = CAGradientLayer()
         gradient.frame = view.frame
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
@@ -91,8 +87,8 @@ class SewerProfileController: UIViewController {
         reviewsTitle?.text = "Avis (4)"
         var tempReviews: [SewerReview] = []
         
-        let reviewOne = SewerReview(author: "Toto", textContent: "sqsfsqfqfs")
-        let reviewTwo = SewerReview(author: "Titi", textContent: "sqsfsqfqfs")
+        let reviewOne = SewerReview(author: "Toto", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus")
+        let reviewTwo = SewerReview(author: "Titi", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus")
         
         tempReviews.append(reviewOne)
         tempReviews.append(reviewTwo)
@@ -102,6 +98,11 @@ class SewerProfileController: UIViewController {
 }
 
 extension SewerProfileController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sewerReviewsList.count
     }
@@ -109,7 +110,7 @@ extension SewerProfileController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sewerReview = sewerReviewsList[indexPath.row]
         
-        let cell = reviewsTableView?.dequeueReusableCell(withIdentifier: "SewerReviewCell") as! SewerReviewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SewerReviewCell") as! SewerReviewCell
         
         cell.setSewerReview(review: sewerReview)
         

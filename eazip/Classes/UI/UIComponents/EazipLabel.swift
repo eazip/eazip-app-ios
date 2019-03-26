@@ -25,7 +25,7 @@ class EazipLabel: UILabel {
     }
     
     func setUp() {
-        self.font = FontHelper.eazipDefaultBlackFontWithSize(size: 24)
+        self.font = FontHelper.eazipDefaultBlackFontWithSize(size: 25)
         self.textAlignment = .left
         self.numberOfLines = 0
         self.lineBreakMode = .byWordWrapping
