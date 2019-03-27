@@ -25,7 +25,9 @@ class PictureViewCell: UICollectionViewCell {
         gradientView.translatesAutoresizingMaskIntoConstraints = false
         sewerPictureView.addSubview(gradientView)
         sewerPictureView.bringSubview(toFront: gradientView)
-        gradientView.frame.size.width = self.frame.size.width
+        gradientView.frame.size.width = sewerPictureView.frame.size.width
+        //gradientView.trailingAnchor.constraint(equalTo: sewerPictureView.trailingAnchor).isActive = true
+        //gradientView.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor).isActive = true
         
         //Picture gradient properties
         let gradient = CAGradientLayer()

@@ -30,7 +30,7 @@ class SewerProfileController: UIViewController {
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 600
         
-        showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
+        
     }
     
     func setUpSewerPicture() {
@@ -73,16 +73,15 @@ class SewerProfileController: UIViewController {
     }
     
     func setUpDescription() {
-        descriptionTitle?.text = "Description"
-        descriptionContent?.text = "Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset."
+        
     }
     
     func setUpReviews() -> [SewerReview] {
         reviewsTitle?.text = "Avis (4)"
         var tempReviews: [SewerReview] = []
         
-        let reviewOne = SewerReview(author: "Toto", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus")
-        let reviewTwo = SewerReview(author: "Titi", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus")
+        let reviewOne = SewerReview(author: "Toto", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus", rating: 2)
+        let reviewTwo = SewerReview(author: "Titi", textContent: "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus", rating: 2)
         
         tempReviews.append(reviewOne)
         tempReviews.append(reviewTwo)
