@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReviewsViewCell" id="gTV-IL-0wX" customClass="ReviewViewCell" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="246"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="246"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jND-ML-u1g" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="52" width="376" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-Yk-cru" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="202" width="376" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="jND-ML-u1g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Jn-b8-OkZ"/>
+                <constraint firstAttribute="trailing" secondItem="jND-ML-u1g" secondAttribute="trailing" id="BKt-LW-jPr"/>
+                <constraint firstAttribute="bottom" secondItem="UFy-Yk-cru" secondAttribute="bottom" constant="23" id="Ubx-yM-U9I"/>
+                <constraint firstAttribute="trailing" secondItem="UFy-Yk-cru" secondAttribute="trailing" id="czr-4f-p4J"/>
+                <constraint firstItem="UFy-Yk-cru" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fEO-zA-dAb"/>
+                <constraint firstItem="jND-ML-u1g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="52" id="qLA-RX-S4A"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="376" height="246"/>
+            <connections>
+                <outlet property="reviewAuthor" destination="UFy-Yk-cru" id="GeS-GG-tfs"/>
+                <outlet property="reviewTextContent" destination="jND-ML-u1g" id="BT8-Zg-DIs"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="86"/>
+        </collectionViewCell>
+    </objects>
+</document>
