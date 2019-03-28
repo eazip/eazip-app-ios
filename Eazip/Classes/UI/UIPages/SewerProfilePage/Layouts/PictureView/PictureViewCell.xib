@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,33 +24,50 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LoO-HF-8R3">
                         <rect key="frame" x="0.0" y="0.0" width="352" height="297"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTa-Rx-FLW" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                        <rect key="frame" x="28" y="231" width="324" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYX-b4-f7N" customClass="LightLabel" customModule="Eazip" customModuleProvider="target">
-                        <rect key="frame" x="28" y="267" width="324" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-Bk-X1S">
+                        <rect key="frame" x="0.0" y="0.0" width="352" height="297"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYX-b4-f7N" customClass="LightLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="20" y="261" width="324" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTa-Rx-FLW" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="20" y="236.5" width="324" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zYX-b4-f7N" firstAttribute="firstBaseline" secondItem="eTa-Rx-FLW" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="4UW-zB-9t0"/>
+                            <constraint firstItem="zYX-b4-f7N" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="4zC-iO-vBK"/>
+                            <constraint firstAttribute="trailing" secondItem="eTa-Rx-FLW" secondAttribute="trailing" constant="8" id="Om3-Kc-o8x"/>
+                            <constraint firstItem="eTa-Rx-FLW" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="dJA-0z-CJA"/>
+                            <constraint firstAttribute="bottom" secondItem="zYX-b4-f7N" secondAttribute="bottom" constant="15" id="fJm-A9-xTo"/>
+                            <constraint firstAttribute="trailing" secondItem="zYX-b4-f7N" secondAttribute="trailing" constant="8" id="pVG-qG-azz"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="eTa-Rx-FLW" secondAttribute="trailing" id="EMh-8e-XJH"/>
+                <constraint firstItem="2rO-Bk-X1S" firstAttribute="height" secondItem="LoO-HF-8R3" secondAttribute="height" id="3x9-4W-otf"/>
+                <constraint firstAttribute="trailing" secondItem="2rO-Bk-X1S" secondAttribute="trailing" id="Ib3-dR-ens"/>
                 <constraint firstAttribute="trailing" secondItem="LoO-HF-8R3" secondAttribute="trailing" id="Sb3-MJ-L2b"/>
                 <constraint firstAttribute="bottom" secondItem="LoO-HF-8R3" secondAttribute="bottom" id="Yjm-fi-z7t"/>
+                <constraint firstItem="2rO-Bk-X1S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YqI-D0-vlg"/>
+                <constraint firstItem="2rO-Bk-X1S" firstAttribute="width" secondItem="LoO-HF-8R3" secondAttribute="width" id="b3m-eZ-sJf"/>
                 <constraint firstItem="LoO-HF-8R3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="c9f-ng-unz"/>
-                <constraint firstItem="eTa-Rx-FLW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="e5e-OU-9Bk"/>
-                <constraint firstItem="zYX-b4-f7N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="28" id="ec9-P5-FD7"/>
-                <constraint firstAttribute="trailing" secondItem="zYX-b4-f7N" secondAttribute="trailing" id="pJb-Vt-B5h"/>
+                <constraint firstItem="2rO-Bk-X1S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iEE-PX-cIo"/>
+                <constraint firstAttribute="bottom" secondItem="2rO-Bk-X1S" secondAttribute="bottom" id="nll-rn-HAl"/>
                 <constraint firstItem="LoO-HF-8R3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="thh-17-7pY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="352" height="297"/>
             <connections>
+                <outlet property="gradientView" destination="2rO-Bk-X1S" id="scs-FU-ksR"/>
                 <outlet property="sewerName" destination="eTa-Rx-FLW" id="WMg-8s-MYf"/>
                 <outlet property="sewerPictureView" destination="LoO-HF-8R3" id="fgb-z5-v9N"/>
                 <outlet property="sewerRating" destination="zYX-b4-f7N" id="Hl9-kP-kbn"/>

@@ -13,7 +13,8 @@ class PictureViewCell: UICollectionViewCell {
     @IBOutlet weak var sewerPictureView: UIImageView!
     @IBOutlet weak var sewerName: UILabel!
     @IBOutlet weak var sewerRating: UILabel!
-
+    @IBOutlet weak var gradientView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,21 +22,16 @@ class PictureViewCell: UICollectionViewCell {
         sewerName?.textColor = UIColor.white
         
         //Picture gradient properties
-        let gradientView = UIView(frame: sewerPictureView.frame)
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
-        sewerPictureView.addSubview(gradientView)
-        sewerPictureView.bringSubview(toFront: gradientView)
-        gradientView.frame.size.width = sewerPictureView.frame.size.width
-        //gradientView.trailingAnchor.constraint(equalTo: sewerPictureView.trailingAnchor).isActive = true
-        //gradientView.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor).isActive = true
+        gradientView.backgroundColor = UIColor.clear
+        //gradientView.backgroundColor = UIColor.blue
         
         //Picture gradient properties
         let gradient = CAGradientLayer()
         gradient.frame = gradientView.frame
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradient.locations = [0.0, 1.0]
-        
-        gradientView.layer.insertSublayer(gradient, at: 0)
+        gradientView.layer.addSublayer(gradient)
+        gradient.frame = gradientView.bounds
         
         //Set data to front view
         gradientView.addSubview(sewerName!)
