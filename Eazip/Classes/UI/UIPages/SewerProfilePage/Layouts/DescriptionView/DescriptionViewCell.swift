@@ -18,9 +18,9 @@ class DescriptionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setData() {
+    func setData(biography: String) {
         descriptionTitle?.text = "Description"
-        descriptionContent?.text = "Denique Antiochensis ordinis vertices sub uno elogio iussit occidi ideo efferatus, quod ei celebrari vilitatem intempestivam urgenti, cum inpenderet inopia, gravius rationabili responderunt; et perissent ad unum ni comes orientis tunc Honoratus fixa constantia restitisset."
+        descriptionContent?.text = biography
         showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
     }
 

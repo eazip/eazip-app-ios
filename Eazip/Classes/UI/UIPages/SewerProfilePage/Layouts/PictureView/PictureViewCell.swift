@@ -44,10 +44,10 @@ class PictureViewCell: UICollectionViewCell {
         sewerRating?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -15).isActive = true
     }
     
-    func setData() {
-        sewerPictureView.image = UIImage(named:"sewerPicture2")
-        sewerName.text = "Milouce"
-        sewerRating.text = String(4) + ".0"
+    func setData(picture: UIImage, name: String, rating: Int) {
+        sewerPictureView.image = picture
+        sewerName.text = name
+        sewerRating.text = String(rating) + ".0"
     }
 
 }

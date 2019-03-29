@@ -22,8 +22,8 @@ class ReviewViewCell: UICollectionViewCell {
         reviewAuthor.font = FontHelper.avenirBlackFontWithSize(size: 13)
     }
     
-    func setData() {
-        reviewTextContent.text = "Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, amicorum causa honesta faciamus. Ut ab amicis honesta petamus, amicorum causa honesta faciamus"
-        reviewAuthor.text = "Minouce (23 avis)"
+    func setData(rating: Int, textContent: String, author: String) {
+        reviewTextContent.text = textContent
+        reviewAuthor.text = author
     }
 }

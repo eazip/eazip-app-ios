@@ -11,19 +11,12 @@ import UIKit
 class SewerProfilePageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var sewerProfileCollectionView: UICollectionView?
-   
-    var profileViewCategories : Array<Any> = []
-    var reviewsViews : [SewerReview] = []
-    var screenSize: CGRect!
-    var screenWidth: CGFloat!
-    var screenHeight: CGFloat!
-    
+    //Data
+    let dataSewer = SewerProfile()
+    var profileSections : Int = 0
+    var reviewsSection : [SewerReview] = []
+
     override func viewDidLoad() {
-        //Screen properties
-        screenSize = UIScreen.main.bounds
-        screenWidth = screenSize.size.width
-        screenHeight = screenSize.height
-        
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 1
@@ -33,37 +26,23 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
         sewerProfileCollectionView?.delegate = self
         sewerProfileCollectionView?.dataSource = self
         
-        //Data
-        let dataSewer = SewerProfile()
-
-        //Sections
-        let pictureView = setUpPictureView(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
-        let descriptionView = setUpDescriptionView(biography: dataSewer.sewerBiography)
-        
-        //Init sections
-        profileViewCategories.append(pictureView)
-        profileViewCategories.append(descriptionView)
-        
-        reviewsViews = setUpReviewView(reviews: dataSewer.sewerReviews)
-
+        setUpPictureView()
+        setUpDescriptionView()
+        reviewsSection = setUpReviewView(reviews: dataSewer.sewerReviews)
     }
     
-    func setUpPictureView(picture: UIImage, name: String, rating: Int) -> [String: Any] {
+    func setUpPictureView() {
         sewerProfileCollectionView?.register(UINib(nibName:"PictureViewCell", bundle: nil), forCellWithReuseIdentifier: "PictureViewCell")
-        
-        let personalInformation: [String: Any] = [
-            "picture": picture,
-            "name": name,
-            "rating": rating
-        ]
-        
-       return personalInformation
+        profileSections = profileSections + 1
     }
     
-    func setUpDescriptionView(biography: String) -> String {
+    func setUpDescriptionView() {
         sewerProfileCollectionView?.register(UINib(nibName:"DescriptionViewCell", bundle: nil), forCellWithReuseIdentifier: "DescriptionViewCell")
-        
-        return biography
+        profileSections = profileSections + 1
+    }
+    
+    func setUpLastWorksView(){
+        profileSections = profileSections + 1
     }
     
     func setUpReviewView(reviews: [SewerReview]) -> [SewerReview] {
@@ -79,34 +58,35 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (section == 0) ? profileViewCategories.count : reviewsViews.count
+        return (section == 0) ? profileSections : reviewsSection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let categoryIndex = indexPath.row
-            let categoryData = profileViewCategories[categoryIndex]
-            
             switch(categoryIndex) {
                 case 0:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
-                    cell.setData()
+                    cell.setData(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
+                    
                     return cell
                 case 1:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionViewCell", for: indexPath) as! DescriptionViewCell
-                    cell.setData()
+                    cell.setData(biography: dataSewer.sewerBiography)
+                    
                     return cell
                 default:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
-                    cell.setData()
+                    cell.setData(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
+                    
                     return cell
             }
         } else {
             let reviewIndex = indexPath.row
-            let reviewData = reviewsViews[reviewIndex]
+            let review = reviewsSection[reviewIndex]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewViewCell", for: indexPath) as! ReviewViewCell
+            cell.setData(rating: review.rating, textContent: review.textContent, author: review.author)
             
-            cell.setData()
             return cell
         }
     }
