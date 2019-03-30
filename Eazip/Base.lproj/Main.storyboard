@@ -264,7 +264,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1q-Ej-14M" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="36" y="8" width="331" height="34"/>
+                                            <rect key="frame" x="8" y="8" width="359" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -273,7 +273,7 @@
                                     <constraints>
                                         <constraint firstItem="e1q-Ej-14M" firstAttribute="top" secondItem="CMw-nq-Wx1" secondAttribute="topMargin" id="U40-vw-QKG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="e1q-Ej-14M" secondAttribute="trailing" id="cA7-aP-Epy"/>
-                                        <constraint firstItem="e1q-Ej-14M" firstAttribute="leading" secondItem="CMw-nq-Wx1" secondAttribute="leadingMargin" constant="28" id="jRm-86-0wS"/>
+                                        <constraint firstItem="e1q-Ej-14M" firstAttribute="leading" secondItem="CMw-nq-Wx1" secondAttribute="leadingMargin" id="jRm-86-0wS"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="e1q-Ej-14M" secondAttribute="bottom" id="lD6-la-3R0"/>
                                     </constraints>
                                     <connections>

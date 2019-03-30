@@ -35,6 +35,8 @@
 		0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F240224BED2200E4B5F2 /* ReviewViewCell.swift */; };
 		0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */; };
 		0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */; };
+		0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */; };
+		0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */; };
 		0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */; };
 		0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA562200523C00400BD2 /* ColoredActionButton.swift */; };
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
@@ -89,6 +91,8 @@
 		0C60F240224BED2200E4B5F2 /* ReviewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 		0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewViewCell.xib; sourceTree = "<group>"; };
 		0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionTitle.swift; sourceTree = "<group>"; };
+		0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWorksViewCell.swift; sourceTree = "<group>"; };
+		0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastWorksViewCell.xib; sourceTree = "<group>"; };
 		0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButtonHelper.swift; sourceTree = "<group>"; };
 		0C93BA562200523C00400BD2 /* ColoredActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredActionButton.swift; sourceTree = "<group>"; };
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 		0C60F235224AD5B200E4B5F2 /* LastWorksView */ = {
 			isa = PBXGroup;
 			children = (
+				0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */,
+				0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */,
 			);
 			path = LastWorksView;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
+				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
 				0C1B9386223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf in Resources */,
 				0C1B9388223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf in Resources */,
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
@@ -540,6 +547,7 @@
 				2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
+				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 			);

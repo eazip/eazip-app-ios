@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SewerProfilePageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+class SewerProfilePageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     @IBOutlet var sewerProfileCollectionView: UICollectionView?
     //Data
     let dataSewer = SewerProfile()
@@ -28,6 +27,7 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
         
         setUpPictureView()
         setUpDescriptionView()
+        setUpLastWorksView()
         reviewsSection = setUpReviewView(reviews: dataSewer.sewerReviews)
     }
     
@@ -42,6 +42,7 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     }
     
     func setUpLastWorksView(){
+        sewerProfileCollectionView?.register(UINib(nibName:"LastWorksViewCell", bundle: nil), forCellWithReuseIdentifier: "LastWorksViewCell")
         profileSections = profileSections + 1
     }
     
@@ -73,6 +74,11 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
                 case 1:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionViewCell", for: indexPath) as! DescriptionViewCell
                     cell.setData(biography: dataSewer.sewerBiography)
+                    
+                    return cell
+                case 2:
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LastWorksViewCell", for: indexPath) as! LastWorksViewCell
+                    cell.setData(works: dataSewer.sewerWorks as! [UIImage])
                     
                     return cell
                 default:
