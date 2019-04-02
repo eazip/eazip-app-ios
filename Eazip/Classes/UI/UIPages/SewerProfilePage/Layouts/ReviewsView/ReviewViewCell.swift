@@ -22,6 +22,17 @@ class ReviewViewCell: UICollectionViewCell {
         reviewAuthor.font = FontHelper.avenirBlackFontWithSize(size: 13)
     }
     
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
+    }
+    
     func setData(rating: Int, textContent: String, author: String) {
         reviewTextContent.text = textContent
         reviewAuthor.text = author

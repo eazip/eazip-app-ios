@@ -14,21 +14,30 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     let dataSewer = SewerProfile()
     var profileSections : Int = 0
     var reviewsSection : [SewerReview] = []
+    var screenSize: CGRect!
+    var screenWidth: CGFloat!
+    var screenHeight: CGFloat!
 
     override func viewDidLoad() {
-        //Layout content position
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 1
-        layout.minimumLineSpacing = 1
-        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
-        
-        sewerProfileCollectionView?.delegate = self
-        sewerProfileCollectionView?.dataSource = self
-        
         setUpPictureView()
         setUpDescriptionView()
         setUpLastWorksView()
         reviewsSection = setUpReviewView(reviews: dataSewer.sewerReviews)
+     
+        initLayout()
+        
+        sewerProfileCollectionView?.delegate = self
+        sewerProfileCollectionView?.dataSource = self
+    }
+    
+    func initLayout() {
+        //Layout content position
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 20
+        layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
+        layout.estimatedItemSize = CGSize(width: 1, height:1)
+        self.sewerProfileCollectionView?.collectionViewLayout = layout
     }
     
     func setUpPictureView() {
@@ -60,6 +69,17 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (section == 0) ? profileSections : reviewsSection.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size : CGSize
+        if indexPath.section == 0 {
+            size = CGSize(width: (sewerProfileCollectionView?.frame.width)!, height: 500)
+            return size
+        } else {
+            size = CGSize(width: (sewerProfileCollectionView?.frame.width)!-30, height: 250)
+            return size
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,7 +120,7 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
        
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "profileSectionTitle", for: indexPath) as! ProfileSectionTitle
-        sectionTitle.setData()
+        sectionTitle.setData(reviewsCount: reviewsSection.count)
         
         return sectionTitle
     }

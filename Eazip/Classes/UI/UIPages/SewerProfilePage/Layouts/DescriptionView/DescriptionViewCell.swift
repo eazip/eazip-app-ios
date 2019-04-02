@@ -18,9 +18,25 @@ class DescriptionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
     func setData(biography: String) {
         descriptionTitle?.text = "Description"
         descriptionContent?.text = biography
+        descriptionContent?.sizeToFit()
         showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
     }
 

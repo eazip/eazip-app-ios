@@ -11,7 +11,7 @@ import UIKit
 class ProfileSectionTitle : UICollectionReusableView {
     @IBOutlet weak var titleLabel : UILabel!
     
-    func setData() {
-        titleLabel.text = "Avis (2)"
+    func setData(reviewsCount: Int) {
+        titleLabel.text = "Avis (" + String(reviewsCount) + ")"
     }
 }

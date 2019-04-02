@@ -15,24 +15,22 @@ class PictureViewCell: UICollectionViewCell {
     @IBOutlet weak var sewerRating: UILabel!
     @IBOutlet weak var gradientView: UIView!
     
+    let gradient: CAGradientLayer = CAGradientLayer()
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         sewerName?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 30)
         sewerName?.textColor = UIColor.white
         
         //Picture gradient properties
         gradientView.backgroundColor = UIColor.clear
-        //gradientView.backgroundColor = UIColor.blue
-        
+    
         //Picture gradient properties
-        let gradient = CAGradientLayer()
-        gradient.frame = gradientView.frame
-        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-        gradient.locations = [0.0, 1.0]
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.8).cgColor]
+        gradient.startPoint = CGPoint(x: 0.5, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
         gradientView.layer.addSublayer(gradient)
-        gradient.frame = gradientView.bounds
-        
+ 
         //Set data to front view
         gradientView.addSubview(sewerName!)
         gradientView.addSubview(sewerRating!)
@@ -42,6 +40,22 @@ class PictureViewCell: UICollectionViewCell {
         //Data constraints
         sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -45).isActive = true
         sewerRating?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -15).isActive = true
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradient.frame = bounds
     }
     
     func setData(picture: UIImage, name: String, rating: Int) {
