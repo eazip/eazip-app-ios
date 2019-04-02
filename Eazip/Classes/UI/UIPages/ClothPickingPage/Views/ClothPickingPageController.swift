@@ -21,6 +21,7 @@ class ClothPickingListScreen: UIViewController {
         clothsList = createArray()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = UIColor.clear
     }
     
     func createArray() -> [ClothItem] {
