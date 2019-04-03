@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DescriptionViewCell: UICollectionViewCell {
+class DescriptionViewCell: UICollectionViewCell, ConfigurableCell {
     
     @IBOutlet var descriptionTitle : UILabel?
     @IBOutlet var descriptionContent : UILabel?
@@ -33,7 +33,7 @@ class DescriptionViewCell: UICollectionViewCell {
         super.layoutSubviews()
     }
     
-    func setData(biography: String) {
+    func configure(data biography: String) {
         descriptionTitle?.text = "Description"
         descriptionContent?.text = biography
         descriptionContent?.sizeToFit()

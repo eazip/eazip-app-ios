@@ -43,6 +43,8 @@
 		0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C988BEA223EF9FD0079727C /* DefaultLightText.swift */; };
 		0C988BED22404B510079727C /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C988BEC22404B510079727C /* Avenir-Black.ttf */; };
 		0C988BF12245A8A70079727C /* LightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C988BF02245A8A70079727C /* LightLabel.swift */; };
+		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
+		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
 		2E5C60DC2200B48E00DEA84A /* ClothPickingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */; };
 		2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */; };
 		2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E42200D15600DEA84A /* ClothsList.swift */; };
@@ -99,6 +101,8 @@
 		0C988BEA223EF9FD0079727C /* DefaultLightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightText.swift; sourceTree = "<group>"; };
 		0C988BEC22404B510079727C /* Avenir-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Black.ttf"; sourceTree = "<group>"; };
 		0C988BF02245A8A70079727C /* LightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLabel.swift; sourceTree = "<group>"; };
+		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
+		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
 		2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingPageController.swift; sourceTree = "<group>"; };
 		2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingCell.swift; sourceTree = "<group>"; };
 		2E5C60E42200D15600DEA84A /* ClothsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsList.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				0C1095B921FCB7DA004F742A /* FontHelper.swift */,
 				0C1095C121FF0434004F742A /* GradientHelper.swift */,
 				0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */,
+				0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -188,7 +193,7 @@
 		0C1B9389223A9D6600EC60B1 /* SewerProfilePage */ = {
 			isa = PBXGroup;
 			children = (
-				0C60F244224C234700E4B5F2 /* Model */,
+				0CD685F822539C78009C9396 /* Template */,
 				0C60F22C2249639700E4B5F2 /* Data */,
 				0C60F22722483A9600E4B5F2 /* Layouts */,
 				0C1B938B223A9DAC00EC60B1 /* Views */,
@@ -325,11 +330,11 @@
 		0C60F22722483A9600E4B5F2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				0C60F237224AD95D00E4B5F2 /* ReviewsView */,
-				0C60F235224AD5B200E4B5F2 /* LastWorksView */,
-				0C60F233224AD57000E4B5F2 /* PictureView */,
-				0C60F234224AD57B00E4B5F2 /* DescriptionView */,
-				0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */,
+				0CD685F7225395BB009C9396 /* Header */,
+				0C60F237224AD95D00E4B5F2 /* Reviews */,
+				0C60F235224AD5B200E4B5F2 /* LastWorks */,
+				0C60F233224AD57000E4B5F2 /* Picture */,
+				0C60F234224AD57B00E4B5F2 /* Biography */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -343,47 +348,56 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		0C60F233224AD57000E4B5F2 /* PictureView */ = {
+		0C60F233224AD57000E4B5F2 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
 				0C60F238224ADBC300E4B5F2 /* PictureViewCell.swift */,
 				0C60F239224ADBC300E4B5F2 /* PictureViewCell.xib */,
 			);
-			path = PictureView;
+			path = Picture;
 			sourceTree = "<group>";
 		};
-		0C60F234224AD57B00E4B5F2 /* DescriptionView */ = {
+		0C60F234224AD57B00E4B5F2 /* Biography */ = {
 			isa = PBXGroup;
 			children = (
 				0C60F23C224AFB3900E4B5F2 /* DescriptionViewCell.swift */,
 				0C60F23D224AFB3900E4B5F2 /* DescriptionViewCell.xib */,
 			);
-			path = DescriptionView;
+			path = Biography;
 			sourceTree = "<group>";
 		};
-		0C60F235224AD5B200E4B5F2 /* LastWorksView */ = {
+		0C60F235224AD5B200E4B5F2 /* LastWorks */ = {
 			isa = PBXGroup;
 			children = (
 				0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */,
 				0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */,
 			);
-			path = LastWorksView;
+			path = LastWorks;
 			sourceTree = "<group>";
 		};
-		0C60F237224AD95D00E4B5F2 /* ReviewsView */ = {
+		0C60F237224AD95D00E4B5F2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
 				0C60F240224BED2200E4B5F2 /* ReviewViewCell.swift */,
 				0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */,
 			);
-			path = ReviewsView;
+			path = Reviews;
 			sourceTree = "<group>";
 		};
-		0C60F244224C234700E4B5F2 /* Model */ = {
+		0CD685F7225395BB009C9396 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */,
 			);
-			path = Model;
+			path = Header;
+			sourceTree = "<group>";
+		};
+		0CD685F822539C78009C9396 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */,
+			);
+			path = Template;
 			sourceTree = "<group>";
 		};
 		2E5C60D72200B43700DEA84A /* ClothPickingPage */ = {
@@ -535,6 +549,7 @@
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
+				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C60F230224AA24D00E4B5F2 /* SewerProfilePage.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
@@ -546,6 +561,7 @@
 				0C60F22E224963B500E4B5F2 /* SewerReview.swift in Sources */,
 				2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
+				0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,

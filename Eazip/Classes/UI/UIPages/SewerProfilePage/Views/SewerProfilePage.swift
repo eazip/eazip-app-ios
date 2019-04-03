@@ -9,25 +9,23 @@
 import UIKit
 
 class SewerProfilePageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+    
     @IBOutlet var sewerProfileCollectionView: UICollectionView?
+    
     //Data
     let dataSewer = SewerProfile()
     var profileSections : Int = 0
     var reviewsSection : [SewerReview] = []
-    var screenSize: CGRect!
-    var screenWidth: CGFloat!
-    var screenHeight: CGFloat!
 
     override func viewDidLoad() {
+        //Init CollectionViewCell Layout
+        initLayout()
+        
+        //Init custum cells
         setUpPictureView()
         setUpDescriptionView()
         setUpLastWorksView()
-        reviewsSection = setUpReviewView(reviews: dataSewer.sewerReviews)
-     
-        initLayout()
-        
-        sewerProfileCollectionView?.delegate = self
-        sewerProfileCollectionView?.dataSource = self
+        setUpReviewView()
     }
     
     func initLayout() {
@@ -38,29 +36,35 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
         layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
         layout.estimatedItemSize = CGSize(width: 1, height:1)
         self.sewerProfileCollectionView?.collectionViewLayout = layout
+        
+        //Init delegate and datasource
+        sewerProfileCollectionView?.delegate = self
+        sewerProfileCollectionView?.dataSource = self
     }
     
     func setUpPictureView() {
-        sewerProfileCollectionView?.register(UINib(nibName:"PictureViewCell", bundle: nil), forCellWithReuseIdentifier: "PictureViewCell")
-        profileSections = profileSections + 1
+         initSewerProfileCell(cellIdentifier: "PictureViewCell")
     }
     
     func setUpDescriptionView() {
-        sewerProfileCollectionView?.register(UINib(nibName:"DescriptionViewCell", bundle: nil), forCellWithReuseIdentifier: "DescriptionViewCell")
-        profileSections = profileSections + 1
+        initSewerProfileCell(cellIdentifier: "DescriptionViewCell")
     }
     
     func setUpLastWorksView(){
-        sewerProfileCollectionView?.register(UINib(nibName:"LastWorksViewCell", bundle: nil), forCellWithReuseIdentifier: "LastWorksViewCell")
-        profileSections = profileSections + 1
+        initSewerProfileCell(cellIdentifier: "LastWorksViewCell")
     }
     
-    func setUpReviewView(reviews: [SewerReview]) -> [SewerReview] {
-        for _ in reviews {
+    func setUpReviewView() {
+        let dataReviews = dataSewer.sewerReviews
+        for _ in dataReviews {
             sewerProfileCollectionView?.register(UINib(nibName:"ReviewViewCell", bundle: nil), forCellWithReuseIdentifier: "ReviewViewCell")
         }
-        
-        return reviews
+        reviewsSection = dataReviews
+    }
+    
+    func initSewerProfileCell(cellIdentifier: String) {
+        sewerProfileCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        profileSections = profileSections + 1
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -84,29 +88,13 @@ class SewerProfilePageController: UIViewController, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let categoryIndex = indexPath.row
-            switch(categoryIndex) {
-                case 0:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
-                    cell.setData(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
-                    
-                    return cell
-                case 1:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionViewCell", for: indexPath) as! DescriptionViewCell
-                    cell.setData(biography: dataSewer.sewerBiography)
-                    
-                    return cell
-                case 2:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LastWorksViewCell", for: indexPath) as! LastWorksViewCell
-                    cell.setData(works: dataSewer.sewerWorks as! [UIImage])
-                    
-                    return cell
-                default:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureViewCell", for: indexPath) as! PictureViewCell
-                    cell.setData(picture: dataSewer.sewerPicture, name: dataSewer.sewerName, rating: dataSewer.sewerRating)
-                    
-                    return cell
-            }
+            let viewModel = SewerProfileScreen(data: dataSewer)
+            let itemsInView = viewModel.templateWithData()
+            let item = itemsInView[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type(of: item).reuseId, for: indexPath)
+            item.configure(cell: cell)
+            
+            return cell
         } else {
             let reviewIndex = indexPath.row
             let review = reviewsSection[reviewIndex]

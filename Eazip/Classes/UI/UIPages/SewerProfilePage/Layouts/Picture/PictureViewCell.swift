@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PictureViewCell: UICollectionViewCell {
-    
+class PictureViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var sewerPictureView: UIImageView!
     @IBOutlet weak var sewerName: UILabel!
     @IBOutlet weak var sewerRating: UILabel!
@@ -58,10 +57,10 @@ class PictureViewCell: UICollectionViewCell {
         gradient.frame = bounds
     }
     
-    func setData(picture: UIImage, name: String, rating: Int) {
-        sewerPictureView.image = picture
-        sewerName.text = name
-        sewerRating.text = String(rating) + ".0"
+    func configure(data personal: [String : Any]) {
+        let rating : String = String(describing: personal["rating"] as? Int ?? 0)
+        sewerPictureView.image = personal["picture"] as? UIImage
+        sewerName.text = personal["name"] as? String
+        sewerRating.text = rating + ".0"
     }
-
 }

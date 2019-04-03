@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastWorksViewCell: UICollectionViewCell, UIScrollViewDelegate {
+class LastWorksViewCell: UICollectionViewCell, ConfigurableCell, UIScrollViewDelegate {
 
     @IBOutlet weak var lastWorksScrollView: UIScrollView!
     @IBOutlet weak var lastWorksLabel: UILabel!
@@ -47,14 +47,12 @@ class LastWorksViewCell: UICollectionViewCell, UIScrollViewDelegate {
         lastWorksScrollView.bringSubview(toFront: lastWorksPageControl)
     }
     
-    func setData(works: [UIImage]) {
+    func configure(data works: [UIImage]) {
         lastWorksLabel.text = "Dernières retouches"
         
         for work in works {
             lastWorks.append(work)
         }
-        
-        
     }
     
 
