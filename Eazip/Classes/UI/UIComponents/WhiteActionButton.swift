@@ -27,6 +27,7 @@ class WhiteActionButton: UIButton {
         self.setEazipButtonProperties()
         self.backgroundColor = UIColor.white
         self.setTitleColor(.black, for: .normal)
+        self.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 20)
     }
 }
 
