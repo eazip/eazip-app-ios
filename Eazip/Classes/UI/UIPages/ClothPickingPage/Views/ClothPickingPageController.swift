@@ -11,6 +11,8 @@ import UIKit
 class ClothPickingListScreen: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var validationButton: UIButton!
+    @IBOutlet weak var clothPickingScreenTitle: UILabel!
     
     var clothsList: [ClothItem] = []
     
@@ -21,6 +23,13 @@ class ClothPickingListScreen: UIViewController {
         clothsList = createArray()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        
+        validationButton.layer.cornerRadius = 25
+        validationButton.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 20)
+        
+        clothPickingScreenTitle.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
+        
     }
     
     func createArray() -> [ClothItem] {
