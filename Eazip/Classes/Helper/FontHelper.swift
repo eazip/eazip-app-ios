@@ -16,8 +16,4 @@ struct FontHelper {
     static func eazipDefaultBlackFontWithSize(size: CGFloat) -> UIFont {
         return UIFont(name: "FrankRuhlLibre-Black", size: size)!
     }
-    
-    static func avenirBookFontWithSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "avenir-book", size: size)!
-    }
 }
