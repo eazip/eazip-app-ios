@@ -26,7 +26,7 @@
 		0C57C44221FC8C67007343C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C44121FC8C67007343C7 /* Assets.xcassets */; };
 		0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F22A2248408F00E4B5F2 /* BoldLabel.swift */; };
 		0C60F22E224963B500E4B5F2 /* SewerReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F22D224963B500E4B5F2 /* SewerReview.swift */; };
-		0C60F230224AA24D00E4B5F2 /* SewerProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F22F224AA24D00E4B5F2 /* SewerProfilePage.swift */; };
+		0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F22F224AA24D00E4B5F2 /* SewerProfileViewController.swift */; };
 		0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F231224AA65500E4B5F2 /* SewerProfile.swift */; };
 		0C60F23A224ADBC300E4B5F2 /* PictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F238224ADBC300E4B5F2 /* PictureViewCell.swift */; };
 		0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F239224ADBC300E4B5F2 /* PictureViewCell.xib */; };
@@ -84,7 +84,7 @@
 		0C57C44121FC8C67007343C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C60F22A2248408F00E4B5F2 /* BoldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldLabel.swift; sourceTree = "<group>"; };
 		0C60F22D224963B500E4B5F2 /* SewerReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerReview.swift; sourceTree = "<group>"; };
-		0C60F22F224AA24D00E4B5F2 /* SewerProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePage.swift; sourceTree = "<group>"; };
+		0C60F22F224AA24D00E4B5F2 /* SewerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfileViewController.swift; sourceTree = "<group>"; };
 		0C60F231224AA65500E4B5F2 /* SewerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfile.swift; sourceTree = "<group>"; };
 		0C60F238224ADBC300E4B5F2 /* PictureViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewCell.swift; sourceTree = "<group>"; };
 		0C60F239224ADBC300E4B5F2 /* PictureViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureViewCell.xib; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		0C1B938B223A9DAC00EC60B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C60F22F224AA24D00E4B5F2 /* SewerProfilePage.swift */,
+				0C60F22F224AA24D00E4B5F2 /* SewerProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -551,7 +551,7 @@
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
-				0C60F230224AA24D00E4B5F2 /* SewerProfilePage.swift in Sources */,
+				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
 				0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,

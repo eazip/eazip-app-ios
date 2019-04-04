@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SewerProfilePageController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+class SewerProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
-    @IBOutlet var sewerProfileCollectionView: UICollectionView?
+    @IBOutlet weak var sewerProfileCollectionView: UICollectionView!
     
     //Data
     let dataSewer = SewerProfile()
