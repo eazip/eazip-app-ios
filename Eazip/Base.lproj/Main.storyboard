@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1824.8" y="31.934032983508249"/>
         </scene>
-        <!--Sewer Profile Page Controller-->
+        <!--Sewer Profile View Controller-->
         <scene sceneID="dYM-b4-g9x">
             <objects>
-                <viewController id="rLG-pX-Oha" customClass="SewerProfilePageController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SewerProfileViewController" id="rLG-pX-Oha" customClass="SewerProfileViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jZv-1L-m8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +294,7 @@
                         <viewLayoutGuide key="safeArea" id="gmp-hD-eAq"/>
                     </view>
                     <connections>
-                        <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="4JK-cL-bhf"/>
+                        <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="JcH-wP-iUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-BD-nVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -325,7 +325,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="230"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="230"/>
