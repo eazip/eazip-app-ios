@@ -308,9 +308,33 @@
                     <view key="view" contentMode="scaleToFill" id="w7O-pj-U3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-B2-wPl">
+                                <rect key="frame" x="28" y="0.0" width="319" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="tmN-PZ-KvA"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UKK-X4-ybQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="top" secondItem="w7O-pj-U3h" secondAttribute="top" id="Kjo-5N-0iQ"/>
+                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="oaq-B2-wPl" secondAttribute="trailing" constant="28" id="YXR-er-rM9"/>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" constant="28" id="ihc-bo-NMf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yRy-XB-ASw"/>
                     </view>
+                    <connections>
+                        <outlet property="datePickerCollectionView" destination="oaq-B2-wPl" id="ARQ-TO-FkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

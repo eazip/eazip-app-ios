@@ -46,6 +46,8 @@
 		0C988BF12245A8A70079727C /* LightLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C988BF02245A8A70079727C /* LightLabel.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
+		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
+		0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFED2922257410200DDE166 /* DatePickerViewCell.xib */; };
 		2E5C60DC2200B48E00DEA84A /* ClothPickingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */; };
 		2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */; };
 		2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E42200D15600DEA84A /* ClothsList.swift */; };
@@ -105,6 +107,8 @@
 		0C988BF02245A8A70079727C /* LightLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightLabel.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
+		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
+		0CFED2922257410200DDE166 /* DatePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewCell.xib; sourceTree = "<group>"; };
 		2E5C60DB2200B48E00DEA84A /* ClothPickingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingPageController.swift; sourceTree = "<group>"; };
 		2E5C60E12200CF5E00DEA84A /* ClothPickingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothPickingCell.swift; sourceTree = "<group>"; };
 		2E5C60E42200D15600DEA84A /* ClothsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsList.swift; sourceTree = "<group>"; };
@@ -214,8 +218,8 @@
 		0C218962225601B80011DA45 /* SewerAvailabilityPage */ = {
 			isa = PBXGroup;
 			children = (
+				0CFED290225740D400DDE166 /* Layouts */,
 				0C218965225601DC0011DA45 /* Views */,
-				0C218964225601D60011DA45 /* Layouts */,
 				0C218963225601D00011DA45 /* Data */,
 			);
 			path = SewerAvailabilityPage;
@@ -226,13 +230,6 @@
 			children = (
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		0C218964225601D60011DA45 /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layouts;
 			sourceTree = "<group>";
 		};
 		0C218965225601DC0011DA45 /* Views */ = {
@@ -435,6 +432,15 @@
 			path = Template;
 			sourceTree = "<group>";
 		};
+		0CFED290225740D400DDE166 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0CFED2912257410200DDE166 /* DatePickerViewCell.swift */,
+				0CFED2922257410200DDE166 /* DatePickerViewCell.xib */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		2E5C60D72200B43700DEA84A /* ClothPickingPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +554,7 @@
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
+				0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */,
 				0C1B9386223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf in Resources */,
 				0C1B9388223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf in Resources */,
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
@@ -585,6 +592,7 @@
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
+				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
