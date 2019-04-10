@@ -14,8 +14,12 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
+
     
-    let dataDate : [[String: String]] = [
+    var selectedMonthIndex : IndexPath = []
+    var selectedDayIndex : IndexPath = []
+    
+    let dataDate : [[String: Any]] = [
         ["day": "Lundi", "dayNb": "26", "status":true],
         ["day": "Mardi", "dayNb": "27", "status":true],
         ["day": "Mercredi", "dayNb": "28", "status":true],
@@ -33,6 +37,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         setUpContinueButton()
     }
     
+/*
     func initDateSelect() {
         let datePickerInputSelect = UIDatePicker()
         datePickerInputSelect.backgroundColor = UIColor.white
@@ -54,7 +59,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    
+*/
     
     func initDatePickerCollectionView() {
         //Init cell
@@ -107,26 +112,36 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let date = dataDate[indexPath.row]
+        let dateNb = date["dayNb"] as! String
+        let dateDay = String(Array(date["day"] as? String ?? "")[0..<3])
+        let availabilityStatus = date["status"] as! Bool
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DatePickerViewCell", for: indexPath) as! DatePickerViewCell
-        let dateNb = date["dayNb"]
-        let dateDay = String(Array(date["day"] ?? "")[0..<3])
-        cell.setData(dayNb: dateNb!, dayTitle: dateDay)
+        cell.setData(dayNb: dateNb, dayTitle: dateDay)
+        
+        if availabilityStatus == false {
+            cell.setUnvailableCellBehaviour()
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-        print("num " + String(describing: indexPath) + " selected")
-        cell.toggleSelected()
+        if cell.isCellAvailable() == true {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+            selectedDayIndex = indexPath
+            cell.toggleSelected()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-        print("num " + String(describing: indexPath) + " deselected")
-        cell.toggleSelected()
+        if cell.isCellAvailable() == true {
+            collectionView.deselectItem(at: selectedDayIndex, animated: true)
+            selectedDayIndex = []
+            cell.toggleSelected()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
