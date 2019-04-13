@@ -14,21 +14,15 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
-
-    
-    var selectedMonthIndex : IndexPath = []
-    var selectedDayIndex : IndexPath = []
-    
-    let dataDate : [[String: Any]] = [
-        ["day": "Lundi", "dayNb": "26", "status":true],
-        ["day": "Mardi", "dayNb": "27", "status":true],
-        ["day": "Mercredi", "dayNb": "28", "status":true],
-        ["day": "Jeudi", "dayNb": "29", "status":false],
-        ["day": "Vendredi", "dayNb": "30", "status":true]
-    ]
     
     let hourAM = [8, 9, 10, 11]
     let hourPM = [14, 15, 16, 17]
+    
+    var monthsToDisplay : [String] = []
+    var daysToDisplay : [[String: Any]] = []
+    var selectedMonth : Int = 0
+    var selectedYear : Int = 0
+    var selectedDay : [IndexPath] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,31 +31,10 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         setUpContinueButton()
     }
     
-/*
-    func initDateSelect() {
-        let datePickerInputSelect = UIDatePicker()
-        datePickerInputSelect.backgroundColor = UIColor.white
-        datePickerInputSelect.datePickerMode = .date
-        datePickerInputSelect.addTarget(self, action: #selector(SewerAvailabilityViewController.dateChanged(datePicker:)), for: .valueChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SewerAvailabilityViewController.viewTapped(gestureRecognizer:)))
-        view.addGestureRecognizer(tapGesture)
-        dateSelectLabel.inputView = datePickerInputSelect
-    }
-    
-    @objc func dateChanged(datePicker: UIDatePicker)  {
-       let dateFormatter = DateFormatter()
-       dateFormatter.dateFormat = "MMMM"
-       dateSelectLabel?.text = dateFormatter.string(from: datePicker.date)
-       view.endEditing(true)
-    }
-    
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-*/
-    
     func initDatePickerCollectionView() {
+        //Init date component
+        initDatePicker()
+        
         //Init cell
         initDatePickerCell(cellIdentifier: "DatePickerViewCell")
         
@@ -88,6 +61,36 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         hourPickerTableView?.delegate = self
         hourPickerTableView?.dataSource =  self
     }
+  
+    func initDatePicker() {
+        let calendarLabels = CalendarHelper().getCalendarLabels()
+        let totalNumberOfMonthsInYear = calendarLabels["months"]?.count
+        
+        let currentYear : Int = Date().currentYear
+        let currentMonth : Int = Date().currentMonth
+        let currentDay : Int = Date().currentDay
+
+        selectedYear = currentYear
+        selectedMonth = currentMonth
+      
+        // render //
+         let monthsForCurrentYear = calendarLabels["months"]![currentMonth-1..<totalNumberOfMonthsInYear!]
+        let totalNumberOfDaysInMonth = CalendarHelper().getNumberOfDaysForMonth(year: selectedYear, month: selectedMonth)
+
+        var daysForCurrentMonth : [[String: Any]] = []
+        
+        for dayIndex in currentDay..<totalNumberOfDaysInMonth {
+            let dayNb = dayIndex
+            let weekdayNb = CalendarHelper().getWeekDayNbForDate(year: selectedYear, month: selectedMonth, day: dayNb)
+            let dayLabel = calendarLabels["days"]![weekdayNb-1]
+            
+            let dataDay = ["dayLabel": dayLabel, "dayNb": dayNb, "status":true] as [String : Any]
+            daysForCurrentMonth.append(dataDay)
+        }
+        
+        monthsToDisplay = Array(monthsForCurrentYear)
+        daysToDisplay = daysForCurrentMonth
+    }
     
     func initDatePickerCell(cellIdentifier: String) {
         datePickerCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
@@ -102,7 +105,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
-        return dataDate.count
+        return daysToDisplay.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -111,9 +114,9 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let date = dataDate[indexPath.row]
-        let dateNb = date["dayNb"] as! String
-        let dateDay = String(Array(date["day"] as? String ?? "")[0..<3])
+        let date = daysToDisplay[indexPath.row]
+        let dateNb = String(describing: date["dayNb"] ?? "")
+        let dateDay = String(Array(date["dayLabel"] as? String ?? "")[0..<3])
         let availabilityStatus = date["status"] as! Bool
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DatePickerViewCell", for: indexPath) as! DatePickerViewCell
@@ -130,7 +133,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
         if cell.isCellAvailable() == true {
             collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-            selectedDayIndex = indexPath
+            selectedDay = [indexPath]
             cell.toggleSelected()
         }
     }
@@ -138,8 +141,8 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
         if cell.isCellAvailable() == true {
-            collectionView.deselectItem(at: selectedDayIndex, animated: true)
-            selectedDayIndex = []
+            collectionView.deselectItem(at: selectedDay[0], animated: true)
+            selectedDay = []
             cell.toggleSelected()
         }
     }
