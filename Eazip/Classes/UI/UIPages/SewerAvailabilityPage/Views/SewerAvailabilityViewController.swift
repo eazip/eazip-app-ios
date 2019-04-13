@@ -18,11 +18,14 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     let hourAM = [8, 9, 10, 11]
     let hourPM = [14, 15, 16, 17]
     
+    var selectedMonth = Date().currentMonth
+    var selectedYear = Date().currentYear
+    var selectedDay = [Date().currentDay]
+    var selectedHour : [Int] = []
+    
+    var calendarData : [String: Any] = [:]
     var monthsToDisplay : [String] = []
     var daysToDisplay : [[String: Any]] = []
-    var selectedMonth : Int = 0
-    var selectedYear : Int = 0
-    var selectedDay : [IndexPath] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     
     func initDatePickerCollectionView() {
         //Init date component
-        initDatePicker()
+        updateDatePicker()
         
         //Init cell
         initDatePickerCell(cellIdentifier: "DatePickerViewCell")
@@ -62,34 +65,11 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         hourPickerTableView?.dataSource =  self
     }
   
-    func initDatePicker() {
-        let calendarLabels = CalendarHelper().getCalendarLabels()
-        let totalNumberOfMonthsInYear = calendarLabels["months"]?.count
-        
-        let currentYear : Int = Date().currentYear
-        let currentMonth : Int = Date().currentMonth
-        let currentDay : Int = Date().currentDay
-
-        selectedYear = currentYear
-        selectedMonth = currentMonth
-      
-        // render //
-         let monthsForCurrentYear = calendarLabels["months"]![currentMonth-1..<totalNumberOfMonthsInYear!]
-        let totalNumberOfDaysInMonth = CalendarHelper().getNumberOfDaysForMonth(year: selectedYear, month: selectedMonth)
-
-        var daysForCurrentMonth : [[String: Any]] = []
-        
-        for dayIndex in currentDay..<totalNumberOfDaysInMonth {
-            let dayNb = dayIndex
-            let weekdayNb = CalendarHelper().getWeekDayNbForDate(year: selectedYear, month: selectedMonth, day: dayNb)
-            let dayLabel = calendarLabels["days"]![weekdayNb-1]
-            
-            let dataDay = ["dayLabel": dayLabel, "dayNb": dayNb, "status":true] as [String : Any]
-            daysForCurrentMonth.append(dataDay)
-        }
-        
-        monthsToDisplay = Array(monthsForCurrentYear)
-        daysToDisplay = daysForCurrentMonth
+    func updateDatePicker() {
+        calendarData = DatePickerHelper().renderFromSelectedMonthInYear(selectedYear: selectedYear, selectedMonth: selectedMonth)
+        monthsToDisplay = calendarData["months"] as! [String]
+        daysToDisplay = calendarData["days"] as! [[String : Any]]
+        dateSelectLabel.text = calendarData["headerMonthLabel"] as? String
     }
     
     func initDatePickerCell(cellIdentifier: String) {
@@ -116,7 +96,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let date = daysToDisplay[indexPath.row]
         let dateNb = String(describing: date["dayNb"] ?? "")
-        let dateDay = String(Array(date["dayLabel"] as? String ?? "")[0..<3])
+        let dateDay = date["dayLabel"] as! String
         let availabilityStatus = date["status"] as! Bool
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DatePickerViewCell", for: indexPath) as! DatePickerViewCell
@@ -133,7 +113,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
         if cell.isCellAvailable() == true {
             collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-            selectedDay = [indexPath]
+            selectedDay = [indexPath.row]
             cell.toggleSelected()
         }
     }
@@ -141,7 +121,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
         if cell.isCellAvailable() == true {
-            collectionView.deselectItem(at: selectedDay[0], animated: true)
+            collectionView.deselectItem(at: IndexPath(row: 0, section: selectedDay[0]), animated: true)
             selectedDay = []
             cell.toggleSelected()
         }

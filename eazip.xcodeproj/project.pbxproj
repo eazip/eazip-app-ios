@@ -49,6 +49,7 @@
 		0C9CE33E225E9ECB004DF3DA /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CE33D225E9ECB004DF3DA /* CalendarHelper.swift */; };
 		0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */; };
 		0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CE34122622300004DF3DA /* DatePickerHelper.swift */; };
+		0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB830282262945F00A689DB /* FormatStringHelper.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
 		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
@@ -118,6 +119,7 @@
 		0C9CE33D225E9ECB004DF3DA /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateHelper.swift; sourceTree = "<group>"; };
 		0C9CE34122622300004DF3DA /* DatePickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerHelper.swift; sourceTree = "<group>"; };
+		0CB830282262945F00A689DB /* FormatStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatStringHelper.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
 		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				0C9CE33D225E9ECB004DF3DA /* CalendarHelper.swift */,
 				0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */,
 				0C9CE34122622300004DF3DA /* DatePickerHelper.swift */,
+				0CB830282262945F00A689DB /* FormatStringHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */,
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
+				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */,

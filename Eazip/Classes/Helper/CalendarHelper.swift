@@ -30,13 +30,13 @@ class CalendarHelper {
         
         return numberOfDays
     }
-  
+    
     func getCalendarLabels() -> [String: [String]] {
         setFrenchLocale(formatter: formatter)
         let monthsLabels = formatter.monthSymbols
         let dayLabels = formatter.shortWeekdaySymbols
         let calendarLabels = ["months": monthsLabels,
-                             "days": dayLabels]
+                              "days": dayLabels]
         
         return calendarLabels as! [String : [String]]
     }
