@@ -71,6 +71,7 @@ class DatePickerViewCell: UICollectionViewCell {
         cellContentView?.backgroundColor = normalCellBackgroundColor
         dayNbLabel?.textColor = normalCellTextColor
         dayTitleLabel?.textColor = normalCellTextColor
+        cellContentView?.layer.borderColor = borderColor.cgColor
     }
     
     private func setSelectedCellBehaviour() {
@@ -83,5 +84,6 @@ class DatePickerViewCell: UICollectionViewCell {
         cellContentView?.backgroundColor = unvailableCellBackgroundColor
         dayNbLabel?.textColor = unvailableCellTextColor
         dayTitleLabel?.textColor = unvailableCellTextColor
+        cellContentView?.layer.borderColor = UIColor.clear.cgColor
     }
 }

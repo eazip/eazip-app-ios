@@ -14,10 +14,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
-    
-    let hourAM = [8, 9, 10, 11]
-    let hourPM = [14, 15, 16, 17]
-    
+   
     var selectedMonth = Date().currentMonth
     var selectedYear = Date().currentYear
     var selectedDay = [Date().currentDay]
@@ -26,6 +23,9 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     var calendarData : [String: Any] = [:]
     var monthsToDisplay : [String] = []
     var daysToDisplay : [[String: Any]] = []
+    
+    let hoursToDisplay = ["AM": [["nb": 8, "offer": true],["nb": 9, "offer": false],["nb": 10, "offer": false],["nb": 11, "offer": true]],
+                         "PM": [["nb": 14, "offer": false],["nb": 15, "offer": false],["nb": 16, "offer": true],["nb": 17, "offer": true]]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     }
   
     func updateDatePicker() {
-        calendarData = DatePickerHelper().renderFromSelectedMonthInYear(selectedYear: selectedYear, selectedMonth: selectedMonth)
+        calendarData = DatePickerHelper.renderFromSelectedMonthInYear(selectedYear: selectedYear, selectedMonth: selectedMonth)
         monthsToDisplay = calendarData["months"] as! [String]
         daysToDisplay = calendarData["days"] as! [[String : Any]]
         dateSelectLabel.text = calendarData["headerMonthLabel"] as? String
@@ -128,22 +128,30 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return hoursToDisplay.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (section == 0) ? hourAM.count : hourPM.count
+        return (section == 0) ? hoursToDisplay["AM"]!.count : hoursToDisplay["PM"]!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let hourItem : Int
+        let hourItem : [String : Any]
         if indexPath.section == 0 {
-            hourItem = hourAM[indexPath.row]
+            hourItem = hoursToDisplay["AM"]![indexPath.row]
         } else {
-            hourItem = hourPM[indexPath.row]
+            hourItem = hoursToDisplay["PM"]![indexPath.row]
         }
+        
+        let hour = hourItem["nb"] as! Int
+        let offerStatus = hourItem["offer"] as! Bool
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "HourPickerViewCell") as! HourPickerViewCell?
-        cell?.setData(hour: hourItem)
+        cell?.setData(hour: hour)
+        
+        if offerStatus {
+            cell?.initOfferCard()
+        }
         
         return cell!
     }
@@ -157,6 +165,7 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
             sectionLabel.text = "Après-midi"
         }
         headerView.backgroundColor = UIColor.white
+        sectionLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
         sectionLabel.sizeToFit()
         headerView.addSubview(sectionLabel)
         
@@ -164,6 +173,6 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 30
     }
 }

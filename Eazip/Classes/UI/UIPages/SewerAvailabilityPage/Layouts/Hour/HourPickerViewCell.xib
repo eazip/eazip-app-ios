@@ -15,26 +15,53 @@
         <tableViewCell contentMode="scaleToFill" restorationIdentifier="HourPickerViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourPickerViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="HourPickerViewCell" customModule="Eazip">
             <rect key="frame" x="0.0" y="0.0" width="341" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="341" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="hourChoiceLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-S0-XFr" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="33" width="42" height="21"/>
+                        <rect key="frame" x="0.0" y="-10.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-c0-oum">
+                        <rect key="frame" x="211" y="10" width="130" height="67.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-mD-NCS" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="23" width="130" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="offerLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c8i-mD-NCS" firstAttribute="width" secondItem="Kap-c0-oum" secondAttribute="width" id="10n-NJ-hE4"/>
+                            <constraint firstItem="c8i-mD-NCS" firstAttribute="centerX" secondItem="Kap-c0-oum" secondAttribute="centerX" id="ESJ-ck-No6"/>
+                            <constraint firstItem="c8i-mD-NCS" firstAttribute="leading" secondItem="Kap-c0-oum" secondAttribute="leading" id="WIC-EQ-T8i"/>
+                            <constraint firstAttribute="width" constant="130" id="hLa-Pl-yUw"/>
+                            <constraint firstItem="c8i-mD-NCS" firstAttribute="centerY" secondItem="Kap-c0-oum" secondAttribute="centerY" id="wyg-PF-cKf"/>
+                            <constraint firstAttribute="trailing" secondItem="c8i-mD-NCS" secondAttribute="trailing" id="x1M-JO-29a"/>
+                            <constraint firstAttribute="height" constant="20" id="zdX-Og-H3L"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="2p6-S0-XFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FIB-dj-tp6"/>
                     <constraint firstItem="2p6-S0-XFr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kdd-iF-p6x"/>
+                    <constraint firstAttribute="trailing" secondItem="Kap-c0-oum" secondAttribute="trailing" id="MFQ-dl-TLY"/>
+                    <constraint firstItem="Kap-c0-oum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="R98-6H-8p3"/>
+                    <constraint firstAttribute="bottom" secondItem="Kap-c0-oum" secondAttribute="bottom" constant="10" id="WP2-yS-H60"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="HourPickerViewCell"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="hourChoiceLabel" destination="2p6-S0-XFr" id="KJv-KT-I3d"/>
+                <outlet property="offerCard" destination="Kap-c0-oum" id="lqD-lR-ufW"/>
+                <outlet property="offerLabel" destination="c8i-mD-NCS" id="6y7-FQ-nuO"/>
             </connections>
             <point key="canvasLocation" x="15.5" y="74"/>
         </tableViewCell>

@@ -241,18 +241,11 @@
 		0C218962225601B80011DA45 /* SewerAvailabilityPage */ = {
 			isa = PBXGroup;
 			children = (
+				0CB8302A226321EA00A689DB /* Extensions */,
 				0CFED290225740D400DDE166 /* Layouts */,
 				0C218965225601DC0011DA45 /* Views */,
-				0C218963225601D00011DA45 /* Data */,
 			);
 			path = SewerAvailabilityPage;
-			sourceTree = "<group>";
-		};
-		0C218963225601D00011DA45 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		0C218965225601DC0011DA45 /* Views */ = {
@@ -439,6 +432,13 @@
 				0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */,
 			);
 			path = Reviews;
+			sourceTree = "<group>";
+		};
+		0CB8302A226321EA00A689DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0CD685F7225395BB009C9396 /* Header */ = {

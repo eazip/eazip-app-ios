@@ -33,12 +33,21 @@ class CalendarHelper {
     
     func getCalendarLabels() -> [String: [String]] {
         setFrenchLocale(formatter: formatter)
-        let monthsLabels = formatter.monthSymbols
-        let dayLabels = formatter.shortWeekdaySymbols
-        let calendarLabels = ["months": monthsLabels,
-                              "days": dayLabels]
+        var monthsLabels : [String] = []
+        var daysLabels : [String] = []
         
-        return calendarLabels as! [String : [String]]
+        for monthLabel in formatter.monthSymbols {
+            monthsLabels.append(monthLabel.pascalCase)
+        }
+        
+        for dayLabel in formatter.shortWeekdaySymbols {
+            daysLabels.append(dayLabel.pascalCase)
+        }
+        
+        let calendarLabels = ["months": monthsLabels,
+                              "days": daysLabels]
+        
+        return calendarLabels
     }
     
     private func setFrenchLocale(formatter: DateFormatter) -> Void {

@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class DatePickerHelper {
-    let currentYear : Int = Date().currentYear
-    let currentMonth : Int = Date().currentMonth
-    let currentDay : Int = Date().currentDay
-    let calendarLabels = CalendarHelper().getCalendarLabels()
-    let totalNumberOfMonthsInYear : Int = 12
+    static let currentYear : Int = Date().currentYear
+    static let currentMonth : Int = Date().currentMonth
+    static let currentDay : Int = Date().currentDay
+    static let calendarLabels = CalendarHelper().getCalendarLabels()
+    static let totalNumberOfMonthsInYear : Int = 12
     
-    func renderFromSelectedMonthInYear(selectedYear: Int, selectedMonth: Int) -> [String : Any] {
+    static func renderFromSelectedMonthInYear(selectedYear: Int, selectedMonth: Int) -> [String : Any] {
         let nextMonthsCurrentYear = getAvailableNextMonthsFromSelectedYear(selectedYear: selectedYear)
         let nextDaysForCurrentMonth = getAvailableNextDaysFromSelectedMonth(selectedYear: selectedYear, selectedMonth: selectedMonth)
         
@@ -33,7 +33,7 @@ class DatePickerHelper {
              ]
     }
     
-    func  getAvailableNextMonthsFromSelectedYear(selectedYear: Int) -> ArraySlice<String> {
+    static func getAvailableNextMonthsFromSelectedYear(selectedYear: Int) -> ArraySlice<String> {
         let firstAvailableMonth : Int
         if selectedYear == currentYear {
             firstAvailableMonth = currentMonth
@@ -46,7 +46,7 @@ class DatePickerHelper {
         return availableNextMonths
     }
     
-    func getAvailableNextDaysFromSelectedMonth(selectedYear: Int, selectedMonth: Int) -> [[String: Any]] {
+    static func getAvailableNextDaysFromSelectedMonth(selectedYear: Int, selectedMonth: Int) -> [[String: Any]] {
         let totalDaysInMonth = CalendarHelper().getNumberOfDaysForMonth(year: selectedYear, month: selectedMonth)
         
         let firstAvailableDay : Int
@@ -69,7 +69,7 @@ class DatePickerHelper {
         return availableNextDays
     }
     
-    func getMonthLabelFromRange(monthRange: Int) -> String {
+    static func getMonthLabelFromRange(monthRange: Int) -> String {
         let monthLabel = calendarLabels["months"]![monthRange-1]
         
         return monthLabel
