@@ -15,21 +15,21 @@
         <tableViewCell contentMode="scaleToFill" restorationIdentifier="HourPickerViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourPickerViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="HourPickerViewCell" customModule="Eazip">
             <rect key="frame" x="0.0" y="0.0" width="341" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="341" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="hourChoiceLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-S0-XFr" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="-10.5" width="42" height="21"/>
+                        <rect key="frame" x="0.0" y="9.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-c0-oum">
-                        <rect key="frame" x="211" y="10" width="130" height="67.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-c0-oum">
+                        <rect key="frame" x="211" y="10" width="130" height="20"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-mD-NCS" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="23" width="130" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-mD-NCS" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="-1" width="130" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="offerLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -49,6 +49,7 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Kap-c0-oum" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1tS-j3-z9F"/>
                     <constraint firstItem="2p6-S0-XFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FIB-dj-tp6"/>
                     <constraint firstItem="2p6-S0-XFr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kdd-iF-p6x"/>
                     <constraint firstAttribute="trailing" secondItem="Kap-c0-oum" secondAttribute="trailing" id="MFQ-dl-TLY"/>

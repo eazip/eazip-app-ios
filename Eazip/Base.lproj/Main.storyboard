@@ -320,6 +320,9 @@
                                     <constraint firstAttribute="height" constant="57" id="OR9-2D-apK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="newAppointment:" destination="EQc-9y-Z18" eventType="touchUpInside" id="wka-uZ-cJD"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-B2-wPl">
                                 <rect key="frame" x="28" y="45" width="319" height="130"/>
@@ -335,10 +338,10 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDz-W2-AMe" customClass="NavigationNextLabel" customModule="Eazip">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDz-W2-AMe" customClass="NavigationNextLabel" customModule="Eazip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="uEO-C3-YNR"/>
+                                    <constraint firstAttribute="height" constant="60" id="uEO-C3-YNR"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

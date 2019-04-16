@@ -46,6 +46,11 @@ class DatePickerViewCell: UICollectionViewCell {
         cellContentView?.bringSubview(toFront: dayNbLabel!)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        setDeselectedCellBehaviour()
+    }
+    
     func setData(dayNb: String, dayTitle: String) {
         dayNbLabel?.text = dayNb
         dayTitleLabel?.text = dayTitle
@@ -67,14 +72,14 @@ class DatePickerViewCell: UICollectionViewCell {
         }
     }
     
-    private func setDeselectedCellBehaviour() {
+    func setDeselectedCellBehaviour() {
         cellContentView?.backgroundColor = normalCellBackgroundColor
         dayNbLabel?.textColor = normalCellTextColor
         dayTitleLabel?.textColor = normalCellTextColor
         cellContentView?.layer.borderColor = borderColor.cgColor
     }
     
-    private func setSelectedCellBehaviour() {
+    func setSelectedCellBehaviour() {
         cellContentView?.backgroundColor = selectedCellBackgroundColor
         dayNbLabel?.textColor = selectedCellTextColor
         dayTitleLabel?.textColor = selectedCellTextColor

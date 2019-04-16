@@ -40,6 +40,7 @@
 		0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */; };
 		0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */; };
 		0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */; };
+		0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */; };
 		0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */; };
 		0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA562200523C00400BD2 /* ColoredActionButton.swift */; };
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
@@ -50,6 +51,8 @@
 		0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */; };
 		0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9CE34122622300004DF3DA /* DatePickerHelper.swift */; };
 		0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB830282262945F00A689DB /* FormatStringHelper.swift */; };
+		0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302B226463D100A689DB /* DatePickerCollectionView.swift */; };
+		0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302D2264652F00A689DB /* HourPickerTableView.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
 		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
@@ -110,6 +113,7 @@
 		0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionTitle.swift; sourceTree = "<group>"; };
 		0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWorksViewCell.swift; sourceTree = "<group>"; };
 		0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastWorksViewCell.xib; sourceTree = "<group>"; };
+		0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursToDisplay.swift; sourceTree = "<group>"; };
 		0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButtonHelper.swift; sourceTree = "<group>"; };
 		0C93BA562200523C00400BD2 /* ColoredActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredActionButton.swift; sourceTree = "<group>"; };
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateHelper.swift; sourceTree = "<group>"; };
 		0C9CE34122622300004DF3DA /* DatePickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerHelper.swift; sourceTree = "<group>"; };
 		0CB830282262945F00A689DB /* FormatStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatStringHelper.swift; sourceTree = "<group>"; };
+		0CB8302B226463D100A689DB /* DatePickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCollectionView.swift; sourceTree = "<group>"; };
+		0CB8302D2264652F00A689DB /* HourPickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerTableView.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
 		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
@@ -171,8 +177,8 @@
 				0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */,
 				0C9CE33D225E9ECB004DF3DA /* CalendarHelper.swift */,
 				0C9CE33F225F62A8004DF3DA /* CurrentDateHelper.swift */,
-				0C9CE34122622300004DF3DA /* DatePickerHelper.swift */,
 				0CB830282262945F00A689DB /* FormatStringHelper.swift */,
+				0C9CE34122622300004DF3DA /* DatePickerHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 		0C218962225601B80011DA45 /* SewerAvailabilityPage */ = {
 			isa = PBXGroup;
 			children = (
+				0C6DAE5B22664BB300DCB077 /* Data */,
 				0CB8302A226321EA00A689DB /* Extensions */,
 				0CFED290225740D400DDE166 /* Layouts */,
 				0C218965225601DC0011DA45 /* Views */,
@@ -434,9 +441,19 @@
 			path = Reviews;
 			sourceTree = "<group>";
 		};
+		0C6DAE5B22664BB300DCB077 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		0CB8302A226321EA00A689DB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0CB8302B226463D100A689DB /* DatePickerCollectionView.swift */,
+				0CB8302D2264652F00A689DB /* HourPickerTableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -635,6 +652,7 @@
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
 				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
+				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
@@ -655,12 +673,14 @@
 				2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
 				0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */,
+				0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
+				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

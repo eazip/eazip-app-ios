@@ -16,6 +16,10 @@ class DatePickerHelper {
     static let calendarLabels = CalendarHelper().getCalendarLabels()
     static let totalNumberOfMonthsInYear : Int = 12
     
+    static func createNewDateFromValues(year: Int, month: Int, day: Int, hour: Int) -> Date {
+        return CalendarHelper().createNewDateFromValues(year: year, month: month, day: day, hour: hour)
+    }
+    
     static func renderFromSelectedMonthInYear(selectedYear: Int, selectedMonth: Int) -> [String : Any] {
         let nextMonthsCurrentYear = getAvailableNextMonthsFromSelectedYear(selectedYear: selectedYear)
         let nextDaysForCurrentMonth = getAvailableNextDaysFromSelectedMonth(selectedYear: selectedYear, selectedMonth: selectedMonth)

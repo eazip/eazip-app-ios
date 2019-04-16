@@ -9,6 +9,7 @@
 import Foundation
 
 extension Date{
+    var currentHour : Int {return Calendar.current.component(.hour, from:self)}
     var currentWeekDay: Int {return  Calendar.current.component(.weekday, from:self)}
     var currentDay : Int {return  Calendar.current.component(.day, from:self)}
     var currentMonth : Int {return  Calendar.current.component(.month, from:self)}

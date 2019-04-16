@@ -12,6 +12,16 @@ import UIKit
 class CalendarHelper {
     let formatter = DateFormatter()
     
+    func createNewDateFromValues(year: Int, month: Int, day: Int, hour: Int) -> Date {
+        let dateComponents = DateComponents(year: year, month: month, day: day, hour: hour)
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier:"CET")!
+        
+        let date = calendar.date(from: dateComponents)
+    
+        return date!
+    }
+    
     func getWeekDayNbForDate(year: Int, month: Int, day: Int) -> Int {
         let dateComponents = DateComponents(year: year, month: month, day: day)
         let calendar = Calendar.current
@@ -54,3 +64,4 @@ class CalendarHelper {
         formatter.locale = Locale(identifier: "FR-fr")
     }
 }
+

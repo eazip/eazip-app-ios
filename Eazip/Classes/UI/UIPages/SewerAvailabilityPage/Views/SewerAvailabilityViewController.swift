@@ -8,24 +8,26 @@
 
 import UIKit
 
-class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class SewerAvailabilityViewController: UIViewController {
 
     @IBOutlet weak var dateSelectLabel: UITextField!
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
+    
+    @IBAction func newAppointment(_ sender: UIButton) {
+        createAppointmentFromData()
+    }
    
     var selectedMonth = Date().currentMonth
     var selectedYear = Date().currentYear
-    var selectedDay = [Date().currentDay]
-    var selectedHour : [Int] = []
+    var selectedDay : Int = Date().currentDay
+    var selectedHour : Int = 0
     
     var calendarData : [String: Any] = [:]
     var monthsToDisplay : [String] = []
     var daysToDisplay : [[String: Any]] = []
-    
-    let hoursToDisplay = ["AM": [["nb": 8, "offer": true],["nb": 9, "offer": false],["nb": 10, "offer": false],["nb": 11, "offer": true]],
-                         "PM": [["nb": 14, "offer": false],["nb": 15, "offer": false],["nb": 16, "offer": true],["nb": 17, "offer": true]]]
+    let hoursToDisplay = HoursToDisplay.getHours()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,8 +63,8 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         initHourPickerCell(cellIdentifier: "HourPickerViewCell")
         
         //Init delegate and datasource
-        hourPickerTableView?.delegate = self
-        hourPickerTableView?.dataSource =  self
+        hourPickerTableView?.delegate = self as UITableViewDelegate
+        hourPickerTableView?.dataSource = self as UITableViewDataSource
     }
   
     func updateDatePicker() {
@@ -84,95 +86,11 @@ class SewerAvailabilityViewController: UIViewController, UICollectionViewDataSou
         continueButton?.setTitle("Continuer", for: .normal)
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
-        return daysToDisplay.count
+    func createAppointmentFromData() {
+        print(DatePickerHelper.createNewDateFromValues(year: selectedYear, month: selectedMonth, day: selectedDay, hour: selectedHour))
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: 70, height: 70)
-        return size
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let date = daysToDisplay[indexPath.row]
-        let dateNb = String(describing: date["dayNb"] ?? "")
-        let dateDay = date["dayLabel"] as! String
-        let availabilityStatus = date["status"] as! Bool
+    func renderHoursAvailibility() -> Void {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DatePickerViewCell", for: indexPath) as! DatePickerViewCell
-        cell.setData(dayNb: dateNb, dayTitle: dateDay)
-        
-        if availabilityStatus == false {
-            cell.setUnvailableCellBehaviour()
-        }
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
-        if cell.isCellAvailable() == true {
-            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-            selectedDay = [indexPath.row]
-            cell.toggleSelected()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DatePickerViewCell
-        if cell.isCellAvailable() == true {
-            collectionView.deselectItem(at: IndexPath(row: 0, section: selectedDay[0]), animated: true)
-            selectedDay = []
-            cell.toggleSelected()
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return hoursToDisplay.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (section == 0) ? hoursToDisplay["AM"]!.count : hoursToDisplay["PM"]!.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let hourItem : [String : Any]
-        if indexPath.section == 0 {
-            hourItem = hoursToDisplay["AM"]![indexPath.row]
-        } else {
-            hourItem = hoursToDisplay["PM"]![indexPath.row]
-        }
-        
-        let hour = hourItem["nb"] as! Int
-        let offerStatus = hourItem["offer"] as! Bool
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HourPickerViewCell") as! HourPickerViewCell?
-        cell?.setData(hour: hour)
-        
-        if offerStatus {
-            cell?.initOfferCard()
-        }
-        
-        return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        let sectionLabel = EazipLabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-        if section == 0 {
-            sectionLabel.text = "Matin"
-        } else {
-            sectionLabel.text = "Après-midi"
-        }
-        headerView.backgroundColor = UIColor.white
-        sectionLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
-        sectionLabel.sizeToFit()
-        headerView.addSubview(sectionLabel)
-        
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
     }
 }
