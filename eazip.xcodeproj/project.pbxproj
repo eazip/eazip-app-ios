@@ -41,6 +41,7 @@
 		0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */; };
 		0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */; };
 		0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */; };
+		0C6DB8CB2266F80900F1020C /* ConfirmAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8CA2266F80900F1020C /* ConfirmAppointmentViewController.swift */; };
 		0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */; };
 		0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA562200523C00400BD2 /* ColoredActionButton.swift */; };
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
@@ -114,6 +115,7 @@
 		0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWorksViewCell.swift; sourceTree = "<group>"; };
 		0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastWorksViewCell.xib; sourceTree = "<group>"; };
 		0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursToDisplay.swift; sourceTree = "<group>"; };
+		0C6DB8CA2266F80900F1020C /* ConfirmAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAppointmentViewController.swift; sourceTree = "<group>"; };
 		0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButtonHelper.swift; sourceTree = "<group>"; };
 		0C93BA562200523C00400BD2 /* ColoredActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredActionButton.swift; sourceTree = "<group>"; };
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */,
 				0C218962225601B80011DA45 /* SewerAvailabilityPage */,
 				0C1B9389223A9D6600EC60B1 /* SewerProfilePage */,
 				0C1B937A223A895100EC60B1 /* SewersPage */,
@@ -447,6 +450,38 @@
 				0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DB8C92266F7A300F1020C /* Extensions */,
+				0C6DB8C82266F79A00F1020C /* Layouts */,
+				0C6DB8C72266F79000F1020C /* Views */,
+			);
+			path = ConfirmAppointmentPage;
+			sourceTree = "<group>";
+		};
+		0C6DB8C72266F79000F1020C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DB8CA2266F80900F1020C /* ConfirmAppointmentViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C6DB8C82266F79A00F1020C /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		0C6DB8C92266F7A300F1020C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0CB8302A226321EA00A689DB /* Extensions */ = {
@@ -676,6 +711,7 @@
 				0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
+				0C6DB8CB2266F80900F1020C /* ConfirmAppointmentViewController.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
