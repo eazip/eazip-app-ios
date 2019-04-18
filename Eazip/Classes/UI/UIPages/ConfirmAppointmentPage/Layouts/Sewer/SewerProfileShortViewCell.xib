@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SewerProfileShortViewCell" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTZ-MA-t4W">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="115"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-WK-pna">
+                                <rect key="frame" x="0.0" y="22" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Pl3-Ns-eVG"/>
+                                    <constraint firstAttribute="height" constant="70" id="QCH-yS-pAW"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="af1-WE-Gbj">
+                                <rect key="frame" x="67" y="22" width="341" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7x-VX-xnA" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-Iu-QwY" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="30" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-vz-rhl">
+                                        <rect key="frame" x="50" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="AAZ-XV-9tq"/>
+                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="G1X-oP-tGl"/>
+                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="8" id="Pch-7y-8NU"/>
+                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="leading" secondItem="J7x-VX-xnA" secondAttribute="trailing" id="QgF-4a-KEa"/>
+                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="8" id="kAB-LA-Fu8"/>
+                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="firstBaseline" secondItem="J7x-VX-xnA" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="mml-qg-uiY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uoL-WK-pna" firstAttribute="leading" secondItem="WTZ-MA-t4W" secondAttribute="leading" id="6pc-r0-dt4"/>
+                            <constraint firstItem="af1-WE-Gbj" firstAttribute="leading" secondItem="WTZ-MA-t4W" secondAttribute="leadingMargin" id="VVU-EA-ycE"/>
+                            <constraint firstAttribute="height" constant="115" id="Y5f-dz-D1r"/>
+                            <constraint firstItem="af1-WE-Gbj" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="gD2-sT-9Iv"/>
+                            <constraint firstItem="uoL-WK-pna" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="pjg-28-EQD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3sV-np-xtS"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Pp-ug-M7n"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="8MB-p5-Xea"/>
+                <constraint firstAttribute="bottom" secondItem="WTZ-MA-t4W" secondAttribute="bottom" id="Ce8-6B-Fxc"/>
+                <constraint firstAttribute="trailing" secondItem="WTZ-MA-t4W" secondAttribute="trailing" id="i6P-0B-YQE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="408" height="117"/>
+            <connections>
+                <outlet property="sewerName" destination="J7x-VX-xnA" id="bvn-4M-dFw"/>
+                <outlet property="sewerPicture" destination="uoL-WK-pna" id="BwS-zM-e5j"/>
+                <outlet property="sewerPrestations" destination="K2e-Iu-QwY" id="HrD-ur-AMQ"/>
+                <outlet property="sewerRating" destination="PB4-vz-rhl" id="8aI-Pq-Khy"/>
+                <outlet property="shortProfileContentView" destination="af1-WE-Gbj" id="ra2-4h-x3n"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="56.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
