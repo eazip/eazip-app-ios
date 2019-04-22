@@ -13,15 +13,15 @@ extension ConfirmAppointmentViewController: UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: 115, height: 115)
+        let size = CGSize(width: (appointmentConfirmationCollectionView?.frame.width)!, height: 200)
+        
         return size
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SewerProfileShortViewCell", for: indexPath) as! SewerProfileShortViewCell
         
-        cell.configure(data: 2)
+        cell.configure(data: dataSewer)
         return cell
     }
 }

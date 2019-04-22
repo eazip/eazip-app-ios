@@ -13,12 +13,16 @@ class ConfirmAppointmentViewController: UIViewController {
     @IBOutlet weak var appointmentConfirmationCollectionView: UICollectionView!
     @IBOutlet weak var confirmAppointmentButton: ColoredActionButton!
     
-    var appointmentSections : Int = 0
+    //Data
+    let appointment = Appointment()
     
+    var appointmentSections : Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initAppointmentConfirmationCollectionView()
         setUpShortProfileView()
+        //setUpProductsDetailsView()
 
     }
     
@@ -30,13 +34,18 @@ class ConfirmAppointmentViewController: UIViewController {
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = CGSize(width: 70, height: 70)
+        layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
+        layout.estimatedItemSize = CGSize(width: 1, height:1)
         
         appointmentConfirmationCollectionView?.collectionViewLayout = layout
     }
     
     func setUpShortProfileView() {
         initAppointmentSectionCell(cellIdentifier: "SewerProfileShortViewCell")
+    }
+    
+    func setUpProductsDetailsView() {
+        initAppointmentSectionCell(cellIdentifier: "ProductsDetailsViewCell")
     }
     
     func initAppointmentSectionCell(cellIdentifier: String) {

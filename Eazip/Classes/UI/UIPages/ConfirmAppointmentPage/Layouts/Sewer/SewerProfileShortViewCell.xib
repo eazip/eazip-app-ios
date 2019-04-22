@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,27 +27,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-WK-pna">
                                 <rect key="frame" x="0.0" y="22" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Pl3-Ns-eVG"/>
-                                    <constraint firstAttribute="height" constant="70" id="QCH-yS-pAW"/>
+                                    <constraint firstAttribute="height" constant="70" id="4xx-5Q-5Jy"/>
+                                    <constraint firstAttribute="width" constant="70" id="z9i-6L-bsN"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="af1-WE-Gbj">
-                                <rect key="frame" x="67" y="22" width="341" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af1-WE-Gbj">
+                                <rect key="frame" x="78" y="22" width="330" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7x-VX-xnA" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7x-VX-xnA" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-Iu-QwY" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="30" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-Iu-QwY" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="33" width="322" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-vz-rhl">
-                                        <rect key="frame" x="50" y="8" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB4-vz-rhl" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="58" y="15" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,32 +55,35 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="AAZ-XV-9tq"/>
-                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="G1X-oP-tGl"/>
-                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="8" id="Pch-7y-8NU"/>
-                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="leading" secondItem="J7x-VX-xnA" secondAttribute="trailing" id="QgF-4a-KEa"/>
-                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="8" id="kAB-LA-Fu8"/>
-                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="firstBaseline" secondItem="J7x-VX-xnA" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="mml-qg-uiY"/>
+                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="firstBaseline" secondItem="J7x-VX-xnA" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="9Fp-vN-UB8"/>
+                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="8" id="LBv-uR-8c9"/>
+                                    <constraint firstAttribute="trailing" secondItem="K2e-Iu-QwY" secondAttribute="trailing" id="VcF-IE-Ev4"/>
+                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="leading" secondItem="J7x-VX-xnA" secondAttribute="trailing" constant="8" id="Ztm-09-vL5"/>
+                                    <constraint firstItem="K2e-Iu-QwY" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="c4H-9W-iMv"/>
+                                    <constraint firstItem="J7x-VX-xnA" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="pzf-fS-jDr"/>
+                                    <constraint firstItem="PB4-vz-rhl" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="15" id="v09-JW-qFo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uoL-WK-pna" firstAttribute="leading" secondItem="WTZ-MA-t4W" secondAttribute="leading" id="6pc-r0-dt4"/>
-                            <constraint firstItem="af1-WE-Gbj" firstAttribute="leading" secondItem="WTZ-MA-t4W" secondAttribute="leadingMargin" id="VVU-EA-ycE"/>
-                            <constraint firstAttribute="height" constant="115" id="Y5f-dz-D1r"/>
-                            <constraint firstItem="af1-WE-Gbj" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="gD2-sT-9Iv"/>
-                            <constraint firstItem="uoL-WK-pna" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="pjg-28-EQD"/>
+                            <constraint firstItem="uoL-WK-pna" firstAttribute="leading" secondItem="WTZ-MA-t4W" secondAttribute="leading" id="9Mo-LV-P4c"/>
+                            <constraint firstItem="af1-WE-Gbj" firstAttribute="top" secondItem="uoL-WK-pna" secondAttribute="top" id="DmR-SI-Zio"/>
+                            <constraint firstItem="uoL-WK-pna" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="LzN-6Q-vR0"/>
+                            <constraint firstItem="af1-WE-Gbj" firstAttribute="centerY" secondItem="WTZ-MA-t4W" secondAttribute="centerY" id="drY-DW-qOA"/>
+                            <constraint firstAttribute="trailing" secondItem="af1-WE-Gbj" secondAttribute="trailing" id="kz6-Q1-aPp"/>
+                            <constraint firstItem="af1-WE-Gbj" firstAttribute="leading" secondItem="uoL-WK-pna" secondAttribute="trailing" constant="8" id="l4V-L7-fqS"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="WTZ-MA-t4W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3sV-np-xtS"/>
-                <constraint firstItem="WTZ-MA-t4W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Pp-ug-M7n"/>
-                <constraint firstItem="WTZ-MA-t4W" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="8MB-p5-Xea"/>
-                <constraint firstAttribute="bottom" secondItem="WTZ-MA-t4W" secondAttribute="bottom" id="Ce8-6B-Fxc"/>
-                <constraint firstAttribute="trailing" secondItem="WTZ-MA-t4W" secondAttribute="trailing" id="i6P-0B-YQE"/>
+                <constraint firstAttribute="trailing" secondItem="WTZ-MA-t4W" secondAttribute="trailing" id="D4j-KM-FsD"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MIg-Oj-XhN"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="mkW-DT-8b0"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ovo-aG-5mu"/>
+                <constraint firstAttribute="bottom" secondItem="WTZ-MA-t4W" secondAttribute="bottom" id="qSI-Id-wvg"/>
+                <constraint firstItem="WTZ-MA-t4W" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="s2g-66-7ha"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="408" height="117"/>

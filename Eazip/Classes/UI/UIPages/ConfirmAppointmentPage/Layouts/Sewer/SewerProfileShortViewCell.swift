@@ -43,6 +43,7 @@ class SewerProfileShortViewCell: UICollectionViewCell, ConfigurableCell {
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()
         layoutIfNeeded()
+        
         let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
         var frame = layoutAttributes.frame
         frame.size.height = ceil(size.height)
@@ -53,19 +54,12 @@ class SewerProfileShortViewCell: UICollectionViewCell, ConfigurableCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-
     }
     
-    func configure(data test: Int) {
-//        let rating : String = String(describing: personal["rating"] as? Int ?? 0)
-//        sewerPicture.image = personal["picture"] as? UIImage
-//        sewerName.text = personal["name"] as? String
-//        sewerRating.text = rating + "/5"
-        
-        sewerPicture.image = UIImage(named:"sewerPicture1")
-        sewerName.text = "Alice Moneroe"
+    func configure(data sewer: SewerProfile) {
+        sewerPicture.image = sewer.sewerPicture
+        sewerName.text = sewer.sewerName
         sewerRating.text = "4/5"
         sewerPrestations.text = "23 prestations"
     }
-
 }

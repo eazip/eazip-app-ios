@@ -45,6 +45,14 @@
 		0C6DB8CE22690A7600F1020C /* SewerProfileShortViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8CC22690A7600F1020C /* SewerProfileShortViewCell.swift */; };
 		0C6DB8CF22690A7600F1020C /* SewerProfileShortViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DB8CD22690A7600F1020C /* SewerProfileShortViewCell.xib */; };
 		0C6DB8D522690E6600F1020C /* AppointmentCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D422690E6600F1020C /* AppointmentCollectionView.swift */; };
+		0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */; };
+		0C6DB8D9226A2B1D00F1020C /* ProductsDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */; };
+		0C6DB8DC226A483B00F1020C /* ProductItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */; };
+		0C6DB8DD226A483B00F1020C /* ProductItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */; };
+		0C6DB8E0226A5D4F00F1020C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DF226A5D4F00F1020C /* Product.swift */; };
+		0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8E1226E299100F1020C /* TodoProduct.swift */; };
+		0C6DB8E5226E3F8800F1020C /* ConfirmScreenTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8E4226E3F8800F1020C /* ConfirmScreenTemplate.swift */; };
+		0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8E6226E435E00F1020C /* Appointment.swift */; };
 		0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */; };
 		0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA562200523C00400BD2 /* ColoredActionButton.swift */; };
 		0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93BA582200535500400BD2 /* WhiteActionButton.swift */; };
@@ -122,6 +130,14 @@
 		0C6DB8CC22690A7600F1020C /* SewerProfileShortViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfileShortViewCell.swift; sourceTree = "<group>"; };
 		0C6DB8CD22690A7600F1020C /* SewerProfileShortViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SewerProfileShortViewCell.xib; sourceTree = "<group>"; };
 		0C6DB8D422690E6600F1020C /* AppointmentCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionView.swift; sourceTree = "<group>"; };
+		0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsViewCell.swift; sourceTree = "<group>"; };
+		0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsDetailsViewCell.xib; sourceTree = "<group>"; };
+		0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemViewCell.swift; sourceTree = "<group>"; };
+		0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemViewCell.xib; sourceTree = "<group>"; };
+		0C6DB8DF226A5D4F00F1020C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0C6DB8E1226E299100F1020C /* TodoProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoProduct.swift; sourceTree = "<group>"; };
+		0C6DB8E4226E3F8800F1020C /* ConfirmScreenTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmScreenTemplate.swift; sourceTree = "<group>"; };
+		0C6DB8E6226E435E00F1020C /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeButtonHelper.swift; sourceTree = "<group>"; };
 		0C93BA562200523C00400BD2 /* ColoredActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredActionButton.swift; sourceTree = "<group>"; };
 		0C93BA582200535500400BD2 /* WhiteActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteActionButton.swift; sourceTree = "<group>"; };
@@ -461,6 +477,8 @@
 		0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */ = {
 			isa = PBXGroup;
 			children = (
+				0C6DB8E3226E3F3700F1020C /* Template */,
+				0C6DB8DE226A5C3E00F1020C /* Data */,
 				0C6DB8C92266F7A300F1020C /* Extensions */,
 				0C6DB8C82266F79A00F1020C /* Layouts */,
 				0C6DB8C72266F79000F1020C /* Views */,
@@ -481,7 +499,7 @@
 			children = (
 				0C6DB8D322690D3700F1020C /* Payment */,
 				0C6DB8D222690CF800F1020C /* Appointment */,
-				0C6DB8D122690CEC00F1020C /* Prestations */,
+				0C6DB8D122690CEC00F1020C /* Products */,
 				0C6DB8D022690A8000F1020C /* Sewer */,
 			);
 			path = Layouts;
@@ -504,11 +522,15 @@
 			path = Sewer;
 			sourceTree = "<group>";
 		};
-		0C6DB8D122690CEC00F1020C /* Prestations */ = {
+		0C6DB8D122690CEC00F1020C /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */,
+				0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */,
+				0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */,
+				0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */,
 			);
-			path = Prestations;
+			path = Products;
 			sourceTree = "<group>";
 		};
 		0C6DB8D222690CF800F1020C /* Appointment */ = {
@@ -523,6 +545,24 @@
 			children = (
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		0C6DB8DE226A5C3E00F1020C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DB8DF226A5D4F00F1020C /* Product.swift */,
+				0C6DB8E1226E299100F1020C /* TodoProduct.swift */,
+				0C6DB8E6226E435E00F1020C /* Appointment.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0C6DB8E3226E3F3700F1020C /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DB8E4226E3F8800F1020C /* ConfirmScreenTemplate.swift */,
+			);
+			path = Template;
 			sourceTree = "<group>";
 		};
 		0CB8302A226321EA00A689DB /* Extensions */ = {
@@ -686,6 +726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6DB8DD226A483B00F1020C /* ProductItemViewCell.xib in Resources */,
 				0CFED29A225754FC00DDE166 /* HourPickerViewCell.xib in Resources */,
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
@@ -700,6 +741,7 @@
 				0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */,
 				0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */,
 				0C57C44221FC8C67007343C7 /* Assets.xcassets in Resources */,
+				0C6DB8D9226A2B1D00F1020C /* ProductsDetailsViewCell.xib in Resources */,
 				0C1B9391223BD72500EC60B1 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,12 +779,16 @@
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
+				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
+				0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */,
+				0C6DB8DC226A483B00F1020C /* ProductItemViewCell.swift in Sources */,
 				0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */,
 				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
 				0C9CE33E225E9ECB004DF3DA /* CalendarHelper.swift in Sources */,
 				0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */,
+				0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,
 				0C6DB8CE22690A7600F1020C /* SewerProfileShortViewCell.swift in Sources */,
 				0C60F23A224ADBC300E4B5F2 /* PictureViewCell.swift in Sources */,
@@ -756,12 +802,14 @@
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
 				0C6DB8CB2266F80900F1020C /* ConfirmAppointmentViewController.swift in Sources */,
+				0C6DB8E5226E3F8800F1020C /* ConfirmScreenTemplate.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,
+				0C6DB8E0226A5D4F00F1020C /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
