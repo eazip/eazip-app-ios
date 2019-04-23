@@ -22,8 +22,8 @@ class ConfirmAppointmentViewController: UIViewController {
         super.viewDidLoad()
         initAppointmentConfirmationCollectionView()
         setUpShortProfileView()
-        //setUpProductsDetailsView()
-
+        setUpProductsDetailsView()
+        setUpAppointmentView()
     }
     
     func initAppointmentConfirmationCollectionView() {
@@ -46,6 +46,10 @@ class ConfirmAppointmentViewController: UIViewController {
     
     func setUpProductsDetailsView() {
         initAppointmentSectionCell(cellIdentifier: "ProductsDetailsViewCell")
+    }
+    
+    func setUpAppointmentView() {
+        initAppointmentSectionCell(cellIdentifier: "AppointmentViewCell")
     }
     
     func initAppointmentSectionCell(cellIdentifier: String) {

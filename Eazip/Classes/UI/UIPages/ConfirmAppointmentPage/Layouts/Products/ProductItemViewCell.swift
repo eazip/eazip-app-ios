@@ -2,17 +2,17 @@
 //  ProductItemViewCell.swift
 //  Eazip
 //
-//  Created by Marie on 19/04/2019.
+//  Created by Marie on 22/04/2019.
 //  Copyright © 2019 Eazip. All rights reserved.
 //
 
 import UIKit
 
 class ProductItemViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var quantityPriceLabel: DefaultText!
     @IBOutlet weak var productDescriptionLabel: DefaultText!
-   
+    
     /**
      /////////////////////
      Up
@@ -20,11 +20,13 @@ class ProductItemViewCell: UITableViewCell {
      */
     override func awakeFromNib() {
         super.awakeFromNib()
+        quantityPriceLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
         
     }
     
     override func layoutSubviews() {
-        
+        self.invalidateIntrinsicContentSize()
+        self.layoutIfNeeded()
     }
     
     func setData(quantity: Int, price: Int, description: String) {
@@ -32,3 +34,4 @@ class ProductItemViewCell: UITableViewCell {
         productDescriptionLabel.text = "Rétrécir - Manches"
     }
 }
+

@@ -39,14 +39,28 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         initItemProductCell(cellIdentifier: "ProductItemViewCell")
         
         //Init delegate and datasource
-        productsTableView?.delegate = self as UITableViewDelegate
-        productsTableView?.dataSource = self as UITableViewDataSource
+        productsTableView?.estimatedRowHeight = 20
+        productsTableView?.rowHeight = UITableViewAutomaticDimension
+        productsTableView?.delegate = self
+        productsTableView?.dataSource = self
     }
     
     func setUptableViewWrapper() {
+        tableViewWrapper?.layer.masksToBounds = false
         tableViewWrapper?.layer.borderWidth = 1
-        tableViewWrapper?.layer.cornerRadius = 7
+        tableViewWrapper?.layer.cornerRadius = 5
         tableViewWrapper?.layer.borderColor = borderColor.cgColor
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
     }
     
     func initItemProductCell(cellIdentifier: String) {
@@ -98,6 +112,12 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         headerView.addSubview(sectionLabel)
         
         return headerView
+    }
+    
+    private func tableView(_ tableView: UITableView, sizeForRowAt indexPath: IndexPath) -> CGSize {
+        let size = CGSize(width: productsTableView.frame.width, height:20)
+        
+        return size
     }
     
     public func configure(data: [Product]) {

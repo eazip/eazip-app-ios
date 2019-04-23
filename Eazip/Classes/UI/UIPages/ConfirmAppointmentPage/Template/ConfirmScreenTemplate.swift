@@ -10,6 +10,7 @@ import UIKit
 
 typealias SewerProfileShortViewCellConfig = CollectionCellConfigurator<SewerProfileShortViewCell, SewerProfile>
 typealias ProductsDetailsCellConfig = CollectionCellConfigurator<ProductsDetailsViewCell, [Product]>
+typealias AppointmentCellConfig = CollectionCellConfigurator<AppointmentViewCell, Appointment>
 
 class ConfirmScreenTemplate {
     var appointment : Appointment
@@ -21,7 +22,8 @@ class ConfirmScreenTemplate {
     func templateWithData() -> [CellConfigurator] {
         let items : [CellConfigurator] = [
             SewerProfileShortViewCellConfig.init(item: appointment.sewer),
-            ProductsDetailsCellConfig.init(item: appointment.products)
+            ProductsDetailsCellConfig.init(item: appointment.products),
+            AppointmentCellConfig.init(item: appointment)
         ]
         
         return items

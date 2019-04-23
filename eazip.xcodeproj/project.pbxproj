@@ -47,8 +47,6 @@
 		0C6DB8D522690E6600F1020C /* AppointmentCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D422690E6600F1020C /* AppointmentCollectionView.swift */; };
 		0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */; };
 		0C6DB8D9226A2B1D00F1020C /* ProductsDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */; };
-		0C6DB8DC226A483B00F1020C /* ProductItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */; };
-		0C6DB8DD226A483B00F1020C /* ProductItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */; };
 		0C6DB8E0226A5D4F00F1020C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8DF226A5D4F00F1020C /* Product.swift */; };
 		0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8E1226E299100F1020C /* TodoProduct.swift */; };
 		0C6DB8E5226E3F8800F1020C /* ConfirmScreenTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DB8E4226E3F8800F1020C /* ConfirmScreenTemplate.swift */; };
@@ -67,6 +65,10 @@
 		0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302D2264652F00A689DB /* HourPickerTableView.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
+		0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24AA226E595600A34AF2 /* ProductItemViewCell.swift */; };
+		0CDA24AD226E595600A34AF2 /* ProductItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */; };
+		0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */; };
+		0CDA24B1226E7A5300A34AF2 /* AppointmentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24AF226E7A5300A34AF2 /* AppointmentViewCell.xib */; };
 		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
 		0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFED2922257410200DDE166 /* DatePickerViewCell.xib */; };
 		0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */; };
@@ -132,8 +134,6 @@
 		0C6DB8D422690E6600F1020C /* AppointmentCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionView.swift; sourceTree = "<group>"; };
 		0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailsViewCell.swift; sourceTree = "<group>"; };
 		0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsDetailsViewCell.xib; sourceTree = "<group>"; };
-		0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemViewCell.swift; sourceTree = "<group>"; };
-		0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemViewCell.xib; sourceTree = "<group>"; };
 		0C6DB8DF226A5D4F00F1020C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0C6DB8E1226E299100F1020C /* TodoProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoProduct.swift; sourceTree = "<group>"; };
 		0C6DB8E4226E3F8800F1020C /* ConfirmScreenTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmScreenTemplate.swift; sourceTree = "<group>"; };
@@ -152,6 +152,10 @@
 		0CB8302D2264652F00A689DB /* HourPickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerTableView.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
+		0CDA24AA226E595600A34AF2 /* ProductItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemViewCell.swift; sourceTree = "<group>"; };
+		0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemViewCell.xib; sourceTree = "<group>"; };
+		0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewCell.swift; sourceTree = "<group>"; };
+		0CDA24AF226E7A5300A34AF2 /* AppointmentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentViewCell.xib; sourceTree = "<group>"; };
 		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
 		0CFED2922257410200DDE166 /* DatePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewCell.xib; sourceTree = "<group>"; };
 		0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerViewCell.swift; sourceTree = "<group>"; };
@@ -527,8 +531,8 @@
 			children = (
 				0C6DB8D6226A2B1D00F1020C /* ProductsDetailsViewCell.swift */,
 				0C6DB8D7226A2B1D00F1020C /* ProductsDetailsViewCell.xib */,
-				0C6DB8DA226A483B00F1020C /* ProductItemViewCell.swift */,
-				0C6DB8DB226A483B00F1020C /* ProductItemViewCell.xib */,
+				0CDA24AA226E595600A34AF2 /* ProductItemViewCell.swift */,
+				0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -536,6 +540,8 @@
 		0C6DB8D222690CF800F1020C /* Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */,
+				0CDA24AF226E7A5300A34AF2 /* AppointmentViewCell.xib */,
 			);
 			path = Appointment;
 			sourceTree = "<group>";
@@ -726,7 +732,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6DB8DD226A483B00F1020C /* ProductItemViewCell.xib in Resources */,
+				0CDA24B1226E7A5300A34AF2 /* AppointmentViewCell.xib in Resources */,
 				0CFED29A225754FC00DDE166 /* HourPickerViewCell.xib in Resources */,
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
@@ -734,6 +740,7 @@
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
 				0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */,
 				0C6DB8CF22690A7600F1020C /* SewerProfileShortViewCell.xib in Resources */,
+				0CDA24AD226E595600A34AF2 /* ProductItemViewCell.xib in Resources */,
 				0C1B9386223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf in Resources */,
 				0C1B9388223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf in Resources */,
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
@@ -770,7 +777,9 @@
 				0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */,
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
+				0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */,
 				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
+				0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
@@ -782,7 +791,6 @@
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */,
-				0C6DB8DC226A483B00F1020C /* ProductItemViewCell.swift in Sources */,
 				0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */,
 				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
