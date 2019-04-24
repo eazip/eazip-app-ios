@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaymentMethodsViewCell" id="gTV-IL-0wX" customClass="PaymentMethodsViewCell" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="528"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="528"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwP-2F-8bd">
+                        <rect key="frame" x="0.0" y="0.0" width="425" height="528"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-Ge-Ifn">
+                                <rect key="frame" x="0.0" y="64" width="425" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKO-Yg-tMJ" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="28" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpZ-WL-abd">
+                                <rect key="frame" x="28" y="405" width="369" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LYY-nl-Xkz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cpZ-WL-abd" firstAttribute="leading" secondItem="IwP-2F-8bd" secondAttribute="leading" constant="28" id="5yE-Pl-8Po"/>
+                            <constraint firstAttribute="trailing" secondItem="HNM-Ge-Ifn" secondAttribute="trailing" id="BZo-Ng-GSl"/>
+                            <constraint firstItem="cpZ-WL-abd" firstAttribute="top" secondItem="HNM-Ge-Ifn" secondAttribute="bottom" constant="15" id="Gvr-fO-7id"/>
+                            <constraint firstItem="HNM-Ge-Ifn" firstAttribute="width" secondItem="IwP-2F-8bd" secondAttribute="width" id="MXV-TQ-xMf"/>
+                            <constraint firstItem="HNM-Ge-Ifn" firstAttribute="top" secondItem="HKO-Yg-tMJ" secondAttribute="bottom" constant="15" id="NiT-ox-SR5"/>
+                            <constraint firstItem="HKO-Yg-tMJ" firstAttribute="top" secondItem="IwP-2F-8bd" secondAttribute="top" constant="28" id="iTk-Wy-Obh"/>
+                            <constraint firstAttribute="bottom" secondItem="cpZ-WL-abd" secondAttribute="bottom" constant="63" id="nai-3k-ypx"/>
+                            <constraint firstItem="HNM-Ge-Ifn" firstAttribute="leading" secondItem="IwP-2F-8bd" secondAttribute="leading" id="oXW-Pu-YYI"/>
+                            <constraint firstItem="HKO-Yg-tMJ" firstAttribute="leading" secondItem="IwP-2F-8bd" secondAttribute="leading" constant="28" id="uac-Qc-pSS"/>
+                            <constraint firstAttribute="trailing" secondItem="cpZ-WL-abd" secondAttribute="trailing" constant="28" id="wnF-OX-Q9J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IwP-2F-8bd" secondAttribute="bottom" id="0v0-LA-cRk"/>
+                <constraint firstItem="IwP-2F-8bd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Jz-aU-FkD"/>
+                <constraint firstItem="IwP-2F-8bd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8RR-fT-BrD"/>
+                <constraint firstItem="IwP-2F-8bd" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="og4-KA-57S"/>
+                <constraint firstItem="IwP-2F-8bd" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="vdP-n1-t6N"/>
+                <constraint firstAttribute="trailing" secondItem="IwP-2F-8bd" secondAttribute="trailing" id="xfu-6B-vSq"/>
+            </constraints>
+            <size key="customSize" width="425" height="528"/>
+            <connections>
+                <outlet property="newPaymentMethodButton" destination="cpZ-WL-abd" id="CUT-Bx-YSW"/>
+                <outlet property="paymentMethodsTableView" destination="HNM-Ge-Ifn" id="3FH-9i-c3h"/>
+                <outlet property="paymentMethodsTitleLabel" destination="HKO-Yg-tMJ" id="coJ-8E-N0Z"/>
+                <outlet property="tableViewWrapper" destination="IwP-2F-8bd" id="PUY-CF-Khf"/>
+            </connections>
+            <point key="canvasLocation" x="213.5" y="291"/>
+        </collectionViewCell>
+    </objects>
+</document>

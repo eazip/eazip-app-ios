@@ -13,7 +13,7 @@ extension ConfirmAppointmentViewController: UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: appointmentConfirmationCollectionView.bounds.size.width, height:200)
+        let size = CGSize(width: appointmentConfirmationCollectionView.bounds.size.width, height:500)
         
         return size
     }

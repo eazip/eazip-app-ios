@@ -15,7 +15,6 @@ class ConfirmAppointmentViewController: UIViewController {
     
     //Data
     let appointment = Appointment()
-    
     var appointmentSections : Int = 0
 
     override func viewDidLoad() {
@@ -24,6 +23,8 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpShortProfileView()
         setUpProductsDetailsView()
         setUpAppointmentView()
+        setUpPaymentMethodsView()
+        setUpPromoCodeView()
     }
     
     func initAppointmentConfirmationCollectionView() {
@@ -50,6 +51,14 @@ class ConfirmAppointmentViewController: UIViewController {
     
     func setUpAppointmentView() {
         initAppointmentSectionCell(cellIdentifier: "AppointmentViewCell")
+    }
+    
+    func setUpPaymentMethodsView() {
+        initAppointmentSectionCell(cellIdentifier: "PaymentMethodsViewCell")
+    }
+    
+    func setUpPromoCodeView() {
+        initAppointmentSectionCell(cellIdentifier: "PromoCodeViewCell")
     }
     
     func initAppointmentSectionCell(cellIdentifier: String) {

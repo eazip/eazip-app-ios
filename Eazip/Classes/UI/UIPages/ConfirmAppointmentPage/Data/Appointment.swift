@@ -12,6 +12,7 @@ class Appointment {
     var date : String
     var hour : Int
     var address : [String:String]
+    var customer : Customer
     
     init() {
         self.sewer = SewerProfile()
@@ -19,6 +20,7 @@ class Appointment {
         self.date = "Jeudi 13 Janvier 2019"
         self.hour = 16
         self.address = ["street":"23 rue de Romainville", "city":"93100 Montreuil"]
+        self.customer = Customer()
     }
 }
 

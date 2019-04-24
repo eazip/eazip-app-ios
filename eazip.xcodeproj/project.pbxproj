@@ -69,6 +69,13 @@
 		0CDA24AD226E595600A34AF2 /* ProductItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */; };
 		0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */; };
 		0CDA24B1226E7A5300A34AF2 /* AppointmentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24AF226E7A5300A34AF2 /* AppointmentViewCell.xib */; };
+		0CDA24B4226F093400A34AF2 /* PaymentMethodsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24B2226F093400A34AF2 /* PaymentMethodsViewCell.swift */; };
+		0CDA24B5226F093400A34AF2 /* PaymentMethodsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24B3226F093400A34AF2 /* PaymentMethodsViewCell.xib */; };
+		0CDA24B7226F18C800A34AF2 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24B6226F18C800A34AF2 /* Customer.swift */; };
+		0CDA24BA226F33B900A34AF2 /* PaymentItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24B8226F33B900A34AF2 /* PaymentItemViewCell.swift */; };
+		0CDA24BB226F33B900A34AF2 /* PaymentItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24B9226F33B900A34AF2 /* PaymentItemViewCell.xib */; };
+		0CDA24BF227067CA00A34AF2 /* PromoCodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24BD227067CA00A34AF2 /* PromoCodeViewCell.swift */; };
+		0CDA24C0227067CA00A34AF2 /* PromoCodeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24BE227067CA00A34AF2 /* PromoCodeViewCell.xib */; };
 		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
 		0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFED2922257410200DDE166 /* DatePickerViewCell.xib */; };
 		0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */; };
@@ -156,6 +163,13 @@
 		0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemViewCell.xib; sourceTree = "<group>"; };
 		0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewCell.swift; sourceTree = "<group>"; };
 		0CDA24AF226E7A5300A34AF2 /* AppointmentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentViewCell.xib; sourceTree = "<group>"; };
+		0CDA24B2226F093400A34AF2 /* PaymentMethodsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewCell.swift; sourceTree = "<group>"; };
+		0CDA24B3226F093400A34AF2 /* PaymentMethodsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodsViewCell.xib; sourceTree = "<group>"; };
+		0CDA24B6226F18C800A34AF2 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		0CDA24B8226F33B900A34AF2 /* PaymentItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentItemViewCell.swift; sourceTree = "<group>"; };
+		0CDA24B9226F33B900A34AF2 /* PaymentItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentItemViewCell.xib; sourceTree = "<group>"; };
+		0CDA24BD227067CA00A34AF2 /* PromoCodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewCell.swift; sourceTree = "<group>"; };
+		0CDA24BE227067CA00A34AF2 /* PromoCodeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoCodeViewCell.xib; sourceTree = "<group>"; };
 		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
 		0CFED2922257410200DDE166 /* DatePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewCell.xib; sourceTree = "<group>"; };
 		0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerViewCell.swift; sourceTree = "<group>"; };
@@ -501,6 +515,7 @@
 		0C6DB8C82266F79A00F1020C /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				0CDA24BC2270672500A34AF2 /* PromoCode */,
 				0C6DB8D322690D3700F1020C /* Payment */,
 				0C6DB8D222690CF800F1020C /* Appointment */,
 				0C6DB8D122690CEC00F1020C /* Products */,
@@ -549,6 +564,10 @@
 		0C6DB8D322690D3700F1020C /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				0CDA24B2226F093400A34AF2 /* PaymentMethodsViewCell.swift */,
+				0CDA24B3226F093400A34AF2 /* PaymentMethodsViewCell.xib */,
+				0CDA24B8226F33B900A34AF2 /* PaymentItemViewCell.swift */,
+				0CDA24B9226F33B900A34AF2 /* PaymentItemViewCell.xib */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -559,6 +578,7 @@
 				0C6DB8DF226A5D4F00F1020C /* Product.swift */,
 				0C6DB8E1226E299100F1020C /* TodoProduct.swift */,
 				0C6DB8E6226E435E00F1020C /* Appointment.swift */,
+				0CDA24B6226F18C800A34AF2 /* Customer.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -594,6 +614,15 @@
 				0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */,
 			);
 			path = Template;
+			sourceTree = "<group>";
+		};
+		0CDA24BC2270672500A34AF2 /* PromoCode */ = {
+			isa = PBXGroup;
+			children = (
+				0CDA24BD227067CA00A34AF2 /* PromoCodeViewCell.swift */,
+				0CDA24BE227067CA00A34AF2 /* PromoCodeViewCell.xib */,
+			);
+			path = PromoCode;
 			sourceTree = "<group>";
 		};
 		0CFED290225740D400DDE166 /* Layouts */ = {
@@ -736,15 +765,18 @@
 				0CFED29A225754FC00DDE166 /* HourPickerViewCell.xib in Resources */,
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
+				0CDA24B5226F093400A34AF2 /* PaymentMethodsViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
 				0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */,
+				0CDA24BB226F33B900A34AF2 /* PaymentItemViewCell.xib in Resources */,
 				0C6DB8CF22690A7600F1020C /* SewerProfileShortViewCell.xib in Resources */,
 				0CDA24AD226E595600A34AF2 /* ProductItemViewCell.xib in Resources */,
 				0C1B9386223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf in Resources */,
 				0C1B9388223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf in Resources */,
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
 				0C988BED22404B510079727C /* Avenir-Black.ttf in Resources */,
+				0CDA24C0227067CA00A34AF2 /* PromoCodeViewCell.xib in Resources */,
 				0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */,
 				0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */,
 				0C57C44221FC8C67007343C7 /* Assets.xcassets in Resources */,
@@ -780,6 +812,7 @@
 				0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */,
 				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
 				0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */,
+				0CDA24BF227067CA00A34AF2 /* PromoCodeViewCell.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
@@ -787,6 +820,7 @@
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
+				0CDA24B4226F093400A34AF2 /* PaymentMethodsViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
@@ -806,6 +840,7 @@
 				2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
 				0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */,
+				0CDA24B7226F18C800A34AF2 /* Customer.swift in Sources */,
 				0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
@@ -817,6 +852,7 @@
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,
+				0CDA24BA226F33B900A34AF2 /* PaymentItemViewCell.swift in Sources */,
 				0C6DB8E0226A5D4F00F1020C /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,8 +30,10 @@ class ProductItemViewCell: UITableViewCell {
     }
     
     func setData(quantity: Int, price: Int, description: String) {
-        quantityPriceLabel.text = "2 x 30€"
-        productDescriptionLabel.text = "Rétrécir - Manches"
+        let quantityToString = String(describing: quantity)
+        let priceToString = String(describing: price)
+        quantityPriceLabel.text = quantityToString + " x " + priceToString + "€"
+        productDescriptionLabel.text = description
     }
 }
 
