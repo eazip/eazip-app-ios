@@ -60,12 +60,22 @@
                                                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-wb-uTM">
+                                                    <rect key="frame" x="310" y="32.5" width="25" height="25"/>
+                                                    <state key="normal" image="no-check"/>
+                                                    <state key="selected" image="checked"/>
+                                                    <connections>
+                                                        <action selector="checkboxTapped:" destination="QRw-DC-WiO" eventType="touchUpInside" id="vXw-gm-KQl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BFw-wb-uTM" secondAttribute="trailing" constant="25" id="3Qn-Kr-uJ2"/>
                                                 <constraint firstItem="GQh-KR-cSV" firstAttribute="centerY" secondItem="y6m-3r-Kv2" secondAttribute="centerY" id="EKx-LM-W2t"/>
                                                 <constraint firstItem="GQh-KR-cSV" firstAttribute="leading" secondItem="nPX-n2-3Ex" secondAttribute="trailing" constant="50" id="fCe-Ab-ctM"/>
+                                                <constraint firstItem="BFw-wb-uTM" firstAttribute="centerY" secondItem="y6m-3r-Kv2" secondAttribute="centerY" id="l07-nb-mc8"/>
                                                 <constraint firstItem="nPX-n2-3Ex" firstAttribute="centerY" secondItem="y6m-3r-Kv2" secondAttribute="centerY" id="oTw-q1-3Wb"/>
                                                 <constraint firstItem="nPX-n2-3Ex" firstAttribute="leading" secondItem="y6m-3r-Kv2" secondAttribute="leading" constant="40" id="yK6-za-9pC"/>
                                             </constraints>
@@ -431,8 +441,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checked" width="25" height="25"/>
         <image name="ciseaux" width="23" height="31"/>
         <image name="loginPageMedia" width="1125" height="1232"/>
+        <image name="no-check" width="25" height="25"/>
         <image name="retouches" width="31" height="19"/>
         <image name="starRank" width="5.5" height="5"/>
         <image name="user" width="26" height="27"/>

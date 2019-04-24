@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 
 class ClothItem {
+    var cloth_id: Int
     var icon: UIImage
     var title: String
+    var selected: Bool
     
-    init(icon: UIImage, title: String) {
+    init(cloth_id: Int, icon: UIImage, title: String, selected: Bool) {
         self.icon = icon
         self.title = title
+        self.selected = selected
+        self.cloth_id = cloth_id
     }
 }
