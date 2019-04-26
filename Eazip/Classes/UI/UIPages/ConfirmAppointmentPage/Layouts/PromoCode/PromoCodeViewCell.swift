@@ -12,7 +12,7 @@ class PromoCodeViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var promoCodeTitleLabel: UILabel!
     @IBOutlet weak var promoCodeTextField: UITextField!
     @IBOutlet weak var messageLabel: DefaultText!
-    @IBOutlet weak var addNewPromoCodeButton: UIButton!
+    @IBOutlet weak var stateIcon: UIImageView!
     
     let promoCodeTextFieldPlaceHolder = "Exemple : AIZOIEPL78"
     var promoCodeValue : String = ""
@@ -24,6 +24,7 @@ class PromoCodeViewCell: UICollectionViewCell, ConfigurableCell {
     // Messages to display
     let errorMessage : String = "Le code promo est invalide"
     let successMessage : String = "-10% pour la fête des mères"
+    let expectedCodeValue : String = "LOVEMUM83"
     
     /**
      /////////////////////
@@ -41,26 +42,12 @@ class PromoCodeViewCell: UICollectionViewCell, ConfigurableCell {
         promoCodeTextField.addTarget(self, action: #selector(textFieldTouched), for: .touchDown)
         promoCodeTextField.addTarget(self, action: #selector(updateTextField), for: .editingDidEndOnExit)
     }
-
+    
     func setUpPromoCodeTitleLabel() {
         promoCodeTitleLabel.text = "Codes promo"
         promoCodeTitleLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
     }
     
-    @objc func updateTextField() {
-        if promoCodeTextField.text == "" {
-            setUpTextFieldPlaceHolder()
-        }
-        promoCodeValue = promoCodeTextField.text!
-        print(promoCodeValue)
-    }
-    
-    func setUpTextFieldPlaceHolder() {
-        promoCodeTextField.text = promoCodeTextFieldPlaceHolder
-        promoCodeTextField.font = FontHelper.avenirBlackFontWithSize(size: 13)
-        promoCodeTextField.textColor = buttonTextColor
-    }
-
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()
         layoutIfNeeded()
@@ -73,26 +60,58 @@ class PromoCodeViewCell: UICollectionViewCell, ConfigurableCell {
     }
     
     @objc func textFieldTouched(textField: UITextField) {
-        promoCodeTextField.text = ""
-        promoCodeTextField.textColor = UIColor.black
+        if promoCodeValue == "" {
+            promoCodeTextField.text = ""
+            promoCodeTextField.textColor = UIColor.black
+        }
+    }
+    
+    @objc func updateTextField() {
+        if promoCodeTextField.text == "" {
+            resetTextField()
+        } else {
+            superview?.endEditing(true)
+            promoCodeValue = promoCodeTextField.text!
+            displayMessage()
+            
+            if promoCodeValue != expectedCodeValue {
+                setErrorBehaviour()
+            } else {
+                setSuccessBehaviour()
+            }
+        }
+    }
+    
+    func resetTextField() {
+        setUpTextFieldPlaceHolder()
+        promoCodeValue = ""
+        stateIcon.image = UIImage(named:"add_new")
+        hideMessage()
+    }
+    
+    func setUpTextFieldPlaceHolder() {
+        promoCodeTextField.text = promoCodeTextFieldPlaceHolder
+        promoCodeTextField.font = FontHelper.avenirBlackFontWithSize(size: 13)
+        promoCodeTextField.textColor = buttonTextColor
+    }
+    
+    func displayMessage() {
+        messageLabel.isHidden = false
+    }
+    
+    func hideMessage() {
+        messageLabel.isHidden = true
     }
     
     func setErrorBehaviour() {
-        setErrorMessage()
-    }
-    
-    func setSuccessBehaviour() {
-        
-    }
-    
-    func setErrorMessage() {
         messageLabel.text = errorMessage
         messageLabel.textColor = UIColor.red
     }
     
-    func setSuccessMessage() {
+    func setSuccessBehaviour() {
         messageLabel.text = successMessage
         messageLabel.textColor = UIColor.green
+        stateIcon.image = UIImage(named:"success_icon")
     }
     
     func configure(data: [Product]) {
