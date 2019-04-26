@@ -16,7 +16,7 @@ class Appointment {
     
     init() {
         self.sewer = SewerProfile()
-        self.products = [Product(), Product()]
+        self.products = [Product()]
         self.date = "Jeudi 13 Janvier 2019"
         self.hour = 16
         self.address = ["street":"23 rue de Romainville", "city":"93100 Montreuil"]

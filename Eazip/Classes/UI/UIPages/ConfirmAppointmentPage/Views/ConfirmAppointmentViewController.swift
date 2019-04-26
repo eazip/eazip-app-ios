@@ -11,10 +11,13 @@ import UIKit
 class ConfirmAppointmentViewController: UIViewController {
 
     @IBOutlet weak var appointmentConfirmationCollectionView: UICollectionView!
+    @IBOutlet weak var totalPriceTitleLabel: EazipLabel!
+    @IBOutlet weak var totalPriceNbLabel: EazipLabel!
     @IBOutlet weak var confirmAppointmentButton: ColoredActionButton!
     
     //Data
     let appointment = Appointment()
+    let totalPrice : Int = 0
     var appointmentSections : Int = 0
 
     override func viewDidLoad() {
@@ -25,6 +28,8 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpAppointmentView()
         setUpPaymentMethodsView()
         setUpPromoCodeView()
+        setUpTotalPriceWrapper()
+        setUpRegisterButton()
     }
     
     func initAppointmentConfirmationCollectionView() {
@@ -64,5 +69,20 @@ class ConfirmAppointmentViewController: UIViewController {
     func initAppointmentSectionCell(cellIdentifier: String) {
         appointmentConfirmationCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         appointmentSections = appointmentSections + 1
+    }
+    
+    func setUpRegisterButton() {
+        confirmAppointmentButton.setTitle("Réserver", for: .normal)
+    }
+    
+    func setUpTotalPriceWrapper() {
+        totalPriceTitleLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
+        totalPriceTitleLabel.text = "Prix final"
+        setTotalPrice()
+    }
+    
+    func setTotalPrice() {
+        let totalPriceToString = String(describing: totalPrice)
+        totalPriceNbLabel.text = totalPriceToString + "€"
     }
 }

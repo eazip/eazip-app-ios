@@ -34,7 +34,8 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
     }
     
     override func layoutSubviews() {
-        
+        super.layoutSubviews()
+        paymentMethodsTableView.layoutIfNeeded()
     }
     
     func setUpPaymentMethodsTitleLabel() {
@@ -50,9 +51,10 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
         newPaymentMethodButton?.layer.borderWidth = 1
         newPaymentMethodButton?.layer.cornerRadius = 5
         newPaymentMethodButton?.layer.borderColor = borderColor.cgColor
+        newPaymentMethodButton?.backgroundColor = UIColor.white
         newPaymentMethodButton?.setTitle("+ Ajouter un nouveau mode de paiement", for: .normal)
         newPaymentMethodButton?.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 13)
-        newPaymentMethodButton?.titleLabel?.textColor = buttonTextColor
+        newPaymentMethodButton?.setTitleColor(buttonTextColor, for: .normal)
     }
     
     func initPaymentMethodsTableView() {
@@ -65,6 +67,7 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
         //Init delegate and datasource
         paymentMethodsTableView?.estimatedRowHeight = 60
         paymentMethodsTableView?.rowHeight = UITableViewAutomaticDimension
+        //paymentMethodsTableView?.isScrollEnabled = false
         paymentMethodsTableView?.delegate = self
         paymentMethodsTableView?.dataSource = self
     }
@@ -84,12 +87,31 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
         paymentMethodsTableView?.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return paymentMethods.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        } else {
+            return 15
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let paymentItem = paymentMethods[indexPath.row]
+        var paymentItem : [String: Any] = [:]
+        
+        for (index, item) in paymentMethods.enumerated() {
+            if indexPath.section == index {
+                paymentItem = item
+            }
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentItemViewCell") as! PaymentItemViewCell
         cell.setData(cbType: paymentItem["cbType"] as! String, cbNb: paymentItem["cbNb"] as! Int)
         
@@ -97,7 +119,7 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
     }
     
     private func tableView(_ tableView: UITableView, sizeForRowAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: paymentMethodsTableView.bounds.width-30, height:60)
+        let size = CGSize(width: paymentMethodsTableView.frame.width, height:60)
         
         return size
     }

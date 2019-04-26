@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SuZ-zp-eLb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SuZ-zp-eLb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,6 +15,10 @@
         <scene sceneID="ZAS-wd-JMU">
             <objects>
                 <viewController id="QRw-DC-WiO" customClass="ClothPickingListScreen" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qV6-Je-NL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="uFf-5s-MwO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dTc-8c-35T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,17 +78,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="p7l-d9-YWa" firstAttribute="top" secondItem="b5B-QZ-k77" secondAttribute="top" id="3a8-e8-Lqn"/>
-                            <constraint firstItem="p7l-d9-YWa" firstAttribute="leading" secondItem="b5B-QZ-k77" secondAttribute="leading" id="9CJ-LY-HFj"/>
+                            <constraint firstItem="p7l-d9-YWa" firstAttribute="top" secondItem="qV6-Je-NL1" secondAttribute="bottom" id="3a8-e8-Lqn"/>
+                            <constraint firstItem="p7l-d9-YWa" firstAttribute="leading" secondItem="dTc-8c-35T" secondAttribute="leading" id="9CJ-LY-HFj"/>
                             <constraint firstItem="Vdh-iX-eyR" firstAttribute="centerX" secondItem="dTc-8c-35T" secondAttribute="centerX" id="Hph-b8-54u"/>
-                            <constraint firstItem="b5B-QZ-k77" firstAttribute="trailing" secondItem="Vdh-iX-eyR" secondAttribute="trailing" constant="20" id="ITk-qq-3gF"/>
-                            <constraint firstItem="Vdh-iX-eyR" firstAttribute="leading" secondItem="b5B-QZ-k77" secondAttribute="leading" constant="20" id="JAw-Bk-LX6"/>
-                            <constraint firstItem="p7l-d9-YWa" firstAttribute="trailing" secondItem="b5B-QZ-k77" secondAttribute="trailing" id="L4R-WQ-cGg"/>
+                            <constraint firstAttribute="trailing" secondItem="Vdh-iX-eyR" secondAttribute="trailing" constant="20" id="ITk-qq-3gF"/>
+                            <constraint firstItem="Vdh-iX-eyR" firstAttribute="leading" secondItem="dTc-8c-35T" secondAttribute="leading" constant="20" id="JAw-Bk-LX6"/>
+                            <constraint firstItem="p7l-d9-YWa" firstAttribute="trailing" secondItem="dTc-8c-35T" secondAttribute="trailing" id="L4R-WQ-cGg"/>
                             <constraint firstItem="Vdh-iX-eyR" firstAttribute="top" secondItem="p7l-d9-YWa" secondAttribute="bottom" constant="10" id="Lhk-n4-55W"/>
-                            <constraint firstItem="b5B-QZ-k77" firstAttribute="bottom" secondItem="Vdh-iX-eyR" secondAttribute="bottom" constant="10" id="oSl-V8-Zow"/>
-                            <constraint firstItem="b5B-QZ-k77" firstAttribute="bottom" secondItem="Vdh-iX-eyR" secondAttribute="bottom" constant="10" id="sCN-Hv-3Nj"/>
+                            <constraint firstItem="uFf-5s-MwO" firstAttribute="top" secondItem="Vdh-iX-eyR" secondAttribute="bottom" constant="10" id="oSl-V8-Zow"/>
+                            <constraint firstItem="uFf-5s-MwO" firstAttribute="top" secondItem="Vdh-iX-eyR" secondAttribute="bottom" constant="10" id="sCN-Hv-3Nj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="b5B-QZ-k77"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="UNE RETOUCHE ? " image="ciseaux" id="Dpm-8M-fhS"/>
                     <navigationItem key="navigationItem" id="NZs-qc-jYI"/>
@@ -101,11 +103,14 @@
         <scene sceneID="dc6-sH-swQ">
             <objects>
                 <viewController id="wT1-Z9-abP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bFe-FI-ofp"/>
+                        <viewControllerLayoutGuide type="bottom" id="bsI-pm-NFb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Av-bc-56l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="eazipLightPeachColor"/>
-                        <viewLayoutGuide key="safeArea" id="g2W-Mp-F82"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MES RETOUCHES" image="retouches" id="7Tg-Y7-tFs"/>
                 </viewController>
@@ -117,11 +122,14 @@
         <scene sceneID="O88-Ia-vAc">
             <objects>
                 <viewController id="LS0-d1-hrQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9mZ-Df-wls"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ii-Tr-EEn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K8T-GI-c4V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="eazipPeachColor"/>
-                        <viewLayoutGuide key="safeArea" id="V1r-ce-NfQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="PROFIL" image="user" id="KVT-y8-FBj"/>
                 </viewController>
@@ -153,6 +161,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WelcomePageController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j5E-wf-2mD"/>
+                        <viewControllerLayoutGuide type="bottom" id="fK6-1K-f6I"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,11 +222,10 @@
                             <constraint firstItem="Q4m-y6-jeO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGt-nU-jqv"/>
                             <constraint firstItem="zmu-h2-Aa8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1T-M4-C3v"/>
                             <constraint firstItem="KXt-g5-n15" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFz-XD-f1F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KXt-g5-n15" secondAttribute="bottom" constant="150" id="lmh-N5-IJq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q4m-y6-jeO" secondAttribute="bottom" constant="20" id="utk-7x-r9t"/>
-                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ygp-EM-cTE"/>
+                            <constraint firstItem="fK6-1K-f6I" firstAttribute="top" secondItem="KXt-g5-n15" secondAttribute="bottom" constant="150" id="lmh-N5-IJq"/>
+                            <constraint firstItem="fK6-1K-f6I" firstAttribute="top" secondItem="Q4m-y6-jeO" secondAttribute="bottom" constant="20" id="utk-7x-r9t"/>
+                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="top" secondItem="j5E-wf-2mD" secondAttribute="bottom" constant="50" id="ygp-EM-cTE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mainTitle" destination="zmu-h2-Aa8" id="v0G-tj-dS1"/>
@@ -230,11 +241,14 @@
         <scene sceneID="vfg-hz-qhd">
             <objects>
                 <viewController id="LdH-Em-MM9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8n9-m8-l9z"/>
+                        <viewControllerLayoutGuide type="bottom" id="2qR-V9-DJX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4DV-Tg-dHZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="T0P-I4-gxD"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlu-aw-5Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,6 +259,10 @@
         <scene sceneID="dYM-b4-g9x">
             <objects>
                 <viewController storyboardIdentifier="SewerProfileViewController" id="rLG-pX-Oha" customClass="SewerProfileViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S3k-QI-Bfr"/>
+                        <viewControllerLayoutGuide type="bottom" id="04X-rs-JTp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jZv-1L-m8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,11 +305,10 @@
                             <constraint firstItem="beg-N1-x7V" firstAttribute="top" secondItem="jZv-1L-m8J" secondAttribute="top" id="0Ch-L1-gy9"/>
                             <constraint firstItem="beg-N1-x7V" firstAttribute="width" secondItem="jZv-1L-m8J" secondAttribute="width" id="0vz-OA-zUf"/>
                             <constraint firstItem="beg-N1-x7V" firstAttribute="centerX" secondItem="jZv-1L-m8J" secondAttribute="centerX" id="7q1-Q3-mke"/>
-                            <constraint firstItem="beg-N1-x7V" firstAttribute="bottom" secondItem="gmp-hD-eAq" secondAttribute="bottom" id="Brb-cX-X91"/>
+                            <constraint firstItem="beg-N1-x7V" firstAttribute="bottom" secondItem="04X-rs-JTp" secondAttribute="top" id="Brb-cX-X91"/>
                             <constraint firstItem="beg-N1-x7V" firstAttribute="trailing" secondItem="jZv-1L-m8J" secondAttribute="trailing" id="Sqq-Wt-gaU"/>
                             <constraint firstItem="beg-N1-x7V" firstAttribute="leading" secondItem="jZv-1L-m8J" secondAttribute="leading" id="dR5-Qv-fK1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gmp-hD-eAq"/>
                     </view>
                     <connections>
                         <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="JcH-wP-iUw"/>
@@ -305,6 +322,10 @@
         <scene sceneID="A0S-RO-Bkt">
             <objects>
                 <viewController id="EQc-9y-Z18" customClass="SewerAvailabilityViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H7P-4v-6fx"/>
+                        <viewControllerLayoutGuide type="bottom" id="QDe-e6-eNb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w7O-pj-U3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,20 +374,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QDz-W2-AMe" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" id="6e2-Qt-V2M"/>
-                            <constraint firstItem="oaq-B2-wPl" firstAttribute="top" secondItem="yRy-XB-ASw" secondAttribute="top" constant="25" id="Gd7-Od-Bvo"/>
-                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="oaq-B2-wPl" secondAttribute="trailing" constant="28" id="Hz3-Jn-DAP"/>
+                            <constraint firstItem="QDz-W2-AMe" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" id="6e2-Qt-V2M"/>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="top" secondItem="H7P-4v-6fx" secondAttribute="bottom" constant="25" id="Gd7-Od-Bvo"/>
+                            <constraint firstAttribute="trailing" secondItem="oaq-B2-wPl" secondAttribute="trailing" constant="28" id="Hz3-Jn-DAP"/>
                             <constraint firstItem="Bbl-HR-yos" firstAttribute="centerX" secondItem="w7O-pj-U3h" secondAttribute="centerX" id="K2k-uF-Rsi"/>
-                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="HoF-K9-Nz0" secondAttribute="trailing" constant="28" id="NKh-rs-obg"/>
+                            <constraint firstAttribute="trailing" secondItem="HoF-K9-Nz0" secondAttribute="trailing" constant="28" id="NKh-rs-obg"/>
                             <constraint firstItem="QDz-W2-AMe" firstAttribute="top" secondItem="w7O-pj-U3h" secondAttribute="top" id="NfK-c2-0lY"/>
                             <constraint firstItem="Bbl-HR-yos" firstAttribute="top" secondItem="HoF-K9-Nz0" secondAttribute="bottom" constant="70" id="RBc-Uf-Var"/>
-                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="QDz-W2-AMe" secondAttribute="trailing" id="UhZ-ZK-5Ch"/>
-                            <constraint firstItem="oaq-B2-wPl" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" constant="28" id="avo-hd-ZuD"/>
-                            <constraint firstItem="HoF-K9-Nz0" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" constant="28" id="oRy-aL-1c3"/>
-                            <constraint firstItem="yRy-XB-ASw" firstAttribute="bottom" secondItem="Bbl-HR-yos" secondAttribute="bottom" constant="15" id="pvZ-ZF-deU"/>
+                            <constraint firstAttribute="trailing" secondItem="QDz-W2-AMe" secondAttribute="trailing" id="UhZ-ZK-5Ch"/>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" constant="28" id="avo-hd-ZuD"/>
+                            <constraint firstItem="HoF-K9-Nz0" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" constant="28" id="oRy-aL-1c3"/>
+                            <constraint firstItem="QDe-e6-eNb" firstAttribute="top" secondItem="Bbl-HR-yos" secondAttribute="bottom" constant="15" id="pvZ-ZF-deU"/>
                             <constraint firstItem="HoF-K9-Nz0" firstAttribute="top" secondItem="oaq-B2-wPl" secondAttribute="bottom" constant="30" id="rff-u4-myg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="yRy-XB-ASw"/>
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="Bbl-HR-yos" id="CNI-NE-bDr"/>
@@ -383,14 +403,19 @@
         <scene sceneID="lf3-mz-cLm">
             <objects>
                 <viewController id="SuZ-zp-eLb" customClass="ConfirmAppointmentViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AGy-OM-cjR"/>
+                        <viewControllerLayoutGuide type="bottom" id="uGd-wt-hhl"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qXz-1X-Fek">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-z9-3OV" customClass="ColoredActionButton" customModule="Eazip">
-                                <rect key="frame" x="27" y="622" width="320" height="30"/>
+                                <rect key="frame" x="27" y="580" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="8TM-r5-j0k"/>
+                                    <constraint firstAttribute="height" constant="57" id="oda-vz-n3c"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -404,8 +429,11 @@
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lwx-jY-f5x">
-                                <rect key="frame" x="0.0" y="20" width="375" height="532"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="522" id="emz-WD-zlU"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jWK-nz-6YR">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -414,25 +442,55 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlg-TU-I7k">
+                                <rect key="frame" x="0.0" y="542" width="375" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kj-7f-Wu0" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="-1" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aM-e7-TtQ" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="305" y="-1" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9kj-7f-Wu0" firstAttribute="leading" secondItem="Jlg-TU-I7k" secondAttribute="leading" constant="28" id="OAI-7e-nnY"/>
+                                    <constraint firstItem="9kj-7f-Wu0" firstAttribute="centerY" secondItem="Jlg-TU-I7k" secondAttribute="centerY" id="RPZ-rM-9AS"/>
+                                    <constraint firstItem="3aM-e7-TtQ" firstAttribute="centerY" secondItem="Jlg-TU-I7k" secondAttribute="centerY" id="dFh-7M-VgE"/>
+                                    <constraint firstAttribute="trailing" secondItem="3aM-e7-TtQ" secondAttribute="trailing" constant="28" id="fLG-wz-LIb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jlg-TU-I7k" firstAttribute="trailing" secondItem="qXz-1X-Fek" secondAttribute="trailing" id="0Uy-Ad-Rgt"/>
                             <constraint firstItem="20C-z9-3OV" firstAttribute="centerX" secondItem="qXz-1X-Fek" secondAttribute="centerX" id="6RN-bY-1Rt"/>
-                            <constraint firstItem="8Ni-RZ-cAs" firstAttribute="bottom" secondItem="20C-z9-3OV" secondAttribute="bottom" constant="15" id="7li-am-ETk"/>
-                            <constraint firstItem="lwx-jY-f5x" firstAttribute="top" secondItem="8Ni-RZ-cAs" secondAttribute="top" id="B0L-Fp-j5n"/>
-                            <constraint firstItem="dZn-fS-wxf" firstAttribute="trailing" secondItem="8Ni-RZ-cAs" secondAttribute="trailing" id="MmS-pN-fb8"/>
-                            <constraint firstItem="8Ni-RZ-cAs" firstAttribute="trailing" secondItem="lwx-jY-f5x" secondAttribute="trailing" id="SWk-Zh-4yF"/>
+                            <constraint firstItem="uGd-wt-hhl" firstAttribute="top" secondItem="20C-z9-3OV" secondAttribute="bottom" constant="30" id="7li-am-ETk"/>
+                            <constraint firstItem="lwx-jY-f5x" firstAttribute="top" secondItem="AGy-OM-cjR" secondAttribute="bottom" id="B0L-Fp-j5n"/>
+                            <constraint firstItem="dZn-fS-wxf" firstAttribute="trailing" secondItem="qXz-1X-Fek" secondAttribute="trailing" id="MmS-pN-fb8"/>
+                            <constraint firstAttribute="trailing" secondItem="lwx-jY-f5x" secondAttribute="trailing" id="SWk-Zh-4yF"/>
                             <constraint firstItem="dZn-fS-wxf" firstAttribute="top" secondItem="qXz-1X-Fek" secondAttribute="top" id="Ttv-Rw-jwA"/>
+                            <constraint firstItem="Jlg-TU-I7k" firstAttribute="top" secondItem="lwx-jY-f5x" secondAttribute="bottom" id="UtN-7f-ReG"/>
                             <constraint firstItem="lwx-jY-f5x" firstAttribute="width" secondItem="qXz-1X-Fek" secondAttribute="width" id="X2q-X8-gUP"/>
-                            <constraint firstItem="lwx-jY-f5x" firstAttribute="leading" secondItem="8Ni-RZ-cAs" secondAttribute="leading" id="iMa-RH-hMF"/>
-                            <constraint firstItem="20C-z9-3OV" firstAttribute="top" secondItem="lwx-jY-f5x" secondAttribute="bottom" constant="70" id="mnY-SF-cJM"/>
-                            <constraint firstItem="dZn-fS-wxf" firstAttribute="leading" secondItem="8Ni-RZ-cAs" secondAttribute="leading" id="vaf-vj-VfH"/>
+                            <constraint firstItem="20C-z9-3OV" firstAttribute="top" secondItem="Jlg-TU-I7k" secondAttribute="bottom" constant="20" id="fSt-Vm-BKm"/>
+                            <constraint firstItem="Jlg-TU-I7k" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="hHC-WU-i5f"/>
+                            <constraint firstItem="lwx-jY-f5x" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="iMa-RH-hMF"/>
+                            <constraint firstAttribute="trailing" secondItem="lwx-jY-f5x" secondAttribute="trailing" id="q0r-wi-mCe"/>
+                            <constraint firstItem="dZn-fS-wxf" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="vaf-vj-VfH"/>
+                            <constraint firstItem="lwx-jY-f5x" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="wnw-hM-ykN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8Ni-RZ-cAs"/>
                     </view>
                     <connections>
                         <outlet property="appointmentConfirmationCollectionView" destination="lwx-jY-f5x" id="fJX-ke-VZh"/>
                         <outlet property="confirmAppointmentButton" destination="20C-z9-3OV" id="dfn-zq-w18"/>
+                        <outlet property="totalPriceNbLabel" destination="3aM-e7-TtQ" id="2xy-h6-V4v"/>
+                        <outlet property="totalPriceTitleLabel" destination="9kj-7f-Wu0" id="Ooh-QX-f56"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,7 +501,11 @@
         <scene sceneID="HrH-iI-Yhp">
             <objects>
                 <viewController id="ZcN-0M-wCV" customClass="SewersViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bHf-cm-X6i">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="659-FA-bYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTO-WM-fIj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bHf-cm-X6i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -463,7 +525,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="230"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="230"/>
@@ -518,7 +580,6 @@
                                             <constraint firstAttribute="bottom" secondItem="mIC-Z0-UJJ" secondAttribute="bottom" constant="20" id="l4O-aS-flD"/>
                                             <constraint firstAttribute="bottom" secondItem="RWh-Hf-FRy" secondAttribute="bottom" id="n8T-hc-czR"/>
                                         </constraints>
-                                        <viewLayoutGuide key="safeArea" id="YjY-u0-wTf"/>
                                         <connections>
                                             <outlet property="sewerNameLabel" destination="mIC-Z0-UJJ" id="uMX-bt-k86"/>
                                             <outlet property="sewerPicture" destination="SHS-hD-hdH" id="dap-bf-7ye"/>
@@ -540,7 +601,6 @@
                             <constraint firstItem="tN0-Hw-tai" firstAttribute="centerX" secondItem="bHf-cm-X6i" secondAttribute="centerX" id="O3I-P1-ANE"/>
                             <constraint firstItem="tN0-Hw-tai" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" constant="25" id="u9E-eQ-nEQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LYy-ya-kJ2"/>
                     </view>
                     <connections>
                         <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>

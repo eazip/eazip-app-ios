@@ -14,20 +14,40 @@ class AppointmentViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var hourIndicationLabel: DefaultText!
     @IBOutlet weak var addressStreetIndicationLabel: DefaultText!
     @IBOutlet weak var addressCityIndicationLabel: DefaultText!
+    
+    let smallerFont = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setUpMainIndicationsTitles()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    func setUpMainIndicationsTitles() {
+        dateIndicationLabel.font = smallerFont
+        addressTitleLabel.font = smallerFont
+    }
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var frame = layoutAttributes.frame
+        frame.size.height = ceil(size.height)
+        layoutAttributes.frame = frame
+        
+        return layoutAttributes
     }
     
     func configure(data appointment: Appointment) {
         let hour = String(describing: appointment.hour)
-        
         dateIndicationLabel.text = appointment.date
         hourIndicationLabel.text = "Dès " + hour + "h00"
         addressTitleLabel.text = "Domicile"
         addressStreetIndicationLabel.text = appointment.address["street"]
         addressCityIndicationLabel.text = appointment.address["city"]
     }
-
 }

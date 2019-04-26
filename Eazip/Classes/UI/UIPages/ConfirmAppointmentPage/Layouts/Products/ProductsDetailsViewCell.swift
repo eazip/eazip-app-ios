@@ -28,7 +28,9 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
     }
     
     override func layoutSubviews() {
-        
+        super.layoutSubviews()
+        productsTableView.layoutIfNeeded()
+        tableViewWrapper.heightAnchor.constraint(equalToConstant: productsTableView.contentSize.height * 1.2).isActive = true
     }
     
     func initProductsTableView() {
@@ -41,6 +43,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         //Init delegate and datasource
         productsTableView?.estimatedRowHeight = 20
         productsTableView?.rowHeight = UITableViewAutomaticDimension
+        productsTableView?.isScrollEnabled = false
         productsTableView?.delegate = self
         productsTableView?.dataSource = self
     }
@@ -78,6 +81,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
                 number = product.toDo.count
             }
         }
+    
         return number
     }
 

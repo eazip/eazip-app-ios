@@ -28,15 +28,14 @@ class PaymentItemViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-       
+        super.layoutSubviews()
+        self.layoutIfNeeded()
     }
     
     func setUpWrapper() {
-        paymentItemWrapper.layer.borderWidth = 1
-        paymentItemWrapper.layer.cornerRadius = 5
-        paymentItemWrapper.layer.borderColor = borderColor.cgColor
-        paymentItemWrapper.backgroundColor = UIColor.blue
-        paymentItemWrapper.bringSubview(toFront: CBIcon!)
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 5
+        self.layer.borderColor = borderColor.cgColor
     }
     
     func setData(cbType: String, cbNb: Int) {

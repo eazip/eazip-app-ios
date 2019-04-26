@@ -32,7 +32,7 @@ class SewerProfileShortViewCell: UICollectionViewCell, ConfigurableCell {
     }
     
     override func layoutSubviews() {
-        
+        super.layoutSubviews()
     }
     
     func setUpSewerPicture() {
