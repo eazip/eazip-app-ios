@@ -23,7 +23,7 @@ class PromoCodeViewCell: UICollectionViewCell, ConfigurableCell {
     
     // Messages to display
     let errorMessage : String = "Le code promo est invalide"
-    let successMessage : String = "-10% pour la fête des mères"
+    let successMessage : String = "-10% de remise pour la fête des mères"
     let expectedCodeValue : String = "LOVEMUM83"
     
     /**

@@ -14,6 +14,7 @@ class ConfirmAppointmentViewController: UIViewController {
     @IBOutlet weak var totalPriceTitleLabel: EazipLabel!
     @IBOutlet weak var totalPriceNbLabel: EazipLabel!
     @IBOutlet weak var confirmAppointmentButton: ColoredActionButton!
+    @IBOutlet weak var navigationItemBar: UINavigationBar!
     
     //Data
     let appointment = Appointment()
@@ -22,6 +23,7 @@ class ConfirmAppointmentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigation()
         initAppointmentConfirmationCollectionView()
         setUpShortProfileView()
         setUpProductsDetailsView()
@@ -30,6 +32,11 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpPromoCodeView()
         setUpTotalPriceWrapper()
         setUpRegisterButton()
+    }
+    
+    func setUpNavigation() {
+        navigationItemBar.tintColor = UIColor(named: "lightGrey")
+        navigationItemBar.backgroundColor = UIColor(named: "backgroundLightGrey")
     }
     
     func initAppointmentConfirmationCollectionView() {
