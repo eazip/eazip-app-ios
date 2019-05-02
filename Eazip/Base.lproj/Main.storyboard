@@ -517,28 +517,29 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVe-mb-7iC">
                                     <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AppoitmentStatusLabel" id="Jeq-Wy-4oE" customClass="AppointmentStatusLabel" customModule="Eazip" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="appointmentStatusLabel" id="e0k-nb-xZd" customClass="AppointmentStatusLabel" customModule="Eazip" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drx-gi-nM2" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="15" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-MT-iej" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="303" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="drx-gi-nM2" firstAttribute="centerY" secondItem="Jeq-Wy-4oE" secondAttribute="centerY" id="xiP-gh-5bV"/>
-                                        <constraint firstItem="drx-gi-nM2" firstAttribute="leading" secondItem="Jeq-Wy-4oE" secondAttribute="leadingMargin" id="yDt-FB-Kq9"/>
+                                        <constraint firstItem="OGX-MT-iej" firstAttribute="leading" secondItem="e0k-nb-xZd" secondAttribute="leadingMargin" id="BG6-qR-MYv"/>
+                                        <constraint firstItem="OGX-MT-iej" firstAttribute="top" secondItem="e0k-nb-xZd" secondAttribute="topMargin" id="WUu-cw-awM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OGX-MT-iej" secondAttribute="trailing" id="g0v-7k-W9K"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="titleLabel" destination="drx-gi-nM2" id="izs-Hq-KbU"/>
+                                        <outlet property="titleLabel" destination="OGX-MT-iej" id="ZMm-vn-sWJ"/>
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
@@ -548,7 +549,7 @@
                             <constraint firstItem="WSr-hQ-eyS" firstAttribute="top" secondItem="tEo-qq-rS8" secondAttribute="bottom" constant="30" id="LjL-z7-Oc7"/>
                             <constraint firstItem="tEo-qq-rS8" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" id="VCy-g3-PAt"/>
                             <constraint firstAttribute="trailing" secondItem="tEo-qq-rS8" secondAttribute="trailing" id="Vn5-Oh-sWw"/>
-                            <constraint firstItem="CJR-8f-THu" firstAttribute="top" secondItem="WSr-hQ-eyS" secondAttribute="bottom" id="duE-je-j7B"/>
+                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="bottom" secondItem="CJR-8f-THu" secondAttribute="top" id="WL3-v3-K5d"/>
                             <constraint firstAttribute="trailing" secondItem="WSr-hQ-eyS" secondAttribute="trailing" constant="28" id="gYo-hP-wW5"/>
                             <constraint firstItem="tEo-qq-rS8" firstAttribute="top" secondItem="kCE-Nb-axH" secondAttribute="top" id="owr-ob-JPc"/>
                             <constraint firstItem="WSr-hQ-eyS" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" constant="28" id="yzr-tP-GEf"/>
@@ -590,7 +591,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="230"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="230"/>

@@ -39,10 +39,10 @@ class AppointmentTileViewCell: UICollectionViewCell {
         
         // Cell border behaviour
         setUpTileShape(view: self)
-        setUpTileShape(view: toDoWrapper)
-        
+       
         setUpBanner()
         setUpPicture()
+        setUpSewerName()
         setUpWorksToDoDetails()
     }
     
@@ -60,8 +60,7 @@ class AppointmentTileViewCell: UICollectionViewCell {
     func setUpTileShape(view: UIView) {
         view.layer.masksToBounds = false
         view.layer.borderWidth = 1
-        view.layer.cornerRadius = 7
-        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 5
         view.layer.borderColor = borderColor.cgColor
     }
     
@@ -71,6 +70,11 @@ class AppointmentTileViewCell: UICollectionViewCell {
     }
     
     func setUpWorksToDoDetails() {
+        let border = CALayer()
+        border.backgroundColor = borderColor.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: toDoWrapper.bounds.size.width, height: 1)
+        toDoWrapper.layer.addSublayer(border)
+        
         toDoLabel.font = FontHelper.avenirBlackFontWithSize(size: 12)
     }
     
@@ -88,6 +92,11 @@ class AppointmentTileViewCell: UICollectionViewCell {
     
     func setUpPicture() {
         sewerPicture?.layer.cornerRadius = 7
+        sewerPicture?.layer.masksToBounds = false
+    }
+    
+    func setUpSewerName() {
+        sewerName?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
     }
     
     func setData(appointment: Appointment) {

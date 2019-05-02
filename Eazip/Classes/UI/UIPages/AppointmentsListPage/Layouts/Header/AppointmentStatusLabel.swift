@@ -1,5 +1,5 @@
 //
-//  AppoitmentStatusLabel.swift
+//  AppointmentStatusLabel.swift
 //  Eazip
 //
 //  Created by Marie on 02/05/2019.
@@ -13,6 +13,6 @@ class AppointmentStatusLabel : UICollectionReusableView {
     
     func setData(label: String) {
         titleLabel.text = label
+        titleLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
     }
 }
-

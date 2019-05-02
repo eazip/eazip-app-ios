@@ -29,7 +29,7 @@ class AppointmentsListViewController: UIViewController {
         
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 17
+        layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 17
         layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
         layout.estimatedItemSize = CGSize(width: 1, height:1)

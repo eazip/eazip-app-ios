@@ -16,7 +16,7 @@
 		0C10E3D52279B5F00070B353 /* AppointmentsListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D42279B5F00070B353 /* AppointmentsListCollectionView.swift */; };
 		0C10E3D82279BAB50070B353 /* AppointmentTileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */; };
 		0C10E3D92279BAB50070B353 /* AppointmentTileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */; };
-		0C10E3DD227B02ED0070B353 /* AppoitmentStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3DC227B02ED0070B353 /* AppoitmentStatusLabel.swift */; };
+		0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */; };
 		0C1B937E223A89A000EC60B1 /* SewersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937D223A89A000EC60B1 /* SewersViewController.swift */; };
 		0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */; };
 		0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B9381223A8A0900EC60B1 /* Sewer.swift */; };
@@ -112,7 +112,7 @@
 		0C10E3D42279B5F00070B353 /* AppointmentsListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsListCollectionView.swift; sourceTree = "<group>"; };
 		0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTileViewCell.swift; sourceTree = "<group>"; };
 		0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTileViewCell.xib; sourceTree = "<group>"; };
-		0C10E3DC227B02ED0070B353 /* AppoitmentStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentStatusLabel.swift; sourceTree = "<group>"; };
+		0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentStatusLabel.swift; sourceTree = "<group>"; };
 		0C1B937D223A89A000EC60B1 /* SewersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewersViewController.swift; sourceTree = "<group>"; };
 		0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerViewCell.swift; sourceTree = "<group>"; };
 		0C1B9381223A8A0900EC60B1 /* Sewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sewer.swift; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		0C10E3DB227B01B50070B353 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				0C10E3DC227B02ED0070B353 /* AppoitmentStatusLabel.swift */,
+				0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -881,7 +881,6 @@
 				0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */,
 				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
 				0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */,
-				0C10E3DD227B02ED0070B353 /* AppoitmentStatusLabel.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
@@ -921,6 +920,7 @@
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
+				0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,
