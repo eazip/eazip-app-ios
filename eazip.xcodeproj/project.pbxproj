@@ -71,6 +71,7 @@
 		0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302D2264652F00A689DB /* HourPickerTableView.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
+		0CD9E23E227C32E2009343A3 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */; };
 		0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24AA226E595600A34AF2 /* ProductItemViewCell.swift */; };
 		0CDA24AD226E595600A34AF2 /* ProductItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */; };
 		0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */; };
@@ -171,6 +172,7 @@
 		0CB8302D2264652F00A689DB /* HourPickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerTableView.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
+		0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
 		0CDA24AA226E595600A34AF2 /* ProductItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemViewCell.swift; sourceTree = "<group>"; };
 		0CDA24AB226E595600A34AF2 /* ProductItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemViewCell.xib; sourceTree = "<group>"; };
 		0CDA24AE226E7A5300A34AF2 /* AppointmentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0CD9E23B227C3230009343A3 /* AppointmentDetailsPage */,
 				0C10E3CE2279AE5B0070B353 /* AppointmentsListPage */,
 				0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */,
 				0C218962225601B80011DA45 /* SewerAvailabilityPage */,
@@ -682,6 +685,22 @@
 			path = Template;
 			sourceTree = "<group>";
 		};
+		0CD9E23B227C3230009343A3 /* AppointmentDetailsPage */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9E23C227C3285009343A3 /* Views */,
+			);
+			path = AppointmentDetailsPage;
+			sourceTree = "<group>";
+		};
+		0CD9E23C227C3285009343A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0CDA24BC2270672500A34AF2 /* PromoCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,6 +934,7 @@
 				0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */,
 				0C93BA572200523C00400BD2 /* ColoredActionButton.swift in Sources */,
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
+				0CD9E23E227C32E2009343A3 /* AppointmentDetailsViewController.swift in Sources */,
 				0C6DB8CB2266F80900F1020C /* ConfirmAppointmentViewController.swift in Sources */,
 				0C6DB8E5226E3F8800F1020C /* ConfirmScreenTemplate.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
