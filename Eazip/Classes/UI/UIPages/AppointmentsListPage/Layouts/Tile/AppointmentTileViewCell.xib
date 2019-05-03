@@ -71,13 +71,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uif-am-jRq" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="101" y="33" width="255" height="21"/>
+                                        <rect key="frame" x="101" y="29" width="255" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-6o-IUS" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="151" y="15" width="42" height="21"/>
+                                        <rect key="frame" x="151" y="10" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="UyB-6o-IUS" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="15" id="0lt-xd-gxB"/>
+                                    <constraint firstItem="UyB-6o-IUS" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="10" id="0lt-xd-gxB"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="8" id="2A1-Wa-SXe"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="leading" secondItem="ACL-6W-dy6" secondAttribute="trailing" constant="8" id="2w6-9s-q2a"/>
                                     <constraint firstItem="ACL-6W-dy6" firstAttribute="centerY" secondItem="u1h-FQ-Y5p" secondAttribute="centerY" id="Kno-zg-EtB"/>
@@ -100,7 +100,7 @@
                                     <constraint firstItem="UyB-6o-IUS" firstAttribute="leading" secondItem="RJ9-oG-5xJ" secondAttribute="trailing" constant="8" id="Mx9-Fm-6el"/>
                                     <constraint firstItem="ACL-6W-dy6" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" id="RpB-nS-jGR"/>
                                     <constraint firstAttribute="bottom" secondItem="ACL-6W-dy6" secondAttribute="bottom" id="TTu-1W-BTu"/>
-                                    <constraint firstItem="uif-am-jRq" firstAttribute="top" secondItem="RJ9-oG-5xJ" secondAttribute="bottom" constant="4" id="d4M-aE-QJ5"/>
+                                    <constraint firstItem="uif-am-jRq" firstAttribute="top" secondItem="RJ9-oG-5xJ" secondAttribute="bottom" id="d4M-aE-QJ5"/>
                                     <constraint firstItem="uif-am-jRq" firstAttribute="leading" secondItem="ACL-6W-dy6" secondAttribute="trailing" constant="8" id="fVd-8w-P3Y"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="topMargin" id="x7v-UB-1XC"/>
                                     <constraint firstItem="ACL-6W-dy6" firstAttribute="leading" secondItem="u1h-FQ-Y5p" secondAttribute="leading" constant="23" id="xfm-w5-5Dl"/>
@@ -150,6 +150,7 @@
                 <constraint firstItem="Oo3-nl-yvi" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="Ihd-KP-M5w"/>
                 <constraint firstAttribute="trailing" secondItem="Oo3-nl-yvi" secondAttribute="trailing" id="R1l-9T-sFx"/>
                 <constraint firstItem="Oo3-nl-yvi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SfZ-ag-uZ9"/>
+                <constraint firstItem="Oo3-nl-yvi" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="lXL-8e-bOm"/>
                 <constraint firstItem="Oo3-nl-yvi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xoz-9w-IKP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

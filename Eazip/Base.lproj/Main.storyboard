@@ -551,6 +551,7 @@
                             <constraint firstAttribute="trailing" secondItem="tEo-qq-rS8" secondAttribute="trailing" id="Vn5-Oh-sWw"/>
                             <constraint firstItem="WSr-hQ-eyS" firstAttribute="bottom" secondItem="CJR-8f-THu" secondAttribute="top" id="WL3-v3-K5d"/>
                             <constraint firstAttribute="trailing" secondItem="WSr-hQ-eyS" secondAttribute="trailing" constant="28" id="gYo-hP-wW5"/>
+                            <constraint firstItem="CJR-8f-THu" firstAttribute="top" secondItem="WSr-hQ-eyS" secondAttribute="bottom" id="nwu-l1-160"/>
                             <constraint firstItem="tEo-qq-rS8" firstAttribute="top" secondItem="kCE-Nb-axH" secondAttribute="top" id="owr-ob-JPc"/>
                             <constraint firstItem="WSr-hQ-eyS" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" constant="28" id="yzr-tP-GEf"/>
                         </constraints>

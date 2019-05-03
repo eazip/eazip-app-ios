@@ -57,6 +57,6 @@ extension AppointmentsListViewController: UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 20, 0)
+        return UIEdgeInsetsMake(0, 0, 50, 0)
     }
 }

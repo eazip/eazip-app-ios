@@ -26,10 +26,11 @@ class AppointmentsListViewController: UIViewController {
         //Init delegate and datasource
         appointmentsListCollectionView?.delegate = self
         appointmentsListCollectionView?.dataSource =  self
+        appointmentsListCollectionView?.showsVerticalScrollIndicator = false
         
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 1
+        layout.minimumInteritemSpacing = 17
         layout.minimumLineSpacing = 17
         layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
         layout.estimatedItemSize = CGSize(width: 1, height:1)
