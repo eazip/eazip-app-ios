@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QRw-DC-WiO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EQc-9y-Z18">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -318,6 +318,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-BD-nVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3244" y="31.934032983508249"/>
+        </scene>
+        <!--Sewer Availability View Controller-->
+        <scene sceneID="A0S-RO-Bkt">
+            <objects>
+                <viewController id="EQc-9y-Z18" customClass="SewerAvailabilityViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7O-pj-U3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-K9-Nz0">
+                                <rect key="frame" x="28" y="205" width="319" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-HR-yos" customClass="ColoredActionButton" customModule="Eazip">
+                                <rect key="frame" x="28" y="595" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="C4Z-dB-pSY"/>
+                                    <constraint firstAttribute="height" constant="57" id="OR9-2D-apK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="newAppointment:" destination="EQc-9y-Z18" eventType="touchUpInside" id="wka-uZ-cJD"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-B2-wPl">
+                                <rect key="frame" x="28" y="45" width="319" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="nPL-QD-iZ7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UKK-X4-ybQ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDz-W2-AMe" customClass="NavigationNextLabel" customModule="Eazip">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uEO-C3-YNR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="initDateSelectWithSender:" destination="EQc-9y-Z18" eventType="editingDidEnd" id="UeA-kn-cn2"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QDz-W2-AMe" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" id="6e2-Qt-V2M"/>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="top" secondItem="yRy-XB-ASw" secondAttribute="top" constant="25" id="Gd7-Od-Bvo"/>
+                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="oaq-B2-wPl" secondAttribute="trailing" constant="28" id="Hz3-Jn-DAP"/>
+                            <constraint firstItem="Bbl-HR-yos" firstAttribute="centerX" secondItem="w7O-pj-U3h" secondAttribute="centerX" id="K2k-uF-Rsi"/>
+                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="HoF-K9-Nz0" secondAttribute="trailing" constant="28" id="NKh-rs-obg"/>
+                            <constraint firstItem="QDz-W2-AMe" firstAttribute="top" secondItem="w7O-pj-U3h" secondAttribute="top" id="NfK-c2-0lY"/>
+                            <constraint firstItem="Bbl-HR-yos" firstAttribute="top" secondItem="HoF-K9-Nz0" secondAttribute="bottom" constant="70" id="RBc-Uf-Var"/>
+                            <constraint firstItem="yRy-XB-ASw" firstAttribute="trailing" secondItem="QDz-W2-AMe" secondAttribute="trailing" id="UhZ-ZK-5Ch"/>
+                            <constraint firstItem="oaq-B2-wPl" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" constant="28" id="avo-hd-ZuD"/>
+                            <constraint firstItem="HoF-K9-Nz0" firstAttribute="leading" secondItem="yRy-XB-ASw" secondAttribute="leading" constant="28" id="oRy-aL-1c3"/>
+                            <constraint firstItem="yRy-XB-ASw" firstAttribute="bottom" secondItem="Bbl-HR-yos" secondAttribute="bottom" constant="15" id="pvZ-ZF-deU"/>
+                            <constraint firstItem="HoF-K9-Nz0" firstAttribute="top" secondItem="oaq-B2-wPl" secondAttribute="bottom" constant="30" id="rff-u4-myg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yRy-XB-ASw"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="Bbl-HR-yos" id="CNI-NE-bDr"/>
+                        <outlet property="datePickerCollectionView" destination="oaq-B2-wPl" id="ARQ-TO-FkJ"/>
+                        <outlet property="dateSelectLabel" destination="QDz-W2-AMe" id="CN7-Rk-ws8"/>
+                        <outlet property="hourPickerTableView" destination="HoF-K9-Nz0" id="K9y-sI-xQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4013.5999999999999" y="30.134932533733135"/>
         </scene>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">
