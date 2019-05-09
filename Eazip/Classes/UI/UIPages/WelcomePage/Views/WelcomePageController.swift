@@ -10,32 +10,41 @@ import UIKit
 
 class WelcomePageController: UIViewController {
     
-    @IBOutlet weak var mainTitle = EazipLabel()
-    @IBOutlet weak var signInButton = WhiteActionButton()
-    @IBOutlet weak var signUpButton = ColoredActionButton()
-    
+    @IBOutlet weak var mainTitle : UILabel!
+    @IBOutlet weak var signInButton : UIButton!
+    @IBOutlet weak var signUpButton : UIButton!
+    @IBOutlet weak var sewerButton: UIButton!
+    @IBOutlet weak var welcomeImage: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMainTitle()
+        setUpWelcomeImage()
         setUpSignUpButton()
         setUpSignInButton()
+        setUpSewerButton()
     }
     
     func setUpMainTitle()  {
         mainTitle?.text = "Aequaliterque ipse pariter termini qui benevolentiae."
+        mainTitle.textAlignment = .center
+    }
+    
+    func setUpWelcomeImage()  {
+        welcomeImage?.image = UIImage(named: "welcome_page_img")
     }
     
     func setUpSignUpButton()  {
-        signUpButton?.setTitle("Register", for: .normal)
+        signUpButton?.setTitle("Inscription", for: .normal)
     }
     
     func setUpSignInButton()  {
-        signInButton?.setTitle("Login", for: .normal)
+        signInButton?.setTitle("Connexion", for: .normal)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func setUpSewerButton()  {
+        sewerButton?.setTitle("Je suis un(e) couturier(e)", for: .normal)
+        sewerButton?.setTitleColor( UIColor(named: "lightGrey"), for: .normal)
     }
-    
 }
 

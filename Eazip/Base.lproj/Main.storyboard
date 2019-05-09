@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rLG-pX-Oha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -158,73 +158,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="loginPageMainTitle" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-h2-Aa8" customClass="EazipLabel" customModule="Eazip">
-                                <rect key="frame" x="12.5" y="70" width="350" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="dEw-CL-IGb"/>
-                                </constraints>
+                                <rect key="frame" x="27" y="90" width="321" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginPageMedia" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-g5-n15">
-                                <rect key="frame" x="-37.5" y="17" width="450" height="500"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="450" id="1Cb-ca-jnb"/>
-                                    <constraint firstAttribute="height" constant="500" id="7lJ-Gs-bcf"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-g5-n15">
+                                <rect key="frame" x="0.0" y="116" width="375" height="347"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4m-y6-jeO">
-                                <rect key="frame" x="67" y="487" width="240" height="160"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="-150" y="90" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Dkg-MP-3up"/>
-                                            <constraint firstAttribute="height" constant="50" id="xv7-ta-4Oq"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="-150" y="20" width="300" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="2jB-12-rd1"/>
-                                            <constraint firstAttribute="height" constant="50" id="3Kn-Aq-ggP"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="28" y="540" width="320" height="57"/>
                                 <constraints>
-                                    <constraint firstItem="Hwt-wr-vkZ" firstAttribute="top" secondItem="Q4m-y6-jeO" secondAttribute="top" constant="20" id="2Kb-YM-TSO"/>
-                                    <constraint firstItem="qMe-4l-1zN" firstAttribute="top" secondItem="Hwt-wr-vkZ" secondAttribute="bottom" constant="20" id="2Rk-ka-RNf"/>
-                                    <constraint firstItem="qMe-4l-1zN" firstAttribute="centerX" secondItem="Q4m-y6-jeO" secondAttribute="centerX" id="9cr-uy-BET"/>
-                                    <constraint firstAttribute="bottom" secondItem="qMe-4l-1zN" secondAttribute="bottom" constant="20" id="AHV-yj-2Cf"/>
-                                    <constraint firstItem="qMe-4l-1zN" firstAttribute="top" secondItem="Hwt-wr-vkZ" secondAttribute="bottom" constant="20" id="Pfy-sw-rwi"/>
-                                    <constraint firstItem="qMe-4l-1zN" firstAttribute="centerX" secondItem="Q4m-y6-jeO" secondAttribute="centerX" id="Q1c-mi-CRL"/>
-                                    <constraint firstItem="Hwt-wr-vkZ" firstAttribute="centerX" secondItem="Q4m-y6-jeO" secondAttribute="centerX" id="b1l-nQ-xWY"/>
+                                    <constraint firstAttribute="height" constant="57" id="Pju-Y4-D7H"/>
+                                    <constraint firstAttribute="width" constant="320" id="Vuo-uJ-nYO"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcR-az-51E">
+                                <rect key="frame" x="165" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="28" y="463" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="gHg-kh-cxj"/>
+                                    <constraint firstAttribute="width" constant="320" id="jyg-xA-ogH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Q4m-y6-jeO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGt-nU-jqv"/>
-                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1T-M4-C3v"/>
-                            <constraint firstItem="KXt-g5-n15" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFz-XD-f1F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KXt-g5-n15" secondAttribute="bottom" constant="150" id="lmh-N5-IJq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q4m-y6-jeO" secondAttribute="bottom" constant="20" id="utk-7x-r9t"/>
-                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ygp-EM-cTE"/>
+                            <constraint firstItem="KXt-g5-n15" firstAttribute="top" secondItem="zmu-h2-Aa8" secondAttribute="bottom" constant="5" id="2aq-I4-FY1"/>
+                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="7gK-Ml-gtQ"/>
+                            <constraint firstItem="qMe-4l-1zN" firstAttribute="top" secondItem="Hwt-wr-vkZ" secondAttribute="bottom" constant="20" id="AoP-uJ-NT7"/>
+                            <constraint firstItem="tcR-az-51E" firstAttribute="top" secondItem="qMe-4l-1zN" secondAttribute="bottom" constant="20" id="DZF-p6-M1o"/>
+                            <constraint firstAttribute="bottom" secondItem="tcR-az-51E" secondAttribute="bottom" constant="20" symbolic="YES" id="LHr-ll-72V"/>
+                            <constraint firstItem="qMe-4l-1zN" firstAttribute="top" secondItem="Hwt-wr-vkZ" secondAttribute="bottom" constant="20" id="MET-Z5-RXA"/>
+                            <constraint firstItem="qMe-4l-1zN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXY-A3-qjP"/>
+                            <constraint firstItem="zmu-h2-Aa8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="U7w-Hp-4Hk"/>
+                            <constraint firstItem="tcR-az-51E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UC9-GZ-IE9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zmu-h2-Aa8" secondAttribute="trailing" constant="27" id="VnV-ag-xCt"/>
+                            <constraint firstItem="Hwt-wr-vkZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="edR-9f-hlJ"/>
+                            <constraint firstItem="KXt-g5-n15" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ieD-0U-4kc"/>
+                            <constraint firstItem="Hwt-wr-vkZ" firstAttribute="top" secondItem="KXt-g5-n15" secondAttribute="bottom" id="lfd-6q-VMw"/>
+                            <constraint firstItem="KXt-g5-n15" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rdj-SU-Y9Q"/>
+                            <constraint firstItem="KXt-g5-n15" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uBT-Ae-gOB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mainTitle" destination="zmu-h2-Aa8" id="v0G-tj-dS1"/>
+                        <outlet property="sewerButton" destination="tcR-az-51E" id="CLR-S8-bqk"/>
                         <outlet property="signInButton" destination="qMe-4l-1zN" id="QDZ-UA-avB"/>
                         <outlet property="signUpButton" destination="Hwt-wr-vkZ" id="iJo-ZC-hd1"/>
+                        <outlet property="welcomeImage" destination="KXt-g5-n15" id="76z-fO-bXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="32"/>
+            <point key="canvasLocation" x="-3327.1999999999998" y="-344.07796101949026"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vfg-hz-qhd">
@@ -415,7 +408,6 @@
     </scenes>
     <resources>
         <image name="ciseaux" width="23" height="31"/>
-        <image name="loginPageMedia" width="1125" height="1232"/>
         <image name="retouches" width="31" height="19"/>
         <image name="starRank" width="5" height="5"/>
         <image name="user" width="26" height="27"/>
