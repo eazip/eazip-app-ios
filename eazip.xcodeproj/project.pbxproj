@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0FB9B52284D6F500B3CF30 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FB9B42284D6F500B3CF30 /* GradientView.swift */; };
+		0C0FB9B82284DEF600B3CF30 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FB9B72284DEF600B3CF30 /* SplashScreenViewController.swift */; };
 		0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B121FCA454004F742A /* EazipLabel.swift */; };
 		0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B921FCB7DA004F742A /* FontHelper.swift */; };
 		0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BC21FCBC6D004F742A /* LoginPageController.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0FB9B42284D6F500B3CF30 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		0C0FB9B72284DEF600B3CF30 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		0C1095B121FCA454004F742A /* EazipLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazipLabel.swift; sourceTree = "<group>"; };
 		0C1095B921FCB7DA004F742A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		0C1095BC21FCBC6D004F742A /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0FB9B62284DEBB00B3CF30 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0C0FB9B72284DEF600B3CF30 /* SplashScreenViewController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		0C1095AE21FCA3F8004F742A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +264,7 @@
 		0C57C43321FC8B07007343C7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0C0FB9B62284DEBB00B3CF30 /* SplashScreen */,
 				0C57C43621FC8B2C007343C7 /* UIPages */,
 				0C57C43521FC8B1D007343C7 /* UIComponents */,
 			);
@@ -276,6 +289,7 @@
 				0C988BEA223EF9FD0079727C /* DefaultLightText.swift */,
 				0C988BF02245A8A70079727C /* LightLabel.swift */,
 				0C60F22A2248408F00E4B5F2 /* BoldLabel.swift */,
+				0C0FB9B42284D6F500B3CF30 /* GradientView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -538,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0FB9B52284D6F500B3CF30 /* GradientView.swift in Sources */,
 				0C1B937E223A89A000EC60B1 /* SewersViewController.swift in Sources */,
 				0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */,
 				2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */,
@@ -545,6 +560,7 @@
 				0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */,
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
+				0C0FB9B82284DEF600B3CF30 /* SplashScreenViewController.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
