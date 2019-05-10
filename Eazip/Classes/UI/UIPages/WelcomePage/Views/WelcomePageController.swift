@@ -25,6 +25,10 @@ class WelcomePageController: UIViewController {
         setUpSewerButton()
     }
     
+    @IBAction func startApplication(sender: UIButton) {
+        startApplication()
+    }
+    
     func setUpMainTitle()  {
         mainTitle?.text = "Aequaliterque ipse pariter termini qui benevolentiae."
         mainTitle.textAlignment = .center
@@ -45,6 +49,10 @@ class WelcomePageController: UIViewController {
     func setUpSewerButton()  {
         sewerButton?.setTitle("Je suis un(e) couturier(e)", for: .normal)
         sewerButton?.setTitleColor( UIColor(named: "lightGrey"), for: .normal)
+    }
+    
+    func startApplication() -> Void {
+        goToScreen(identifier: "ClothPickingListScreen")
     }
 }
 

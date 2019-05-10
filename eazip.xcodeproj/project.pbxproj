@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C0FB9B52284D6F500B3CF30 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FB9B42284D6F500B3CF30 /* GradientView.swift */; };
 		0C0FB9B82284DEF600B3CF30 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FB9B72284DEF600B3CF30 /* SplashScreenViewController.swift */; };
+		0C0FB9BA2285F4C700B3CF30 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FB9B92285F4C700B3CF30 /* NavigationHelper.swift */; };
 		0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B121FCA454004F742A /* EazipLabel.swift */; };
 		0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095B921FCB7DA004F742A /* FontHelper.swift */; };
 		0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BC21FCBC6D004F742A /* LoginPageController.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0C0FB9B42284D6F500B3CF30 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		0C0FB9B72284DEF600B3CF30 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		0C0FB9B92285F4C700B3CF30 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		0C1095B121FCA454004F742A /* EazipLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EazipLabel.swift; sourceTree = "<group>"; };
 		0C1095B921FCB7DA004F742A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		0C1095BC21FCBC6D004F742A /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				0C1095C121FF0434004F742A /* GradientHelper.swift */,
 				0C93BA5422004E7300400BD2 /* CustomizeButtonHelper.swift */,
 				0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */,
+				0C0FB9B92285F4C700B3CF30 /* NavigationHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 			files = (
 				0C0FB9B52284D6F500B3CF30 /* GradientView.swift in Sources */,
 				0C1B937E223A89A000EC60B1 /* SewersViewController.swift in Sources */,
+				0C0FB9BA2285F4C700B3CF30 /* NavigationHelper.swift in Sources */,
 				0C1095BA21FCB7DA004F742A /* FontHelper.swift in Sources */,
 				2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */,
 				0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */,
