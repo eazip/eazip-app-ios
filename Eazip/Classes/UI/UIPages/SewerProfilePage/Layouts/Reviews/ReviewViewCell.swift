@@ -15,7 +15,6 @@ class ReviewViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         let borderColor : UIColor = UIColor(named: "borderLightGrey")!
-        self.layer.masksToBounds = false
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 5
         self.layer.borderColor = borderColor.cgColor
