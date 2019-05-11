@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rLG-pX-Oha">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SA0-a6-f1V">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -510,6 +510,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4716" y="23.838080959520241"/>
+        </scene>
+        <!--Appointments List View Controller-->
+        <scene sceneID="dWb-i5-PYy">
+            <objects>
+                <viewController id="SA0-a6-f1V" customClass="AppointmentsListViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vXR-84-jhP"/>
+                        <viewControllerLayoutGuide type="bottom" id="CJR-8f-THu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kCE-Nb-axH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEo-qq-rS8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Mes retouches" id="w59-V3-sVk"/>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WSr-hQ-eyS">
+                                <rect key="frame" x="28" y="74" width="319" height="593"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVe-mb-7iC">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="appointmentStatusLabel" id="e0k-nb-xZd" customClass="AppointmentStatusLabel" customModule="Eazip" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-MT-iej" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="303" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OGX-MT-iej" firstAttribute="leading" secondItem="e0k-nb-xZd" secondAttribute="leadingMargin" id="BG6-qR-MYv"/>
+                                        <constraint firstItem="OGX-MT-iej" firstAttribute="top" secondItem="e0k-nb-xZd" secondAttribute="topMargin" id="WUu-cw-awM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OGX-MT-iej" secondAttribute="trailing" id="g0v-7k-W9K"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="OGX-MT-iej" id="ZMm-vn-sWJ"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="top" secondItem="tEo-qq-rS8" secondAttribute="bottom" constant="30" id="LjL-z7-Oc7"/>
+                            <constraint firstItem="tEo-qq-rS8" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" id="VCy-g3-PAt"/>
+                            <constraint firstAttribute="trailing" secondItem="tEo-qq-rS8" secondAttribute="trailing" id="Vn5-Oh-sWw"/>
+                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="bottom" secondItem="CJR-8f-THu" secondAttribute="top" id="WL3-v3-K5d"/>
+                            <constraint firstAttribute="trailing" secondItem="WSr-hQ-eyS" secondAttribute="trailing" constant="28" id="gYo-hP-wW5"/>
+                            <constraint firstItem="CJR-8f-THu" firstAttribute="top" secondItem="WSr-hQ-eyS" secondAttribute="bottom" id="nwu-l1-160"/>
+                            <constraint firstItem="tEo-qq-rS8" firstAttribute="top" secondItem="kCE-Nb-axH" secondAttribute="top" id="owr-ob-JPc"/>
+                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" constant="28" id="yzr-tP-GEf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appointmentsListCollectionView" destination="WSr-hQ-eyS" id="YfM-GO-c6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7o-mx-Fdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5418.3999999999996" y="19.340329835082461"/>
         </scene>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">

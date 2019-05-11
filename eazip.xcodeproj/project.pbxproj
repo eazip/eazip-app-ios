@@ -12,6 +12,11 @@
 		0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BC21FCBC6D004F742A /* LoginPageController.swift */; };
 		0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095BF21FCBC99004F742A /* WelcomePageController.swift */; };
 		0C1095C221FF0434004F742A /* GradientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1095C121FF0434004F742A /* GradientHelper.swift */; };
+		0C10E3D32279AEF70070B353 /* AppointmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D22279AEF70070B353 /* AppointmentsListViewController.swift */; };
+		0C10E3D52279B5F00070B353 /* AppointmentsListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D42279B5F00070B353 /* AppointmentsListCollectionView.swift */; };
+		0C10E3D82279BAB50070B353 /* AppointmentTileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */; };
+		0C10E3D92279BAB50070B353 /* AppointmentTileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */; };
+		0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */; };
 		0C1B937E223A89A000EC60B1 /* SewersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937D223A89A000EC60B1 /* SewersViewController.swift */; };
 		0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */; };
 		0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B9381223A8A0900EC60B1 /* Sewer.swift */; };
@@ -107,6 +112,11 @@
 		0C1095BC21FCBC6D004F742A /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		0C1095BF21FCBC99004F742A /* WelcomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageController.swift; sourceTree = "<group>"; };
 		0C1095C121FF0434004F742A /* GradientHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientHelper.swift; sourceTree = "<group>"; };
+		0C10E3D22279AEF70070B353 /* AppointmentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsListViewController.swift; sourceTree = "<group>"; };
+		0C10E3D42279B5F00070B353 /* AppointmentsListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsListCollectionView.swift; sourceTree = "<group>"; };
+		0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTileViewCell.swift; sourceTree = "<group>"; };
+		0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTileViewCell.xib; sourceTree = "<group>"; };
+		0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentStatusLabel.swift; sourceTree = "<group>"; };
 		0C1B937D223A89A000EC60B1 /* SewersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewersViewController.swift; sourceTree = "<group>"; };
 		0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerViewCell.swift; sourceTree = "<group>"; };
 		0C1B9381223A8A0900EC60B1 /* Sewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sewer.swift; sourceTree = "<group>"; };
@@ -248,6 +258,58 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0C10E3CE2279AE5B0070B353 /* AppointmentsListPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3D12279AE870070B353 /* Extensions */,
+				0C10E3D02279AE780070B353 /* Layouts */,
+				0C10E3CF2279AE710070B353 /* Views */,
+			);
+			path = AppointmentsListPage;
+			sourceTree = "<group>";
+		};
+		0C10E3CF2279AE710070B353 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3D22279AEF70070B353 /* AppointmentsListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C10E3D02279AE780070B353 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3DB227B01B50070B353 /* Header */,
+				0C10E3DA227B01A50070B353 /* Tile */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		0C10E3D12279AE870070B353 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3D42279B5F00070B353 /* AppointmentsListCollectionView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C10E3DA227B01A50070B353 /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */,
+				0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */,
+			);
+			path = Tile;
+			sourceTree = "<group>";
+		};
+		0C10E3DB227B01B50070B353 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		0C1B937A223A895100EC60B1 /* SewersPage */ = {
@@ -393,9 +455,8 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
-
+				0C10E3CE2279AE5B0070B353 /* AppointmentsListPage */,
 				0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */,
-
 				0C218962225601B80011DA45 /* SewerAvailabilityPage */,
 				0C1B9389223A9D6600EC60B1 /* SewerProfilePage */,
 				0C1B937A223A895100EC60B1 /* SewersPage */,
@@ -799,6 +860,7 @@
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
 				0C988BED22404B510079727C /* Avenir-Black.ttf in Resources */,
 				0CDA24C0227067CA00A34AF2 /* PromoCodeViewCell.xib in Resources */,
+				0C10E3D92279BAB50070B353 /* AppointmentTileViewCell.xib in Resources */,
 				0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */,
 				0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */,
 				0C57C44221FC8C67007343C7 /* Assets.xcassets in Resources */,
@@ -831,6 +893,7 @@
 				2E5C60E22200CF5E00DEA84A /* ClothPickingCell.swift in Sources */,
 				0C1095B221FCA454004F742A /* EazipLabel.swift in Sources */,
 				0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */,
+				0C10E3D82279BAB50070B353 /* AppointmentTileViewCell.swift in Sources */,
 				0C1095BD21FCBC6D004F742A /* LoginPageController.swift in Sources */,
 				0C1095C021FCBC99004F742A /* WelcomePageController.swift in Sources */,
 
@@ -843,6 +906,7 @@
 				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,
 				0C988BF12245A8A70079727C /* LightLabel.swift in Sources */,
 				0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */,
+				0C10E3D52279B5F00070B353 /* AppointmentsListCollectionView.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
@@ -862,6 +926,7 @@
 				0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */,
 				0C8CA46922798B0200CEEA65 /* DefaultNavigation.swift in Sources */,
 				0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */,
+				0C10E3D32279AEF70070B353 /* AppointmentsListViewController.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,
 				0C6DB8CE22690A7600F1020C /* SewerProfileShortViewCell.swift in Sources */,
 				0C60F23A224ADBC300E4B5F2 /* PictureViewCell.swift in Sources */,
@@ -882,6 +947,7 @@
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
+				0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,
