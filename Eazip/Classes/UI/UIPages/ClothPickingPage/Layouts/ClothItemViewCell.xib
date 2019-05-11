@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClothItemViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="ClothItemViewCell" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B84-RO-bZ4">
+                        <rect key="frame" x="27" y="4" width="20" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Frm-jv-G66"/>
+                            <constraint firstAttribute="height" constant="50" id="O2R-3r-ixE"/>
+                            <constraint firstAttribute="width" constant="20" id="Qog-Zj-uEi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuZ-Ps-AIZ" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                        <rect key="frame" x="77" y="19" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_new" translatesAutoresizingMaskIntoConstraints="NO" id="0cv-eb-a9a">
+                        <rect key="frame" x="331" y="19" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="YuG-4Y-NcE"/>
+                            <constraint firstAttribute="height" constant="20" id="bOB-R2-Exc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_new" translatesAutoresizingMaskIntoConstraints="NO" id="iaP-ad-Qch">
+                        <rect key="frame" x="239" y="19" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1Eu-jg-oqj"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="5VM-cR-8iN"/>
+                            <constraint firstAttribute="width" constant="20" id="c1e-mv-aNU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwY-rp-L1t" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                        <rect key="frame" x="274" y="19" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0cv-eb-a9a" firstAttribute="top" secondItem="iaP-ad-Qch" secondAttribute="top" id="3N2-zU-FBa"/>
+                    <constraint firstItem="iaP-ad-Qch" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DJz-nE-9vt"/>
+                    <constraint firstItem="0cv-eb-a9a" firstAttribute="top" secondItem="DwY-rp-L1t" secondAttribute="top" id="Hn1-9A-zTY"/>
+                    <constraint firstItem="B84-RO-bZ4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="Jb1-YM-ClX"/>
+                    <constraint firstAttribute="trailing" secondItem="0cv-eb-a9a" secondAttribute="trailing" constant="27" id="RKH-5a-jyE"/>
+                    <constraint firstItem="iaP-ad-Qch" firstAttribute="centerY" secondItem="B84-RO-bZ4" secondAttribute="centerY" id="Sdc-iI-eRf"/>
+                    <constraint firstItem="DwY-rp-L1t" firstAttribute="leading" secondItem="iaP-ad-Qch" secondAttribute="trailing" constant="15" id="b9Y-5D-EnE"/>
+                    <constraint firstItem="DwY-rp-L1t" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fa4-oV-Y11"/>
+                    <constraint firstItem="0cv-eb-a9a" firstAttribute="leading" secondItem="DwY-rp-L1t" secondAttribute="trailing" constant="15" id="h65-He-lAh"/>
+                    <constraint firstItem="0cv-eb-a9a" firstAttribute="centerY" secondItem="B84-RO-bZ4" secondAttribute="centerY" id="i1R-96-wgY"/>
+                    <constraint firstItem="XuZ-Ps-AIZ" firstAttribute="leading" secondItem="B84-RO-bZ4" secondAttribute="trailing" constant="30" id="kXo-LV-90g"/>
+                    <constraint firstItem="XuZ-Ps-AIZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="phC-Ls-G0f"/>
+                    <constraint firstItem="0cv-eb-a9a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="q7a-ne-eco"/>
+                    <constraint firstItem="B84-RO-bZ4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rWN-d8-q7f"/>
+                    <constraint firstItem="B84-RO-bZ4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="ziQ-Qw-9SL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="clothIcon" destination="B84-RO-bZ4" id="MGz-pl-6AQ"/>
+                <outlet property="clothLabel" destination="XuZ-Ps-AIZ" id="I7h-p0-jUy"/>
+                <outlet property="countLabel" destination="DwY-rp-L1t" id="8MU-sH-N51"/>
+                <outlet property="minusButton" destination="iaP-ad-Qch" id="DNg-AM-RMM"/>
+                <outlet property="plusButton" destination="0cv-eb-a9a" id="qIi-S5-q22"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="21"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="add_new" width="36" height="36"/>
+    </resources>
+</document>

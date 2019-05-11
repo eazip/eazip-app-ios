@@ -13,7 +13,7 @@ extension UIButton {
         let layer : CALayer = CALayer()
         self.titleLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 18)
         self.clipsToBounds = true
-        self.layer.cornerRadius = 25
+        self.layer.cornerRadius = 27
         self.setTitleColor(.white, for: .normal)
         self.layer.insertSublayer(layer, at: 0)
     }
