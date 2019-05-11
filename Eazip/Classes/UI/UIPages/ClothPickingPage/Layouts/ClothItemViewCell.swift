@@ -13,8 +13,8 @@ class ClothItemViewCell: UITableViewCell {
     @IBOutlet weak var clothIcon: UIImageView!
     @IBOutlet weak var clothLabel: EazipLabel!
     @IBOutlet weak var countLabel: DefaultText!
-    @IBOutlet weak var minusButton: UIImageView!
-    @IBOutlet weak var plusButton: UIImageView!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     
     var count : Int = 0
     
@@ -45,6 +45,28 @@ class ClothItemViewCell: UITableViewCell {
     func setData(icon: UIImage, label: String) {
         clothIcon.image = icon
         clothLabel.text = label
+    }
+    
+    @IBAction func addCloth(_ sender: UIButton) {
+        addOne()
+        updateCountLabel()
+    }
+    
+    @IBAction func removeCloth(_ sender: UIButton) {
+        removeOne()
+        updateCountLabel()
+    }
+    
+    func addOne() {
+        if count < 10 {
+          count += 1
+        }
+    }
+    
+    func removeOne() {
+        if count > 0 {
+            count -= 1
+        }
     }
     
     func updateCountLabel() {
