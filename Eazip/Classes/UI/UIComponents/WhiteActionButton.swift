@@ -26,7 +26,10 @@ class WhiteActionButton: UIButton {
     func setUp() {
         self.setEazipButtonProperties()
         self.backgroundColor = UIColor.white
-        self.setTitleColor(.black, for: .normal)
+        self.layer.masksToBounds = false
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(named: "borderLightGrey")?.cgColor
+        self.setTitleColor(UIColor(named: "lightGrey"), for: .normal)
         self.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 20)
     }
 }
