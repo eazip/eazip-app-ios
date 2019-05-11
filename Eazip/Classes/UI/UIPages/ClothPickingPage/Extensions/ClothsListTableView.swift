@@ -21,18 +21,15 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var clothItem : ClothItem = ClothItem(cloth_id: 0, icon: UIImage(named: "")!, title: "", selected: false)
-//        
-//        for (index, cloth) in clothsList.enumerated() {
-//            
-//            print(cloth)
-//            
-////            if indexPath.section == index {
-////                clothItem = cloth[indexPath.row]
-////            }
-//        }
+        var clothItem : ClothItem = ClothItem(cloth_id: 0, icon: UIImage(named: "robe")!, title: "", selected: false)
+        
+        for (index, cloth) in clothsList.enumerated() {
+            if indexPath.section == index {
+                clothItem = cloth
+            }
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
-        cell.setData(icon: UIImage(named: "robe")!, label: "Robe")
+        cell.setData(icon: clothItem.icon, label: clothItem.title)
         
         return cell
     }

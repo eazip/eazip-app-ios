@@ -447,9 +447,9 @@
 			children = (
 				0C1095B121FCA454004F742A /* EazipLabel.swift */,
 				0C93BA562200523C00400BD2 /* ColoredActionButton.swift */,
-				0C93BA582200535500400BD2 /* WhiteActionButton.swift */,
 				0C988BEA223EF9FD0079727C /* DefaultLightText.swift */,
 				0C988BF02245A8A70079727C /* LightLabel.swift */,
+				0C93BA582200535500400BD2 /* WhiteActionButton.swift */,
 				0C60F22A2248408F00E4B5F2 /* BoldLabel.swift */,
 				0CFED29E225A92F000DDE166 /* DefaultText.swift */,
 				0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */,
