@@ -29,6 +29,10 @@
 		0C218967225602150011DA45 /* SewerAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */; };
 		0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */; };
 		0C2290B8225BEAE8009FBC9C /* NavigationNextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */; };
+		0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A222872329005249AA /* WorksByClothViewController.swift */; };
+		0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */; };
+		0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */; };
+		0C47D4AB228820FE005249AA /* ClothDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */; };
 		0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C41321FC8AF7007343C7 /* AppDelegate.swift */; };
 		0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41721FC8AF7007343C7 /* Main.storyboard */; };
 		0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */; };
@@ -132,6 +136,10 @@
 		0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerAvailabilityViewController.swift; sourceTree = "<group>"; };
 		0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationUIHelper.swift; sourceTree = "<group>"; };
 		0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationNextLabel.swift; sourceTree = "<group>"; };
+		0C47D4A222872329005249AA /* WorksByClothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothViewController.swift; sourceTree = "<group>"; };
+		0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothCollectionView.swift; sourceTree = "<group>"; };
+		0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailsViewCell.swift; sourceTree = "<group>"; };
+		0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothDetailsViewCell.xib; sourceTree = "<group>"; };
 		0C57C41021FC8AF7007343C7 /* Eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C57C41321FC8AF7007343C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C57C41821FC8AF7007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -384,6 +392,41 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0C47D4A022872117005249AA /* WorksByClothPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C47D4A722881E64005249AA /* Layouts */,
+				0C47D4A422881BD6005249AA /* Extensions */,
+				0C47D4A12287212F005249AA /* Views */,
+			);
+			path = WorksByClothPage;
+			sourceTree = "<group>";
+		};
+		0C47D4A12287212F005249AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C47D4A222872329005249AA /* WorksByClothViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C47D4A422881BD6005249AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C47D4A722881E64005249AA /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */,
+				0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		0C57C40721FC8AF7007343C7 = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +505,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0C47D4A022872117005249AA /* WorksByClothPage */,
 				0CD9E23B227C3230009343A3 /* AppointmentDetailsPage */,
 				0C10E3CE2279AE5B0070B353 /* AppointmentsListPage */,
 				0C6DB8C62266F77C00F1020C /* ConfirmAppointmentPage */,
@@ -900,6 +944,7 @@
 				0CFED29A225754FC00DDE166 /* HourPickerViewCell.xib in Resources */,
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
+				0C47D4AB228820FE005249AA /* ClothDetailsViewCell.xib in Resources */,
 				0CDA24B5226F093400A34AF2 /* PaymentMethodsViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
@@ -961,6 +1006,7 @@
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
+				0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */,
 				0CDA24B4226F093400A34AF2 /* PaymentMethodsViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
@@ -971,6 +1017,7 @@
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
 				0C9CE33E225E9ECB004DF3DA /* CalendarHelper.swift in Sources */,
 				0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */,
+				0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */,
 				0C8CA46922798B0200CEEA65 /* DefaultNavigation.swift in Sources */,
 				0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */,
 				0CD9E244227C3D46009343A3 /* AppointmentDetailsTemplate.swift in Sources */,
@@ -997,6 +1044,7 @@
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
 				0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */,
+				0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
 				0C9CE34222622300004DF3DA /* DatePickerHelper.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRw-DC-WiO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="51n-77-UP6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,6 +71,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzE-Ah-Dcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2538.4000000000001" y="413.3433283358321"/>
+        </scene>
+        <!--Works By Cloth View Controller-->
+        <scene sceneID="xi6-Ez-CHK">
+            <objects>
+                <viewController id="51n-77-UP6" customClass="WorksByClothViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MdS-wx-yRK"/>
+                        <viewControllerLayoutGuide type="bottom" id="MaJ-Uz-aIU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E2D-VC-R6T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJA-Zp-AIS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="Q80-Vs-E19">
+                                        <string key="title">Choisissez vos
+types de retouches</string>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xMJ-dT-ZV3">
+                                <rect key="frame" x="0.0" y="44" width="375" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dlr-uR-0qT">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KU-gf-67s" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="577" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="gUr-Eo-JED"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XJA-Zp-AIS" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="9mi-9R-120"/>
+                            <constraint firstAttribute="trailing" secondItem="xMJ-dT-ZV3" secondAttribute="trailing" id="GFr-Op-kkK"/>
+                            <constraint firstItem="0KU-gf-67s" firstAttribute="top" secondItem="xMJ-dT-ZV3" secondAttribute="bottom" constant="15" id="P1n-JO-akz"/>
+                            <constraint firstItem="xMJ-dT-ZV3" firstAttribute="top" secondItem="XJA-Zp-AIS" secondAttribute="bottom" id="V8k-aR-4WX"/>
+                            <constraint firstAttribute="trailing" secondItem="XJA-Zp-AIS" secondAttribute="trailing" id="buR-KS-iZE"/>
+                            <constraint firstItem="xMJ-dT-ZV3" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="d37-VW-Nn9"/>
+                            <constraint firstItem="MaJ-Uz-aIU" firstAttribute="top" secondItem="0KU-gf-67s" secondAttribute="bottom" constant="33" id="g2P-WO-vdv"/>
+                            <constraint firstItem="0KU-gf-67s" firstAttribute="centerX" secondItem="E2D-VC-R6T" secondAttribute="centerX" id="jPn-Ki-gXb"/>
+                            <constraint firstItem="0KU-gf-67s" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leadingMargin" constant="11" id="oO2-gp-5mD"/>
+                            <constraint firstItem="XJA-Zp-AIS" firstAttribute="top" secondItem="E2D-VC-R6T" secondAttribute="top" id="zyc-rL-6KF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="validationButton" destination="0KU-gf-67s" id="doD-Qu-Bhr"/>
+                        <outlet property="worksByClothCollectionView" destination="xMJ-dT-ZV3" id="9z4-XJ-KfV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWK-Di-P5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2538.4000000000001" y="1113.1934032983509"/>
         </scene>
         <!--MES RETOUCHES-->
         <scene sceneID="dc6-sH-swQ">
