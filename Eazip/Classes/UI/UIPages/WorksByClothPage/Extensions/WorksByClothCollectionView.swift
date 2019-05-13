@@ -21,4 +21,8 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+            return CGSize(width: UIScreen.main.bounds.size.width, height: 70)
+    }
 }

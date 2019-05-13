@@ -75,6 +75,10 @@
 		0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB830282262945F00A689DB /* FormatStringHelper.swift */; };
 		0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302B226463D100A689DB /* DatePickerCollectionView.swift */; };
 		0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB8302D2264652F00A689DB /* HourPickerTableView.swift */; };
+		0CBC128F2289C1E800E7985D /* WorksDropdownItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC128D2289C1E800E7985D /* WorksDropdownItemViewCell.swift */; };
+		0CBC12902289C1E800E7985D /* WorksDropdownItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */; };
+		0CBC129B2289C96600E7985D /* WorkChoiceItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */; };
+		0CBC129C2289C96600E7985D /* WorkChoiceItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
 		0CD9E23E227C32E2009343A3 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */; };
@@ -186,6 +190,10 @@
 		0CB830282262945F00A689DB /* FormatStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatStringHelper.swift; sourceTree = "<group>"; };
 		0CB8302B226463D100A689DB /* DatePickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCollectionView.swift; sourceTree = "<group>"; };
 		0CB8302D2264652F00A689DB /* HourPickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerTableView.swift; sourceTree = "<group>"; };
+		0CBC128D2289C1E800E7985D /* WorksDropdownItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksDropdownItemViewCell.swift; sourceTree = "<group>"; };
+		0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorksDropdownItemViewCell.xib; sourceTree = "<group>"; };
+		0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChoiceItemViewCell.swift; sourceTree = "<group>"; };
+		0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkChoiceItemViewCell.xib; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
 		0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +431,10 @@
 			children = (
 				0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */,
 				0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */,
+				0CBC128D2289C1E800E7985D /* WorksDropdownItemViewCell.swift */,
+				0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */,
+				0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */,
+				0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -963,7 +975,9 @@
 				0C57C44221FC8C67007343C7 /* Assets.xcassets in Resources */,
 				0C6DB8D9226A2B1D00F1020C /* ProductsDetailsViewCell.xib in Resources */,
 				0C1B9391223BD72500EC60B1 /* Colors.xcassets in Resources */,
+				0CBC129C2289C96600E7985D /* WorkChoiceItemViewCell.xib in Resources */,
 				0CE0D7BA2286E29E00D23FA6 /* ClothItemViewCell.xib in Resources */,
+				0CBC12902289C1E800E7985D /* WorksDropdownItemViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1018,8 @@
 				0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */,
 				0C10E3D52279B5F00070B353 /* AppointmentsListCollectionView.swift in Sources */,
 				0C60F232224AA65500E4B5F2 /* SewerProfile.swift in Sources */,
+				0CBC129B2289C96600E7985D /* WorkChoiceItemViewCell.swift in Sources */,
+				0CBC128F2289C1E800E7985D /* WorksDropdownItemViewCell.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
 				0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */,

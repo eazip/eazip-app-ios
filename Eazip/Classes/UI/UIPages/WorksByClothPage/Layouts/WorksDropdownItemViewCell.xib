@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WorksDropdownItemViewCell" id="gTV-IL-0wX" customClass="WorksDropdownItemViewCell" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="277" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czY-Q7-xhR">
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="166"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-kP-NXM">
+                                <rect key="frame" x="0.0" y="0.0" width="277" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3Dv-ma-NLq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wrj-MI-xq2">
+                                <rect key="frame" x="27" y="70" width="223" height="96"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wrj-MI-xq2" secondAttribute="bottom" id="3J6-NR-TxX"/>
+                            <constraint firstAttribute="trailing" secondItem="1fF-kP-NXM" secondAttribute="trailing" id="6XF-Cg-RTs"/>
+                            <constraint firstItem="1fF-kP-NXM" firstAttribute="top" secondItem="czY-Q7-xhR" secondAttribute="top" id="A8w-4m-seG"/>
+                            <constraint firstItem="1fF-kP-NXM" firstAttribute="leading" secondItem="czY-Q7-xhR" secondAttribute="leading" id="Fyi-vK-Pm4"/>
+                            <constraint firstItem="wrj-MI-xq2" firstAttribute="top" secondItem="1fF-kP-NXM" secondAttribute="bottom" id="ZPJ-7I-r9b"/>
+                            <constraint firstItem="wrj-MI-xq2" firstAttribute="leading" secondItem="czY-Q7-xhR" secondAttribute="leading" constant="27" id="cAo-sp-e7c"/>
+                            <constraint firstAttribute="trailing" secondItem="wrj-MI-xq2" secondAttribute="trailing" constant="27" id="qX3-L2-Pp8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="czY-Q7-xhR" secondAttribute="bottom" id="Nlr-8h-K5c"/>
+                <constraint firstAttribute="trailing" secondItem="czY-Q7-xhR" secondAttribute="trailing" id="gIx-lr-Fr7"/>
+                <constraint firstItem="czY-Q7-xhR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uPV-5G-EnR"/>
+                <constraint firstItem="czY-Q7-xhR" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="vej-TA-2Fn"/>
+                <constraint firstItem="czY-Q7-xhR" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="wjv-Vs-o8R"/>
+                <constraint firstItem="czY-Q7-xhR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zIk-Ut-3OQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="277" height="166"/>
+            <connections>
+                <outlet property="OpenerButton" destination="1fF-kP-NXM" id="tny-iB-FM3"/>
+                <outlet property="dropDownWrapper" destination="czY-Q7-xhR" id="YD3-Dd-Cur"/>
+                <outlet property="worksListTableView" destination="wrj-MI-xq2" id="5BM-I0-7ds"/>
+            </connections>
+            <point key="canvasLocation" x="138.5" y="110"/>
+        </collectionViewCell>
+    </objects>
+</document>

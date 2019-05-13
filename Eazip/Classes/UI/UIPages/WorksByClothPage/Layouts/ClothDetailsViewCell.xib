@@ -79,6 +79,7 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Spy-b9-FnC" secondAttribute="trailing" id="4tP-E8-fhc"/>
+                <constraint firstItem="4ph-h1-fQR" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="EOI-1G-87e"/>
                 <constraint firstItem="Spy-b9-FnC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JOm-pw-Enr"/>
                 <constraint firstAttribute="bottom" secondItem="Spy-b9-FnC" secondAttribute="bottom" id="Wja-tk-0Qk"/>
                 <constraint firstItem="Spy-b9-FnC" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="ghN-XR-l0I"/>
@@ -91,6 +92,7 @@
                 <outlet property="clothIcon" destination="tyP-pG-gCc" id="OAH-Pi-fSX"/>
                 <outlet property="clothLabel" destination="XpI-H0-1OL" id="EPI-ZE-OkL"/>
                 <outlet property="clothTitleWrapper" destination="GYT-Si-di6" id="iaH-6f-0J0"/>
+                <outlet property="worksDropDownCollectionView" destination="4ph-h1-fQR" id="oZy-wM-h7g"/>
             </connections>
             <point key="canvasLocation" x="169" y="161.5"/>
         </collectionViewCell>

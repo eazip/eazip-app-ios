@@ -108,6 +108,7 @@ types de retouches</string>
                                 <rect key="frame" x="27" y="577" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="gUr-Eo-JED"/>
+                                    <constraint firstAttribute="width" constant="320" id="ltd-IN-Mnp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -122,7 +123,7 @@ types de retouches</string>
                             <constraint firstItem="xMJ-dT-ZV3" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="d37-VW-Nn9"/>
                             <constraint firstItem="MaJ-Uz-aIU" firstAttribute="top" secondItem="0KU-gf-67s" secondAttribute="bottom" constant="33" id="g2P-WO-vdv"/>
                             <constraint firstItem="0KU-gf-67s" firstAttribute="centerX" secondItem="E2D-VC-R6T" secondAttribute="centerX" id="jPn-Ki-gXb"/>
-                            <constraint firstItem="0KU-gf-67s" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leadingMargin" constant="11" id="oO2-gp-5mD"/>
+                            <constraint firstItem="xMJ-dT-ZV3" firstAttribute="width" secondItem="E2D-VC-R6T" secondAttribute="width" id="lBP-FL-ww5"/>
                             <constraint firstItem="XJA-Zp-AIS" firstAttribute="top" secondItem="E2D-VC-R6T" secondAttribute="top" id="zyc-rL-6KF"/>
                         </constraints>
                     </view>
