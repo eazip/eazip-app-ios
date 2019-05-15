@@ -17,6 +17,7 @@ class ClothItemViewCell: UITableViewCell {
     @IBOutlet weak var plusButton: UIButton!
     
     var count : Int = 0
+    var itemID : Int = 1
     
     // Main Cell Colors
     let clothItemBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
@@ -37,6 +38,11 @@ class ClothItemViewCell: UITableViewCell {
         self.layoutIfNeeded()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        resetCount()
+    }
+    
     func setUpWrapperView() {
         self.backgroundColor = clothItemBackgroundColor
         self.clothLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
@@ -48,6 +54,8 @@ class ClothItemViewCell: UITableViewCell {
     }
     
     @IBAction func addCloth(_ sender: UIButton) {
+        isSelected = true
+        super.layoutIfNeeded()
         addOne()
         updateCountLabel()
     }
@@ -69,7 +77,20 @@ class ClothItemViewCell: UITableViewCell {
         }
     }
     
+    func resetCount() {
+        count = 0
+        updateCountLabel()
+    }
+    
     func updateCountLabel() {
         countLabel.text = String(describing: count)
+    }
+    
+    func getItemID() -> Int {
+        return itemID
+    }
+    
+    func getCount() -> Int {
+        return count
     }
 }

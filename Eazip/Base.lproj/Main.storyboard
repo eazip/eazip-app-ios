@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="51n-77-UP6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRw-DC-WiO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,6 +44,9 @@
                                 <state key="normal">
                                     <color key="titleColor" red="0.96862745100000003" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="next:" destination="QRw-DC-WiO" eventType="touchDown" id="GOa-ua-duv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +78,7 @@
         <!--Works By Cloth View Controller-->
         <scene sceneID="xi6-Ez-CHK">
             <objects>
-                <viewController id="51n-77-UP6" customClass="WorksByClothViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorksByClothViewController" id="51n-77-UP6" customClass="WorksByClothViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MdS-wx-yRK"/>
                         <viewControllerLayoutGuide type="bottom" id="MaJ-Uz-aIU"/>
@@ -712,7 +715,7 @@ types de retouches</string>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">
             <objects>
-                <viewController id="ZcN-0M-wCV" customClass="SewersViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SewersViewController" id="ZcN-0M-wCV" customClass="SewersViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="659-FA-bYS"/>
                         <viewControllerLayoutGuide type="bottom" id="XTO-WM-fIj"/>
@@ -737,7 +740,7 @@ types de retouches</string>
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="230"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="230"/>

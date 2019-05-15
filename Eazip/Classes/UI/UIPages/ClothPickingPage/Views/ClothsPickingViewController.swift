@@ -15,6 +15,8 @@ class ClothsPickingViewController: UIViewController {
     @IBOutlet weak var clothsPickingScreenTitle: UILabel!
     
     var clothsList: [ClothItem] = []
+    var navigationAllowed : Bool = false
+    var selectedClothes : [[String: Any]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,7 @@ class ClothsPickingViewController: UIViewController {
         setUpTitleScreen()
         initClothsTableView()
         setUpValidationButton()
+        makeNextStepUnavailable()
     }
     
     func createArray() -> [ClothItem] {
@@ -63,6 +66,34 @@ class ClothsPickingViewController: UIViewController {
     }
     
     func setUpValidationButton() {
-        validationButton?.setTitle("Choisir les retouches", for: .normal)
+        validationButton?.setTitle("Valider", for: .normal)
+    }
+    
+    func toggleNavigationAvailability() {
+        if selectedClothes.count == 0 {
+            makeNextStepUnavailable()
+        } else {
+            makeNextStepAvailable()
+        }
+    }
+    
+    func makeNextStepUnavailable() {
+        navigationAllowed = false
+        validationButton?.alpha = 0.30
+    }
+    
+    func makeNextStepAvailable() {
+        navigationAllowed = true
+        validationButton?.alpha = 1
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        nextStep()
+    }
+    
+    func nextStep() -> Void {
+        if navigationAllowed {
+            goToScreen(identifier: "WorksByClothViewController")
+        }
     }
 }

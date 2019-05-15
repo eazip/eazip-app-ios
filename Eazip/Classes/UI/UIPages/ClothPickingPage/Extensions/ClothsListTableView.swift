@@ -30,7 +30,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
         cell.setData(icon: clothItem.icon, label: clothItem.title)
-        
+    
         return cell
     }
     
@@ -47,5 +47,29 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 12
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let isCell = tableView.cellForRow(at: indexPath) {
+            let cell = isCell as! ClothItemViewCell
+            cell.addOne()
+            cell.updateCountLabel()
+            
+            var selectedClothesCount : Int = 0
+            for (index, clothe) in selectedClothes.enumerated() {
+                let keyExists = clothe["itemID"] != nil
+                if keyExists {
+                    let clotheID = clothe["itemID"] as! Int
+                    if clotheID == cell.getItemID() {
+                        selectedClothesCount += 1
+                        selectedClothes[index]["count"] = cell.getCount()
+                    }
+                }
+            }
+            if selectedClothesCount == 0 {
+                selectedClothes.append(["itemID" : cell.getItemID(), "count": cell.getCount()])
+            }
+            toggleNavigationAvailability()
+        }
     }
 }
