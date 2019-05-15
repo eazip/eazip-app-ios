@@ -11,18 +11,21 @@ import UIKit
 extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return clothProducts.count
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let clothItem = clothProducts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClothDetailsViewCell", for: indexPath as IndexPath) as! ClothDetailsViewCell
-        cell.setData(icon: clothItem.icon, label: clothItem.title)
+        cell.setData(icon: UIImage(named:"robe")!, label: "Robe")
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-            return CGSize(width: UIScreen.main.bounds.size.width, height: 70)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: worksByClothCollectionView.bounds.width, height: 70)
+    }
+    
+    private func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAtt indexPath: IndexPath) {
+        self.loadViewIfNeeded()
     }
 }

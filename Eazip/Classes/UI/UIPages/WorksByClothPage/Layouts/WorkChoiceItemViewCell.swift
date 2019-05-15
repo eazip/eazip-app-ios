@@ -16,10 +16,14 @@ class WorkChoiceItemViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layoutIfNeeded()
+    }
 
     func setData(label: String, price: String) {
         workLabel.text = label
         workPrice.text = price
     }
-    
 }

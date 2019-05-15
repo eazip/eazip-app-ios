@@ -66,6 +66,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GYT-Si-di6" firstAttribute="width" secondItem="Spy-b9-FnC" secondAttribute="width" id="1DT-P0-lLv"/>
+                            <constraint firstItem="4ph-h1-fQR" firstAttribute="width" secondItem="Spy-b9-FnC" secondAttribute="width" id="6Zd-7f-VNf"/>
                             <constraint firstAttribute="trailing" secondItem="4ph-h1-fQR" secondAttribute="trailing" id="DIZ-7v-RzO"/>
                             <constraint firstItem="4ph-h1-fQR" firstAttribute="top" secondItem="GYT-Si-di6" secondAttribute="bottom" id="Hlq-0q-kKK"/>
                             <constraint firstAttribute="trailing" secondItem="GYT-Si-di6" secondAttribute="trailing" id="POi-rC-ZTP"/>
@@ -92,7 +93,9 @@
                 <outlet property="clothIcon" destination="tyP-pG-gCc" id="OAH-Pi-fSX"/>
                 <outlet property="clothLabel" destination="XpI-H0-1OL" id="EPI-ZE-OkL"/>
                 <outlet property="clothTitleWrapper" destination="GYT-Si-di6" id="iaH-6f-0J0"/>
+                <outlet property="collectionHeight" destination="gev-XX-Zow" id="ZxT-Q9-ONs"/>
                 <outlet property="worksDropDownCollectionView" destination="4ph-h1-fQR" id="oZy-wM-h7g"/>
+                <outlet property="wrapperView" destination="Spy-b9-FnC" id="0LN-zL-Jsc"/>
             </connections>
             <point key="canvasLocation" x="169" y="161.5"/>
         </collectionViewCell>

@@ -79,6 +79,7 @@
 		0CBC12902289C1E800E7985D /* WorksDropdownItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */; };
 		0CBC129B2289C96600E7985D /* WorkChoiceItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */; };
 		0CBC129C2289C96600E7985D /* WorkChoiceItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */; };
+		0CBC129F228A02AB00E7985D /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC129E228A02AB00E7985D /* Cloth.swift */; };
 		0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */; };
 		0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */; };
 		0CD9E23E227C32E2009343A3 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */; };
@@ -194,6 +195,7 @@
 		0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorksDropdownItemViewCell.xib; sourceTree = "<group>"; };
 		0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkChoiceItemViewCell.swift; sourceTree = "<group>"; };
 		0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkChoiceItemViewCell.xib; sourceTree = "<group>"; };
+		0CBC129E228A02AB00E7985D /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		0CD685EF22534E03009C9396 /* SewerProfilePageTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerProfilePageTemplate.swift; sourceTree = "<group>"; };
 		0CD685F5225388B7009C9396 /* CollectionCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurator.swift; sourceTree = "<group>"; };
 		0CD9E23D227C32E2009343A3 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 		0C47D4A022872117005249AA /* WorksByClothPage */ = {
 			isa = PBXGroup;
 			children = (
+				0CBC129D228A027900E7985D /* Data */,
 				0C47D4A722881E64005249AA /* Layouts */,
 				0C47D4A422881BD6005249AA /* Extensions */,
 				0C47D4A12287212F005249AA /* Views */,
@@ -739,6 +742,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0CBC129D228A027900E7985D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0CBC129E228A02AB00E7985D /* Cloth.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		0CD685F7225395BB009C9396 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1022,7 @@
 				5591A3A32273509600DE342D /* PromoCodeViewCell.swift in Sources */,
 				0CDA24B0226E7A5300A34AF2 /* AppointmentViewCell.swift in Sources */,
 				0CB830292262945F00A689DB /* FormatStringHelper.swift in Sources */,
+				0CBC129F228A02AB00E7985D /* Cloth.swift in Sources */,
 				0CDA24AC226E595600A34AF2 /* ProductItemViewCell.swift in Sources */,
 				0C988BEB223EF9FD0079727C /* DefaultLightText.swift in Sources */,
 				0CB8302E2264652F00A689DB /* HourPickerTableView.swift in Sources */,

@@ -13,11 +13,13 @@ class WorksByClothViewController: UIViewController {
     @IBOutlet weak var worksByClothCollectionView: UICollectionView!
     @IBOutlet weak var validationButton: ColoredActionButton!
     
-    let clothProducts : [ClothItem] = [ClothItem(cloth_id: 1, icon: UIImage(named: "robe")!, title: "Robe", selected: false), ClothItem(cloth_id: 1, icon: UIImage(named: "robe")!, title: "Robe", selected: false)]
+    let clotheProducts : [[String: Any]] = []
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initWorksByClothCollectionView()
+        worksByClothCollectionView.layoutIfNeeded()
     }
     
     func initWorksByClothCollectionView() {
