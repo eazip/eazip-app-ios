@@ -20,6 +20,7 @@ class WorksByClothViewController: UIViewController {
         super.viewDidLoad()
         initWorksByClothCollectionView()
         worksByClothCollectionView.layoutIfNeeded()
+        setUpValidationButton()
     }
     
     func initWorksByClothCollectionView() {
@@ -45,5 +46,9 @@ class WorksByClothViewController: UIViewController {
     
     func initClothSectionCell(cellIdentifier: String) {
         worksByClothCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+    }
+    
+    func setUpValidationButton()  {
+        validationButton?.setTitle("Chercher un(e) couturier(e)", for: .normal)
     }
 }

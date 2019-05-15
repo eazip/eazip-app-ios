@@ -18,9 +18,6 @@ class ClothDetailsViewCell: UICollectionViewCell,UICollectionViewDataSource, UIC
     @IBOutlet weak var clothLabel: UILabel!
     @IBOutlet weak var worksDropDownCollectionView: UICollectionView!
     
-    // Main Colors
-    let wrapperBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
-    
     /**
      /////////////////////
      Up
@@ -37,10 +34,6 @@ class ClothDetailsViewCell: UICollectionViewCell,UICollectionViewDataSource, UIC
         super.layoutSubviews()
         worksDropDownCollectionView.layoutIfNeeded()
         wrapperView.layoutIfNeeded()
-        
-        print(wrapperView.heightAnchor)
-        print(clothTitleWrapper.heightAnchor)
-        print(worksDropDownCollectionView.heightAnchor)
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -94,7 +87,7 @@ class ClothDetailsViewCell: UICollectionViewCell,UICollectionViewDataSource, UIC
     }
     
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: worksDropDownCollectionView.bounds.width, height: 70)
+        return CGSize(width: worksDropDownCollectionView.bounds.width, height: 200)
     }
     
     private func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAtt indexPath: IndexPath) {
