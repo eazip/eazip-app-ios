@@ -29,7 +29,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
             }
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
-        cell.setData(icon: clothItem.icon, label: clothItem.title)
+        cell.setData(tableView: tableView, icon: clothItem.icon, label: clothItem.title)
     
         return cell
     }
@@ -70,6 +70,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
                 selectedClothes.append(["itemID" : cell.getItemID(), "count": cell.getCount()])
             }
             toggleNavigationAvailability()
+            print(selectedClothes)
         }
     }
 }

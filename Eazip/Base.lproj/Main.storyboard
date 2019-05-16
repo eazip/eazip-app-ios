@@ -114,6 +114,9 @@ types de retouches</string>
                                     <constraint firstAttribute="width" constant="320" id="ltd-IN-Mnp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="next:" destination="51n-77-UP6" eventType="touchDown" id="q9V-yS-cqP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

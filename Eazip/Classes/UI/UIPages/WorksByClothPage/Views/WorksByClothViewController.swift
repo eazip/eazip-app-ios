@@ -13,8 +13,8 @@ class WorksByClothViewController: UIViewController {
     @IBOutlet weak var worksByClothCollectionView: UICollectionView!
     @IBOutlet weak var validationButton: ColoredActionButton!
     
-    let clotheProducts : [[String: Any]] = []
-        
+    var navigationAllowed : Bool = true
+    var selectedServices : [[String : Any]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,5 +50,33 @@ class WorksByClothViewController: UIViewController {
     
     func setUpValidationButton()  {
         validationButton?.setTitle("Chercher un(e) couturier(e)", for: .normal)
+    }
+    
+    func toggleNavigationAvailability() {
+        if selectedServices.count == 0 {
+            makeNextStepUnavailable()
+        } else {
+            makeNextStepAvailable()
+        }
+    }
+    
+    func makeNextStepUnavailable() {
+        navigationAllowed = false
+        validationButton?.alpha = 0.30
+    }
+    
+    func makeNextStepAvailable() {
+        navigationAllowed = true
+        validationButton?.alpha = 1
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        nextStep()
+    }
+    
+    func nextStep() -> Void {
+        if navigationAllowed {
+            goToScreen(identifier: "SewersViewController")
+        }
     }
 }

@@ -18,6 +18,7 @@ class ClothItemViewCell: UITableViewCell {
     
     var count : Int = 0
     var itemID : Int = 1
+    var associatedTableView : UITableView? = nil
     
     // Main Cell Colors
     let clothItemBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
@@ -48,16 +49,18 @@ class ClothItemViewCell: UITableViewCell {
         self.clothLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
     }
     
-    func setData(icon: UIImage, label: String) {
+    func setData(tableView: UITableView, icon: UIImage, label: String) {
         clothIcon.image = icon
         clothLabel.text = label
+        associatedTableView = tableView
     }
     
     @IBAction func addCloth(_ sender: UIButton) {
-        isSelected = true
-        super.layoutIfNeeded()
         addOne()
         updateCountLabel()
+        let indexPath = IndexPath(row: 1, section: 0)
+        associatedTableView?.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+        associatedTableView?.delegate?.tableView!(associatedTableView!, didSelectRowAt: indexPath)
     }
     
     @IBAction func removeCloth(_ sender: UIButton) {
