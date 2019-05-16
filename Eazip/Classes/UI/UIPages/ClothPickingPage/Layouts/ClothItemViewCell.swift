@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ClothsPickingViewDelegate {
+    func didIncreaseCountButtonPressed(cell: ClothItemViewCell)
+    func didDecreaseCountButtonPressed(cell: ClothItemViewCell)
+}
+
 class ClothItemViewCell: UITableViewCell {
+    var delegate : ClothsPickingViewDelegate?
     
     @IBOutlet weak var clothIcon: UIImageView!
     @IBOutlet weak var clothLabel: EazipLabel!
@@ -18,7 +24,7 @@ class ClothItemViewCell: UITableViewCell {
     
     var count : Int = 0
     var itemID : Int = 1
-    var associatedTableView : UITableView? = nil
+    var selectedState : Bool = false
     
     // Main Cell Colors
     let clothItemBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
@@ -49,35 +55,31 @@ class ClothItemViewCell: UITableViewCell {
         self.clothLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
     }
     
-    func setData(tableView: UITableView, icon: UIImage, label: String) {
+    func setData(icon: UIImage, label: String) {
         clothIcon.image = icon
         clothLabel.text = label
-        associatedTableView = tableView
     }
     
     @IBAction func addCloth(_ sender: UIButton) {
-        addOne()
-        updateCountLabel()
-        let indexPath = IndexPath(row: 1, section: 0)
-        associatedTableView?.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        associatedTableView?.delegate?.tableView!(associatedTableView!, didSelectRowAt: indexPath)
+        delegate?.didIncreaseCountButtonPressed(cell: self)
     }
     
     @IBAction func removeCloth(_ sender: UIButton) {
-        removeOne()
-        updateCountLabel()
+        delegate?.didDecreaseCountButtonPressed(cell: self)
     }
     
     func addOne() {
         if count < 10 {
           count += 1
         }
+        updateCountLabel()
     }
     
     func removeOne() {
         if count > 0 {
             count -= 1
         }
+        updateCountLabel()
     }
     
     func resetCount() {

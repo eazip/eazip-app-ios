@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelegate {
+extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelegate, ClothsPickingViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -29,7 +29,8 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
             }
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
-        cell.setData(tableView: tableView, icon: clothItem.icon, label: clothItem.title)
+        cell.delegate = self
+        cell.setData(icon: clothItem.icon, label: clothItem.title)
     
         return cell
     }
@@ -52,25 +53,64 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
             let cell = isCell as! ClothItemViewCell
-            cell.addOne()
-            cell.updateCountLabel()
-            
-            var selectedClothesCount : Int = 0
-            for (index, clothe) in selectedClothes.enumerated() {
-                let keyExists = clothe["itemID"] != nil
-                if keyExists {
-                    let clotheID = clothe["itemID"] as! Int
-                    if clotheID == cell.getItemID() {
-                        selectedClothesCount += 1
-                        selectedClothes[index]["count"] = cell.getCount()
-                    }
+            increaseItem(from: cell)
+        }
+    }
+    
+    func didIncreaseCountButtonPressed(cell: ClothItemViewCell) {
+        increaseItem(from: cell)
+    }
+    
+    func didDecreaseCountButtonPressed(cell: ClothItemViewCell) {
+        decreaseItem(from: cell)
+    }
+    
+    func increaseItem(from cell: ClothItemViewCell) {
+        cell.addOne()
+        var itemsWithThisTypeSelected : Bool = false
+        for (index, clothe) in selectedClothes.enumerated() {
+            let keyExists = clothe["itemID"] != nil
+            if keyExists {
+                let clotheID = clothe["itemID"] as! Int
+                if clotheID == cell.getItemID() {
+                    itemsWithThisTypeSelected = true
+                    updateClotheCountInSelectedClothes(at: index, count: cell.getCount())
+                    break
                 }
             }
-            if selectedClothesCount == 0 {
-                selectedClothes.append(["itemID" : cell.getItemID(), "count": cell.getCount()])
-            }
-            toggleNavigationAvailability()
-            print(selectedClothes)
         }
+        if !itemsWithThisTypeSelected {
+            addNewClotheObjectInSelectedClothes(clotheId: cell.getItemID())
+        }
+        toggleNavigationAvailability()
+        print(selectedClothes)
+    }
+    
+    func decreaseItem(from cell: ClothItemViewCell) {
+        cell.removeOne()
+        for (index, clothe) in selectedClothes.enumerated() {
+            if clothe["itemID"] as! Int == cell.getItemID() {
+                let newClotheCount = cell.getCount()
+                if newClotheCount == 0 {
+                    removeClotheFromSelectedClothes(at: index)
+                } else {
+                    updateClotheCountInSelectedClothes(at: index, count: newClotheCount)
+                }
+            }
+        }
+        toggleNavigationAvailability()
+        print(selectedClothes)
+    }
+    
+    func updateClotheCountInSelectedClothes(at index: Int, count: Int) {
+        selectedClothes[index]["count"] = count
+    }
+    
+    func removeClotheFromSelectedClothes(at index: Int) {
+        selectedClothes.remove(at: index)
+    }
+    
+    func addNewClotheObjectInSelectedClothes(clotheId: Int) {
+        selectedClothes.append(["itemID" : clotheId, "count": 1])
     }
 }

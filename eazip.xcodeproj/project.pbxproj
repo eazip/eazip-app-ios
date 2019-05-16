@@ -812,8 +812,8 @@
 		0CE0D7B62286E23E00D23FA6 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				0CE0D7B72286E29E00D23FA6 /* ClothItemViewCell.swift */,
 				0CE0D7B82286E29E00D23FA6 /* ClothItemViewCell.xib */,
+				0CE0D7B72286E29E00D23FA6 /* ClothItemViewCell.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
