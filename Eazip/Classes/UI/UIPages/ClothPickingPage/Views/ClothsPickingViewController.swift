@@ -79,12 +79,12 @@ class ClothsPickingViewController: UIViewController {
     
     func makeNextStepUnavailable() {
         navigationAllowed = false
-        validationButton?.alpha = 0.30
+        validationButton.isHidden = true
     }
     
     func makeNextStepAvailable() {
         navigationAllowed = true
-        validationButton?.alpha = 1
+        validationButton.isHidden = false
     }
     
     @IBAction func next(_ sender: Any) {

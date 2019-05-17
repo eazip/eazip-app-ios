@@ -53,6 +53,7 @@ class ClothItemViewCell: UITableViewCell {
     func setUpWrapperView() {
         self.backgroundColor = clothItemBackgroundColor
         self.clothLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
+        self.countLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
     }
     
     func setData(icon: UIImage, label: String) {
@@ -89,6 +90,11 @@ class ClothItemViewCell: UITableViewCell {
     
     func updateCountLabel() {
         countLabel.text = String(describing: count)
+        if count == 0 {
+            countLabel.textColor = UIColor(named: "lightGrey")
+        } else {
+            countLabel.textColor = .black
+        }
     }
     
     func getItemID() -> Int {
@@ -97,5 +103,17 @@ class ClothItemViewCell: UITableViewCell {
     
     func getCount() -> Int {
         return count
+    }
+    
+    func setCount(countNb: Int) -> Void {
+        count = countNb
+        updateCountLabel()
+    }
+    
+    func tapAnimation() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.backgroundColor = UIColor(named: "lightPeachColor")
+            self.backgroundColor = UIColor(named: "backgroundLightGrey")
+        })
     }
 }

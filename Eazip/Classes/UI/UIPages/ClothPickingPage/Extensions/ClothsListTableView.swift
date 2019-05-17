@@ -31,6 +31,16 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
         cell.delegate = self
         cell.setData(icon: clothItem.icon, label: clothItem.title)
+        
+        for clothe in selectedClothes {
+            let keyExists = clothe["itemID"] != nil
+            if keyExists {
+                let clotheID = clothe["itemID"] as! Int
+                if clotheID == cell.getItemID() {
+                    cell.setCount(countNb: clothe["count"] as! Int)
+                }
+            }
+        }
     
         return cell
     }
@@ -53,6 +63,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
             let cell = isCell as! ClothItemViewCell
+            cell.selectionStyle = .none
             increaseItem(from: cell)
         }
     }
@@ -66,6 +77,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func increaseItem(from cell: ClothItemViewCell) {
+        cell.tapAnimation()
         cell.addOne()
         var itemsWithThisTypeSelected : Bool = false
         for (index, clothe) in selectedClothes.enumerated() {
@@ -87,6 +99,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
     }
     
     func decreaseItem(from cell: ClothItemViewCell) {
+        cell.tapAnimation()
         cell.removeOne()
         for (index, clothe) in selectedClothes.enumerated() {
             if clothe["itemID"] as! Int == cell.getItemID() {
