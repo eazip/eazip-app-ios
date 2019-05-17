@@ -28,6 +28,30 @@ class ClothsPickingViewController: UIViewController {
     }
     
     func createArray() -> [ClothItem] {
+        
+        if let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/clothes") {
+            print("La condition est vrai")
+            let session = URLSession.shared
+            session.dataTask(with: url) { (data, response, error) in
+                
+                if let response = response {
+                    print("response", response)
+                }
+                
+                if let data = data {
+                    print("data", data)
+                    
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        print("JSON", json)
+                    } catch {
+                        print(error)
+                    }
+                }
+            }.resume()
+        }
+        
+        
         var tempClothList: [ClothItem] = []
         
         tempClothList.append(ClothItem(cloth_id: 1, icon: UIImage(named: "robe")!, title: "Robe", selected: false))
