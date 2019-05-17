@@ -469,8 +469,8 @@
 				0C57C43D21FC8C1D007343C7 /* Resources */,
 				0C57C43421FC8B0D007343C7 /* Classes */,
 				0C57C41321FC8AF7007343C7 /* AppDelegate.swift */,
-				0C57C41721FC8AF7007343C7 /* Main.storyboard */,
 				0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */,
+				0C57C41721FC8AF7007343C7 /* Main.storyboard */,
 				0C57C41F21FC8AF7007343C7 /* Info.plist */,
 			);
 			path = Eazip;
