@@ -12,13 +12,13 @@ import UIKit
 class Sewer {
     var sewerPicture : UIImage
     var sewerName : String
-    var sewerRank : String
-    var sewerWorksNb : String
+    var sewerRating : Int
+    var sewerWorksNb : Int
     
-    init(img: UIImage, name: String, rank: String, works: String ) {
+    init(img: UIImage, name: String, rating: Int, works: Int) {
         self.sewerPicture = img
         self.sewerName = name
-        self.sewerRank = rank
+        self.sewerRating = rating
         self.sewerWorksNb = works
     }
 }

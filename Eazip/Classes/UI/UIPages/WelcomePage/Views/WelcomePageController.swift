@@ -52,7 +52,7 @@ class WelcomePageController: UIViewController {
     }
     
     func startApplication() -> Void {
-        goToScreen(identifier: "ClothPickingListScreen")
+        goToScreen(identifier: "ClothsPickingViewController")
     }
 }
 
