@@ -98,6 +98,7 @@
 		0CE0D7B92286E29E00D23FA6 /* ClothItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0D7B72286E29E00D23FA6 /* ClothItemViewCell.swift */; };
 		0CE0D7BA2286E29E00D23FA6 /* ClothItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0D7B82286E29E00D23FA6 /* ClothItemViewCell.xib */; };
 		0CE0D7BD2286E3EF00D23FA6 /* ClothsListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0D7BC2286E3EF00D23FA6 /* ClothsListTableView.swift */; };
+		0CECB921228EA9500004C368 /* SewerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CECB920228EA9500004C368 /* SewerCollectionView.swift */; };
 		0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED2912257410200DDE166 /* DatePickerViewCell.swift */; };
 		0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFED2922257410200DDE166 /* DatePickerViewCell.xib */; };
 		0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */; };
@@ -214,6 +215,7 @@
 		0CE0D7B72286E29E00D23FA6 /* ClothItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothItemViewCell.swift; sourceTree = "<group>"; };
 		0CE0D7B82286E29E00D23FA6 /* ClothItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothItemViewCell.xib; sourceTree = "<group>"; };
 		0CE0D7BC2286E3EF00D23FA6 /* ClothsListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsListTableView.swift; sourceTree = "<group>"; };
+		0CECB920228EA9500004C368 /* SewerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerCollectionView.swift; sourceTree = "<group>"; };
 		0CFED2912257410200DDE166 /* DatePickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewCell.swift; sourceTree = "<group>"; };
 		0CFED2922257410200DDE166 /* DatePickerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewCell.xib; sourceTree = "<group>"; };
 		0CFED297225754FC00DDE166 /* HourPickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourPickerViewCell.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		0C1B937A223A895100EC60B1 /* SewersPage */ = {
 			isa = PBXGroup;
 			children = (
+				0CECB91F228EA92E0004C368 /* Extensions */,
 				0C1B937C223A896D00EC60B1 /* Views */,
 				0C1B937B223A896500EC60B1 /* Layouts */,
 				0C1B9381223A8A0900EC60B1 /* Sewer.swift */,
@@ -826,6 +829,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0CECB91F228EA92E0004C368 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CECB920228EA9500004C368 /* SewerCollectionView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0CFED290225740D400DDE166 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,6 +1063,7 @@
 				0C10E3D32279AEF70070B353 /* AppointmentsListViewController.swift in Sources */,
 				0C93BA592200535500400BD2 /* WhiteActionButton.swift in Sources */,
 				0CE0D7BD2286E3EF00D23FA6 /* ClothsListTableView.swift in Sources */,
+				0CECB921228EA9500004C368 /* SewerCollectionView.swift in Sources */,
 				0C6DB8CE22690A7600F1020C /* SewerProfileShortViewCell.swift in Sources */,
 				0C60F23A224ADBC300E4B5F2 /* PictureViewCell.swift in Sources */,
 				0C1095C221FF0434004F742A /* GradientHelper.swift in Sources */,

@@ -13,14 +13,12 @@ class SewerViewCell: UICollectionViewCell {
     static let identifier = "SewerViewCell"
     
     @IBOutlet weak var sewerNameLabel: UILabel!
-    @IBOutlet weak var sewerRankLabel: UILabel!
+    @IBOutlet weak var sewerRatingLabel: UILabel!
     @IBOutlet weak var sewerWorksNbLabel: UILabel!
     @IBOutlet weak var sewerPicture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(0, 0, 0, 0))
         setUpSewerPicture()
         setUpSewerName()
         setupSewerWorksNb()
@@ -34,10 +32,6 @@ class SewerViewCell: UICollectionViewCell {
     
     func setUpSewerName() {
         sewerNameLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
-        sewerNameLabel.textAlignment = .left
-        sewerNameLabel.numberOfLines = 0
-        sewerNameLabel.lineBreakMode = .byWordWrapping
-        sewerNameLabel.sizeToFit()
     }
     
     func setupSewerWorksNb() {
@@ -45,7 +39,14 @@ class SewerViewCell: UICollectionViewCell {
     }
     
     func setupSewerRank() {
-        sewerRankLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
+        sewerRatingLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
+    }
+    
+    func setData(name: String, rating: Int, worksNb: Int, picture: UIImage) {
+        sewerNameLabel.text = name
+        sewerRatingLabel.text = String(describing: rating) + "/5"
+        sewerWorksNbLabel.text = String(describing: worksNb) + " prestations"
+        sewerPicture.image = picture
     }
 }
 

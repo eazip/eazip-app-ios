@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SewersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SewersViewController: UIViewController {
     
     @IBOutlet var sewerCollectionView : UICollectionView?
     
@@ -21,29 +21,18 @@ class SewersViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSewers = createSewersArray()
-        
-        //Screen properties
-        screenSize = UIScreen.main.bounds
-        screenWidth = screenSize.size.width
-        screenHeight = screenSize.height
-        
-        //Layout content position
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: screenWidth / 2 , height: screenWidth / 2)
-        layout.minimumInteritemSpacing = 1
-        layout.minimumLineSpacing = 1
-        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        initSewerCollectionView()
     }
     
     func createSewersArray() -> [Sewer] {
         var sewerList : [Sewer] = []
         
-        let sewer1 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Amélie", rank: "4,5/5", works: "20")
-        let sewer2 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Joseph", rank: "4,5/5", works: "20")
-        let sewer3 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Nina", rank: "4,5/5", works: "20")
-        let sewer4 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Alice", rank: "4,5/5", works: "20")
-        let sewer5 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Pierre-Emanuel", rank: "4,0/5", works: "20")
-        let sewer6 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Julie", rank: "4,5/5", works: "20")
+        let sewer1 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Amélie", rating: 4, works: 3)
+        let sewer2 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Joseph", rating: 4, works: 10)
+        let sewer3 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Nina", rating: 4, works: 18)
+        let sewer4 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Alice", rating: 4, works: 34)
+        let sewer5 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Pierre-Emanuel", rating: 4, works: 19)
+        let sewer6 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Julie", rating: 4, works: 43)
         
         sewerList.append(sewer1)
         sewerList.append(sewer2)
@@ -55,25 +44,16 @@ class SewersViewController: UIViewController, UICollectionViewDataSource, UIColl
         return sewerList
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSewers.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let sewerCell = collectionView.dequeueReusableCell(withReuseIdentifier: SewerViewCell.identifier, for: indexPath as IndexPath) as! SewerViewCell
+    func initSewerCollectionView() {
+        //Init delegate and datasource
+        sewerCollectionView?.delegate = self
+        sewerCollectionView?.dataSource =  self
         
-        sewerCell.sewerNameLabel.text = dataSewers[indexPath.item].sewerName
-        sewerCell.sewerRankLabel.text = dataSewers[indexPath.item].sewerRank
-        sewerCell.sewerWorksNbLabel.text = dataSewers[indexPath.item].sewerWorksNb + " prestations"
-        sewerCell.sewerPicture.image = dataSewers[indexPath.item].sewerPicture
-        
-        return sewerCell
+        //Layout content position
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 30
+        sewerCollectionView?.collectionViewLayout = layout
     }
-    
 }
 
 
