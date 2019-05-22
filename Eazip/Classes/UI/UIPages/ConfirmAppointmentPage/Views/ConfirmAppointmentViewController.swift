@@ -21,6 +21,11 @@ class ConfirmAppointmentViewController: UIViewController {
     let totalPrice : Int = 0
     var appointmentSections : Int = 0
 
+    
+    @IBAction func nextStep(_ sender: Any) {
+        nextStep()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigation()
@@ -91,5 +96,9 @@ class ConfirmAppointmentViewController: UIViewController {
     func setTotalPrice() {
         let totalPriceToString = String(describing: totalPrice)
         totalPriceNbLabel.text = totalPriceToString + "€"
+    }
+    
+    func nextStep() -> Void {
+        goToScreen(identifier: "AppointmentsListViewController")
     }
 }

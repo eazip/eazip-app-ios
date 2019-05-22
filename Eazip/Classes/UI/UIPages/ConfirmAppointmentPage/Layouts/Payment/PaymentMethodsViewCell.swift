@@ -67,7 +67,7 @@ class PaymentMethodsViewCell: UICollectionViewCell, ConfigurableCell, UITableVie
         //Init delegate and datasource
         paymentMethodsTableView?.estimatedRowHeight = 60
         paymentMethodsTableView?.rowHeight = UITableViewAutomaticDimension
-        //paymentMethodsTableView?.isScrollEnabled = false
+        paymentMethodsTableView?.isScrollEnabled = false
         paymentMethodsTableView?.delegate = self
         paymentMethodsTableView?.dataSource = self
     }

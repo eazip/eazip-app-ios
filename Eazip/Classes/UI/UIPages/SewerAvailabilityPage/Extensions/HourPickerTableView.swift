@@ -35,7 +35,13 @@ extension SewerAvailabilityViewController: UITableViewDataSource, UITableViewDel
             cell?.initOfferCard()
         }
         
-        if selectedDay == Date().currentDay && hour < Date().currentHour {
+        cell?.setNormalCellBehaviour()
+        
+        if selectedHour != 0 && selectedHour == hour {
+            cell?.setSelectedCellBehaviour()
+        }
+        
+        if selectedDay == Date().currentDay && hour < Date().currentHour + 2 {
             cell?.setUnvailableCellBehaviour()
         }
         
@@ -61,22 +67,26 @@ extension SewerAvailabilityViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
             let cell = isCell as! HourPickerViewCell
+            cell.selectionStyle = .none
+            cell.tapAnimation()
             if cell.isCellAvailable() {
-                tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
                 if indexPath.section == 0 {
                     selectedHour = hoursToDisplay["AM"]![indexPath.row]["nb"] as! Int
                 } else {
                     selectedHour = hoursToDisplay["PM"]![indexPath.row]["nb"] as! Int
                 }
+                cell.setSelectedCellBehaviour()
             }
         }
+        toggleNavigationAvailability()
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let isCell = tableView.cellForRow(at: indexPath) {
-            //let cell = isCell as! HourPickerViewCell
-            tableView.deselectRow(at: IndexPath(row: 0, section: selectedHour), animated: true)
+            let cell = isCell as! HourPickerViewCell
+            cell.setDeselectedCellBehaviour()
         }
+        toggleNavigationAvailability()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
