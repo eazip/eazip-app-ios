@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QRw-DC-WiO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EQc-9y-Z18">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -408,15 +408,30 @@ types de retouches</string>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <connections>
                                     <action selector="initDateSelectWithSender:" destination="EQc-9y-Z18" eventType="editingDidEnd" id="UeA-kn-cn2"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-4Z-ibI">
+                                <rect key="frame" x="301" y="15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextMonth:" destination="EQc-9y-Z18" eventType="touchDown" id="AdA-FH-qiR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVh-DL-bHq">
+                                <rect key="frame" x="28" y="15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="previousMonth:" destination="EQc-9y-Z18" eventType="touchDown" id="ATx-2U-JBI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QDz-W2-AMe" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" id="6e2-Qt-V2M"/>
+                            <constraint firstItem="XVh-DL-bHq" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" constant="28" id="8G8-VC-kFj"/>
                             <constraint firstItem="oaq-B2-wPl" firstAttribute="top" secondItem="H7P-4v-6fx" secondAttribute="bottom" constant="25" id="Gd7-Od-Bvo"/>
                             <constraint firstAttribute="trailing" secondItem="oaq-B2-wPl" secondAttribute="trailing" constant="28" id="Hz3-Jn-DAP"/>
                             <constraint firstItem="Bbl-HR-yos" firstAttribute="centerX" secondItem="w7O-pj-U3h" secondAttribute="centerX" id="K2k-uF-Rsi"/>
@@ -425,9 +440,12 @@ types de retouches</string>
                             <constraint firstItem="Bbl-HR-yos" firstAttribute="top" secondItem="HoF-K9-Nz0" secondAttribute="bottom" constant="70" id="RBc-Uf-Var"/>
                             <constraint firstAttribute="trailing" secondItem="QDz-W2-AMe" secondAttribute="trailing" id="UhZ-ZK-5Ch"/>
                             <constraint firstItem="oaq-B2-wPl" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" constant="28" id="avo-hd-ZuD"/>
+                            <constraint firstItem="XVh-DL-bHq" firstAttribute="centerY" secondItem="QDz-W2-AMe" secondAttribute="centerY" id="bbR-u7-Huz"/>
+                            <constraint firstItem="XVh-DL-bHq" firstAttribute="baseline" secondItem="m9g-4Z-ibI" secondAttribute="baseline" id="kMN-KT-UxZ"/>
                             <constraint firstItem="HoF-K9-Nz0" firstAttribute="leading" secondItem="w7O-pj-U3h" secondAttribute="leading" constant="28" id="oRy-aL-1c3"/>
                             <constraint firstItem="QDe-e6-eNb" firstAttribute="top" secondItem="Bbl-HR-yos" secondAttribute="bottom" constant="15" id="pvZ-ZF-deU"/>
                             <constraint firstItem="HoF-K9-Nz0" firstAttribute="top" secondItem="oaq-B2-wPl" secondAttribute="bottom" constant="30" id="rff-u4-myg"/>
+                            <constraint firstAttribute="trailing" secondItem="m9g-4Z-ibI" secondAttribute="trailing" constant="28" id="y0l-ej-XTB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -435,6 +453,8 @@ types de retouches</string>
                         <outlet property="datePickerCollectionView" destination="oaq-B2-wPl" id="ARQ-TO-FkJ"/>
                         <outlet property="dateSelectLabel" destination="QDz-W2-AMe" id="CN7-Rk-ws8"/>
                         <outlet property="hourPickerTableView" destination="HoF-K9-Nz0" id="K9y-sI-xQb"/>
+                        <outlet property="nextMonthButton" destination="m9g-4Z-ibI" id="dpV-sO-lpw"/>
+                        <outlet property="previousMonthButton" destination="XVh-DL-bHq" id="VOK-1y-zS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,7 +464,7 @@ types de retouches</string>
         <!--Confirm Appointment View Controller-->
         <scene sceneID="lf3-mz-cLm">
             <objects>
-                <viewController id="SuZ-zp-eLb" customClass="ConfirmAppointmentViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmAppointmentViewController" id="SuZ-zp-eLb" customClass="ConfirmAppointmentViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGy-OM-cjR"/>
                         <viewControllerLayoutGuide type="bottom" id="uGd-wt-hhl"/>
@@ -743,7 +763,7 @@ types de retouches</string>
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="206"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="206"/>

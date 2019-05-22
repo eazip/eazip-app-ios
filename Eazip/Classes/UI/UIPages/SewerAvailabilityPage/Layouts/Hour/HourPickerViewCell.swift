@@ -17,8 +17,10 @@ class HourPickerViewCell: UITableViewCell {
     let offerCardText : String = "Heure creuse -30 %"
     let hourIndicative : String = "h00"
     
-    // Main cell colors
-    let unvailableCellBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
+    // Main Cell Colors
+    let normalCellBackgroundColor : UIColor = UIColor.white
+    let selectedCellBackgroundColor : UIColor = UIColor(named: "backgroundLightGrey")!
+    let normalCellTextColor : UIColor = UIColor.black
     let unvailableCellTextColor : UIColor = UIColor(named: "lightGrey")!
     
     var availableCell : Bool = true
@@ -39,7 +41,7 @@ class HourPickerViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        setNormalCellBehaviour()
+         setNormalCellBehaviour()
     }
     
     func setUpOfferCard() {
@@ -74,6 +76,7 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func setNormalCellBehaviour() {
+        self.backgroundColor = normalCellBackgroundColor
         hourChoiceLabel?.textColor = UIColor.black
         hourChoiceLabel?.alpha = 1
         offerCard?.alpha = 1
@@ -91,5 +94,20 @@ class HourPickerViewCell: UITableViewCell {
     
     func isCellAvailable() -> Bool {
         return availableCell
+    }
+    
+    func setDeselectedCellBehaviour() {
+        self.backgroundColor = normalCellBackgroundColor
+    }
+    
+    func setSelectedCellBehaviour() {
+        self.backgroundColor = selectedCellBackgroundColor
+    }
+    
+    func tapAnimation() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.backgroundColor = UIColor(named: "lightPeachColor")
+            self.backgroundColor = UIColor.white
+        })
     }
 }

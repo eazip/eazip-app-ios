@@ -14,6 +14,7 @@ class CalendarHelper {
     
     func createNewDateFromValues(year: Int, month: Int, day: Int, hour: Int) -> Date {
         let dateComponents = DateComponents(year: year, month: month, day: day, hour: hour)
+        
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(identifier:"CET")!
         
@@ -49,14 +50,13 @@ class CalendarHelper {
         for monthLabel in formatter.monthSymbols {
             monthsLabels.append(monthLabel.pascalCase)
         }
-        
         for dayLabel in formatter.shortWeekdaySymbols {
             daysLabels.append(dayLabel.pascalCase)
         }
         
         let calendarLabels = ["months": monthsLabels,
                               "days": daysLabels]
-        
+       
         return calendarLabels
     }
     

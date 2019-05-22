@@ -12,7 +12,7 @@ extension String {
     var pascalCase: String {
         return self.components(separatedBy: " ")
             .map {
-                if $0.count <= 3 {
+                if $0.count <= 2 {
                     return $0.uppercased()
                 } else {
                     if $0.index(of: "-") != nil {

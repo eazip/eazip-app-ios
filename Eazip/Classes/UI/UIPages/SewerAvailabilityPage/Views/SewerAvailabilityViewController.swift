@@ -11,17 +11,24 @@ import UIKit
 class SewerAvailabilityViewController: UIViewController {
 
     @IBOutlet weak var dateSelectLabel: UITextField!
+    @IBOutlet weak var nextMonthButton: UIButton!
+    @IBOutlet weak var previousMonthButton: UIButton!
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
+    var appointment : Date? = nil
+    var navigationAllowed : Bool = false
     
     @IBAction func newAppointment(_ sender: UIButton) {
         createAppointmentFromData()
+        nextStep()
     }
+    
+    var firstDay : Int? = nil
    
     var selectedMonth = Date().currentMonth
     var selectedYear = Date().currentYear
-    var selectedDay : Int = Date().currentDay
+    var selectedDay : Int? = nil
     var selectedHour : Int = 0
     
     var calendarData : [String: Any] = [:]
@@ -34,6 +41,39 @@ class SewerAvailabilityViewController: UIViewController {
         initDatePickerCollectionView()
         initHourPickerTableView()
         setUpContinueButton()
+        toggleNavigationAvailability()
+    }
+    
+    @IBAction func previousMonth(_ sender: Any) {
+        if selectedYear == Date().currentYear {
+            if selectedMonth > Date().currentMonth {
+                selectedMonth -= 1
+            }
+            if selectedMonth == Date().currentMonth {
+                selectedDay = Date().currentDay
+            }
+        }
+        if selectedYear > Date().currentYear {
+            if selectedMonth == 1 {
+                selectedYear -= 1
+                selectedMonth = 12
+            } else {
+                selectedMonth -= 1
+            }
+        }
+        updateDatePicker()
+        datePickerCollectionView.reloadData()
+    }
+    
+    @IBAction func nextMonth(_ sender: Any) {
+        if selectedMonth == 12 {
+            selectedYear += 1
+            selectedMonth = 1
+        } else {
+            selectedMonth += 1
+        }
+        updateDatePicker()
+        datePickerCollectionView.reloadData()
     }
     
     func initDatePickerCollectionView() {
@@ -65,13 +105,31 @@ class SewerAvailabilityViewController: UIViewController {
         //Init delegate and datasource
         hourPickerTableView?.delegate = self as UITableViewDelegate
         hourPickerTableView?.dataSource = self as UITableViewDataSource
+        hourPickerTableView?.isScrollEnabled = false
     }
   
     func updateDatePicker() {
+        initFirstDay()
         calendarData = DatePickerHelper.renderFromSelectedMonthInYear(selectedYear: selectedYear, selectedMonth: selectedMonth)
         monthsToDisplay = calendarData["months"] as! [String]
         daysToDisplay = calendarData["days"] as! [[String : Any]]
+        if selectedMonth == Date().currentMonth && firstDay != Date().currentDay {
+            daysToDisplay.remove(at: 0)
+        }
         dateSelectLabel.text = calendarData["headerMonthLabel"] as? String
+    }
+    
+    func initFirstDay() {
+        if selectedMonth == Date().currentMonth {
+            if Date().currentHour >= 15 && selectedMonth == Date().currentMonth {
+                firstDay = Date().currentDay + 1
+            } else {
+                firstDay = Date().currentDay
+            }
+        } else {
+            firstDay = 1
+        }
+        selectedDay = firstDay!
     }
     
     func initDatePickerCell(cellIdentifier: String) {
@@ -87,10 +145,31 @@ class SewerAvailabilityViewController: UIViewController {
     }
     
     func createAppointmentFromData() {
-        print(DatePickerHelper.createNewDateFromValues(year: selectedYear, month: selectedMonth, day: selectedDay, hour: selectedHour))
+        appointment = DatePickerHelper.createNewDateFromValues(year: selectedYear, month: selectedMonth, day: selectedDay!, hour: selectedHour)
+        print(appointment!)
     }
     
-    func renderHoursAvailibility() -> Void {
-        
+    func toggleNavigationAvailability() {
+        if selectedHour == 0 {
+            makeNextStepUnavailable()
+        } else {
+            makeNextStepAvailable()
+        }
+    }
+    
+    func makeNextStepUnavailable() {
+        navigationAllowed = false
+        continueButton.isHidden = true
+    }
+    
+    func makeNextStepAvailable() {
+        navigationAllowed = true
+        continueButton.isHidden = false
+    }
+    
+    func nextStep() -> Void {
+        if navigationAllowed {
+            goToScreen(identifier: "ConfirmAppointmentViewController")
+        }
     }
 }
