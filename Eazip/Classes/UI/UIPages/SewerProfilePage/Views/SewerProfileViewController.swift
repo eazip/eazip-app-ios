@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SewerProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+class SewerProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, SewerDescriptionViewDelegate {
     
     @IBOutlet weak var sewerProfileCollectionView: UICollectionView!
     
@@ -94,6 +94,15 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type(of: item).reuseId, for: indexPath)
             item.configure(cell: cell)
             
+            // ViewCell de la description du couturier
+            if indexPath.row == 1 {
+                let ccell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionViewCell", for: indexPath as IndexPath) as! DescriptionViewCell
+                ccell.delegate = self
+                ccell.setData(biography: dataSewer.sewerBiography)
+                
+                return ccell
+            }
+        
             return cell
         } else {
             let reviewIndex = indexPath.row
@@ -122,5 +131,9 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         default:
             return CGSize(width: collectionView.bounds.width, height: 70)
         }
+    }
+    
+    func checkSewerAvailabilities() {
+        goToScreen(identifier: "SewerAvailabilityViewController")
     }
 }
