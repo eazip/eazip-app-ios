@@ -41,7 +41,26 @@ class ClothsPickingViewController: UIViewController {
                                     for cloth in clothArray as! [Dictionary<String, AnyObject>] {
                                         let id = cloth["id"] as! Int
                                         let label = cloth["label"] as! String
-                                        tempClothList.append(ClothItem(cloth_id: id, icon: UIImage(named: "robe")!, title: label, selected: false))
+                                        var icon = ""
+                                        if cloth["label"] as! String == "Robe" {
+                                            icon = "robe"
+                                        } else if cloth["label"] as! String == "Pantalon" {
+                                            icon = "pantalon"
+                                        } else if cloth["label"] as! String == "T-Shirt" {
+                                            icon = "t-shirt"
+                                        } else if cloth["label"] as! String == "Jupe" {
+                                            icon = "jupe"
+                                        } else if cloth["label"] as! String == "Short" {
+                                            icon = "pantalon"
+                                        } else if cloth["label"] as! String == "Pull-Over" {
+                                            icon = "pullover"
+                                        } else if cloth["label"] as! String == "Blazer" {
+                                            icon = "veste"
+                                        } else if cloth["label"] as! String == "Manteau" {
+                                            icon = "manteau"
+                                        }
+                                        
+                                        tempClothList.append(ClothItem(cloth_id: id, icon: UIImage(named: icon)!, title: label, selected: false))
                                     }
                                 }
                             }
