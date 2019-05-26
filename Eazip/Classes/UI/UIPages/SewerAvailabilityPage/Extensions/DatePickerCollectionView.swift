@@ -18,7 +18,8 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let date = daysToDisplay[indexPath.row]
+        var date = daysToDisplay[indexPath.row]
+
         let dateNb = String(describing: date["dayNb"] ?? "")
         let dateDay = date["dayLabel"] as! String
         let availabilityStatus = date["status"] as! Bool
@@ -27,8 +28,8 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
 
         cell.setData(dayNb: dateNb, dayTitle: dateDay)
 
-        if indexPath.row == (selectedDay - Date().currentDay) {
-            cell.setDeselectedCellBehaviour()
+        if indexPath.row == (selectedDay! - firstDay!) {
+            cell.setSelectedCellBehaviour()
         }
         
         if availabilityStatus == false {
@@ -42,10 +43,22 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
         if let isCell = collectionView.cellForItem(at: indexPath) {
             let cell = isCell as! DatePickerViewCell
             if cell.isCellAvailable() == true {
+                let previousSelectedDay : Int = selectedDay!
+                
                 collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
                 cell.toggleSelected()
-                selectedDay = indexPath.row + Date().currentDay
+                
+                if selectedMonth == Date().currentMonth {
+                    selectedDay = indexPath.row + firstDay!
+                } else {
+                     selectedDay = indexPath.row + 1
+                }
+               
+                if selectedDay != previousSelectedDay {
+                    selectedHour = 0
+                }
                 hourPickerTableView?.reloadData()
+                toggleNavigationAvailability()
             }
         }
     }
@@ -54,8 +67,9 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
         if let isCell = collectionView.cellForItem(at: indexPath) {
             let cell = isCell as! DatePickerViewCell
             if cell.isCellAvailable() == true {
-                collectionView.deselectItem(at: IndexPath(row: 0, section: selectedDay - Date().currentDay), animated: true)
+                collectionView.deselectItem(at: IndexPath(row: 0, section: selectedDay! - firstDay!), animated: true)
                 cell.toggleSelected()
+                toggleNavigationAvailability()
             }
         }
     }

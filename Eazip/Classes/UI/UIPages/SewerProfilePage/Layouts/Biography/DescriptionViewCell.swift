@@ -8,12 +8,22 @@
 
 import UIKit
 
+protocol SewerDescriptionViewDelegate {
+    func checkSewerAvailabilities()
+}
+
 class DescriptionViewCell: UICollectionViewCell, ConfigurableCell {
+    var delegate : SewerDescriptionViewDelegate?
     
     @IBOutlet var descriptionTitle : UILabel?
     @IBOutlet var descriptionContent : UILabel?
     @IBOutlet var showAvailabilityBtn : ColoredActionButton?
-
+    
+    
+    @IBAction func sewerAvailabilities(_ sender: Any) {
+        delegate?.checkSewerAvailabilities()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -39,5 +49,11 @@ class DescriptionViewCell: UICollectionViewCell, ConfigurableCell {
         descriptionContent?.sizeToFit()
         showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
     }
-
+    
+    func setData(biography: String) {
+        descriptionTitle?.text = "Description"
+        descriptionContent?.text = biography
+        descriptionContent?.sizeToFit()
+        showAvailabilityBtn?.setTitle("Voir ses disponibilités", for: .normal)
+    }
 }

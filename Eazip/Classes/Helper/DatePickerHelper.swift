@@ -30,7 +30,7 @@ class DatePickerHelper {
         let headerLabelToDisplay = currentMonthLabelToDisplay + " " + currentYearLabelToDisplay
         let monthLabelsToDisplay = Array(nextMonthsCurrentYear)
         let daysToDisplay = nextDaysForCurrentMonth
-        
+    
         return ["headerMonthLabel": headerLabelToDisplay,
               "months": monthLabelsToDisplay,
               "days": daysToDisplay
@@ -75,7 +75,7 @@ class DatePickerHelper {
     
     static func getMonthLabelFromRange(monthRange: Int) -> String {
         let monthLabel = calendarLabels["months"]![monthRange-1]
-        
+
         return monthLabel
     }
 }
