@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n2E-jr-dJv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XBr-J2-CnQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -200,10 +200,36 @@ types de retouches</string>
             </objects>
             <point key="canvasLocation" x="-2538" y="-344"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="1iS-mA-ea3">
+            <objects>
+                <pageViewController storyboardIdentifier="OnBoardingPageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="partialCurl" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dkX-VG-BgL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IF-k1-buV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4106" y="-1034"/>
+        </scene>
         <!--On Boarding View Controller-->
+        <scene sceneID="0Qi-wx-slh">
+            <objects>
+                <viewController id="XBr-J2-CnQ" customClass="OnBoardingViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6l-8B-cVf"/>
+                        <viewControllerLayoutGuide type="bottom" id="QnB-6v-I4i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lCN-sR-xO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbT-9U-OcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4910" y="-344"/>
+        </scene>
+        <!--On Boarding Page Content View Controller-->
         <scene sceneID="p7R-PU-3eO">
             <objects>
-                <viewController id="n2E-jr-dJv" customClass="OnBoardingViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingPageContentViewController" id="n2E-jr-dJv" customClass="OnBoardingPageContentViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Fu-qN-2jh"/>
                         <viewControllerLayoutGuide type="bottom" id="maU-9Y-lwy"/>
@@ -212,71 +238,81 @@ types de retouches</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-py-xAX">
-                                <rect key="frame" x="27" y="93" width="321" height="423"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
-                                        <rect key="frame" x="20" y="112" width="281" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="oGn-UM-Cg1"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IGs-vd-zyD" secondAttribute="trailing" constant="20" id="Fqd-kC-Il2"/>
-                                    <constraint firstItem="IGs-vd-zyD" firstAttribute="centerY" secondItem="9jC-py-xAX" secondAttribute="centerY" id="PcW-eu-Wvq"/>
-                                    <constraint firstItem="IGs-vd-zyD" firstAttribute="leading" secondItem="9jC-py-xAX" secondAttribute="leading" constant="20" id="r5k-yi-l22"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ge-sB-i7a" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="546" width="321" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-kr-pWg" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="583" width="321" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrandine_white_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vWG-i1-Cg5">
                                 <rect key="frame" x="130" y="20" width="23" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="II4-AT-yLB"/>
+                                    <constraint firstAttribute="height" constant="23" id="cAh-u7-iRK"/>
+                                    <constraint firstAttribute="width" constant="23" id="oHm-Fk-K5V"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ferrandine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-cj-xiX" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="161" y="22" width="83" height="21"/>
+                                <rect key="frame" x="161" y="20" width="83" height="21"/>
                                 <accessibility key="accessibilityConfiguration" label="Ferrandine"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-py-xAX">
+                                <rect key="frame" x="27" y="70" width="321" height="400"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
+                                        <rect key="frame" x="30" y="10" width="260" height="380"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ge-sB-i7a" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="489" width="321" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-kr-pWg" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="526" width="321" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZA6-a1-SPp">
+                                <rect key="frame" x="168" y="620" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-hP-2f4" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="565" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="l18-4b-0O2"/>
+                                </constraints>
+                                <state key="normal" title="Démarrer !"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="4J6-AY-Krh"/>
-                            <constraint firstItem="9jC-py-xAX" firstAttribute="top" secondItem="bCx-v6-WKA" secondAttribute="top" constant="93" id="4Pl-JS-cbG"/>
-                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="130" id="IMa-2L-Jlk"/>
-                            <constraint firstAttribute="trailing" secondItem="9jC-py-xAX" secondAttribute="trailing" constant="27" id="IZq-SX-9mn"/>
-                            <constraint firstAttribute="trailing" secondItem="3Ge-sB-i7a" secondAttribute="trailing" constant="27" id="Rt5-88-qyR"/>
-                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="bottom" secondItem="Bhh-cj-xiX" secondAttribute="bottom" id="VzX-oh-rlO"/>
-                            <constraint firstAttribute="trailing" secondItem="9mN-kr-pWg" secondAttribute="trailing" constant="27" id="YWb-Pv-4Gk"/>
-                            <constraint firstItem="9mN-kr-pWg" firstAttribute="top" secondItem="3Ge-sB-i7a" secondAttribute="bottom" constant="16" id="ZDR-4a-4Ln"/>
-                            <constraint firstItem="Bhh-cj-xiX" firstAttribute="leading" secondItem="vWG-i1-Cg5" secondAttribute="trailing" constant="8" symbolic="YES" id="bIV-QA-Xr7"/>
-                            <constraint firstItem="9mN-kr-pWg" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="erB-gz-FMw"/>
-                            <constraint firstItem="maU-9Y-lwy" firstAttribute="top" secondItem="9mN-kr-pWg" secondAttribute="bottom" constant="63" id="hYW-1o-1d8"/>
-                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="top" secondItem="1Fu-qN-2jh" secondAttribute="bottom" id="i1R-hh-WeA"/>
-                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="iag-EW-D0e"/>
-                            <constraint firstItem="9jC-py-xAX" firstAttribute="top" secondItem="vWG-i1-Cg5" secondAttribute="bottom" constant="50" id="kaX-ss-1rv"/>
-                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="9jC-py-xAX" secondAttribute="bottom" constant="30" id="lwd-D7-c9v"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="centerX" secondItem="Gtg-hP-2f4" secondAttribute="centerX" id="BF3-xL-Q0l"/>
+                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="top" secondItem="9mN-kr-pWg" secondAttribute="bottom" constant="18" id="DZ5-mL-B7I"/>
+                            <constraint firstItem="Bhh-cj-xiX" firstAttribute="top" secondItem="bCx-v6-WKA" secondAttribute="top" constant="20" id="G8I-sJ-9fb"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="HdQ-Km-Hp8"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="centerX" secondItem="ZA6-a1-SPp" secondAttribute="centerX" id="O5L-JJ-C39"/>
+                            <constraint firstItem="maU-9Y-lwy" firstAttribute="top" secondItem="ZA6-a1-SPp" secondAttribute="bottom" constant="10" id="ODA-sy-9rk"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="9mN-kr-pWg" secondAttribute="leading" id="OS9-Ek-lqk"/>
+                            <constraint firstItem="Bhh-cj-xiX" firstAttribute="leading" secondItem="vWG-i1-Cg5" secondAttribute="trailing" constant="8" id="RTk-b0-4RW"/>
+                            <constraint firstItem="maU-9Y-lwy" firstAttribute="top" secondItem="Gtg-hP-2f4" secondAttribute="bottom" constant="45" id="WOy-si-qlg"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leadingMargin" constant="11" id="Y3I-46-dl7"/>
+                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="130" id="aNP-PM-k1f"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="Gtg-hP-2f4" secondAttribute="leading" id="d4a-gt-sK7"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="top" secondItem="vWG-i1-Cg5" secondAttribute="bottom" constant="27" id="g9E-eq-Ch7"/>
+                            <constraint firstAttribute="bottom" secondItem="9jC-py-xAX" secondAttribute="bottom" constant="197" id="gVQ-uc-cA2"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="3Ge-sB-i7a" secondAttribute="leading" id="mwJ-wm-np9"/>
+                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="top" secondItem="Bhh-cj-xiX" secondAttribute="top" id="rtx-QC-LvM"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="trailing" secondItem="3Ge-sB-i7a" secondAttribute="trailing" id="s6L-Ss-lfZ"/>
+                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="9jC-py-xAX" secondAttribute="bottom" constant="19" id="tfS-MD-8b1"/>
+                            <constraint firstItem="9jC-py-xAX" firstAttribute="trailing" secondItem="9mN-kr-pWg" secondAttribute="trailing" id="wgl-Bw-MID"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageWrapperView" destination="9jC-py-xAX" id="TOI-CQ-UXk"/>
                         <outlet property="logoFerrandinetitle" destination="Bhh-cj-xiX" id="56g-sI-ZBg"/>
                         <outlet property="mainView" destination="bCx-v6-WKA" id="nfp-1N-hEu"/>
+                        <outlet property="pageControl" destination="ZA6-a1-SPp" id="I0C-fE-Zu7"/>
                         <outlet property="pageImage" destination="IGs-vd-zyD" id="kPs-2m-fXi"/>
                         <outlet property="pageLabel" destination="3Ge-sB-i7a" id="nl2-To-GLx"/>
                         <outlet property="pageMainText" destination="9mN-kr-pWg" id="CaX-Cb-NDT"/>
