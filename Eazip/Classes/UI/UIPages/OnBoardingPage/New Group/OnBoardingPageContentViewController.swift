@@ -16,6 +16,7 @@ class OnBoardingPageContentViewController: UIViewController {
     @IBOutlet weak var pageLabel: EazipLabel!
     @IBOutlet weak var pageImage: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var startButton: WhiteActionButton!
     
     var pageIndex: Int!
     var dataPageLabel : String!
@@ -27,6 +28,9 @@ class OnBoardingPageContentViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setData()
+        if pageIndex == totalNumberOfPages - 1 {
+            makeStartButtonAppear()
+        }
     }
     
     func setupUI() {
@@ -45,6 +49,13 @@ class OnBoardingPageContentViewController: UIViewController {
         pageMainText.text = dataPageMainText
         pageControl.numberOfPages = totalNumberOfPages
         pageControl.currentPage = pageIndex
+    }
+    
+    func makeStartButtonAppear() {
+        self.startButton.isHidden = false
+    }
+    @IBAction func startApplication(_ sender: Any) {
+        goToScreen(identifier: "WelcomePageController")
     }
     
     override func didReceiveMemoryWarning() {
