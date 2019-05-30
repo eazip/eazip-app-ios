@@ -29,6 +29,8 @@
 		0C218967225602150011DA45 /* SewerAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */; };
 		0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */; };
 		0C2290B8225BEAE8009FBC9C /* NavigationNextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */; };
+		0C268AE2229AC24400BCB9E8 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE1229AC24400BCB9E8 /* OnBoardingPageViewController.swift */; };
+		0C268AE5229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */; };
 		0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A222872329005249AA /* WorksByClothViewController.swift */; };
 		0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */; };
 		0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */; };
@@ -142,6 +144,8 @@
 		0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerAvailabilityViewController.swift; sourceTree = "<group>"; };
 		0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationUIHelper.swift; sourceTree = "<group>"; };
 		0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationNextLabel.swift; sourceTree = "<group>"; };
+		0C268AE1229AC24400BCB9E8 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
+		0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageContentViewController.swift; sourceTree = "<group>"; };
 		0C47D4A222872329005249AA /* WorksByClothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothViewController.swift; sourceTree = "<group>"; };
 		0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothCollectionView.swift; sourceTree = "<group>"; };
 		0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailsViewCell.swift; sourceTree = "<group>"; };
@@ -405,6 +409,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0C268ADD229AAA7B00BCB9E8 /* OnBoardingPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C268AE3229AC2CF00BCB9E8 /* Layouts */,
+				0C268AE0229AC1F800BCB9E8 /* Views */,
+			);
+			path = OnBoardingPage;
+			sourceTree = "<group>";
+		};
+		0C268AE0229AC1F800BCB9E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C268AE1229AC24400BCB9E8 /* OnBoardingPageViewController.swift */,
+				0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */,
+			);
+			name = Views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		0C268AE3229AC2CF00BCB9E8 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		0C47D4A022872117005249AA /* WorksByClothPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +553,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0C268ADD229AAA7B00BCB9E8 /* OnBoardingPage */,
 				0C47D4A022872117005249AA /* WorksByClothPage */,
 				0CD9E23B227C3230009343A3 /* AppointmentDetailsPage */,
 				0C10E3CE2279AE5B0070B353 /* AppointmentsListPage */,
@@ -1049,6 +1080,7 @@
 				0CDA24B4226F093400A34AF2 /* PaymentMethodsViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
+				0C268AE5229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */,
 				0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */,
@@ -1079,6 +1111,7 @@
 				0C9CE340225F62A8004DF3DA /* CurrentDateHelper.swift in Sources */,
 				0CD9E23E227C32E2009343A3 /* AppointmentDetailsViewController.swift in Sources */,
 				0C6DB8CB2266F80900F1020C /* ConfirmAppointmentViewController.swift in Sources */,
+				0C268AE2229AC24400BCB9E8 /* OnBoardingPageViewController.swift in Sources */,
 				0C6DB8E5226E3F8800F1020C /* ConfirmScreenTemplate.swift in Sources */,
 				0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */,
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
