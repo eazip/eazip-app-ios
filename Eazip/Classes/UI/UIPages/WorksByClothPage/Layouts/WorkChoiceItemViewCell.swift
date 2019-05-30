@@ -49,4 +49,11 @@ class WorkChoiceItemViewCell: UITableViewCell {
     func getChoiceId() -> Int {
         return choiceID
     }
+    
+    func tapAnimation() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.backgroundColor = UIColor(named: "lightPeachColor")
+            self.backgroundColor = UIColor(named: "backgroundLightGrey")
+        })
+    }
 }

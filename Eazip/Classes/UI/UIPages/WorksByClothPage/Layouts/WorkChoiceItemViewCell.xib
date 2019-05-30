@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ahx-UG-bK0">
-                        <rect key="frame" x="267" y="24" width="20" height="20"/>
+                        <rect key="frame" x="279" y="24" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="ET3-Y7-4Nf"/>
                             <constraint firstAttribute="height" constant="20" id="GHO-OA-HL4"/>
@@ -48,7 +48,7 @@
                     <constraint firstItem="fgL-4I-z6l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1yM-9D-jtz"/>
                     <constraint firstItem="fgL-4I-z6l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="50Q-Pg-yTn"/>
                     <constraint firstItem="Ahx-UG-bK0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qg7-jz-job"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Ahx-UG-bK0" secondAttribute="trailing" constant="17" id="Sv1-Un-hbN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ahx-UG-bK0" secondAttribute="trailing" constant="5" id="Sv1-Un-hbN"/>
                     <constraint firstItem="A4f-44-ttl" firstAttribute="firstBaseline" secondItem="fgL-4I-z6l" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="TC6-aE-1E8"/>
                     <constraint firstItem="A4f-44-ttl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hIt-ss-kfn"/>
                     <constraint firstAttribute="trailing" secondItem="fgL-4I-z6l" secondAttribute="trailing" id="wll-I0-jyj"/>
@@ -65,7 +65,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="success_icon" width="155" height="123"/>
+        <image name="success_icon" width="64" height="64"/>
         <namedColor name="backgroundLightGrey">
             <color red="0.96899998188018799" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

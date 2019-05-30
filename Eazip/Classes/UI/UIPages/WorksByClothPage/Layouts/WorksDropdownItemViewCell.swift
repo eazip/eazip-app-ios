@@ -159,7 +159,7 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
             let cell = isCell as! WorkChoiceItemViewCell
             cell.toggleSelected()
             cell.selectionStyle = .none
-            print(cell.getChoiceId())
+            cell.tapAnimation()
         }
     }
     
