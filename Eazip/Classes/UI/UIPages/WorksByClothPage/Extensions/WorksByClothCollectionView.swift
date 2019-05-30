@@ -8,24 +8,53 @@
 
 import UIKit
 
-extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ExpandableDropdownDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClothDetailsViewCell", for: indexPath as IndexPath) as! ClothDetailsViewCell
-        cell.setData(icon: UIImage(named:"robe")!, label: "Robe")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorksDropdownItemViewCell", for: indexPath as IndexPath) as! WorksDropdownItemViewCell
+        cell.setData()
+        cell.indexPath = indexPath
+        cell.delegate = self
+        
+        if expandableDropdownStatesByClothe[indexPath.section][indexPath.row] == notExpandedHeight {
+            cell.tableState = false
+        } else {
+            cell.tableState = true
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: worksByClothCollectionView.bounds.width, height: 70)
+        
+        return CGSize(width: collectionView.bounds.width, height: expandableDropdownStatesByClothe[indexPath.section][indexPath.row])
     }
     
-    private func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAtt indexPath: IndexPath) {
-        self.loadViewIfNeeded()
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ClothHeaderReusableView", for: indexPath) as! ClothHeaderReusableView
+        sectionTitle.setData(clotheLabel: "Robe", clotheIcon: "robe")
+        
+        return sectionTitle
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.bounds.width, height: 80)
+    }
+    
+    func openerButtonTouched(indexPath: IndexPath, size: CGFloat) {
+        expandableDropdownStatesByClothe[indexPath.section][indexPath.row] = size
+        UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.9, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            self.worksDropDownCollectionView?.reloadItems(at: [indexPath])
+        })
     }
 }

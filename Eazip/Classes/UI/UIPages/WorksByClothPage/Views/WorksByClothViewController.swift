@@ -10,46 +10,61 @@ import UIKit
 
 class WorksByClothViewController: UIViewController {
 
-    @IBOutlet weak var worksByClothCollectionView: UICollectionView!
+    @IBOutlet weak var worksDropDownCollectionView: UICollectionView!
     @IBOutlet weak var validationButton: ColoredActionButton!
     
+    let notExpandedHeight : CGFloat = 70
+    
+    let selectedClothes = ["Robe", "Robe"]
     var navigationAllowed : Bool = true
     var selectedServices : [[String : Any]] = []
+    var expandableDropdownStatesByClothe : [[CGFloat]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initWorksByClothCollectionView()
-        worksByClothCollectionView.layoutIfNeeded()
+        initWorksDropDownCollectionView()
+        worksDropDownCollectionView.layoutIfNeeded()
         setUpValidationButton()
+        toggleNavigationAvailability()
     }
     
-    func initWorksByClothCollectionView() {
+    func initWorksDropDownCollectionView() {
+        //Init headers
+        initHeader(headerIdentifier: "ClothHeaderReusableView")
         //Init cell
-        setUpClothView()
+        initDropDownItemViewCell(cellIdentifier: "WorksDropdownItemViewCell")
+        
+        //Init cells state
+        initExpandableDropdownStatesByClothe()
         
         //Init delegate and datasource
-        worksByClothCollectionView?.delegate = self
-        worksByClothCollectionView?.dataSource =  self
-        
+        worksDropDownCollectionView?.delegate = self
+        worksDropDownCollectionView?.dataSource = self
+  
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
-        layout.estimatedItemSize = CGSize(width: 1, height:1)
+        layout.scrollDirection = UICollectionViewScrollDirection.vertical
         
-        worksByClothCollectionView?.collectionViewLayout = layout
+        worksDropDownCollectionView?.collectionViewLayout = layout
     }
 
-    func setUpClothView() {
-        initClothSectionCell(cellIdentifier: "ClothDetailsViewCell")
+    func initDropDownItemViewCell(cellIdentifier: String) {
+        worksDropDownCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
     }
     
-    func initClothSectionCell(cellIdentifier: String) {
-        worksByClothCollectionView?.register(UINib(nibName:cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+    func initHeader(headerIdentifier: String) {
+         worksDropDownCollectionView?.register(UINib.init(nibName: headerIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
     }
     
     func setUpValidationButton()  {
         validationButton?.setTitle("Chercher un(e) couturier(e)", for: .normal)
+    }
+    
+    func initExpandableDropdownStatesByClothe() {
+        for _ in (0...selectedClothes.count-1) {
+            expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+        }
     }
     
     func toggleNavigationAvailability() {
@@ -62,12 +77,12 @@ class WorksByClothViewController: UIViewController {
     
     func makeNextStepUnavailable() {
         navigationAllowed = false
-        validationButton?.alpha = 0.30
+        validationButton?.isHidden = true
     }
     
     func makeNextStepAvailable() {
         navigationAllowed = true
-        validationButton?.alpha = 1
+        validationButton?.isHidden = false
     }
     
     @IBAction func next(_ sender: Any) {

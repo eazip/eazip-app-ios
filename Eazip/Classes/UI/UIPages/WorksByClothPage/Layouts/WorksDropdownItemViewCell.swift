@@ -8,16 +8,23 @@
 
 import UIKit
 
+protocol ExpandableDropdownDelegate {
+    func openerButtonTouched(indexPath: IndexPath, size: CGFloat)
+}
+
 class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var dropDownIcon: UIImageView!
-    @IBOutlet weak var wrapperHeight: NSLayoutConstraint!
-    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     @IBOutlet weak var dropDownWrapper: UIView!
     @IBOutlet weak var OpenerButton: UIButton!
     @IBOutlet weak var worksListTableView: UITableView!
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
-    var tableState : Bool = false
+    var cellHeight : CGFloat!
+    
+    var indexPath : IndexPath!
+    var delegate : ExpandableDropdownDelegate?
+    var tableState : Bool!
     
     /**
      /////////////////////
@@ -28,18 +35,25 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
         super.awakeFromNib()
         setUpOpenerButton()
         initWorksListTableView()
-        hideTable()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         worksListTableView.layoutIfNeeded()
-        dropDownWrapper.layoutIfNeeded()
+        
+        //Items height
+        tableHeight?.constant = worksListTableView.contentSize.height
+        cellHeight = 70
+        
+        if tableState {
+            dropDownIcon.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        } else {
+            dropDownIcon.transform = CGAffineTransform.identity
+        }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        hideTable()
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -81,41 +95,37 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
     
     @IBAction func openTable(_ sender: Any) {
         toggleTableVisibility()
+        delegate?.openerButtonTouched(indexPath: indexPath, size: cellHeight)
         layoutIfNeeded()
         superview?.layoutIfNeeded()
-        
     }
     
     func toggleTableVisibility() {
         if !tableState {
+            tableState = true
             showTable()
         } else {
+            tableState = false
             hideTable()
         }
     }
     
-    func hideTable() {
-        tableState = false
+    func showTable() {
+        cellHeight = tableHeight.constant + 90
         UIView.animate(withDuration: 0.3, animations: {
-            self.tableHeight?.constant = 0
-//            self.wrapperHeight?.constant = (self.tableHeight?.constant)! + 80
-            self.worksListTableView.isHidden = true
-            self.dropDownIcon.transform = CGAffineTransform.identity
-            self.layoutIfNeeded()
-            self.superview?.layoutIfNeeded()
+            self.dropDownIcon.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         })
     }
     
-    func showTable() {
-        tableState = true
+    func hideTable() {
+        cellHeight = 70
         UIView.animate(withDuration: 0.3, animations: {
-            self.tableHeight?.constant = self.worksListTableView.contentSize.height
-            self.wrapperHeight?.constant = (self.tableHeight?.constant)! + 80
-            self.dropDownIcon.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-            self.worksListTableView.isHidden = false
-            self.layoutIfNeeded()
-            self.superview?.layoutIfNeeded()
+            self.dropDownIcon.transform = CGAffineTransform.identity
         })
+    }
+    
+    func isDropdownExpanded() -> Bool {
+        return tableState
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -148,7 +158,8 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
         if let isCell = tableView.cellForRow(at: indexPath) {
             let cell = isCell as! WorkChoiceItemViewCell
             cell.toggleSelected()
-            print(cell.getChoiceId())
+            cell.selectionStyle = .none
+            cell.tapAnimation()
         }
     }
     

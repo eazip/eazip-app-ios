@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClothHeaderReusableView" id="U6b-Vx-4bR" customClass="ClothHeaderReusableView" customModule="Eazip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzi-eO-ieo">
+                    <rect key="frame" x="0.0" y="0.0" width="338" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gZ1-uE-01D">
+                            <rect key="frame" x="128" y="23" width="25" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="HgC-dJ-vO3"/>
+                                <constraint firstAttribute="height" constant="35" id="ws4-w0-j3m"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unt-Qq-Bgc" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                            <rect key="frame" x="168" y="30" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gZ1-uE-01D" firstAttribute="centerY" secondItem="rzi-eO-ieo" secondAttribute="centerY" id="9Pk-TB-ghm"/>
+                        <constraint firstItem="gZ1-uE-01D" firstAttribute="centerY" secondItem="unt-Qq-Bgc" secondAttribute="centerY" id="CNI-iq-QyT"/>
+                        <constraint firstItem="unt-Qq-Bgc" firstAttribute="leading" secondItem="gZ1-uE-01D" secondAttribute="trailing" constant="15" id="S7O-du-z3l"/>
+                        <constraint firstItem="gZ1-uE-01D" firstAttribute="leading" secondItem="rzi-eO-ieo" secondAttribute="leading" constant="128" id="e8S-9p-lK0"/>
+                        <constraint firstAttribute="height" constant="80" id="v8l-hd-Nmy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rzi-eO-ieo" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="0st-fI-RTZ"/>
+                <constraint firstItem="rzi-eO-ieo" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="5sM-ii-LBW"/>
+                <constraint firstItem="rzi-eO-ieo" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="CrG-g1-5nf"/>
+                <constraint firstItem="rzi-eO-ieo" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="lIV-sY-Qbd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="clotheImage" destination="gZ1-uE-01D" id="98H-wf-dQa"/>
+                <outlet property="clotheTitleLabel" destination="unt-Qq-Bgc" id="qPa-mx-Wx1"/>
+            </connections>
+            <point key="canvasLocation" x="-79" y="74"/>
+        </collectionReusableView>
+    </objects>
+</document>

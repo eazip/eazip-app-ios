@@ -29,12 +29,15 @@
 		0C218967225602150011DA45 /* SewerAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */; };
 		0C2290B6225BE88F009FBC9C /* CustomNavigationUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */; };
 		0C2290B8225BEAE8009FBC9C /* NavigationNextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */; };
+
+		0C268AE8229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE6229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift */; };
+		0C268AE9229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C268AE7229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib */; };
+
 		0C268AE2229AC24400BCB9E8 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE1229AC24400BCB9E8 /* OnBoardingPageViewController.swift */; };
 		0C268AE5229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */; };
+
 		0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A222872329005249AA /* WorksByClothViewController.swift */; };
 		0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */; };
-		0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */; };
-		0C47D4AB228820FE005249AA /* ClothDetailsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */; };
 		0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C41321FC8AF7007343C7 /* AppDelegate.swift */; };
 		0C57C41921FC8AF7007343C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41721FC8AF7007343C7 /* Main.storyboard */; };
 		0C57C41E21FC8AF7007343C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C57C41C21FC8AF7007343C7 /* LaunchScreen.storyboard */; };
@@ -144,12 +147,15 @@
 		0C218966225602150011DA45 /* SewerAvailabilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerAvailabilityViewController.swift; sourceTree = "<group>"; };
 		0C2290B5225BE88F009FBC9C /* CustomNavigationUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationUIHelper.swift; sourceTree = "<group>"; };
 		0C2290B7225BEAE8009FBC9C /* NavigationNextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationNextLabel.swift; sourceTree = "<group>"; };
+
+		0C268AE6229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothHeaderReusableView.swift; sourceTree = "<group>"; };
+		0C268AE7229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothHeaderReusableView.xib; sourceTree = "<group>"; };
+
 		0C268AE1229AC24400BCB9E8 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
 		0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageContentViewController.swift; sourceTree = "<group>"; };
+
 		0C47D4A222872329005249AA /* WorksByClothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothViewController.swift; sourceTree = "<group>"; };
 		0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothCollectionView.swift; sourceTree = "<group>"; };
-		0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothDetailsViewCell.swift; sourceTree = "<group>"; };
-		0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothDetailsViewCell.xib; sourceTree = "<group>"; };
 		0C57C41021FC8AF7007343C7 /* Eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C57C41321FC8AF7007343C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C57C41821FC8AF7007343C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -465,12 +471,12 @@
 		0C47D4A722881E64005249AA /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				0C47D4A8228820FE005249AA /* ClothDetailsViewCell.swift */,
-				0C47D4A9228820FE005249AA /* ClothDetailsViewCell.xib */,
 				0CBC128D2289C1E800E7985D /* WorksDropdownItemViewCell.swift */,
 				0CBC128E2289C1E800E7985D /* WorksDropdownItemViewCell.xib */,
 				0CBC12992289C96600E7985D /* WorkChoiceItemViewCell.swift */,
 				0CBC129A2289C96600E7985D /* WorkChoiceItemViewCell.xib */,
+				0C268AE6229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift */,
+				0C268AE7229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -1009,7 +1015,6 @@
 				0CFED29A225754FC00DDE166 /* HourPickerViewCell.xib in Resources */,
 				0C60F23B224ADBC300E4B5F2 /* PictureViewCell.xib in Resources */,
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
-				0C47D4AB228820FE005249AA /* ClothDetailsViewCell.xib in Resources */,
 				0CDA24B5226F093400A34AF2 /* PaymentMethodsViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
@@ -1020,6 +1025,7 @@
 				0C1B9386223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf in Resources */,
 				0C1B9388223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf in Resources */,
 				0C1B9387223A8B8400EC60B1 /* avenir-book.ttf in Resources */,
+				0C268AE9229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib in Resources */,
 				0C988BED22404B510079727C /* Avenir-Black.ttf in Resources */,
 				0CDA24C0227067CA00A34AF2 /* PromoCodeViewCell.xib in Resources */,
 				0C10E3D92279BAB50070B353 /* AppointmentTileViewCell.xib in Resources */,
@@ -1076,7 +1082,6 @@
 				0CBC128F2289C1E800E7985D /* WorksDropdownItemViewCell.swift in Sources */,
 				0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */,
 				0CFED2932257410200DDE166 /* DatePickerViewCell.swift in Sources */,
-				0C47D4AA228820FE005249AA /* ClothDetailsViewCell.swift in Sources */,
 				0CDA24B4226F093400A34AF2 /* PaymentMethodsViewCell.swift in Sources */,
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
@@ -1084,6 +1089,7 @@
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */,
 				0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */,
+				0C268AE8229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift in Sources */,
 				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
 				0C9CE33E225E9ECB004DF3DA /* CalendarHelper.swift in Sources */,
