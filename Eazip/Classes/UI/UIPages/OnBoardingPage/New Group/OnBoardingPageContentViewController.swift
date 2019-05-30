@@ -11,7 +11,6 @@ import UIKit
 class OnBoardingPageContentViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var logoFerrandinetitle: EazipLabel!
-    @IBOutlet weak var imageWrapperView: UIView!
     @IBOutlet weak var pageMainText: UILabel!
     @IBOutlet weak var pageLabel: EazipLabel!
     @IBOutlet weak var pageImage: UIImageView!
@@ -36,7 +35,6 @@ class OnBoardingPageContentViewController: UIViewController {
     func setupUI() {
         mainView.setEazipGradient(colors: [UIColor(named: "peachColor")!, UIColor(named: "lightPeachColor")!])
         logoFerrandinetitle.textColor = .white
-        imageWrapperView.layer.cornerRadius = 20
         pageLabel.textColor = .white
         pageMainText.textColor = .white
         pageLabel.textAlignment = .center

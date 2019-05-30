@@ -252,18 +252,8 @@ types de retouches</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-py-xAX">
-                                <rect key="frame" x="27" y="51" width="321" height="400"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
-                                        <rect key="frame" x="30" y="10" width="260" height="380"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ge-sB-i7a" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="470" width="321" height="21"/>
+                                <rect key="frame" x="27" y="480" width="321" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -274,7 +264,7 @@ types de retouches</string>
                                     <constraint firstAttribute="height" constant="57" id="efW-Rl-uT0"/>
                                     <constraint firstAttribute="width" constant="320" id="uHl-Lt-GuV"/>
                                 </constraints>
-                                <state key="normal" title="Démarrer !"/>
+                                <state key="normal" title="Démarrer"/>
                                 <connections>
                                     <action selector="startApplication:" destination="n2E-jr-dJv" eventType="touchDown" id="DGt-ol-Y7s"/>
                                 </connections>
@@ -283,36 +273,38 @@ types de retouches</string>
                                 <rect key="frame" x="168" y="620" width="39" height="37"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-kr-pWg" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="499" width="321" height="21"/>
+                                <rect key="frame" x="27" y="509" width="321" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
+                                <rect key="frame" x="27" y="67" width="321" height="390"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9jC-py-xAX" firstAttribute="top" secondItem="vWG-i1-Cg5" secondAttribute="bottom" constant="8" symbolic="YES" id="4d2-pP-6Ga"/>
                             <constraint firstItem="maU-9Y-lwy" firstAttribute="top" secondItem="Gtg-hP-2f4" secondAttribute="bottom" constant="45" id="63K-LG-n3j"/>
                             <constraint firstItem="9mN-kr-pWg" firstAttribute="top" secondItem="3Ge-sB-i7a" secondAttribute="bottom" constant="8" id="BvI-QI-tIj"/>
                             <constraint firstItem="Bhh-cj-xiX" firstAttribute="top" secondItem="bCx-v6-WKA" secondAttribute="top" constant="20" id="G8I-sJ-9fb"/>
                             <constraint firstItem="3Ge-sB-i7a" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="Iyx-uK-GsA"/>
+                            <constraint firstAttribute="trailing" secondItem="IGs-vd-zyD" secondAttribute="trailing" constant="27" id="Jch-VQ-A86"/>
                             <constraint firstAttribute="trailing" secondItem="9mN-kr-pWg" secondAttribute="trailing" constant="27" id="KzX-sY-7hx"/>
-                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="9jC-py-xAX" secondAttribute="bottom" constant="19" id="PZR-r6-pjR"/>
                             <constraint firstItem="ZA6-a1-SPp" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="REz-oz-074"/>
                             <constraint firstItem="Bhh-cj-xiX" firstAttribute="leading" secondItem="vWG-i1-Cg5" secondAttribute="trailing" constant="8" id="RTk-b0-4RW"/>
                             <constraint firstItem="9mN-kr-pWg" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="V7L-Rq-eWQ"/>
-                            <constraint firstItem="9jC-py-xAX" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="VkM-Em-cXG"/>
                             <constraint firstItem="vWG-i1-Cg5" firstAttribute="top" secondItem="Bhh-cj-xiX" secondAttribute="top" id="Wjz-Z2-JCw"/>
+                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="IGs-vd-zyD" secondAttribute="bottom" constant="23" id="fCw-8c-enO"/>
                             <constraint firstAttribute="trailing" secondItem="3Ge-sB-i7a" secondAttribute="trailing" constant="27" id="ho2-Jg-iUF"/>
                             <constraint firstItem="maU-9Y-lwy" firstAttribute="top" secondItem="ZA6-a1-SPp" secondAttribute="bottom" constant="10" id="iLq-4s-ucv"/>
-                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="top" secondItem="9mN-kr-pWg" secondAttribute="bottom" constant="45" id="lMF-FT-Ifu"/>
+                            <constraint firstItem="IGs-vd-zyD" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="jHr-UD-a3o"/>
+                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="top" secondItem="9mN-kr-pWg" secondAttribute="bottom" constant="35" id="lMF-FT-Ifu"/>
+                            <constraint firstItem="IGs-vd-zyD" firstAttribute="top" secondItem="vWG-i1-Cg5" secondAttribute="bottom" constant="24" id="ndi-Db-rmZ"/>
                             <constraint firstItem="vWG-i1-Cg5" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="130" id="oAe-jS-bia"/>
                             <constraint firstItem="Gtg-hP-2f4" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="pJp-Mi-mia"/>
-                            <constraint firstAttribute="trailing" secondItem="9jC-py-xAX" secondAttribute="trailing" constant="27" id="xaF-1e-ea8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageWrapperView" destination="9jC-py-xAX" id="TOI-CQ-UXk"/>
                         <outlet property="logoFerrandinetitle" destination="Bhh-cj-xiX" id="56g-sI-ZBg"/>
                         <outlet property="mainView" destination="bCx-v6-WKA" id="nfp-1N-hEu"/>
                         <outlet property="pageControl" destination="ZA6-a1-SPp" id="I0C-fE-Zu7"/>
@@ -324,7 +316,7 @@ types de retouches</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfS-Pz-Uwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4106" y="-344"/>
+            <point key="canvasLocation" x="-4106.3999999999996" y="-344.07796101949026"/>
         </scene>
         <!--Welcome Page Controller-->
         <scene sceneID="tne-QT-ifu">
