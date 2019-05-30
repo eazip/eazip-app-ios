@@ -20,27 +20,52 @@ class ClothsPickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        clothsList = createArray()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            print(self.clothsList.count)
+            self.initClothsTableView()
+        }
+        getCloths()
         setUpTitleScreen()
-        initClothsTableView()
         setUpValidationButton()
         makeNextStepUnavailable()
     }
     
-    func createArray() -> [ClothItem] {
-        var tempClothList: [ClothItem] = []
-        
-        tempClothList.append(ClothItem(cloth_id: 1, icon: UIImage(named: "robe")!, title: "Robe", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 2, icon: UIImage(named: "pantalon")!, title: "Pantalon", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 3, icon: UIImage(named: "t-shirt")!, title: "T-shirt", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 4, icon: UIImage(named: "jupe")!, title: "Jupe", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 5, icon: UIImage(named: "chemise")!, title: "Chemise", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 6, icon: UIImage(named: "pullover")!, title: "Pullover", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 7, icon: UIImage(named: "col-roule")!, title: "Col roulé", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 8, icon: UIImage(named: "veste")!, title: "Veste", selected: false))
-        tempClothList.append(ClothItem(cloth_id: 9, icon: UIImage(named: "manteau")!, title: "Manteau", selected: false))
+    func getCloths() {
+        ApiClothsHelper() { clothList, error in
+            if clothList != nil {
+                self.clothsList.append(contentsOf: clothList!)
+            }
+        }
+    }
     
-        return tempClothList
+    typealias Apicompletion = (_ clothList: [ClothItem]?, _ erroString: String?) -> Void
+    
+    func ApiClothsHelper(completion: Apicompletion?) {
+        let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/clothes")
+        let session = URLSession.shared
+        
+        session.dataTask(with: url!) { (data, response, error) in
+            var tempClothlist: [ClothItem] = []
+            
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        if let clothArray = json["data"] as? NSArray {
+                            for cloth in clothArray as! [Dictionary<String, AnyObject>] {
+                                let id = cloth["id"] as! Int
+                                let label = cloth["label"] as! String
+                                
+                                tempClothlist.append(ClothItem(cloth_id: id, icon: UIImage(named: "robe")!, title: label, selected: false))
+                            }
+                            completion?(tempClothlist, nil)
+                        }
+                    }
+                } catch {
+                    completion?(nil, error.localizedDescription)
+                }
+            }
+        }.resume()
+        
     }
     
     func setUpTitleScreen() {
