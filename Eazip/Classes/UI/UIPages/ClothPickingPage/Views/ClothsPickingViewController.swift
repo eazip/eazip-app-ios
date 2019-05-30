@@ -55,7 +55,7 @@ class ClothsPickingViewController: UIViewController {
                                 let id = cloth["id"] as! Int
                                 let label = cloth["label"] as! String
                                 
-                                tempClothlist.append(ClothItem(cloth_id: id, icon: UIImage(named: "robe")!, title: label, selected: false))
+                                tempClothlist.append(ClothItem(cloth_id: id, icon: UIImage(named: self.getClothImage(label: label))!, title: label, selected: false))
                             }
                             completion?(tempClothlist, nil)
                         }
@@ -66,6 +66,29 @@ class ClothsPickingViewController: UIViewController {
             }
         }.resume()
         
+    }
+    
+    func getClothImage(label: String) -> String {
+        switch label {
+        case "Robe":
+            return "robe"
+        case "Pantalon":
+            return "pantalon"
+        case "T-Shirt":
+            return "t-shirt"
+        case "Jupe":
+            return "jupe"
+        case "Short":
+            return "pantalon"
+        case "Pull-over":
+            return "pullover"
+        case "Blazer":
+            return "veste"
+        case "Manteau":
+            return "manteau"
+        default:
+            return ""
+        }
     }
     
     func setUpTitleScreen() {
