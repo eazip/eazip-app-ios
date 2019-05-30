@@ -20,11 +20,14 @@ class ClothsPickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            print("self.clothsList.count", self.clothsList.count)
+            self.initClothsTableView()
+        }
         getCloths()
-        setUpTitleScreen()
-        initClothsTableView()
-        setUpValidationButton()
         makeNextStepUnavailable()
+        setUpValidationButton()
+        setUpTitleScreen()
     }
     
     func getCloths() {
@@ -49,12 +52,10 @@ class ClothsPickingViewController: UIViewController {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                         if let clothArray = json["data"] as? NSArray {
                             for cloth in clothArray as! [Dictionary<String, AnyObject>] {
-                                print(cloth)
                                 let id = cloth["id"] as! Int
                                 let label = cloth["label"] as! String
                                 
                                 tempClothList.append(ClothItem(cloth_id: id, icon: UIImage(named: "robe")!, title: label, selected: false))
-                                print(tempClothList)
                             }
                             completion?(tempClothList, nil)
                         }
