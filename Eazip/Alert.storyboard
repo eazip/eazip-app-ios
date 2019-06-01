@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="1Tr-1l-WWV">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IyC-QF-saO" customClass="AlertViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gke-Zd-gAh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3S-ps-Cxl">
+                                <rect key="frame" x="27" y="120" width="321" height="330"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl9-lm-7Gd" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="96" width="261" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8O-8O-H2l" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="138" width="261" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Baq-It-Rco">
+                                        <rect key="frame" x="150.5" y="55" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Nor-Nb-ytg"/>
+                                            <constraint firstAttribute="width" constant="20" id="aMU-Oh-d0U"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Baq-It-Rco" firstAttribute="centerX" secondItem="J3S-ps-Cxl" secondAttribute="centerX" id="1UV-e5-o78"/>
+                                    <constraint firstItem="fl9-lm-7Gd" firstAttribute="centerX" secondItem="J3S-ps-Cxl" secondAttribute="centerX" id="9Ag-jk-94J"/>
+                                    <constraint firstItem="u8O-8O-H2l" firstAttribute="leading" secondItem="J3S-ps-Cxl" secondAttribute="leading" constant="30" id="9Ym-oM-xwL"/>
+                                    <constraint firstAttribute="width" constant="321" id="HAT-dD-T5C"/>
+                                    <constraint firstItem="Baq-It-Rco" firstAttribute="top" secondItem="J3S-ps-Cxl" secondAttribute="top" constant="55" id="Hn9-jq-LI1"/>
+                                    <constraint firstItem="fl9-lm-7Gd" firstAttribute="top" secondItem="Baq-It-Rco" secondAttribute="bottom" constant="21" id="ceQ-Sf-soQ"/>
+                                    <constraint firstAttribute="height" constant="330" id="haO-8Q-634"/>
+                                    <constraint firstItem="u8O-8O-H2l" firstAttribute="centerX" secondItem="J3S-ps-Cxl" secondAttribute="centerX" id="p7U-P3-sN7"/>
+                                    <constraint firstAttribute="trailing" secondItem="fl9-lm-7Gd" secondAttribute="trailing" constant="30" id="qI1-PH-Md7"/>
+                                    <constraint firstAttribute="trailing" secondItem="u8O-8O-H2l" secondAttribute="trailing" constant="30" id="rin-uZ-dHS"/>
+                                    <constraint firstItem="u8O-8O-H2l" firstAttribute="top" secondItem="fl9-lm-7Gd" secondAttribute="bottom" constant="21" id="u5d-Kn-EdC"/>
+                                    <constraint firstItem="fl9-lm-7Gd" firstAttribute="leading" secondItem="J3S-ps-Cxl" secondAttribute="leading" constant="30" id="udK-iy-FUT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-dj-5Hx" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="28" y="471" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="aT7-pT-tFH"/>
+                                    <constraint firstAttribute="width" constant="320" id="fNp-yN-Pqr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="action:" destination="IyC-QF-saO" eventType="touchUpInside" id="QaX-A7-zsJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-eM-EUP" customClass="TransparentButton" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="28" y="549" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="50O-Tx-liW"/>
+                                    <constraint firstAttribute="width" constant="320" id="a7g-4a-tpG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="IyC-QF-saO" eventType="touchDown" id="XWG-QZ-TLN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zfG-dj-5Hx" firstAttribute="top" secondItem="J3S-ps-Cxl" secondAttribute="bottom" constant="21" id="10G-Xz-nwg"/>
+                            <constraint firstItem="FCB-dM-upT" firstAttribute="trailing" secondItem="J3S-ps-Cxl" secondAttribute="trailing" constant="27" id="1KF-wM-HMQ"/>
+                            <constraint firstItem="J3S-ps-Cxl" firstAttribute="top" secondItem="FCB-dM-upT" secondAttribute="top" constant="100" id="BXZ-ys-AY3"/>
+                            <constraint firstItem="J3S-ps-Cxl" firstAttribute="leading" secondItem="FCB-dM-upT" secondAttribute="leading" constant="27" id="gcW-8z-gCv"/>
+                            <constraint firstItem="zfG-dj-5Hx" firstAttribute="centerX" secondItem="Gke-Zd-gAh" secondAttribute="centerX" id="jao-8W-PPH"/>
+                            <constraint firstItem="DkB-eM-EUP" firstAttribute="top" secondItem="zfG-dj-5Hx" secondAttribute="bottom" constant="21" id="pdV-oT-ZvM"/>
+                            <constraint firstItem="DkB-eM-EUP" firstAttribute="centerX" secondItem="Gke-Zd-gAh" secondAttribute="centerX" id="rly-Aa-ePI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FCB-dM-upT"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertActionButton" destination="zfG-dj-5Hx" id="jZu-Od-LD4"/>
+                        <outlet property="alertCloseButton" destination="DkB-eM-EUP" id="bAC-SE-LIE"/>
+                        <outlet property="alertIcon" destination="Baq-It-Rco" id="TOb-0a-WV4"/>
+                        <outlet property="alertMainTextLabel" destination="u8O-8O-H2l" id="GLZ-bU-MH4"/>
+                        <outlet property="alertTitleLabel" destination="fl9-lm-7Gd" id="mZU-6c-5IO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gau-JY-sBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="144.3778110944528"/>
+        </scene>
+    </scenes>
+</document>
