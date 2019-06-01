@@ -15,6 +15,8 @@ class ConfirmAppointmentViewController: UIViewController {
     @IBOutlet weak var totalPriceNbLabel: EazipLabel!
     @IBOutlet weak var confirmAppointmentButton: ColoredActionButton!
     @IBOutlet weak var navigationItemBar: UINavigationBar!
+    var didAlertAppear : Bool = false
+    let alertHelper = AlertHelper()
     
     //Data
     let appointment = Appointment()
@@ -99,6 +101,15 @@ class ConfirmAppointmentViewController: UIViewController {
     }
     
     func nextStep() -> Void {
-        goToScreen(identifier: "AppointmentsListViewController")
+        if !didAlertAppear {
+            let appointmentAlert = alertHelper.appointmentAlert(status: AlertHelper.AlertAppointmentType.created) {
+                [weak self] in
+                self?.goToScreen(identifier: "AppointmentDetailsViewController")
+            }
+            present(appointmentAlert, animated: true)
+            didAlertAppear = true
+        } else {
+            goToScreen(identifier: "AppointmentsListViewController")
+        }
     }
 }

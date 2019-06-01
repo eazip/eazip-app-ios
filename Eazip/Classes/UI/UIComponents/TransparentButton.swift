@@ -1,14 +1,14 @@
 //
-//  MainActionButton.swift
+//  TransparentButton.swift
 //  Eazip
 //
-//  Created by Marie on 26/01/2019.
+//  Created by Marie on 30/05/2019.
 //  Copyright © 2019 Eazip. All rights reserved.
 //
 
 import UIKit
 
-class ColoredActionButton: UIButton {
+class TransparentButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -25,8 +25,11 @@ class ColoredActionButton: UIButton {
     
     func setUp() {
         self.setEazipButtonProperties()
-        self.setEazipGradient(colors: [UIColor(named: "peachColor")!, UIColor(named: "lightPeachColor")!])
         self.setTitleColor(.white, for: .normal)
         self.titleLabel?.font = FontHelper.avenirBlackFontWithSize(size: 20)
+        self.backgroundColor = UIColor.clear
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
     }
 }
+
