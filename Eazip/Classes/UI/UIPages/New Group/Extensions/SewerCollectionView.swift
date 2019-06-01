@@ -26,7 +26,7 @@ extension SewersViewController : UICollectionViewDataSource, UICollectionViewDel
         let sewerCell = collectionView.dequeueReusableCell(withReuseIdentifier: SewerViewCell.identifier, for: indexPath as IndexPath) as! SewerViewCell
         let item = dataSewers[indexPath.row]
         
-        sewerCell.setData(name: item.sewerName, rating: item.sewerRating, worksNb: item.sewerWorksNb, picture: item.sewerPicture)
+        sewerCell.setData(name: item.sewerFirstName, rating: item.sewerRating, worksNb: item.sewerWorksNb, picture: item.sewerPicture)
         
         return sewerCell
     }

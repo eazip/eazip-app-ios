@@ -52,10 +52,11 @@ class SewersViewController: UIViewController {
                                 let id = sewer["id"] as! Int
                                 let firstName = sewer["first_name"] as! String
                                 let lastName = sewer["last_name"] as! String
+                                let bio = sewer["description"] as! String
                                 let picture = "sewerPicture1"
                                 let works = 3
                                 
-                                tempSewerList.append(Sewer(img: UIImage(named: picture)!, name: firstName, rating: 3, works: works))
+                                tempSewerList.append(Sewer(id: id, bio: bio, img: UIImage(named: picture)!, firstName: firstName, lastName: lastName, rating: 3, works: works))
                             }
                             completion?(tempSewerList, nil)
                         }
