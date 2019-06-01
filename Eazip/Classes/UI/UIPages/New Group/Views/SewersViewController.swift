@@ -36,7 +36,7 @@ class SewersViewController: UIViewController {
     
     typealias Apicompletion = (_ sewerList: [Sewer]?, _ errorString: String?) -> Void
     
-    func ApiSewersHelper(completion: @escaping Apicompletion) {
+    func ApiSewersHelper(completion: Apicompletion?) {
         let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/sewers")
         let session = URLSession.shared
         
@@ -57,34 +57,14 @@ class SewersViewController: UIViewController {
                                 
                                 tempSewerList.append(Sewer(img: UIImage(named: picture)!, name: firstName, rating: 3, works: works))
                             }
-                            completion(tempSewerList, nil)
+                            completion?(tempSewerList, nil)
                         }
                     }
                 } catch {
-                    completion(nil, error.localizedDescription)
+                    completion?(nil, error.localizedDescription)
                 }
             }
         }.resume()
-    }
-    
-    func createSewersArray() -> [Sewer] {
-        var sewerList : [Sewer] = []
-        
-        let sewer1 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Amélie", rating: 4, works: 3)
-        let sewer2 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Joseph", rating: 4, works: 10)
-        let sewer3 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Nina", rating: 4, works: 18)
-        let sewer4 = Sewer(img: UIImage(named:"sewerPicture1")!, name: "Alice", rating: 4, works: 34)
-        let sewer5 = Sewer(img: UIImage(named:"sewerPicture2")!, name: "Pierre-Emanuel", rating: 4, works: 19)
-        let sewer6 = Sewer(img: UIImage(named:"sewerPicture3")!, name: "Julie", rating: 4, works: 43)
-        
-        sewerList.append(sewer1)
-        sewerList.append(sewer2)
-        sewerList.append(sewer3)
-        sewerList.append(sewer4)
-        sewerList.append(sewer5)
-        sewerList.append(sewer6)
-        
-        return sewerList
     }
     
     func initSewerCollectionView() {
