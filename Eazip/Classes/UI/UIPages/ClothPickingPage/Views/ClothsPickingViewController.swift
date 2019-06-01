@@ -37,7 +37,7 @@ class ClothsPickingViewController: UIViewController {
         }
     }
     
-    typealias Apicompletion = (_ clothList: [ClothItem]?, _ erroString: String?) -> Void
+    typealias Apicompletion = (_ clothList: [ClothItem]?, _ errorString: String?) -> Void
     
     func ApiClothsHelper(completion: Apicompletion?) {
         let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/clothes")
