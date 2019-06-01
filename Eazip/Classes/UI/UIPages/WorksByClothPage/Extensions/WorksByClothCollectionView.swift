@@ -42,7 +42,6 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
         
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ClothHeaderReusableView", for: indexPath) as! ClothHeaderReusableView
         sectionTitle.setData(clotheLabel: "Robe", clotheIcon: "robe")
-        
         return sectionTitle
     }
     

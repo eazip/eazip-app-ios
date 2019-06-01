@@ -135,13 +135,18 @@ class ClothsPickingViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
+        performSegue(withIdentifier: "selectedClothesSegue", sender: self)
         nextStep()
     }
     
     func nextStep() -> Void {
         if navigationAllowed {
-            print("selectedClothes", selectedClothes)
             goToScreen(identifier: "WorksByClothViewController")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WorksByClothViewController
+        vc.self.selectedClothes = selectedClothes
     }
 }

@@ -68,6 +68,7 @@
                         <outlet property="clothsPickingScreenTitle" destination="toL-vg-bfB" id="wGg-dP-W1m"/>
                         <outlet property="clothsTableView" destination="p7l-d9-YWa" id="7BW-pO-jlx"/>
                         <outlet property="validationButton" destination="X6B-5u-Mwg" id="CLb-bN-jXs"/>
+                        <segue destination="51n-77-UP6" kind="presentation" identifier="selectedClothesSegue" id="Itc-el-mw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzE-Ah-Dcl" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,17 +15,18 @@ class WorksByClothViewController: UIViewController {
     
     let notExpandedHeight : CGFloat = 70
     
-    let selectedClothes = ["Robe", "Robe"]
+    var selectedClothes : [[String: Any]] = []
     var navigationAllowed : Bool = true
     var selectedServices : [[String : Any]] = []
     var expandableDropdownStatesByClothe : [[CGFloat]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initWorksDropDownCollectionView()
-        worksDropDownCollectionView.layoutIfNeeded()
-        setUpValidationButton()
-        toggleNavigationAvailability()
+//        initWorksDropDownCollectionView()
+//        worksDropDownCollectionView.layoutIfNeeded()
+//        setUpValidationButton()
+//        toggleNavigationAvailability()
+        print("SUPER HERO", selectedClothes)
     }
     
     func initWorksDropDownCollectionView() {
@@ -62,9 +63,9 @@ class WorksByClothViewController: UIViewController {
     }
     
     func initExpandableDropdownStatesByClothe() {
-        for _ in (0...selectedClothes.count-1) {
-            expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
-        }
+//        for _ in (0...selectedClothes.count-1) {
+//            expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+//        }
     }
     
     func toggleNavigationAvailability() {
