@@ -30,7 +30,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothItemViewCell") as! ClothItemViewCell
         cell.delegate = self
-        cell.setData(icon: clothItem.icon, label: clothItem.title)
+        cell.setData(icon: clothItem.icon, label: clothItem.title, id: clothItem.cloth_id)
         
         for clothe in selectedClothes {
             let keyExists = clothe["itemID"] != nil
@@ -95,7 +95,6 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
             addNewClotheObjectInSelectedClothes(clotheId: cell.getItemID())
         }
         toggleNavigationAvailability()
-        print(selectedClothes)
     }
     
     func decreaseItem(from cell: ClothItemViewCell) {
@@ -112,7 +111,6 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
             }
         }
         toggleNavigationAvailability()
-        print(selectedClothes)
     }
     
     func updateClotheCountInSelectedClothes(at index: Int, count: Int) {

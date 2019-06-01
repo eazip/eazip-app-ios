@@ -20,10 +20,6 @@ class ClothsPickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            print(self.clothsList.count)
-            self.initClothsTableView()
-        }
         getCloths()
         setUpTitleScreen()
         setUpValidationButton()
@@ -34,6 +30,9 @@ class ClothsPickingViewController: UIViewController {
         ApiClothsHelper() { clothList, error in
             if clothList != nil {
                 self.clothsList.append(contentsOf: clothList!)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.initClothsTableView()
+                }
             }
         }
     }
@@ -141,6 +140,7 @@ class ClothsPickingViewController: UIViewController {
     
     func nextStep() -> Void {
         if navigationAllowed {
+            print("selectedClothes", selectedClothes)
             goToScreen(identifier: "WorksByClothViewController")
         }
     }

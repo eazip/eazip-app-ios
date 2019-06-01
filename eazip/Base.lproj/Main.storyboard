@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SuZ-zp-eLb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Enf-si-2ty">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toL-vg-bfB" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="70" width="321" height="21"/>
+                                <rect key="frame" x="27" y="70" width="321" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-d9-YWa">
-                                <rect key="frame" x="0.0" y="121" width="375" height="497"/>
+                                <rect key="frame" x="0.0" y="120.5" width="375" height="497.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -108,7 +107,7 @@ types de retouches</string>
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KU-gf-67s" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="577" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="577" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="gUr-Eo-JED"/>
                                     <constraint firstAttribute="width" constant="320" id="ltd-IN-Mnp"/>
@@ -259,7 +258,7 @@ types de retouches</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-hP-2f4" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="565" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="565" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="efW-Rl-uT0"/>
                                     <constraint firstAttribute="width" constant="320" id="uHl-Lt-GuV"/>
@@ -340,7 +339,7 @@ types de retouches</string>
                                 <rect key="frame" x="0.0" y="116" width="375" height="347"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignUpButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-4l-1zN" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="28" y="540" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="540" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Pju-Y4-D7H"/>
                                     <constraint firstAttribute="width" constant="320" id="Vuo-uJ-nYO"/>
@@ -351,11 +350,11 @@ types de retouches</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcR-az-51E">
-                                <rect key="frame" x="165" y="617" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="welcomePageSignInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-wr-vkZ" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="28" y="463" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="463" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="gHg-kh-cxj"/>
                                     <constraint firstAttribute="width" constant="320" id="jyg-xA-ogH"/>
@@ -474,7 +473,7 @@ types de retouches</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-HR-yos" customClass="ColoredActionButton" customModule="Eazip">
-                                <rect key="frame" x="28" y="595" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="595" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="C4Z-dB-pSY"/>
                                     <constraint firstAttribute="height" constant="57" id="OR9-2D-apK"/>
@@ -580,7 +579,7 @@ types de retouches</string>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-z9-3OV" customClass="ColoredActionButton" customModule="Eazip">
-                                <rect key="frame" x="27" y="580" width="320" height="57"/>
+                                <rect key="frame" x="27.5" y="580" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="8TM-r5-j0k"/>
                                     <constraint firstAttribute="height" constant="57" id="oda-vz-n3c"/>
@@ -591,7 +590,7 @@ types de retouches</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lwx-jY-f5x">
-                                <rect key="frame" x="0.0" y="50" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jWK-nz-6YR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -602,7 +601,7 @@ types de retouches</string>
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlg-TU-I7k">
-                                <rect key="frame" x="0.0" y="542" width="375" height="18"/>
+                                <rect key="frame" x="0.0" y="541" width="375" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kj-7f-Wu0" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="28" y="-1" width="42" height="21"/>
@@ -689,7 +688,7 @@ types de retouches</string>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-MT-iej" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="303" height="21"/>
+                                            <rect key="frame" x="8" y="28" width="303" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -748,7 +747,7 @@ types de retouches</string>
                                 <rect key="frame" x="0.0" y="44" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDN-gC-An1" customClass="BoldLabel" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="27" y="5" width="321" height="21"/>
+                                        <rect key="frame" x="27" y="4.5" width="321" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -888,7 +887,7 @@ types de retouches</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-sI-ZfS">
-                                                                    <rect key="frame" x="0.0" y="35.5" width="42" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="35" width="42" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -987,9 +986,9 @@ types de retouches</string>
     </scenes>
     <resources>
         <image name="ciseaux" width="23" height="31"/>
-        <image name="ferrandine_white_logo" width="68" height="61"/>
+        <image name="ferrandine_white_logo" width="68" height="61.5"/>
         <image name="retouches" width="31" height="19"/>
-        <image name="starRating" width="5" height="5"/>
+        <image name="starRating" width="5.5" height="5"/>
         <image name="user" width="26" height="27"/>
         <namedColor name="eazipLightPeachColor">
             <color red="0.98000001907348633" green="0.68599998950958252" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

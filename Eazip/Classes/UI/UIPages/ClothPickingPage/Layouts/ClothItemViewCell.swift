@@ -23,7 +23,7 @@ class ClothItemViewCell: UITableViewCell {
     @IBOutlet weak var plusButton: UIButton!
     
     var count : Int = 0
-    var itemID : Int = 1
+    var itemID : Int = 0
     var selectedState : Bool = false
     
     // Main Cell Colors
@@ -56,9 +56,10 @@ class ClothItemViewCell: UITableViewCell {
         self.countLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
     }
     
-    func setData(icon: UIImage, label: String) {
+    func setData(icon: UIImage, label: String, id: Int) {
         clothIcon.image = icon
         clothLabel.text = label
+        itemID = id
     }
     
     @IBAction func addCloth(_ sender: UIButton) {
