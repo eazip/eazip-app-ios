@@ -33,12 +33,10 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
         cell.setData(icon: clothItem.icon, label: clothItem.title, id: clothItem.cloth_id)
         
         for clothe in selectedClothes {
-            print("clothe", clothe)
             let keyExists = clothe["itemID"] != nil
             if keyExists {
                 let clotheID = clothe["itemID"] as! Int
                 if clotheID == cell.getItemID() {
-                    print("clotheID", clotheID)
                     cell.setCount(countNb: clothe["count"] as! Int)
                 }
             }
