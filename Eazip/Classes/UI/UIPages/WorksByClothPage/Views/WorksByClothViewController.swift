@@ -64,8 +64,11 @@ class WorksByClothViewController: UIViewController {
     }
     
     func initExpandableDropdownStatesByClothe() {
-        for _ in (0...selectedClothes.count - 1) {
-            expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+        print("selectedClothes", selectedClothes.count)
+        if (selectedClothes.count > 0) {
+            for _ in (0...selectedClothes.count - 1) {
+                expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+            }
         }
     }
     
