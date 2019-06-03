@@ -35,8 +35,6 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpShortProfileView()
         setUpProductsDetailsView()
         setUpAppointmentView()
-        setUpPaymentMethodsView()
-        setUpPromoCodeView()
         setUpTotalPriceWrapper()
         setUpRegisterButton()
     }
@@ -97,7 +95,7 @@ class ConfirmAppointmentViewController: UIViewController {
     
     func setTotalPrice() {
         let totalPriceToString = String(describing: totalPrice)
-        totalPriceNbLabel.text = totalPriceToString + "€"
+        totalPriceNbLabel.text = totalPriceToString + " €"
     }
     
     func nextStep() -> Void {

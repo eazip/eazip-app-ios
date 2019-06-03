@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,16 +23,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S28-Hb-Wjh">
                         <rect key="frame" x="0.0" y="0.0" width="415" height="104"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jND-ML-u1g" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="23" y="10" width="369" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jND-ML-u1g" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="23" y="10" width="369" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-Yk-cru" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="23" y="73" width="369" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-Yk-cru" customClass="BoldLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="23" y="73" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-bg-zZA" customClass="BoldLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="70" y="73" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="lightGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -41,8 +48,9 @@
                             <constraint firstAttribute="bottom" secondItem="UFy-Yk-cru" secondAttribute="bottom" constant="10" id="6Fn-1f-nzF"/>
                             <constraint firstItem="UFy-Yk-cru" firstAttribute="leading" secondItem="S28-Hb-Wjh" secondAttribute="leading" constant="23" id="CDN-QT-PIN"/>
                             <constraint firstItem="UFy-Yk-cru" firstAttribute="top" secondItem="jND-ML-u1g" secondAttribute="bottom" constant="20" id="Imw-8Y-2v7"/>
+                            <constraint firstItem="dfb-bg-zZA" firstAttribute="leading" secondItem="UFy-Yk-cru" secondAttribute="trailing" constant="5" id="Pac-Am-igL"/>
                             <constraint firstItem="jND-ML-u1g" firstAttribute="top" secondItem="S28-Hb-Wjh" secondAttribute="top" constant="10" id="Rdr-5z-s2z"/>
-                            <constraint firstAttribute="trailing" secondItem="UFy-Yk-cru" secondAttribute="trailing" constant="23" id="nYB-y1-yCY"/>
+                            <constraint firstAttribute="bottom" secondItem="dfb-bg-zZA" secondAttribute="bottom" constant="10" id="mgc-ou-5e9"/>
                             <constraint firstItem="jND-ML-u1g" firstAttribute="leading" secondItem="S28-Hb-Wjh" secondAttribute="leading" constant="23" id="z8H-7H-dQm"/>
                         </constraints>
                     </view>
@@ -61,8 +69,14 @@
             <connections>
                 <outlet property="reviewAuthor" destination="UFy-Yk-cru" id="GeS-GG-tfs"/>
                 <outlet property="reviewTextContent" destination="jND-ML-u1g" id="BT8-Zg-DIs"/>
+                <outlet property="reviewsNb" destination="dfb-bg-zZA" id="fEw-L9-uCh"/>
             </connections>
             <point key="canvasLocation" x="25.5" y="15"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="lightGrey">
+            <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

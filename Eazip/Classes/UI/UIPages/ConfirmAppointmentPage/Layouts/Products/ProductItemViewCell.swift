@@ -20,8 +20,7 @@ class ProductItemViewCell: UITableViewCell {
      */
     override func awakeFromNib() {
         super.awakeFromNib()
-        quantityPriceLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
-        
+        quantityPriceLabel.font = FontHelper.avenirHeavyFontWithSize(size: 17)
     }
     
     override func layoutSubviews() {

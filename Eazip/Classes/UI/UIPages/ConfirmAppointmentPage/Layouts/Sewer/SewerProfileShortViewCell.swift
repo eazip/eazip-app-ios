@@ -61,5 +61,8 @@ class SewerProfileShortViewCell: UICollectionViewCell, ConfigurableCell {
         sewerName.text = sewer.sewerName
         sewerRating.text = "4/5"
         sewerPrestations.text = "23 prestations"
+        sewerPrestations.textColor = UIColor.black
+        sewerPrestations.font = FontHelper.avenirBookFontWithSize(size: 14)
+        sewerRating.font = FontHelper.eazipDefaultBlackFontWithSize(size: 14)
     }
 }

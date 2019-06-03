@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,8 +23,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIg-3a-McO">
                         <rect key="frame" x="0.0" y="0.0" width="415" height="208"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-9A-8TG" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="5" width="361" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-9A-8TG" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="5" width="361" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,8 +40,8 @@
                                     <action selector="sewerAvailabilities:" destination="gTV-IL-0wX" eventType="touchDown" id="78K-te-MTH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCe-T6-XaH" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="29.5" width="361" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCe-T6-XaH" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="65" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,7 +51,7 @@
                         <constraints>
                             <constraint firstItem="LCe-T6-XaH" firstAttribute="leading" secondItem="wnh-9A-8TG" secondAttribute="leading" id="6GD-ne-hZv"/>
                             <constraint firstItem="wnh-9A-8TG" firstAttribute="leading" secondItem="aIg-3a-McO" secondAttribute="leading" constant="27" id="CLW-eo-FJ1"/>
-                            <constraint firstItem="LCe-T6-XaH" firstAttribute="firstBaseline" secondItem="wnh-9A-8TG" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="Ewz-Yh-FOm"/>
+                            <constraint firstItem="LCe-T6-XaH" firstAttribute="firstBaseline" secondItem="wnh-9A-8TG" secondAttribute="baseline" constant="30" id="Ewz-Yh-FOm"/>
                             <constraint firstItem="AlP-GE-3Bb" firstAttribute="centerX" secondItem="aIg-3a-McO" secondAttribute="centerX" id="HxQ-lh-Mq9"/>
                             <constraint firstItem="wnh-9A-8TG" firstAttribute="top" secondItem="aIg-3a-McO" secondAttribute="top" constant="5" id="MaG-9g-zmA"/>
                             <constraint firstItem="LCe-T6-XaH" firstAttribute="trailing" secondItem="wnh-9A-8TG" secondAttribute="trailing" id="QEl-wC-YXS"/>

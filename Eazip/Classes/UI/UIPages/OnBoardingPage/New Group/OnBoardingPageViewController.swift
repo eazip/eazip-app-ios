@@ -103,19 +103,19 @@ class OnBoardingViewController: UIViewController, UIPageViewControllerDataSource
     }
     
     func setServicesSlide(pageContentViewController: OnBoardingPageContentViewController) {
-        pageContentViewController.dataPageImage = UIImage(named: "clothes_guide")
+        pageContentViewController.dataPageImage = UIImage(named: "services_guide")
         pageContentViewController.dataPageLabel = "Retouches"
         pageContentViewController.dataPageMainText = "Choisissez les retouches disponibles en fonction des vetements que vous avez choisis."
     }
     
     func setSewersSlide(pageContentViewController: OnBoardingPageContentViewController) {
-        pageContentViewController.dataPageImage = UIImage(named: "clothes_guide")
+        pageContentViewController.dataPageImage = UIImage(named: "sewers_guide")
         pageContentViewController.dataPageLabel = "Couturiers"
         pageContentViewController.dataPageMainText = "Choisissez le couturier de votre choix parmis une liste de plusieurs centaine de professionels"
     }
     
     func setAppointmentSlide(pageContentViewController: OnBoardingPageContentViewController) {
-        pageContentViewController.dataPageImage = UIImage(named: "clothes_guide")
+        pageContentViewController.dataPageImage = UIImage(named: "appointments_guide")
         pageContentViewController.dataPageLabel = "Rendez-vous"
         pageContentViewController.dataPageMainText = "Proposez un rendez-vous à votre couturier afin de finaliser votre demande de retouche."
     }

@@ -33,6 +33,10 @@
 		0C268AE5229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */; };
 		0C268AE8229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C268AE6229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift */; };
 		0C268AE9229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C268AE7229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib */; };
+		0C44F90422A55EE00047A9C2 /* ProfileHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44F90222A55EE00047A9C2 /* ProfileHeaderReusableView.swift */; };
+		0C44F90522A55EE00047A9C2 /* ProfileHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C44F90322A55EE00047A9C2 /* ProfileHeaderReusableView.xib */; };
+		0C44F90922A5A6850047A9C2 /* LaunchscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44F90822A5A6850047A9C2 /* LaunchscreenViewController.swift */; };
+		0C44F90B22A5AB050047A9C2 /* LaunchscreenController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C44F90A22A5AB050047A9C2 /* LaunchscreenController.storyboard */; };
 		0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A222872329005249AA /* WorksByClothViewController.swift */; };
 		0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */; };
 		0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57C41321FC8AF7007343C7 /* AppDelegate.swift */; };
@@ -50,7 +54,6 @@
 		0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F23D224AFB3900E4B5F2 /* DescriptionViewCell.xib */; };
 		0C60F242224BED2200E4B5F2 /* ReviewViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F240224BED2200E4B5F2 /* ReviewViewCell.swift */; };
 		0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */; };
-		0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */; };
 		0C60F249224E9CEF00E4B5F2 /* LastWorksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */; };
 		0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */; };
 		0C6DAE5D22664BE500DCB077 /* HoursToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */; };
@@ -152,6 +155,11 @@
 		0C268AE4229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageContentViewController.swift; sourceTree = "<group>"; };
 		0C268AE6229DCF9D00BCB9E8 /* ClothHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothHeaderReusableView.swift; sourceTree = "<group>"; };
 		0C268AE7229DCF9D00BCB9E8 /* ClothHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothHeaderReusableView.xib; sourceTree = "<group>"; };
+		0C44F90222A55EE00047A9C2 /* ProfileHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderReusableView.swift; sourceTree = "<group>"; };
+		0C44F90322A55EE00047A9C2 /* ProfileHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderReusableView.xib; sourceTree = "<group>"; };
+		0C44F90622A588120047A9C2 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		0C44F90822A5A6850047A9C2 /* LaunchscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchscreenViewController.swift; sourceTree = "<group>"; };
+		0C44F90A22A5AB050047A9C2 /* LaunchscreenController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchscreenController.storyboard; sourceTree = "<group>"; };
 		0C47D4A222872329005249AA /* WorksByClothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothViewController.swift; sourceTree = "<group>"; };
 		0C47D4A522881BFD005249AA /* WorksByClothCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksByClothCollectionView.swift; sourceTree = "<group>"; };
 		0C57C41021FC8AF7007343C7 /* Eazip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eazip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +181,6 @@
 		0C60F23D224AFB3900E4B5F2 /* DescriptionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewCell.xib; sourceTree = "<group>"; };
 		0C60F240224BED2200E4B5F2 /* ReviewViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewCell.swift; sourceTree = "<group>"; };
 		0C60F241224BED2200E4B5F2 /* ReviewViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewViewCell.xib; sourceTree = "<group>"; };
-		0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionTitle.swift; sourceTree = "<group>"; };
 		0C60F247224E9CEF00E4B5F2 /* LastWorksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWorksViewCell.swift; sourceTree = "<group>"; };
 		0C60F248224E9CEF00E4B5F2 /* LastWorksViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastWorksViewCell.xib; sourceTree = "<group>"; };
 		0C6DAE5C22664BE500DCB077 /* HoursToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursToDisplay.swift; sourceTree = "<group>"; };
@@ -260,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				0C988BEC22404B510079727C /* Avenir-Black.ttf */,
+				0C44F90622A588120047A9C2 /* Avenir-Heavy.ttf */,
 				0C1B9384223A8B8400EC60B1 /* avenir-book.ttf */,
 				0C1B9385223A8B8400EC60B1 /* FrankRuhlLibre-Black.ttf */,
 				0C1B9383223A8B8400EC60B1 /* FrankRuhlLibre-Regular.ttf */,
@@ -444,6 +452,14 @@
 			path = Layouts;
 			sourceTree = "<group>";
 		};
+		0C44F90722A5A64D0047A9C2 /* Launchscreen */ = {
+			isa = PBXGroup;
+			children = (
+				0C44F90822A5A6850047A9C2 /* LaunchscreenViewController.swift */,
+			);
+			path = Launchscreen;
+			sourceTree = "<group>";
+		};
 		0C47D4A022872117005249AA /* WorksByClothPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +528,7 @@
 				0C57C41721FC8AF7007343C7 /* Main.storyboard */,
 				0C57C41F21FC8AF7007343C7 /* Info.plist */,
 				0CAD17DA22A0151400A871C7 /* Alert.storyboard */,
+				0C44F90A22A5AB050047A9C2 /* LaunchscreenController.storyboard */,
 			);
 			path = Eazip;
 			sourceTree = "<group>";
@@ -565,6 +582,7 @@
 		0C57C43621FC8B2C007343C7 /* UIPages */ = {
 			isa = PBXGroup;
 			children = (
+				0C44F90722A5A64D0047A9C2 /* Launchscreen */,
 				0C268ADD229AAA7B00BCB9E8 /* OnBoardingPage */,
 				0C47D4A022872117005249AA /* WorksByClothPage */,
 				0CD9E23B227C3230009343A3 /* AppointmentDetailsPage */,
@@ -807,7 +825,8 @@
 		0CD685F7225395BB009C9396 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				0C60F245224E41EB00E4B5F2 /* ProfileSectionTitle.swift */,
+				0C44F90222A55EE00047A9C2 /* ProfileHeaderReusableView.swift */,
+				0C44F90322A55EE00047A9C2 /* ProfileHeaderReusableView.xib */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -1031,6 +1050,8 @@
 				0C60F23F224AFB3900E4B5F2 /* DescriptionViewCell.xib in Resources */,
 				0CDA24B5226F093400A34AF2 /* PaymentMethodsViewCell.xib in Resources */,
 				0C60F243224BED2200E4B5F2 /* ReviewViewCell.xib in Resources */,
+				0C44F90522A55EE00047A9C2 /* ProfileHeaderReusableView.xib in Resources */,
+				0C44F90B22A5AB050047A9C2 /* LaunchscreenController.storyboard in Resources */,
 				0C60F24A224E9CEF00E4B5F2 /* LastWorksViewCell.xib in Resources */,
 				0CFED2942257410200DDE166 /* DatePickerViewCell.xib in Resources */,
 				0CDA24BB226F33B900A34AF2 /* PaymentItemViewCell.xib in Resources */,
@@ -1103,6 +1124,7 @@
 				0CD685F022534E03009C9396 /* SewerProfilePageTemplate.swift in Sources */,
 				0C6DB8E7226E435E00F1020C /* Appointment.swift in Sources */,
 				0C268AE5229C7A9600BCB9E8 /* OnBoardingPageContentViewController.swift in Sources */,
+				0C44F90422A55EE00047A9C2 /* ProfileHeaderReusableView.swift in Sources */,
 				0C60F23E224AFB3900E4B5F2 /* DescriptionViewCell.swift in Sources */,
 				0C6DB8D8226A2B1D00F1020C /* ProductsDetailsViewCell.swift in Sources */,
 				0CFED299225754FC00DDE166 /* HourPickerViewCell.swift in Sources */,
@@ -1110,7 +1132,6 @@
 				0C60F230224AA24D00E4B5F2 /* SewerProfileViewController.swift in Sources */,
 				0C60F22B2248408F00E4B5F2 /* BoldLabel.swift in Sources */,
 				0C9CE33E225E9ECB004DF3DA /* CalendarHelper.swift in Sources */,
-				0C60F246224E41EB00E4B5F2 /* ProfileSectionTitle.swift in Sources */,
 				0C47D4A322872329005249AA /* WorksByClothViewController.swift in Sources */,
 				0C8CA46922798B0200CEEA65 /* DefaultNavigation.swift in Sources */,
 				0C6DB8E2226E299100F1020C /* TodoProduct.swift in Sources */,
@@ -1141,6 +1162,7 @@
 				0C57C41421FC8AF7007343C7 /* AppDelegate.swift in Sources */,
 				0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */,
 				0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */,
+				0C44F90922A5A6850047A9C2 /* LaunchscreenViewController.swift in Sources */,
 				0C47D4A622881BFD005249AA /* WorksByClothCollectionView.swift in Sources */,
 				0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */,
 				0CB8302C226463D100A689DB /* DatePickerCollectionView.swift in Sources */,
@@ -1299,12 +1321,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQNL3UB6DG;
+				DEVELOPMENT_TEAM = 8HFCGNMR6M;
 				INFOPLIST_FILE = Eazip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eazip.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1314,12 +1338,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XQNL3UB6DG;
+				DEVELOPMENT_TEAM = 8HFCGNMR6M;
 				INFOPLIST_FILE = Eazip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eazip.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

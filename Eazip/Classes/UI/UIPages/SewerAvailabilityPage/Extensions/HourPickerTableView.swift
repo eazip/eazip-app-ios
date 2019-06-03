@@ -89,6 +89,17 @@ extension SewerAvailabilityViewController: UITableViewDataSource, UITableViewDel
         toggleNavigationAvailability()
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: hourPickerTableView.frame.size.width, height: 30))
+        footerView.backgroundColor = UIColor.white
+        
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }

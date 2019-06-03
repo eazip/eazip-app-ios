@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="415" height="365"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYX-b4-f7N" customClass="LightLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="20" y="329" width="387" height="21"/>
+                                <rect key="frame" x="20" y="329" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,15 +41,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ht-Sh-sgG" customClass="LightLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="62" y="324" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zYX-b4-f7N" firstAttribute="firstBaseline" secondItem="eTa-Rx-FLW" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="4UW-zB-9t0"/>
                             <constraint firstItem="zYX-b4-f7N" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="4zC-iO-vBK"/>
                             <constraint firstAttribute="trailing" secondItem="eTa-Rx-FLW" secondAttribute="trailing" constant="8" id="Om3-Kc-o8x"/>
+                            <constraint firstAttribute="bottom" secondItem="1Ht-Sh-sgG" secondAttribute="bottom" constant="20" id="Z9I-lf-fgY"/>
                             <constraint firstItem="eTa-Rx-FLW" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="dJA-0z-CJA"/>
                             <constraint firstAttribute="bottom" secondItem="zYX-b4-f7N" secondAttribute="bottom" constant="15" id="fJm-A9-xTo"/>
-                            <constraint firstAttribute="trailing" secondItem="zYX-b4-f7N" secondAttribute="trailing" constant="8" id="pVG-qG-azz"/>
+                            <constraint firstItem="1Ht-Sh-sgG" firstAttribute="leading" secondItem="zYX-b4-f7N" secondAttribute="trailing" id="mzG-RU-yzt"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,6 +76,7 @@
             <size key="customSize" width="352" height="365"/>
             <connections>
                 <outlet property="gradientView" destination="2rO-Bk-X1S" id="scs-FU-ksR"/>
+                <outlet property="ratingBis" destination="1Ht-Sh-sgG" id="UK6-Et-s2V"/>
                 <outlet property="sewerName" destination="eTa-Rx-FLW" id="WMg-8s-MYf"/>
                 <outlet property="sewerPictureView" destination="LoO-HF-8R3" id="fgb-z5-v9N"/>
                 <outlet property="sewerRating" destination="zYX-b4-f7N" id="Hl9-kP-kbn"/>

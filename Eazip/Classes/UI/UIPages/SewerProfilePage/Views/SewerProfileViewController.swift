@@ -25,8 +25,10 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         //Init custum cells
         setUpPictureView()
         setUpDescriptionView()
-        setUpLastWorksView()
         setUpReviewView()
+        
+        sewerProfileCollectionView?.register(UINib(nibName: "ProfileHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeaderReusableView")
+
         print("THE CURRENT PROFILE SA MERE", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
     }
     
@@ -121,11 +123,17 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-       
-        let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "profileSectionTitle", for: indexPath) as! ProfileSectionTitle
-        sectionTitle.setData(reviewsCount: reviewsSection.count)
+        switch kind {
+            case UICollectionElementKindSectionHeader:
+                let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeaderReusableView", for: indexPath) as! ProfileHeaderReusableView
+                sectionTitle.setData(reviewsCount: reviewsSection.count)
+                
+                return sectionTitle
+            
+            default:
+                fatalError("No Reusable view")
+        }
         
-        return sectionTitle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

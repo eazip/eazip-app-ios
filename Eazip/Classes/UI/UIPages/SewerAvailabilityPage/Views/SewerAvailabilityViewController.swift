@@ -63,6 +63,7 @@ class SewerAvailabilityViewController: UIViewController {
         }
         updateDatePicker()
         datePickerCollectionView.reloadData()
+        hourPickerTableView.reloadData()
     }
     
     @IBAction func nextMonth(_ sender: Any) {
@@ -74,6 +75,7 @@ class SewerAvailabilityViewController: UIViewController {
         }
         updateDatePicker()
         datePickerCollectionView.reloadData()
+        hourPickerTableView.reloadData()
     }
     
     func initDatePickerCollectionView() {
@@ -99,6 +101,8 @@ class SewerAvailabilityViewController: UIViewController {
     }
     
     func initHourPickerTableView() {
+        hourPickerTableView.backgroundColor = UIColor.white
+        
         //Init cell
         initHourPickerCell(cellIdentifier: "HourPickerViewCell")
         

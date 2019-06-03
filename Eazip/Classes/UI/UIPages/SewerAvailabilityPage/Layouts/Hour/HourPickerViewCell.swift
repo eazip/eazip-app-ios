@@ -12,7 +12,8 @@ class HourPickerViewCell: UITableViewCell {
     @IBOutlet weak var hourChoiceLabel: DefaultText!
     @IBOutlet weak var offerCard: UIView!
     @IBOutlet weak var offerLabel: DefaultText!
-
+    @IBOutlet weak var radioIcon: UIImageView!
+    
     // Textes
     let offerCardText : String = "Heure creuse -30 %"
     let hourIndicative : String = "h00"
@@ -49,11 +50,12 @@ class HourPickerViewCell: UITableViewCell {
         offerCard?.layer.masksToBounds = false
         offerCard?.layer.borderWidth = 1
         offerCard?.layer.cornerRadius = 5
-        offerCard?.layer.borderColor = UIColor.black.cgColor
+        offerCard?.layer.borderColor = UIColor(named: "peachColor")?.cgColor
         offerLabel?.textAlignment = .center
         // Text
         offerLabel?.font = FontHelper.avenirBookFontWithSize(size: 12)
         offerLabel?.text = offerCardText
+        offerLabel?.textColor = UIColor(named: "peachColor")
         
         disableOfferCard()
     }
@@ -68,14 +70,15 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func disableOfferCard() -> Void {
-       offerCard?.isHidden = false
+       offerCard.isHidden = true
     }
     
     func enableOfferCard() -> Void {
-        offerCard?.isHidden = true
+        offerCard.isHidden = false
     }
     
     func setNormalCellBehaviour() {
+        radioIcon.image = UIImage(named: "radio_empty")
         self.backgroundColor = normalCellBackgroundColor
         hourChoiceLabel?.textColor = UIColor.black
         hourChoiceLabel?.alpha = 1
@@ -85,6 +88,7 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func setUnvailableCellBehaviour() {
+        disableOfferCard()
         hourChoiceLabel?.textColor = unvailableCellTextColor
         hourChoiceLabel?.alpha = 0.30
         offerCard?.alpha = 0.30
@@ -97,11 +101,11 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func setDeselectedCellBehaviour() {
-        self.backgroundColor = normalCellBackgroundColor
+        radioIcon.image = UIImage(named: "radio_empty")
     }
     
     func setSelectedCellBehaviour() {
-        self.backgroundColor = selectedCellBackgroundColor
+        radioIcon.image = UIImage(named: "radio_full")
     }
     
     func tapAnimation() {

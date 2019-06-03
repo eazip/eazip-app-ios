@@ -9,10 +9,11 @@
 import UIKit
 
 class ClothsPickingViewController: UIViewController {
-    
     @IBOutlet weak var clothsTableView: UITableView!
     @IBOutlet weak var validationButton: UIButton!
     @IBOutlet weak var clothsPickingScreenTitle: UILabel!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var validationButtonHeight: NSLayoutConstraint!
     
     var clothsList: [ClothItem] = []
     var navigationAllowed : Bool = false
@@ -127,11 +128,21 @@ class ClothsPickingViewController: UIViewController {
     func makeNextStepUnavailable() {
         navigationAllowed = false
         validationButton.isHidden = true
+        updateBottomConstraints()
     }
     
     func makeNextStepAvailable() {
         navigationAllowed = true
         validationButton.isHidden = false
+        updateBottomConstraints()
+    }
+    
+    func updateBottomConstraints() {
+        if  !validationButton.isHidden {
+            tableViewBottomConstraint.constant = validationButtonHeight.constant * 1.5
+        } else {
+            tableViewBottomConstraint.constant = 0
+        }
     }
     
     @IBAction func next(_ sender: Any) {

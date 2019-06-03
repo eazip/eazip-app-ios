@@ -21,7 +21,7 @@ extension ConfirmAppointmentViewController: UICollectionViewDataSource, UICollec
             cellWidth = UIScreen.main.bounds.size.width-30
         }
         
-        return CGSize(width: cellWidth, height:200)
+        return CGSize(width: cellWidth, height:0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

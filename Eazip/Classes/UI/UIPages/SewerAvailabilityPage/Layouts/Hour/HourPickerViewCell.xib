@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +21,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="hourChoiceLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p6-S0-XFr" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="9.5" width="42" height="21"/>
+                        <rect key="frame" x="28" y="12" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-c0-oum">
-                        <rect key="frame" x="211" y="10" width="130" height="20"/>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-c0-oum">
+                        <rect key="frame" x="211" y="12" width="130" height="22"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-mD-NCS" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-1" width="130" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="offerLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ycL-ae-Swq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,17 +48,24 @@
                             <constraint firstAttribute="width" constant="130" id="hLa-Pl-yUw"/>
                             <constraint firstItem="c8i-mD-NCS" firstAttribute="centerY" secondItem="Kap-c0-oum" secondAttribute="centerY" id="wyg-PF-cKf"/>
                             <constraint firstAttribute="trailing" secondItem="c8i-mD-NCS" secondAttribute="trailing" id="x1M-JO-29a"/>
-                            <constraint firstAttribute="height" constant="20" id="zdX-Og-H3L"/>
+                            <constraint firstAttribute="height" constant="22" id="zdX-Og-H3L"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_empty" translatesAutoresizingMaskIntoConstraints="NO" id="ryg-0W-RGF">
+                        <rect key="frame" x="0.0" y="14" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="YE0-Yr-L1H"/>
+                            <constraint firstAttribute="width" constant="15" id="rpW-70-s7p"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Kap-c0-oum" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1tS-j3-z9F"/>
-                    <constraint firstItem="2p6-S0-XFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FIB-dj-tp6"/>
-                    <constraint firstItem="2p6-S0-XFr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kdd-iF-p6x"/>
+                    <constraint firstItem="2p6-S0-XFr" firstAttribute="leading" secondItem="ryg-0W-RGF" secondAttribute="trailing" constant="13" id="2qC-Tm-Od1"/>
                     <constraint firstAttribute="trailing" secondItem="Kap-c0-oum" secondAttribute="trailing" id="MFQ-dl-TLY"/>
-                    <constraint firstItem="Kap-c0-oum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="R98-6H-8p3"/>
-                    <constraint firstAttribute="bottom" secondItem="Kap-c0-oum" secondAttribute="bottom" constant="10" id="WP2-yS-H60"/>
+                    <constraint firstItem="ryg-0W-RGF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="N1y-cc-HbE"/>
+                    <constraint firstItem="ryg-0W-RGF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="cmr-SF-TCI"/>
+                    <constraint firstItem="2p6-S0-XFr" firstAttribute="top" secondItem="Kap-c0-oum" secondAttribute="top" id="rhW-1f-woL"/>
+                    <constraint firstItem="2p6-S0-XFr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="yxi-Jb-8hL"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="HourPickerViewCell"/>
@@ -63,8 +74,12 @@
                 <outlet property="hourChoiceLabel" destination="2p6-S0-XFr" id="KJv-KT-I3d"/>
                 <outlet property="offerCard" destination="Kap-c0-oum" id="lqD-lR-ufW"/>
                 <outlet property="offerLabel" destination="c8i-mD-NCS" id="6y7-FQ-nuO"/>
+                <outlet property="radioIcon" destination="ryg-0W-RGF" id="yLS-7J-F71"/>
             </connections>
             <point key="canvasLocation" x="15.5" y="74"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="radio_empty" width="15" height="15"/>
+    </resources>
 </document>
