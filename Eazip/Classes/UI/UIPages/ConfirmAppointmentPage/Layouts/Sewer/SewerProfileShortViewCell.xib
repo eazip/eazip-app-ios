@@ -53,6 +53,13 @@
                                         <color key="textColor" name="lightGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey_star" translatesAutoresizingMaskIntoConstraints="NO" id="B00-MH-XY0">
+                                        <rect key="frame" x="105" y="21" width="8" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="7D7-Xu-C0x"/>
+                                            <constraint firstAttribute="height" constant="8" id="d3Y-8z-nJV"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -61,6 +68,8 @@
                                     <constraint firstAttribute="trailing" secondItem="K2e-Iu-QwY" secondAttribute="trailing" id="VcF-IE-Ev4"/>
                                     <constraint firstItem="PB4-vz-rhl" firstAttribute="leading" secondItem="J7x-VX-xnA" secondAttribute="trailing" constant="8" id="Ztm-09-vL5"/>
                                     <constraint firstItem="K2e-Iu-QwY" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="c4H-9W-iMv"/>
+                                    <constraint firstItem="B00-MH-XY0" firstAttribute="centerY" secondItem="PB4-vz-rhl" secondAttribute="centerY" constant="-0.5" id="gFy-zs-tSc"/>
+                                    <constraint firstItem="B00-MH-XY0" firstAttribute="leading" secondItem="PB4-vz-rhl" secondAttribute="trailing" constant="5" id="lzh-Pi-C07"/>
                                     <constraint firstItem="J7x-VX-xnA" firstAttribute="leading" secondItem="af1-WE-Gbj" secondAttribute="leading" constant="8" id="pzf-fS-jDr"/>
                                     <constraint firstItem="PB4-vz-rhl" firstAttribute="top" secondItem="af1-WE-Gbj" secondAttribute="top" constant="15" id="v09-JW-qFo"/>
                                 </constraints>
@@ -99,6 +108,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="grey_star" width="5" height="5"/>
         <namedColor name="lightGrey">
             <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
