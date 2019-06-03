@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7lL-p6-Eir">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FrankRuhlLibre-Black.ttf">
+            <string>FrankRuhlLibre-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Launchscreen View Controller-->
+        <scene sceneID="unQ-HQ-Plk">
+            <objects>
+                <viewController id="7lL-p6-Eir" customClass="LaunchscreenViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRZ-4G-yJa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrandine_white_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-oF-K5B">
+                                <rect key="frame" x="157" y="320" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="goK-4m-Zku"/>
+                                    <constraint firstAttribute="height" constant="60" id="wSw-LO-rNA"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mug-t3-glI">
+                                <rect key="frame" x="0.0" y="400" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" name="FrankRuhlLibre-Black" family="Frank Ruhl Libre Black" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="lightPeachColor"/>
+                        <color key="tintColor" name="lightPeachColor"/>
+                        <constraints>
+                            <constraint firstItem="8ex-oF-K5B" firstAttribute="top" secondItem="bwe-g0-RON" secondAttribute="top" constant="300" id="1bY-gu-aM0"/>
+                            <constraint firstItem="8ex-oF-K5B" firstAttribute="centerX" secondItem="BRZ-4G-yJa" secondAttribute="centerX" id="9tS-Of-dMb"/>
+                            <constraint firstItem="mug-t3-glI" firstAttribute="top" secondItem="8ex-oF-K5B" secondAttribute="bottom" constant="20" id="Ehz-yj-cn2"/>
+                            <constraint firstItem="mug-t3-glI" firstAttribute="leading" secondItem="bwe-g0-RON" secondAttribute="leading" id="n07-Ng-jXM"/>
+                            <constraint firstItem="bwe-g0-RON" firstAttribute="trailing" secondItem="mug-t3-glI" secondAttribute="trailing" id="oYZ-j7-9cg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bwe-g0-RON"/>
+                    </view>
+                    <connections>
+                        <outlet property="logo" destination="mug-t3-glI" id="5Gj-Ca-euE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MY-78-84J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ferrandine_white_logo" width="68" height="61"/>
+        <namedColor name="lightPeachColor">
+            <color red="0.98000001910000001" green="0.68599998949999996" blue="0.60799998040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
