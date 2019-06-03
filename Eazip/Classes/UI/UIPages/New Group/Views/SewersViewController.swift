@@ -85,6 +85,7 @@ class SewersViewController: UIViewController {
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 30
+        sewerCollectionView?.reloadData()
         sewerCollectionView?.collectionViewLayout = layout
     }
     

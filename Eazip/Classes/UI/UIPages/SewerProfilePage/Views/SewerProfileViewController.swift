@@ -34,7 +34,6 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     
     func initDataSewer() -> SewerProfile {
         return SewerProfile(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBiography: currentProfile.sewerBio)
->>>>>>> 52e7432f716d6e785876f1226a294f785151c22d
     }
     
     func initLayout() {
