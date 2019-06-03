@@ -15,7 +15,7 @@ class Appointment {
     var customer : Customer
     
     init() {
-        self.sewer = SewerProfile()
+        self.sewer = SewerProfile(sewerFirstName: "Alice", sewerLastName: "Monroe", sewerRating: 0, sewerBiography: "Description")
         self.products = [Product()]
         self.date = "Jeudi 13 Janvier 2019"
         self.hour = 16
