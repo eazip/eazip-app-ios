@@ -18,6 +18,7 @@ class LaunchscreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         logo.font = FontHelper.eazipDefaultBlackFontWithSize(size: 25)
+        self.view.setEazipGradient(colors: [UIColor(named: "peachColor")!, UIColor(named: "lightPeachColor")!])
         UIView.animate(withDuration: 4, delay: 0.1, options: [], animations: {
             self.logo.text = "Ferrandine"
             self.logo.isHidden = false
