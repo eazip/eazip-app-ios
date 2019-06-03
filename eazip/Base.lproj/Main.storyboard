@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZcN-0M-wCV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Enf-si-2ty">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,7 +63,9 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="UNE RETOUCHE ? " image="ciseaux" id="Dpm-8M-fhS"/>
+                    <tabBarItem key="tabBarItem" title="UNE RETOUCHE ? " image="ciseaux" id="Dpm-8M-fhS">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="NZs-qc-jYI"/>
                     <connections>
                         <outlet property="clothsPickingScreenTitle" destination="toL-vg-bfB" id="wGg-dP-W1m"/>
@@ -148,7 +150,7 @@ types de retouches</string>
         <!--MES RETOUCHES-->
         <scene sceneID="dc6-sH-swQ">
             <objects>
-                <viewController id="wT1-Z9-abP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppointmentsListViewController" id="wT1-Z9-abP" customClass="AppointmentsListViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NEd-qZ-xqI"/>
                         <viewControllerLayoutGuide type="bottom" id="3bx-9v-9va"/>
@@ -156,32 +158,60 @@ types de retouches</string>
                     <view key="view" contentMode="scaleToFill" id="2Av-bc-56l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="eazipLightPeachColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8gE-Mi-ejl">
+                                <rect key="frame" x="27" y="20" width="321" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l99-0J-Prm">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="appointmentStatusLabel" id="TH6-7N-26k" customClass="AppointmentStatusLabel" customModule="Eazip" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-SA-lph" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="305" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bAp-SA-lph" firstAttribute="top" secondItem="TH6-7N-26k" secondAttribute="topMargin" id="VRr-yh-WA5"/>
+                                        <constraint firstItem="bAp-SA-lph" firstAttribute="leading" secondItem="TH6-7N-26k" secondAttribute="leadingMargin" id="nqV-Y4-Ank"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bAp-SA-lph" secondAttribute="trailing" id="ntq-Wf-Rr6"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="bAp-SA-lph" id="rQj-89-bvy"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3bx-9v-9va" firstAttribute="top" secondItem="8gE-Mi-ejl" secondAttribute="bottom" id="0bR-1b-4C3"/>
+                            <constraint firstItem="8gE-Mi-ejl" firstAttribute="leading" secondItem="2Av-bc-56l" secondAttribute="leading" constant="27" id="PyY-LD-F5V"/>
+                            <constraint firstAttribute="trailing" secondItem="8gE-Mi-ejl" secondAttribute="trailing" constant="27" id="RGp-8a-XZq"/>
+                            <constraint firstItem="8gE-Mi-ejl" firstAttribute="top" secondItem="NEd-qZ-xqI" secondAttribute="bottom" id="Zqf-Q5-qc2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MES RETOUCHES" image="retouches" id="7Tg-Y7-tFs"/>
+                    <connections>
+                        <outlet property="appointmentsListCollectionView" destination="8gE-Mi-ejl" id="KTF-7k-0Y1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMn-7u-DAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="xMB-He-IrO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="-1060" y="111"/>
-        </scene>
-        <!--PROFIL-->
-        <scene sceneID="O88-Ia-vAc">
-            <objects>
-                <viewController id="LS0-d1-hrQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YgV-SD-MKi"/>
-                        <viewControllerLayoutGuide type="bottom" id="11s-rb-JsM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K8T-GI-c4V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="eazipPeachColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="PROFIL" image="user" id="KVT-y8-FBj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k40-ci-2rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1537" y="-601"/>
+            <point key="canvasLocation" x="-1060" y="-48"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JME-5n-MED">
@@ -190,11 +220,10 @@ types de retouches</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UaE-j0-JUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98431372549019602" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" name="eazipLightPeachColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="LS0-d1-hrQ" kind="relationship" relationship="viewControllers" id="id2-wS-Kmx"/>
                         <segue destination="QRw-DC-WiO" kind="relationship" relationship="viewControllers" id="ylL-Gp-yid"/>
                         <segue destination="wT1-Z9-abP" kind="relationship" relationship="viewControllers" id="dhl-BH-eeP"/>
                     </connections>
@@ -552,7 +581,7 @@ types de retouches</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="108.39580209895054"/>
+            <point key="canvasLocation" x="1882" y="108"/>
         </scene>
         <!--Confirm Appointment View Controller-->
         <scene sceneID="lf3-mz-cLm">
@@ -650,77 +679,7 @@ types de retouches</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3596" y="109"/>
-        </scene>
-        <!--Appointments List View Controller-->
-        <scene sceneID="dWb-i5-PYy">
-            <objects>
-                <viewController storyboardIdentifier="AppointmentsListViewController" id="SA0-a6-f1V" customClass="AppointmentsListViewController" customModule="Eazip" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uod-zv-q2c"/>
-                        <viewControllerLayoutGuide type="bottom" id="M6Q-Hr-sgx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kCE-Nb-axH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEo-qq-rS8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Mes retouches" id="w59-V3-sVk"/>
-                                </items>
-                            </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WSr-hQ-eyS">
-                                <rect key="frame" x="28" y="74" width="319" height="593"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVe-mb-7iC">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="appointmentStatusLabel" id="e0k-nb-xZd" customClass="AppointmentStatusLabel" customModule="Eazip" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-MT-iej" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="303" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="OGX-MT-iej" firstAttribute="leading" secondItem="e0k-nb-xZd" secondAttribute="leadingMargin" id="BG6-qR-MYv"/>
-                                        <constraint firstItem="OGX-MT-iej" firstAttribute="top" secondItem="e0k-nb-xZd" secondAttribute="topMargin" id="WUu-cw-awM"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OGX-MT-iej" secondAttribute="trailing" id="g0v-7k-W9K"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="titleLabel" destination="OGX-MT-iej" id="ZMm-vn-sWJ"/>
-                                    </connections>
-                                </collectionReusableView>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="top" secondItem="tEo-qq-rS8" secondAttribute="bottom" constant="30" id="LjL-z7-Oc7"/>
-                            <constraint firstItem="tEo-qq-rS8" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" id="VCy-g3-PAt"/>
-                            <constraint firstAttribute="trailing" secondItem="tEo-qq-rS8" secondAttribute="trailing" id="Vn5-Oh-sWw"/>
-                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="bottom" secondItem="M6Q-Hr-sgx" secondAttribute="top" id="WL3-v3-K5d"/>
-                            <constraint firstAttribute="trailing" secondItem="WSr-hQ-eyS" secondAttribute="trailing" constant="28" id="gYo-hP-wW5"/>
-                            <constraint firstItem="M6Q-Hr-sgx" firstAttribute="top" secondItem="WSr-hQ-eyS" secondAttribute="bottom" id="nwu-l1-160"/>
-                            <constraint firstItem="tEo-qq-rS8" firstAttribute="top" secondItem="kCE-Nb-axH" secondAttribute="top" id="owr-ob-JPc"/>
-                            <constraint firstItem="WSr-hQ-eyS" firstAttribute="leading" secondItem="kCE-Nb-axH" secondAttribute="leading" constant="28" id="yzr-tP-GEf"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="appointmentsListCollectionView" destination="WSr-hQ-eyS" id="YfM-GO-c6v"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n7o-mx-Fdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4426" y="108"/>
+            <point key="canvasLocation" x="2822" y="110"/>
         </scene>
         <!--Appointment Details View Controller-->
         <scene sceneID="smS-86-iQE">
@@ -829,7 +788,7 @@ types de retouches</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oF-QH-LBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4425" y="829"/>
+            <point key="canvasLocation" x="-1060" y="840"/>
         </scene>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">
@@ -859,7 +818,7 @@ types de retouches</string>
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="206"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="206"/>
@@ -999,12 +958,8 @@ types de retouches</string>
         <image name="retouches" width="31" height="19"/>
         <image name="right_arrow" width="64" height="64"/>
         <image name="starRating" width="5" height="5"/>
-        <image name="user" width="26" height="27"/>
         <namedColor name="eazipLightPeachColor">
             <color red="0.98000001907348633" green="0.68599998950958252" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="eazipPeachColor">
-            <color red="0.97600001096725464" green="0.58399999141693115" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
