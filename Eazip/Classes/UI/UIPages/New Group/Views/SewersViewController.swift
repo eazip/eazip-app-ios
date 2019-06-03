@@ -16,11 +16,19 @@ class SewersViewController: UIViewController {
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
-    var dataSewers : [Sewer] = []
+    var dataSewers: [Sewer] = []
+    var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getSewersData()
+    }
+    
+    private func setUpNavigationBarItems() {
+        let backButton = UIButton(type: .system)
+        backButton.setImage(UIImage(named: "back_btn"), for: .normal)
+        backButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
     func getSewersData() {
@@ -48,15 +56,16 @@ class SewersViewController: UIViewController {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                         if let sewerArray = json["data"] as? NSArray {
                             for sewer in sewerArray as! [Dictionary<String, AnyObject>] {
-                                print("sewer", sewer)
                                 let id = sewer["id"] as! Int
                                 let firstName = sewer["first_name"] as! String
                                 let lastName = sewer["last_name"] as! String
+                                let rating: Int = 4
                                 let bio = sewer["description"] as! String
                                 let picture = "sewerPicture1"
                                 let works = 3
                                 
-                                tempSewerList.append(Sewer(id: id, bio: bio, img: UIImage(named: picture)!, firstName: firstName, lastName: lastName, rating: 3, works: works))
+                                
+                                tempSewerList.append(Sewer(id: id, bio: bio, img: UIImage(named: picture)!, firstName: firstName, lastName: lastName, rating: rating, works: works))
                             }
                             completion?(tempSewerList, nil)
                         }
@@ -77,6 +86,11 @@ class SewersViewController: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 30
         sewerCollectionView?.collectionViewLayout = layout
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SewerProfileViewController
+        vc.self.currentProfile = currentSewer
     }
 }
 

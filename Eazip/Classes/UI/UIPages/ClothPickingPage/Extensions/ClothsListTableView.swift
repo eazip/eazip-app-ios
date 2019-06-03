@@ -41,7 +41,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
                 }
             }
         }
-    
+        
         return cell
     }
     

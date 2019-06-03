@@ -13,11 +13,12 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var sewerProfileCollectionView: UICollectionView!
     
     //Data
-    let dataSewer = SewerProfile()
     var profileSections : Int = 0
     var reviewsSection : [SewerReview] = []
-
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
+    var dataSewer = SewerProfile(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBiography: "")
     override func viewDidLoad() {
+        dataSewer = initDataSewer()
         //Init CollectionViewCell Layout
         initLayout()
         
@@ -26,6 +27,11 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         setUpDescriptionView()
         setUpLastWorksView()
         setUpReviewView()
+        print("THE CURRENT PROFILE SA MERE", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
+    }
+    
+    func initDataSewer() -> SewerProfile {
+        return SewerProfile(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBiography: currentProfile.sewerBio)
     }
     
     func initLayout() {
