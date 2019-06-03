@@ -10,14 +10,20 @@ import Foundation
 import UIKit
 
 class Sewer {
-    var sewerPicture : UIImage
-    var sewerName : String
-    var sewerRating : Int
-    var sewerWorksNb : Int
+    var sewerId: Int
+    var sewerBio: String
+    var sewerPicture: UIImage
+    var sewerFirstName: String
+    var sewerLastName: String
+    var sewerRating: Int
+    var sewerWorksNb: Int
     
-    init(img: UIImage, name: String, rating: Int, works: Int) {
+    init(id: Int, bio: String, img: UIImage, firstName: String, lastName: String, rating: Int, works: Int) {
+        self.sewerId = id
+        self.sewerBio = bio
         self.sewerPicture = img
-        self.sewerName = name
+        self.sewerFirstName = firstName
+        self.sewerLastName = lastName
         self.sewerRating = rating
         self.sewerWorksNb = works
     }

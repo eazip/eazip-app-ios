@@ -26,7 +26,7 @@ extension SewersViewController : UICollectionViewDataSource, UICollectionViewDel
         let sewerCell = collectionView.dequeueReusableCell(withReuseIdentifier: SewerViewCell.identifier, for: indexPath as IndexPath) as! SewerViewCell
         let item = dataSewers[indexPath.row]
         
-        sewerCell.setData(name: item.sewerName, rating: item.sewerRating, worksNb: item.sewerWorksNb, picture: item.sewerPicture)
+        sewerCell.setData(name: item.sewerFirstName, rating: item.sewerRating, worksNb: item.sewerWorksNb, picture: item.sewerPicture, description: item.sewerBio, lastName: item.sewerLastName, sewerId: item.sewerId)
         
         return sewerCell
     }
@@ -43,6 +43,11 @@ extension SewersViewController : UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = dataSewers[indexPath.row]
+        currentSewer = Sewer(id: item.sewerId, bio: item.sewerBio, img: UIImage(named: "sewerPicture1")!, firstName: item.sewerFirstName, lastName: item.sewerLastName, rating: 4, works: 10)
+        
+        performSegue(withIdentifier: "currentSewerSegue", sender: self)
+
         goToScreen(identifier: "SewerProfileViewController")
     }
 }

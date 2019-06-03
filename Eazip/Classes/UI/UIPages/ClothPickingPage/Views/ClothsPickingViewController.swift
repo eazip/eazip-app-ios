@@ -38,7 +38,7 @@ class ClothsPickingViewController: UIViewController {
         }
     }
     
-    typealias Apicompletion = (_ clothList: [ClothItem]?, _ erroString: String?) -> Void
+    typealias Apicompletion = (_ clothList: [ClothItem]?, _ errorString: String?) -> Void
     
     func ApiClothsHelper(completion: Apicompletion?) {
         let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/clothes")
@@ -146,13 +146,19 @@ class ClothsPickingViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
+        performSegue(withIdentifier: "selectedClothesSegue", sender: self)
         nextStep()
     }
     
     func nextStep() -> Void {
         if navigationAllowed {
-            print("selectedClothes", selectedClothes)
-            goToScreen(identifier: "WorksByClothViewController")
+            print("selectedCLothes", selectedClothes)
+//            goToScreen(identifier: "WorksByClothViewController")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WorksByClothViewController
+        vc.self.selectedClothes = selectedClothes
     }
 }

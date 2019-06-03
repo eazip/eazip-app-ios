@@ -12,8 +12,8 @@ class Cloth {
     var type : ClothItem
     var works : [[String: Any]]
     
-    init() {
-        self.type = ClothItem(cloth_id: 1, icon: UIImage(named: "robe")!, title: "Robe", selected: false)
+    init(id: Int, icon: UIImage, title: String, selected: Bool) {
+        self.type = ClothItem(cloth_id: id, icon: icon, title: title, selected: selected)
         self.works = [
             ["category":"Raccourcir", "data": [TodoProduct(), TodoProduct()]],
             ["category":"Raccourcir", "data": [TodoProduct(), TodoProduct()]]
