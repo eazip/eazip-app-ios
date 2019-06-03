@@ -16,6 +16,7 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     let dataSewer = SewerProfile()
     var profileSections : Int = 0
     var reviewsSection : [SewerReview] = []
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
 
     override func viewDidLoad() {
         //Init CollectionViewCell Layout
@@ -26,6 +27,7 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         setUpDescriptionView()
         setUpLastWorksView()
         setUpReviewView()
+        print("THE CURRENT PROFILE SA MERE", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
     }
     
     func initLayout() {

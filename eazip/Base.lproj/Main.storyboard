@@ -987,6 +987,7 @@ types de retouches</string>
                     </view>
                     <connections>
                         <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>
+                        <segue destination="rLG-pX-Oha" kind="presentation" identifier="currentSewerSegue" id="ayJ-5V-0JF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibD-WY-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>

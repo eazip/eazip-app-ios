@@ -16,7 +16,8 @@ class SewersViewController: UIViewController {
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
-    var dataSewers : [Sewer] = []
+    var dataSewers: [Sewer] = []
+    var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +86,11 @@ class SewersViewController: UIViewController {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 30
         sewerCollectionView?.collectionViewLayout = layout
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SewerProfileViewController
+        vc.self.currentProfile = currentSewer
     }
 }
 
