@@ -15,7 +15,9 @@ class WorksByClothViewController: UIViewController {
     
     let notExpandedHeight : CGFloat = 70
     
-    let selectedClothes = ["Robe", "Robe"]
+    var selectedClothes: [[String: Any]] = []
+    
+//    let selectedClothes = ["Robe", "Robe"]
     var navigationAllowed : Bool = true
     var selectedServices : [[String : Any]] = []
     var expandableDropdownStatesByClothe : [[CGFloat]] = []
@@ -26,6 +28,7 @@ class WorksByClothViewController: UIViewController {
         worksDropDownCollectionView.layoutIfNeeded()
         setUpValidationButton()
         toggleNavigationAvailability()
+        print("TEST DATA", selectedClothes)
     }
     
     func initWorksDropDownCollectionView() {
@@ -62,8 +65,33 @@ class WorksByClothViewController: UIViewController {
     }
     
     func initExpandableDropdownStatesByClothe() {
-        for _ in (0...selectedClothes.count-1) {
-            expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+        if (selectedClothes.count > 0) {
+            for _ in (0...selectedClothes.count - 1) {
+                expandableDropdownStatesByClothe.append(Array(repeating: notExpandedHeight, count: 3))
+            }
+        }
+    }
+    
+    func getClothImage(label: String) -> String {
+        switch label {
+        case "Robe":
+            return "robe"
+        case "Pantalon":
+            return "pantalon"
+        case "T-Shirt":
+            return "t-shirt"
+        case "Jupe":
+            return "jupe"
+        case "Short":
+            return "pantalon"
+        case "Pull-over":
+            return "pullover"
+        case "Blazer":
+            return "veste"
+        case "Manteau":
+            return "manteau"
+        default:
+            return ""
         }
     }
     

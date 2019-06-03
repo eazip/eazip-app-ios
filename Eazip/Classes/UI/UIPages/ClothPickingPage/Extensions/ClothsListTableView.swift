@@ -92,7 +92,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
             }
         }
         if !itemsWithThisTypeSelected {
-            addNewClotheObjectInSelectedClothes(clotheId: cell.getItemID())
+            addNewClotheObjectInSelectedClothes(clotheId: cell.getItemID(), clothLabel: cell.clothLabel.text!, clothIcon: cell.clothIcon)
         }
         toggleNavigationAvailability()
     }
@@ -121,7 +121,7 @@ extension ClothsPickingViewController : UITableViewDataSource, UITableViewDelega
         selectedClothes.remove(at: index)
     }
     
-    func addNewClotheObjectInSelectedClothes(clotheId: Int) {
-        selectedClothes.append(["itemID" : clotheId, "count": 1])
+    func addNewClotheObjectInSelectedClothes(clotheId: Int, clothLabel: String, clothIcon: UIImageView) {
+        selectedClothes.append(["itemID" : clotheId, "count": 1, "clothLabel": clothLabel, "clothIcon": clothIcon])
     }
 }
