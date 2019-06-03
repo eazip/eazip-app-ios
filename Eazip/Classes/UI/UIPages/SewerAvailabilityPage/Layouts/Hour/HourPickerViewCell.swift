@@ -68,11 +68,11 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func disableOfferCard() -> Void {
-       offerCard?.isHidden = false
+       offerCard.isHidden = true
     }
     
     func enableOfferCard() -> Void {
-        offerCard?.isHidden = true
+        offerCard.isHidden = false
     }
     
     func setNormalCellBehaviour() {
@@ -85,6 +85,7 @@ class HourPickerViewCell: UITableViewCell {
     }
     
     func setUnvailableCellBehaviour() {
+        disableOfferCard()
         hourChoiceLabel?.textColor = unvailableCellTextColor
         hourChoiceLabel?.alpha = 0.30
         offerCard?.alpha = 0.30

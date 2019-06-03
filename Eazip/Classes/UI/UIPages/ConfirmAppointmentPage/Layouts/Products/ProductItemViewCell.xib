@@ -12,23 +12,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductItemViewCell" id="gTV-IL-0wX" customClass="ProductItemViewCell" customModule="Eazip" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="20"/>
+            <rect key="frame" x="0.0" y="0.0" width="325" height="25"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="325" height="20"/>
+                <rect key="frame" x="0.0" y="0.0" width="325" height="25"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pA5-Es-DSH">
-                        <rect key="frame" x="0.0" y="0.0" width="325" height="20"/>
+                        <rect key="frame" x="0.0" y="0.0" width="325" height="25"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-Eu-v6P" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-0.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-Eu-v6P" customClass="BoldLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="2" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyQ-oA-Ta8" customClass="DefaultText" customModule="Eazip">
-                                <rect key="frame" x="57" y="-0.5" width="42" height="21"/>
+                                <rect key="frame" x="57" y="2" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,10 +37,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zfk-Eu-v6P" firstAttribute="leading" secondItem="pA5-Es-DSH" secondAttribute="leading" id="UAp-a3-50P"/>
-                            <constraint firstAttribute="height" constant="20" id="i3Z-GW-GeI"/>
+                            <constraint firstItem="Zfk-Eu-v6P" firstAttribute="centerY" secondItem="pA5-Es-DSH" secondAttribute="centerY" id="V0z-zD-Qqg"/>
+                            <constraint firstAttribute="height" constant="25" id="i3Z-GW-GeI"/>
                             <constraint firstItem="GyQ-oA-Ta8" firstAttribute="centerY" secondItem="pA5-Es-DSH" secondAttribute="centerY" id="rhM-ju-9xY"/>
                             <constraint firstItem="GyQ-oA-Ta8" firstAttribute="leading" secondItem="Zfk-Eu-v6P" secondAttribute="trailing" constant="15" id="veF-VX-qQY"/>
                             <constraint firstItem="Zfk-Eu-v6P" firstAttribute="centerY" secondItem="pA5-Es-DSH" secondAttribute="centerY" id="vsQ-mm-cf9"/>
+                            <constraint firstItem="GyQ-oA-Ta8" firstAttribute="centerY" secondItem="pA5-Es-DSH" secondAttribute="centerY" id="yUy-jm-Eto"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,12 +54,12 @@
                 <constraint firstItem="pA5-Es-DSH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iWo-w9-fes"/>
                 <constraint firstAttribute="trailing" secondItem="pA5-Es-DSH" secondAttribute="trailing" id="yTT-B5-x4g"/>
             </constraints>
-            <size key="customSize" width="325" height="20"/>
+            <size key="customSize" width="325" height="25"/>
             <connections>
                 <outlet property="productDescriptionLabel" destination="GyQ-oA-Ta8" id="pah-Pb-h2j"/>
                 <outlet property="quantityPriceLabel" destination="Zfk-Eu-v6P" id="Nxd-45-VYG"/>
             </connections>
-            <point key="canvasLocation" x="164.5" y="37"/>
+            <point key="canvasLocation" x="164.5" y="39.5"/>
         </collectionViewCell>
     </objects>
 </document>

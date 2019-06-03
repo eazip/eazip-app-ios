@@ -39,7 +39,7 @@ class DatePickerViewCell: UICollectionViewCell {
         cellContentView?.layer.borderColor = borderColor.cgColor
         
         // Cell text behaviour
-        dayTitleLabel.font = FontHelper.avenirBlackFontWithSize(size: 13)
+        dayTitleLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 13)
         dayTitleLabel.textAlignment = .center
         dayNbLabel.textAlignment = .center
         cellContentView?.bringSubview(toFront: dayTitleLabel!)

@@ -11,6 +11,7 @@ import UIKit
 class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableViewWrapper: UIView!
     @IBOutlet weak var productsTableView: UITableView!
+    @IBOutlet weak var wrapperHeight: NSLayoutConstraint!
     
     var clothsToSew : [Product] = []
     
@@ -30,7 +31,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
     override func layoutSubviews() {
         super.layoutSubviews()
         productsTableView.layoutIfNeeded()
-        tableViewWrapper.heightAnchor.constraint(equalToConstant: productsTableView.contentSize.height * 1.2).isActive = true
+        wrapperHeight.constant = productsTableView.contentSize.height * 1.5
     }
     
     func initProductsTableView() {
@@ -41,8 +42,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         initItemProductCell(cellIdentifier: "ProductItemViewCell")
         
         //Init delegate and datasource
-        productsTableView?.estimatedRowHeight = 20
-        productsTableView?.rowHeight = UITableViewAutomaticDimension
+        productsTableView?.rowHeight = 25
         productsTableView?.isScrollEnabled = false
         productsTableView?.delegate = self
         productsTableView?.dataSource = self
@@ -96,13 +96,14 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductItemViewCell") as! ProductItemViewCell
         cell.setData(quantity: productItem.quantity, price: productItem.price, description: productItem.description)
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        let sectionLabel = EazipLabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        let sectionLabel = EazipLabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 20))
         
         for (index, product) in clothsToSew.enumerated() {
             if section == index {
@@ -111,7 +112,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         }
         
         headerView.backgroundColor = UIColor.white
-        sectionLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
+        sectionLabel.font = FontHelper.avenirBlackFontWithSize(size: 17)
         sectionLabel.sizeToFit()
         headerView.addSubview(sectionLabel)
         
@@ -119,7 +120,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
     }
     
     private func tableView(_ tableView: UITableView, sizeForRowAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: productsTableView.frame.width, height:20)
+        let size = CGSize(width: productsTableView.frame.width, height:10)
         
         return size
     }

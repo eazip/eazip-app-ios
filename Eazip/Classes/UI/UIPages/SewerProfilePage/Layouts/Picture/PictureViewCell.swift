@@ -12,6 +12,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var sewerPictureView: UIImageView!
     @IBOutlet weak var sewerName: UILabel!
     @IBOutlet weak var sewerRating: UILabel!
+    @IBOutlet weak var ratingBis: LightLabel!
     @IBOutlet weak var gradientView: UIView!
     
     let gradient: CAGradientLayer = CAGradientLayer()
@@ -20,6 +21,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
         super.awakeFromNib()
         sewerName?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 30)
         sewerName?.textColor = UIColor.white
+        ratingBis.font = FontHelper.avenirBookFontWithSize(size: 14)
         
         //Picture gradient properties
         gradientView.backgroundColor = UIColor.clear
@@ -35,6 +37,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
         gradientView.addSubview(sewerRating!)
         gradientView.bringSubview(toFront: sewerName!)
         gradientView.bringSubview(toFront: sewerRating!)
+        gradientView.bringSubview(toFront: ratingBis!)
         
         //Data constraints
         sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -45).isActive = true
@@ -61,6 +64,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
         let rating : String = String(describing: personal["rating"] as? Int ?? 0)
         sewerPictureView.image = personal["picture"] as? UIImage
         sewerName.text = personal["name"] as? String
-        sewerRating.text = rating + ".0"
+        sewerRating.text = rating
+        ratingBis.text = ".0"
     }
 }
