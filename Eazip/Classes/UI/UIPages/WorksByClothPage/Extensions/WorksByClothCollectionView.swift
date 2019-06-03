@@ -55,10 +55,9 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionTitle = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ClothHeaderReusableView", for: indexPath) as! ClothHeaderReusableView
-        print("selectedClothes[indexPath.section]", selectedClothes[indexPath.section]["clothLabel"])
         
         
-        sectionTitle.setData(clotheLabel: selectedClothes[indexPath.section]["clothLabel"] as! String, clotheIcon: "robe")
+        sectionTitle.setData(clotheLabel: selectedClothes[indexPath.section]["clothLabel"] as! String, clotheIcon: getClothImage(label: selectedClothes[indexPath.section]["clothLabel"] as! String))
         return sectionTitle
     }
     
