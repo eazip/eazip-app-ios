@@ -72,6 +72,29 @@ class WorksByClothViewController: UIViewController {
         }
     }
     
+    func getClothImage(label: String) -> String {
+        switch label {
+        case "Robe":
+            return "robe"
+        case "Pantalon":
+            return "pantalon"
+        case "T-Shirt":
+            return "t-shirt"
+        case "Jupe":
+            return "jupe"
+        case "Short":
+            return "pantalon"
+        case "Pull-over":
+            return "pullover"
+        case "Blazer":
+            return "veste"
+        case "Manteau":
+            return "manteau"
+        default:
+            return ""
+        }
+    }
+    
     func toggleNavigationAvailability() {
         if selectedServices.count == 0 {
             makeNextStepUnavailable()
