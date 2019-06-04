@@ -10,13 +10,21 @@ import UIKit
 
 class AppointmentsListViewController: UIViewController {
 
+    @IBOutlet weak var headerviewLabel: EazipLabel!
     @IBOutlet weak var appointmentsListCollectionView: UICollectionView!
-    let lastAppointments : [[String : Any]] = [["appointment": Appointment(), "status": 2], ["appointment": Appointment(), "status": 2]]
-    let nextAppointments : [[String: Any]] = [["appointment": Appointment(), "status": 1]]
+    
+    let lastAppointments : [[String : Any]] = [["appointment": Appointment(), "status": 2], ["appointment": Appointment(), "status": 2],["appointment": Appointment(), "status": 2], ["appointment": Appointment(), "status": 2]]
+    let nextAppointments : [[String: Any]] = [["appointment": Appointment(), "status": 1],["appointment": Appointment(), "status": 1]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         initAppointmentsListCollectionView()
+    }
+    
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Mes retouches"
     }
     
     func initAppointmentsListCollectionView() {
@@ -30,7 +38,7 @@ class AppointmentsListViewController: UIViewController {
         
         //Layout content position
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 17
+        layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 17
         layout.itemSize = UICollectionViewFlowLayoutAutomaticSize
         layout.estimatedItemSize = CGSize(width: 1, height:1)

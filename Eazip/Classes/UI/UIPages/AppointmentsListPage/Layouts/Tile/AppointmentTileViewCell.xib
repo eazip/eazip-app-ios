@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,9 +78,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-6o-IUS" customClass="DefaultLightText" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="151" y="10" width="42" height="21"/>
+                                        <rect key="frame" x="151" y="15" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="lightGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACL-6W-dy6">
@@ -89,10 +90,18 @@
                                             <constraint firstAttribute="width" constant="70" id="g9J-Sn-hdg"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grey_star" translatesAutoresizingMaskIntoConstraints="NO" id="zvw-KI-zIZ">
+                                        <rect key="frame" x="198" y="21" width="8" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="j8k-UI-xog"/>
+                                            <constraint firstAttribute="width" constant="8" id="xSE-Pf-yGg"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="UyB-6o-IUS" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="10" id="0lt-xd-gxB"/>
+                                    <constraint firstItem="UyB-6o-IUS" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="15" id="0lt-xd-gxB"/>
+                                    <constraint firstItem="zvw-KI-zIZ" firstAttribute="leading" secondItem="UyB-6o-IUS" secondAttribute="trailing" constant="5" id="1GR-nU-IDF"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="top" constant="8" id="2A1-Wa-SXe"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="leading" secondItem="ACL-6W-dy6" secondAttribute="trailing" constant="8" id="2w6-9s-q2a"/>
                                     <constraint firstItem="ACL-6W-dy6" firstAttribute="centerY" secondItem="u1h-FQ-Y5p" secondAttribute="centerY" id="Kno-zg-EtB"/>
@@ -102,6 +111,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ACL-6W-dy6" secondAttribute="bottom" id="TTu-1W-BTu"/>
                                     <constraint firstItem="uif-am-jRq" firstAttribute="top" secondItem="RJ9-oG-5xJ" secondAttribute="bottom" id="d4M-aE-QJ5"/>
                                     <constraint firstItem="uif-am-jRq" firstAttribute="leading" secondItem="ACL-6W-dy6" secondAttribute="trailing" constant="8" id="fVd-8w-P3Y"/>
+                                    <constraint firstItem="zvw-KI-zIZ" firstAttribute="centerY" secondItem="UyB-6o-IUS" secondAttribute="centerY" id="op6-vK-wd3"/>
                                     <constraint firstItem="RJ9-oG-5xJ" firstAttribute="top" secondItem="u1h-FQ-Y5p" secondAttribute="topMargin" id="x7v-UB-1XC"/>
                                     <constraint firstItem="ACL-6W-dy6" firstAttribute="leading" secondItem="u1h-FQ-Y5p" secondAttribute="leading" constant="23" id="xfm-w5-5Dl"/>
                                     <constraint firstAttribute="trailing" secondItem="uif-am-jRq" secondAttribute="trailing" constant="23" id="znW-2P-Hl7"/>
@@ -111,7 +121,7 @@
                                 <rect key="frame" x="0.0" y="152" width="379" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJA-cE-xVr" customClass="BoldLabel" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="14.5" width="356" height="21"/>
+                                        <rect key="frame" x="23" y="15" width="356" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -171,4 +181,10 @@
             <point key="canvasLocation" x="110.5" y="128"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="grey_star" width="5" height="5"/>
+        <namedColor name="lightGrey">
+            <color red="0.62400001287460327" green="0.62400001287460327" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
