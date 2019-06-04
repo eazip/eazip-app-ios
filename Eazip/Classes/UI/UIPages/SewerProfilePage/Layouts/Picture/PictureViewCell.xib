@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTa-Rx-FLW" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="20" y="304.5" width="387" height="21"/>
+                                <rect key="frame" x="20" y="305" width="387" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,12 +48,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-bn-a3B" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="109" y="324" width="115" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="rating_star_full"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="rating_star_empty"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zYX-b4-f7N" firstAttribute="firstBaseline" secondItem="eTa-Rx-FLW" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="4UW-zB-9t0"/>
                             <constraint firstItem="zYX-b4-f7N" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="4zC-iO-vBK"/>
                             <constraint firstAttribute="trailing" secondItem="eTa-Rx-FLW" secondAttribute="trailing" constant="8" id="Om3-Kc-o8x"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="b6P-bn-a3B" secondAttribute="bottom" constant="15" id="QLv-Cc-hrU"/>
+                            <constraint firstItem="b6P-bn-a3B" firstAttribute="leading" secondItem="1Ht-Sh-sgG" secondAttribute="trailing" constant="12" id="X0d-6L-VTu"/>
                             <constraint firstAttribute="bottom" secondItem="1Ht-Sh-sgG" secondAttribute="bottom" constant="20" id="Z9I-lf-fgY"/>
                             <constraint firstItem="eTa-Rx-FLW" firstAttribute="leading" secondItem="2rO-Bk-X1S" secondAttribute="leading" constant="20" id="dJA-0z-CJA"/>
                             <constraint firstAttribute="bottom" secondItem="zYX-b4-f7N" secondAttribute="bottom" constant="15" id="fJm-A9-xTo"/>
@@ -80,8 +110,13 @@
                 <outlet property="sewerName" destination="eTa-Rx-FLW" id="WMg-8s-MYf"/>
                 <outlet property="sewerPictureView" destination="LoO-HF-8R3" id="fgb-z5-v9N"/>
                 <outlet property="sewerRating" destination="zYX-b4-f7N" id="Hl9-kP-kbn"/>
+                <outlet property="starsField" destination="b6P-bn-a3B" id="gJW-3U-3wJ"/>
             </connections>
             <point key="canvasLocation" x="4.5" y="28.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="rating_star_empty" width="19" height="18"/>
+        <image name="rating_star_full" width="19" height="18"/>
+    </resources>
 </document>

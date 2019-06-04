@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class PictureViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var sewerPictureView: UIImageView!
@@ -14,6 +15,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var sewerRating: UILabel!
     @IBOutlet weak var ratingBis: LightLabel!
     @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var starsField: CosmosView!
     
     let gradient: CAGradientLayer = CAGradientLayer()
 
@@ -38,6 +40,7 @@ class PictureViewCell: UICollectionViewCell, ConfigurableCell {
         gradientView.bringSubview(toFront: sewerName!)
         gradientView.bringSubview(toFront: sewerRating!)
         gradientView.bringSubview(toFront: ratingBis!)
+        gradientView.bringSubview(toFront: starsField!)
         
         //Data constraints
         sewerName?.bottomAnchor.constraint(equalTo: sewerPictureView.bottomAnchor, constant: -45).isActive = true

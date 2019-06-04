@@ -19,6 +19,8 @@
 		0C10E3D82279BAB50070B353 /* AppointmentTileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */; };
 		0C10E3D92279BAB50070B353 /* AppointmentTileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */; };
 		0C10E3DF227B2F7A0070B353 /* AppointmentStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */; };
+		0C12A79A22A6BDE4008DD94C /* Pods_Eazip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C12A79B22A6BDE4008DD94C /* Pods_Eazip.framework */; };
+		0C12A79C22A6BDEA008DD94C /* Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C12A79D22A6BDEA008DD94C /* Cosmos.framework */; };
 		0C1B937E223A89A000EC60B1 /* SewersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937D223A89A000EC60B1 /* SewersViewController.swift */; };
 		0C1B9380223A89E900EC60B1 /* SewerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */; };
 		0C1B9382223A8A0900EC60B1 /* Sewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B9381223A8A0900EC60B1 /* Sewer.swift */; };
@@ -115,6 +117,7 @@
 		0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED29E225A92F000DDE166 /* DefaultText.swift */; };
 		2E5C60DC2200B48E00DEA84A /* ClothsPickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60DB2200B48E00DEA84A /* ClothsPickingViewController.swift */; };
 		2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E42200D15600DEA84A /* ClothsList.swift */; };
+		36A14A7BCD3203C700435B5D /* Pods_EazipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C4F93B0D8A7A690BE23C3F /* Pods_EazipTests.framework */; };
 		5591A3A32273509600DE342D /* PromoCodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591A3A22273509600DE342D /* PromoCodeViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +130,19 @@
 			remoteInfo = Eazip;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C12A79922A6BCE9008DD94C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C0FB9B42284D6F500B3CF30 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -141,6 +157,8 @@
 		0C10E3D62279BAB50070B353 /* AppointmentTileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTileViewCell.swift; sourceTree = "<group>"; };
 		0C10E3D72279BAB50070B353 /* AppointmentTileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTileViewCell.xib; sourceTree = "<group>"; };
 		0C10E3DE227B2F7A0070B353 /* AppointmentStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentStatusLabel.swift; sourceTree = "<group>"; };
+		0C12A79B22A6BDE4008DD94C /* Pods_Eazip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Eazip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C12A79D22A6BDEA008DD94C /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1B937D223A89A000EC60B1 /* SewersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewersViewController.swift; sourceTree = "<group>"; };
 		0C1B937F223A89E900EC60B1 /* SewerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SewerViewCell.swift; sourceTree = "<group>"; };
 		0C1B9381223A8A0900EC60B1 /* Sewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sewer.swift; sourceTree = "<group>"; };
@@ -243,6 +261,12 @@
 		2E5C60DB2200B48E00DEA84A /* ClothsPickingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsPickingViewController.swift; sourceTree = "<group>"; };
 		2E5C60E42200D15600DEA84A /* ClothsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsList.swift; sourceTree = "<group>"; };
 		5591A3A22273509600DE342D /* PromoCodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewCell.swift; sourceTree = "<group>"; };
+		6F1F9DCD8A11D0340570D564 /* Pods-Eazip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eazip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eazip/Pods-Eazip.release.xcconfig"; sourceTree = "<group>"; };
+		8367C77D7F958D3AD6D7D6E9 /* Pods_Eazip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eazip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B61FF6AFDC61A09490115B /* Pods-Eazip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eazip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eazip/Pods-Eazip.debug.xcconfig"; sourceTree = "<group>"; };
+		9B5A2A8EFA24244953263C69 /* Pods-EazipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EazipTests/Pods-EazipTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5C4F93B0D8A7A690BE23C3F /* Pods_EazipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE41989C8BB68684754875D /* Pods-EazipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EazipTests/Pods-EazipTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +274,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C12A79C22A6BDEA008DD94C /* Cosmos.framework in Frameworks */,
+				0C12A79A22A6BDE4008DD94C /* Pods_Eazip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A14A7BCD3203C700435B5D /* Pods_EazipTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +533,8 @@
 				0C57C41221FC8AF7007343C7 /* Eazip */,
 				0C57C42721FC8AF7007343C7 /* EazipTests */,
 				0C57C41121FC8AF7007343C7 /* Products */,
+				DF86887952C08D5CD3C3CC84 /* Pods */,
+				8CE72BC081EF8211313E6565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -961,6 +990,28 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		8CE72BC081EF8211313E6565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C12A79D22A6BDEA008DD94C /* Cosmos.framework */,
+				0C12A79B22A6BDE4008DD94C /* Pods_Eazip.framework */,
+				8367C77D7F958D3AD6D7D6E9 /* Pods_Eazip.framework */,
+				F5C4F93B0D8A7A690BE23C3F /* Pods_EazipTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF86887952C08D5CD3C3CC84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85B61FF6AFDC61A09490115B /* Pods-Eazip.debug.xcconfig */,
+				6F1F9DCD8A11D0340570D564 /* Pods-Eazip.release.xcconfig */,
+				FEE41989C8BB68684754875D /* Pods-EazipTests.debug.xcconfig */,
+				9B5A2A8EFA24244953263C69 /* Pods-EazipTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -968,9 +1019,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C57C42D21FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "Eazip" */;
 			buildPhases = (
+				C83C1C078FBE25F80FADF6C9 /* [CP] Check Pods Manifest.lock */,
 				0C57C40C21FC8AF7007343C7 /* Sources */,
 				0C57C40D21FC8AF7007343C7 /* Frameworks */,
 				0C57C40E21FC8AF7007343C7 /* Resources */,
+				99C8B6B621C6F6851628076D /* [CP] Embed Pods Frameworks */,
+				0C12A79922A6BCE9008DD94C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -985,6 +1039,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C57C43021FC8AF7007343C7 /* Build configuration list for PBXNativeTarget "EazipTests" */;
 			buildPhases = (
+				5F9A66F313135A134AB42D15 /* [CP] Check Pods Manifest.lock */,
 				0C57C42021FC8AF7007343C7 /* Sources */,
 				0C57C42121FC8AF7007343C7 /* Frameworks */,
 				0C57C42221FC8AF7007343C7 /* Resources */,
@@ -1084,6 +1139,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F9A66F313135A134AB42D15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EazipTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99C8B6B621C6F6851628076D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Eazip/Pods-Eazip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eazip/Pods-Eazip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83C1C078FBE25F80FADF6C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eazip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C57C40C21FC8AF7007343C7 /* Sources */ = {
@@ -1319,6 +1431,7 @@
 		};
 		0C57C42E21FC8AF7007343C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85B61FF6AFDC61A09490115B /* Pods-Eazip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1336,6 +1449,7 @@
 		};
 		0C57C42F21FC8AF7007343C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1F9DCD8A11D0340570D564 /* Pods-Eazip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1353,6 +1467,7 @@
 		};
 		0C57C43121FC8AF7007343C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE41989C8BB68684754875D /* Pods-EazipTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1369,6 +1484,7 @@
 		};
 		0C57C43221FC8AF7007343C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5A2A8EFA24244953263C69 /* Pods-EazipTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
