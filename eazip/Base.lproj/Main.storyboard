@@ -517,6 +517,9 @@
                                     <constraint firstAttribute="height" constant="15" id="Duz-Yg-bL9"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="white_back_btn"/>
+                                <connections>
+                                    <action selector="back:" destination="rLG-pX-Oha" eventType="touchUpInside" id="cqp-oS-nLV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -535,11 +538,12 @@
                     <connections>
                         <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="JcH-wP-iUw"/>
                         <segue destination="EQc-9y-Z18" kind="presentation" identifier="currentSewerAvailability" id="dXe-Mt-tAK"/>
+                        <segue destination="ZcN-0M-wCV" kind="showDetail" identifier="selectedClothesBackToSewers" id="PdR-SA-dGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-BD-nVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="110"/>
+            <point key="canvasLocation" x="855" y="107"/>
         </scene>
         <!--confirmAppointmentSegue-->
         <scene sceneID="A0S-RO-Bkt">
@@ -646,6 +650,7 @@
                         <outlet property="headerviewLabel" destination="tad-bP-hli" id="peU-s3-c88"/>
                         <outlet property="hourPickerTableView" destination="HoF-K9-Nz0" id="K9y-sI-xQb"/>
                         <segue destination="SuZ-zp-eLb" kind="presentation" identifier="confirmAppointmentSegue" id="AQb-XC-yyf"/>
+                        <segue destination="rLG-pX-Oha" kind="showDetail" identifier="currentSewerBackToProfile" id="cvf-bd-Qh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1098,6 +1103,9 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dXe-Mt-tAK"/>
+        <segue reference="PdR-SA-dGL"/>
+        <segue reference="cvf-bd-Qh9"/>
         <segue reference="sdN-NF-bBs"/>
     </inferredMetricsTieBreakers>
 </document>

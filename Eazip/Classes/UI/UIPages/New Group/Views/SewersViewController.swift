@@ -115,6 +115,7 @@ class SewersViewController: UIViewController {
         if segue.identifier == "currentSewerSegue" {
             let vc = segue.destination as! SewerProfileViewController
             vc.self.currentProfile = currentSewer
+            vc.self.selectedClothes = selectedClothes
         }
         
         if segue.identifier == "selectedClothesBackToServicePage" {
