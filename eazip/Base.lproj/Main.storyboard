@@ -723,6 +723,7 @@
                         <outlet property="headerviewLabel" destination="cWK-7R-3M4" id="5V5-pk-6qo"/>
                         <outlet property="totalPriceNbLabel" destination="3aM-e7-TtQ" id="2xy-h6-V4v"/>
                         <outlet property="totalPriceTitleLabel" destination="9kj-7f-Wu0" id="Ooh-QX-f56"/>
+                        <segue destination="acj-H6-nEQ" kind="presentation" identifier="currentSewerAppointmentDetails" id="3rm-Q6-DkA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>

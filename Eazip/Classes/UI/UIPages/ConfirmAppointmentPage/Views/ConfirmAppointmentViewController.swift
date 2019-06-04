@@ -109,6 +109,7 @@ class ConfirmAppointmentViewController: UIViewController {
         if !didAlertAppear {
             let appointmentAlert = alertHelper.appointmentAlert(status: AlertHelper.AlertAppointmentType.created) {
                 [weak self] in
+                self?.performSegue(withIdentifier: "currentSewerAppointmentDetails", sender: self)
                 self?.goToScreen(identifier: "AppointmentDetailsViewController")
             }
             present(appointmentAlert, animated: true)
@@ -116,5 +117,10 @@ class ConfirmAppointmentViewController: UIViewController {
         } else {
             goToScreen(identifier: "AppointmentsListViewController")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! AppointmentDetailsViewController
+        vc.self.currentProfile = currentProfile
     }
 }
