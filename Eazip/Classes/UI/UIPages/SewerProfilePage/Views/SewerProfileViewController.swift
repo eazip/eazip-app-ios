@@ -25,6 +25,7 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         //Init custum cells
         setUpPictureView()
         setUpDescriptionView()
+        setUpLastWorksView()
         setUpReviewView()
         
         sewerProfileCollectionView?.register(UINib(nibName: "ProfileHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeaderReusableView")

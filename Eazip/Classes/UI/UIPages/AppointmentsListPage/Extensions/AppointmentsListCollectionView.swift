@@ -44,7 +44,7 @@ extension AppointmentsListViewController: UICollectionViewDataSource, UICollecti
        
         let titleView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "appointmentStatusLabel", for: indexPath) as! AppointmentStatusLabel
         
-        let title = (indexPath.section == 0) ? "Retouches à venir" : "Retouches effectuées"
+        let title = (indexPath.section == 0) ? "Retouches à venir" : "Historique des rendez-vous"
         
         titleView.setData(label: title)
         
@@ -57,6 +57,6 @@ extension AppointmentsListViewController: UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 50, 0)
+        return UIEdgeInsetsMake(0, 0, 30, 0)
     }
 }

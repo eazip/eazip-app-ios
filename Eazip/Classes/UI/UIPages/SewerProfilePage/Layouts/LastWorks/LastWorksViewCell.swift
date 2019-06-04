@@ -8,17 +8,13 @@
 
 import UIKit
 
-class LastWorksViewCell: UICollectionViewCell, ConfigurableCell, UIScrollViewDelegate {
+class LastWorksViewCell: UICollectionViewCell, ConfigurableCell {
 
-    @IBOutlet weak var lastWorksScrollView: UIScrollView!
     @IBOutlet weak var lastWorksLabel: UILabel!
-    @IBOutlet weak var lastWorksPageControl: UIPageControl!
-    
     var lastWorks : [UIImage] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        lastWorksScrollView.delegate = self
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -34,27 +30,10 @@ class LastWorksViewCell: UICollectionViewCell, ConfigurableCell, UIScrollViewDel
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let scrollViewWidth:CGFloat = lastWorksScrollView.frame.width
-        let scrollViewHeight:CGFloat = lastWorksScrollView.frame.height
-        for lastWork in lastWorks {
-            let img = UIImageView(frame: CGRect(x:0, y:0,width:scrollViewWidth, height:scrollViewHeight))
-            img.image = lastWork
-            lastWorksScrollView.addSubview(img)
-            img.frame = lastWorksScrollView.bounds
-        }
-        let lastWorksCount = CGFloat(lastWorks.count)
-        lastWorksScrollView.contentSize = CGSize(width:scrollViewWidth * lastWorksCount, height:scrollViewHeight)
-        lastWorksScrollView.bringSubview(toFront: lastWorksPageControl)
     }
     
     func configure(data works: [UIImage]) {
-        lastWorksLabel.text = "Dernières retouches"
-        
-        for work in works {
-            lastWorks.append(work)
-        }
+        lastWorksLabel.text = "Dernière retouche"
     }
-    
-
 }
     

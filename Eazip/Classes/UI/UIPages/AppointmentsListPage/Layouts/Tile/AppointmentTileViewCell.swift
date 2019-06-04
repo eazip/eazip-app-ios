@@ -43,6 +43,7 @@ class AppointmentTileViewCell: UICollectionViewCell {
         setUpBanner()
         setUpPicture()
         setUpSewerName()
+        setUpRating()
         setUpWorksToDoDetails()
     }
     
@@ -67,6 +68,7 @@ class AppointmentTileViewCell: UICollectionViewCell {
     func setUpBanner() {
         setUpTag()
         dateHourIndicationLabel.font = FontHelper.avenirBlackFontWithSize(size: 12)
+        worksLabel.font = FontHelper.avenirBookFontWithSize(size: 14)
     }
     
     func setUpWorksToDoDetails() {
@@ -97,6 +99,10 @@ class AppointmentTileViewCell: UICollectionViewCell {
     
     func setUpSewerName() {
         sewerName?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 20)
+    }
+    
+    func setUpRating() {
+        ratingLabel?.font = FontHelper.eazipDefaultBlackFontWithSize(size: 12)
     }
     
     func setData(appointment: Appointment) {
