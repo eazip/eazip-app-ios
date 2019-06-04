@@ -20,12 +20,12 @@ class AlertHelper {
         case confirmed  = "confirmed"
     }
     
-    func appointmentAlert(status: AlertAppointmentType, action: @escaping () -> Void) -> AlertViewController {
+    func appointmentAlert(date: String, sewerName: String, hour: String ,status: AlertAppointmentType, action: @escaping () -> Void) -> AlertViewController {
         var alertViewController : AlertViewController? = nil
         
         switch status {
         case AlertAppointmentType.created:
-            alertViewController = appointmentCreatedAlert(action: action)
+            alertViewController = appointmentCreatedAlert(date: date, sewerName: sewerName, hour: hour, action: action)
         case AlertAppointmentType.confirmed: break
             //
         }
@@ -33,14 +33,13 @@ class AlertHelper {
         return alertViewController!
     }
     
-    func appointmentCreatedAlert(action: @escaping () -> Void) -> AlertViewController {
+    func appointmentCreatedAlert(date: String, sewerName: String, hour: String, action: @escaping () -> Void) -> AlertViewController {
         let alertViewController = self.storyboard.instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
         alertViewController.icon = UIImage(named: "paper_plane")!
         alertViewController.labelTitle = "Votre réservation a bien été émise !"
-        alertViewController.body = "Votre demande pour le jeudi 13 janvier, à partir de 16h a bien été envoyée à Alice. Vous recevrez une réponse dans moins de 48h."
+        alertViewController.body = "Votre demande pour le \(date), à partir de \(hour)h a bien été envoyée à \(sewerName). Vous recevrez une réponse dans moins de 48h."
         alertViewController.actionButtonText = "Voir le récapitulatif"
         alertViewController.action = action
-        
         
         return alertViewController
     }

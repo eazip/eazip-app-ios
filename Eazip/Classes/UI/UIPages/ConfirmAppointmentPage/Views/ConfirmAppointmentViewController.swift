@@ -109,7 +109,7 @@ class ConfirmAppointmentViewController: UIViewController {
     
     func nextStep() -> Void {
         if !didAlertAppear {
-            let appointmentAlert = alertHelper.appointmentAlert(status: AlertHelper.AlertAppointmentType.created) {
+            let appointmentAlert = alertHelper.appointmentAlert(date: String(appointmentDate?.currentDay ?? 0) + " " + "Juin" + " " + String(appointmentDate?.currentYear ?? 0), sewerName: currentProfile.sewerFirstName, hour: String(appointmentDate?.currentHour ?? 0),status: AlertHelper.AlertAppointmentType.created) {
                 [weak self] in
                 self?.performSegue(withIdentifier: "currentSewerAppointmentDetails", sender: self)
                 self?.goToScreen(identifier: "AppointmentDetailsViewController")
