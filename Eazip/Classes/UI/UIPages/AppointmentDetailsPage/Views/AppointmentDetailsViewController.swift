@@ -58,7 +58,7 @@ class AppointmentDetailsViewController: UIViewController {
         bannerLabel.font = FontHelper.avenirBlackFontWithSize(size: 12)
         
         //Text
-        let sewerName = appointment.sewer.sewerName
+        let sewerName = currentProfile.sewerFirstName
         bannerLabel.text = sewerName + " n’a pas encore accepté votre demande"
     }
     
