@@ -59,7 +59,7 @@ class SewerProfileShortViewCell: UICollectionViewCell, ConfigurableCell {
     func configure(data sewer: SewerProfile) {
         sewerPicture.image = sewer.sewerPicture
         sewerName.text = sewer.sewerName
-        sewerRating.text = "4/5"
+        sewerRating.text = String(sewer.sewerRating) + "/5"
         sewerPrestations.text = "23 prestations"
         sewerPrestations.textColor = UIColor.black
         sewerPrestations.font = FontHelper.avenirBookFontWithSize(size: 14)

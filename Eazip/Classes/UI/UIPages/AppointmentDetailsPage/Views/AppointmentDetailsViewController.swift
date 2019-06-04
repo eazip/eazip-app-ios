@@ -19,8 +19,9 @@ class AppointmentDetailsViewController: UIViewController {
     @IBOutlet weak var headerviewLabel: EazipLabel!
     
     //Data
-    let appointment = Appointment()
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
     var appointmentSections : Int = 0
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class AppointmentDetailsViewController: UIViewController {
         setUpBanner()
         initAppointmentConfirmationCollectionView()
         setUpCancellationWrapper()
+        appointment = initAppointmentData()
+    }
+    
+    func initAppointmentData() -> Appointment {
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio)
     }
     
     func setUpHeaderView() {

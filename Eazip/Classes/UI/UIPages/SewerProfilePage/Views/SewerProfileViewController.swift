@@ -149,6 +149,12 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func checkSewerAvailabilities() {
+        performSegue(withIdentifier: "currentSewerAvailability", sender: self)
         goToScreen(identifier: "SewerAvailabilityViewController")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SewerAvailabilityViewController
+        vc.self.currentProfile = currentProfile
     }
 }

@@ -20,9 +20,10 @@ class ConfirmAppointmentViewController: UIViewController {
     let alertHelper = AlertHelper()
     
     //Data
-    let appointment = Appointment()
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
     let totalPrice : Int = 0
     var appointmentSections : Int = 0
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
 
     
     @IBAction func nextStep(_ sender: Any) {
@@ -38,6 +39,11 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpAppointmentView()
         setUpTotalPriceWrapper()
         setUpRegisterButton()
+        appointment = initAppointmentData()
+    }
+    
+    func initAppointmentData() -> Appointment {
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio)
     }
     
     func setUpHeaderView() {
@@ -103,6 +109,7 @@ class ConfirmAppointmentViewController: UIViewController {
         if !didAlertAppear {
             let appointmentAlert = alertHelper.appointmentAlert(status: AlertHelper.AlertAppointmentType.created) {
                 [weak self] in
+                self?.performSegue(withIdentifier: "currentSewerAppointmentDetails", sender: self)
                 self?.goToScreen(identifier: "AppointmentDetailsViewController")
             }
             present(appointmentAlert, animated: true)
@@ -110,5 +117,10 @@ class ConfirmAppointmentViewController: UIViewController {
         } else {
             goToScreen(identifier: "AppointmentsListViewController")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! AppointmentDetailsViewController
+        vc.self.currentProfile = currentProfile
     }
 }
