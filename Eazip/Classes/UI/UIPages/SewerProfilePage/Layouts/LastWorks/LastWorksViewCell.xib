@@ -23,34 +23,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="415" height="262"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zD-9A-A25" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="0.0" width="388" height="7"/>
+                                <rect key="frame" x="27" y="7" width="42" height="13"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jJ-mE-x5h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sewing_example" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-aR-jHF">
                                 <rect key="frame" x="0.0" y="36" width="415" height="226"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="lastWorksPageControl" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-7u-3va">
-                                        <rect key="frame" x="188.5" y="152" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Rw3-CA-w17"/>
+                                    <constraint firstAttribute="height" constant="226" id="iQF-Mi-KOK"/>
                                 </constraints>
-                            </scrollView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7zD-9A-A25" firstAttribute="leading" secondItem="t9n-tr-4XK" secondAttribute="leading" constant="27" id="0kb-9G-M42"/>
-                            <constraint firstAttribute="trailing" secondItem="7zD-9A-A25" secondAttribute="trailing" id="1Gs-IU-cdC"/>
-                            <constraint firstItem="2jJ-mE-x5h" firstAttribute="top" secondItem="7zD-9A-A25" secondAttribute="bottom" constant="15" id="780-qX-INZ"/>
-                            <constraint firstItem="7zD-9A-A25" firstAttribute="top" secondItem="t9n-tr-4XK" secondAttribute="top" id="OWP-05-GWS"/>
-                            <constraint firstAttribute="bottom" secondItem="2jJ-mE-x5h" secondAttribute="bottom" id="aOK-kC-XDb"/>
-                            <constraint firstItem="2jJ-mE-x5h" firstAttribute="width" secondItem="t9n-tr-4XK" secondAttribute="width" id="h4m-IG-vAT"/>
-                            <constraint firstItem="2jJ-mE-x5h" firstAttribute="leading" secondItem="t9n-tr-4XK" secondAttribute="leading" id="ntQ-9q-PNC"/>
-                            <constraint firstAttribute="trailing" secondItem="2jJ-mE-x5h" secondAttribute="trailing" id="yMd-ga-0HH"/>
+                            <constraint firstItem="7zD-9A-A25" firstAttribute="leading" secondItem="t9n-tr-4XK" secondAttribute="leading" constant="27" id="8vq-va-fa6"/>
+                            <constraint firstAttribute="trailing" secondItem="mmX-aR-jHF" secondAttribute="trailing" id="M73-lf-FMe"/>
+                            <constraint firstAttribute="bottom" secondItem="mmX-aR-jHF" secondAttribute="bottom" id="TLO-vk-OSW"/>
+                            <constraint firstItem="7zD-9A-A25" firstAttribute="top" secondItem="t9n-tr-4XK" secondAttribute="top" constant="7" id="nQH-ZH-TOV"/>
+                            <constraint firstItem="mmX-aR-jHF" firstAttribute="width" secondItem="t9n-tr-4XK" secondAttribute="width" id="vJv-vv-ZCq"/>
+                            <constraint firstItem="mmX-aR-jHF" firstAttribute="leading" secondItem="t9n-tr-4XK" secondAttribute="leading" id="xR1-Z2-gSX"/>
+                            <constraint firstItem="mmX-aR-jHF" firstAttribute="top" secondItem="7zD-9A-A25" secondAttribute="bottom" constant="16" id="y9g-Yf-YYm"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -67,10 +60,11 @@
             <size key="customSize" width="384" height="262"/>
             <connections>
                 <outlet property="lastWorksLabel" destination="7zD-9A-A25" id="3QF-6m-a0t"/>
-                <outlet property="lastWorksPageControl" destination="qyS-7u-3va" id="VoB-xT-lgF"/>
-                <outlet property="lastWorksScrollView" destination="2jJ-mE-x5h" id="xdH-4t-Ucf"/>
             </connections>
-            <point key="canvasLocation" x="171" y="93"/>
+            <point key="canvasLocation" x="170.5" y="93"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="sewing_example" width="1125" height="750"/>
+    </resources>
 </document>
