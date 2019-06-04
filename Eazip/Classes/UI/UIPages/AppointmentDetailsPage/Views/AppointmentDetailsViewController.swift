@@ -19,9 +19,10 @@ class AppointmentDetailsViewController: UIViewController {
     @IBOutlet weak var headerviewLabel: EazipLabel!
     
     //Data
-    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "")
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0, hour: 0)
     var appointmentSections : Int = 0
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
+    var appointmentDate: Date? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,12 @@ class AppointmentDetailsViewController: UIViewController {
     }
     
     func initAppointmentData() -> Appointment {
-        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity)
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity, day: appointmentDate?.currentDay ?? 0, month: "Juin", year: appointmentDate?.currentYear ?? 0, hour: appointmentDate?.currentHour ?? 0)
     }
     
     func setUpHeaderView() {
         headerviewLabel.textAlignment = .center
-        headerviewLabel.text = "Jeudi 13 Janvier · 16h"
+        headerviewLabel.text = String(appointmentDate?.currentDay ?? 0) + " " + "Juin" + " " + String(appointmentDate?.currentYear ?? 0)
     }
     
     func setUpBanner() {

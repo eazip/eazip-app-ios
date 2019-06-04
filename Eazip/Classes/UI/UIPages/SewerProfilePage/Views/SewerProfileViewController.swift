@@ -17,6 +17,8 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     var reviewsSection : [SewerReview] = []
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
     var dataSewer = SewerProfile(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBiography: "", sewerCity: "", sewerStreet: "")
+    var selectedClothes: [[String: Any]] = []
+
     override func viewDidLoad() {
         dataSewer = initDataSewer()
         // Init CollectionViewCell Layout
@@ -150,9 +152,21 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         performSegue(withIdentifier: "currentSewerAvailability", sender: self)
         goToScreen(identifier: "SewerAvailabilityViewController")
     }
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "selectedClothesBackToSewers", sender: self)
+        goToScreen(identifier: "SewersViewController")
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! SewerAvailabilityViewController
-        vc.self.currentProfile = currentProfile
+        if segue.identifier == "currentSewerAvailability" {
+            let vc = segue.destination as! SewerAvailabilityViewController
+            vc.self.currentProfile = currentProfile
+            vc.self.selectedClothes = selectedClothes
+        }
+        
+        if segue.identifier == "selectedClothesBackToSewers" {
+            let vc = segue.destination as! SewersViewController
+            vc.self.selectedClothes = selectedClothes
+        }
     }
 }

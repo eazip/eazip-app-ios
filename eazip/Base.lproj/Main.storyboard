@@ -141,6 +141,9 @@
                                             <constraint firstAttribute="width" constant="21" id="ZV8-fv-Buz"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="51n-77-UP6" eventType="touchUpInside" id="0y1-wc-Iuh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundLightGrey"/>
@@ -172,6 +175,7 @@
                         <outlet property="headerviewLabel" destination="JGM-hM-dDw" id="Cue-Hm-lSW"/>
                         <outlet property="validationButton" destination="0KU-gf-67s" id="doD-Qu-Bhr"/>
                         <outlet property="worksDropDownCollectionView" destination="xMJ-dT-ZV3" id="pUL-Cc-LHr"/>
+                        <segue destination="ZcN-0M-wCV" kind="presentation" identifier="selectedClothesToSewersPage" id="Sgy-vQ-bR5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWK-Di-P5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -513,6 +517,9 @@
                                     <constraint firstAttribute="height" constant="15" id="Duz-Yg-bL9"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="white_back_btn"/>
+                                <connections>
+                                    <action selector="back:" destination="rLG-pX-Oha" eventType="touchUpInside" id="cqp-oS-nLV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,11 +538,12 @@
                     <connections>
                         <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="JcH-wP-iUw"/>
                         <segue destination="EQc-9y-Z18" kind="presentation" identifier="currentSewerAvailability" id="dXe-Mt-tAK"/>
+                        <segue destination="ZcN-0M-wCV" kind="showDetail" identifier="selectedClothesBackToSewers" id="PdR-SA-dGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-BD-nVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="110"/>
+            <point key="canvasLocation" x="855" y="107"/>
         </scene>
         <!--confirmAppointmentSegue-->
         <scene sceneID="A0S-RO-Bkt">
@@ -602,6 +610,9 @@
                                             <constraint firstAttribute="height" constant="11" id="ebn-On-OA7"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="EQc-9y-Z18" eventType="touchUpInside" id="v8z-gu-NDN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundLightGrey"/>
@@ -642,6 +653,7 @@
                         <outlet property="headerviewLabel" destination="tad-bP-hli" id="peU-s3-c88"/>
                         <outlet property="hourPickerTableView" destination="HoF-K9-Nz0" id="K9y-sI-xQb"/>
                         <segue destination="SuZ-zp-eLb" kind="presentation" identifier="confirmAppointmentSegue" id="AQb-XC-yyf"/>
+                        <segue destination="rLG-pX-Oha" kind="showDetail" identifier="currentSewerBackToProfile" id="cvf-bd-Qh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -681,6 +693,9 @@
                                             <constraint firstAttribute="width" constant="21" id="XWA-sC-LT3"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="SuZ-zp-eLb" eventType="touchUpInside" id="KYK-jC-qim"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-7R-3M4" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="27" y="63.5" width="321" height="0.0"/>
@@ -760,6 +775,7 @@
                         <outlet property="totalPriceNbLabel" destination="3aM-e7-TtQ" id="2xy-h6-V4v"/>
                         <outlet property="totalPriceTitleLabel" destination="9kj-7f-Wu0" id="Ooh-QX-f56"/>
                         <segue destination="acj-H6-nEQ" kind="presentation" identifier="currentSewerAppointmentDetails" id="3rm-Q6-DkA"/>
+                        <segue destination="EQc-9y-Z18" kind="showDetail" identifier="currentDateBackToDatePicker" id="wY6-nM-0sw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -896,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oF-QH-LBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="839.73013493253382"/>
+            <point key="canvasLocation" x="-614" y="1176"/>
         </scene>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">
@@ -1036,6 +1052,9 @@
                                             <constraint firstAttribute="height" constant="11" id="vhm-o0-nuc"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="ZcN-0M-wCV" eventType="touchUpInside" id="IJU-In-AlZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundLightGrey"/>
@@ -1065,6 +1084,7 @@
                         <outlet property="headerviewLabel" destination="ung-Jk-gKH" id="3xe-rB-EUs"/>
                         <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>
                         <segue destination="rLG-pX-Oha" kind="presentation" identifier="currentSewerSegue" id="ayJ-5V-0JF"/>
+                        <segue destination="51n-77-UP6" kind="presentation" identifier="selectedClothesBackToServicePage" id="sdN-NF-bBs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibD-WY-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1089,4 +1109,10 @@
             <color red="0.62400001287460327" green="0.62400001287460327" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PdR-SA-dGL"/>
+        <segue reference="wY6-nM-0sw"/>
+        <segue reference="cvf-bd-Qh9"/>
+        <segue reference="sdN-NF-bBs"/>
+    </inferredMetricsTieBreakers>
 </document>

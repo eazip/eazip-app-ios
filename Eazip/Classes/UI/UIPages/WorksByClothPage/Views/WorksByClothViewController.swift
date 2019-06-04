@@ -13,7 +13,6 @@ class WorksByClothViewController: UIViewController {
     @IBOutlet weak var headerviewLabel: EazipLabel!
     @IBOutlet weak var worksDropDownCollectionView: UICollectionView!
     @IBOutlet weak var validationButton: ColoredActionButton!
-    
     let notExpandedHeight : CGFloat = 70
     
     var selectedClothes: [[String: Any]] = []
@@ -120,12 +119,24 @@ class WorksByClothViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
+        performSegue(withIdentifier: "selectedClothesToSewersPage", sender: self)
         nextStep()
     }
     
+    @IBAction func back(_ sender: Any) {
+        previousStep()
+    }
+    
+    func previousStep() -> Void {
+        goToScreen(identifier: "ClothsPickingViewController")
+    }
+    
     func nextStep() -> Void {
-        //if navigationAllowed {
-            goToScreen(identifier: "SewersViewController")
-        //}
+        goToScreen(identifier: "SewersViewController")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SewersViewController
+        vc.self.selectedClothes = selectedClothes
     }
 }
