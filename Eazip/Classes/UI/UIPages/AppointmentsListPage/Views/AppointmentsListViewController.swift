@@ -11,8 +11,8 @@ import UIKit
 class AppointmentsListViewController: UIViewController {
 
     @IBOutlet weak var appointmentsListCollectionView: UICollectionView!
-    let lastAppointments : [[String : Any]] = [["appointment": Appointment(), "status": 2], ["appointment": Appointment(), "status": 2]]
-    let nextAppointments : [[String: Any]] = [["appointment": Appointment(), "status": 1]]
+    let lastAppointments : [[String : Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: ""), "status": 2], ["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: ""), "status": 2]]
+    let nextAppointments : [[String: Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: ""), "status": 1]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

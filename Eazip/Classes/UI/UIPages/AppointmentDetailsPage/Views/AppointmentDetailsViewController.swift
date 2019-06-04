@@ -19,7 +19,7 @@ class AppointmentDetailsViewController: UIViewController {
     @IBOutlet weak var headerviewLabel: EazipLabel!
     
     //Data
-    let appointment = Appointment()
+    let appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
     var appointmentSections : Int = 0
 
     override func viewDidLoad() {

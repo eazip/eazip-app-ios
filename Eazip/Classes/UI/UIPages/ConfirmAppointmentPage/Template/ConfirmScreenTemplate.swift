@@ -18,7 +18,7 @@ class ConfirmScreenTemplate {
     var appointment : Appointment
     
     init(data: Appointment) {
-        self.appointment = Appointment()
+        self.appointment = data.self
     }
     
     func templateWithData() -> [CellConfigurator] {
