@@ -44,7 +44,7 @@ extension SewersViewController : UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = dataSewers[indexPath.row]
-        currentSewer = Sewer(id: item.sewerId, bio: item.sewerBio, img: UIImage(named: "sewerPicture1")!, firstName: item.sewerFirstName, lastName: item.sewerLastName, rating: 4, works: 10)
+        currentSewer = Sewer(id: item.sewerId, bio: item.sewerBio, img: UIImage(named: "sewerPicture1")!, firstName: item.sewerFirstName, lastName: item.sewerLastName, rating: 4, works: 10, street: item.sewerStreet, city: item.sewerCity)
         
         performSegue(withIdentifier: "currentSewerSegue", sender: self)
 

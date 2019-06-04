@@ -152,8 +152,7 @@ class ClothsPickingViewController: UIViewController {
     
     func nextStep() -> Void {
         if navigationAllowed {
-            print("selectedCLothes", selectedClothes)
-//            goToScreen(identifier: "WorksByClothViewController")
+            goToScreen(identifier: "WorksByClothViewController")
         }
     }
     

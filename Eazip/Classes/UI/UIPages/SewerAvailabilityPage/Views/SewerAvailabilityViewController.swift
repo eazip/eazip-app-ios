@@ -17,7 +17,7 @@ class SewerAvailabilityViewController: UIViewController {
     @IBOutlet weak var continueButton: ColoredActionButton!
     var appointment : Date? = nil
     var navigationAllowed : Bool = false
-    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
     
     @IBAction func newAppointment(_ sender: UIButton) {
         createAppointmentFromData()

@@ -75,9 +75,6 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         for (index, product) in clothsToSew.enumerated() {
             if section == index {
                 number = product.toDo.count
-//                for test in product.toDo {
-//                    print("LE GRAND PRIX DE SES MORTS", test.price)
-//                }
             }
         }
     

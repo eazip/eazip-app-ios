@@ -15,26 +15,24 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     //Data
     var profileSections : Int = 0
     var reviewsSection : [SewerReview] = []
-    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
-    var dataSewer = SewerProfile(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBiography: "")
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
+    var dataSewer = SewerProfile(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBiography: "", sewerCity: "", sewerStreet: "")
     override func viewDidLoad() {
         dataSewer = initDataSewer()
-        //Init CollectionViewCell Layout
+        // Init CollectionViewCell Layout
         initLayout()
         
-        //Init custum cells
+        // Init custum cells
         setUpPictureView()
         setUpDescriptionView()
         setUpLastWorksView()
         setUpReviewView()
         
         sewerProfileCollectionView?.register(UINib(nibName: "ProfileHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeaderReusableView")
-
-        print("THE CURRENT PROFILE SA MERE", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
     }
     
     func initDataSewer() -> SewerProfile {
-        return SewerProfile(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBiography: currentProfile.sewerBio)
+        return SewerProfile(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBiography: currentProfile.sewerBio, sewerCity: currentProfile.sewerCity, sewerStreet: currentProfile.sewerStreet)
     }
     
     func initLayout() {

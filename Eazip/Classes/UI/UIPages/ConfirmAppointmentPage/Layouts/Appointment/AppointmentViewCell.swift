@@ -44,6 +44,7 @@ class AppointmentViewCell: UICollectionViewCell, ConfigurableCell {
     
     func configure(data appointment: Appointment) {
         let hour = String(describing: appointment.hour)
+        
         dateIndicationLabel.text = appointment.date
         hourIndicationLabel.text = "Dès " + hour + "h00"
         addressTitleLabel.text = "Domicile"

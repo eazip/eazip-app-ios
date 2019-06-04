@@ -30,7 +30,6 @@ class WorksByClothViewController: UIViewController {
         worksDropDownCollectionView.layoutIfNeeded()
         setUpValidationButton()
         toggleNavigationAvailability()
-        print("TEST DATA", selectedClothes)
     }
     
     func setUpHeaderView() {
