@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZcN-0M-wCV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XBr-J2-CnQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -223,7 +224,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-SA-lph" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="28" width="305" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="305" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -323,31 +324,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrandine_white_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vWG-i1-Cg5">
-                                <rect key="frame" x="130" y="20" width="23" height="23"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-49-V41">
+                                <rect key="frame" x="111.5" y="20" width="153" height="23"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrandine_white_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vWG-i1-Cg5">
+                                        <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="23" id="CTQ-lG-OY9"/>
+                                            <constraint firstAttribute="height" constant="23" id="jnI-kP-ygm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ferrandine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-cj-xiX" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="23" y="0.0" width="130" height="23"/>
+                                        <accessibility key="accessibilityConfiguration" label="Ferrandine"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="Hb7-ao-AI9"/>
+                                            <constraint firstAttribute="height" constant="23" id="Vr2-AT-Oql"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
+                                <rect key="frame" x="25" y="53" width="325" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="3Iv-fM-olM"/>
-                                    <constraint firstAttribute="width" constant="23" id="n1m-SO-5Nd"/>
+                                    <constraint firstAttribute="height" constant="400" id="W0I-Vu-FZe"/>
+                                    <constraint firstAttribute="width" constant="325" id="dMz-UM-Co6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ferrandine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-cj-xiX" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="161" y="20" width="83" height="21"/>
-                                <accessibility key="accessibilityConfiguration" label="Ferrandine"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ge-sB-i7a" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="471" width="321" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ge-sB-i7a" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="480" width="321" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-kr-pWg" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
+                                <rect key="frame" x="27" y="499.5" width="321" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-hP-2f4" customClass="WhiteActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27.5" y="565" width="320" height="57"/>
+                                <rect key="frame" x="28" y="565" width="320" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="efW-Rl-uT0"/>
-                                    <constraint firstAttribute="width" constant="320" id="uHl-Lt-GuV"/>
+                                    <constraint firstAttribute="width" constant="320" id="OZb-Pg-8I8"/>
+                                    <constraint firstAttribute="height" constant="57" id="nyu-Zj-QUF"/>
                                 </constraints>
                                 <state key="normal" title="Démarrer"/>
                                 <connections>
@@ -357,36 +380,23 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZA6-a1-SPp">
                                 <rect key="frame" x="168" y="620" width="39" height="37"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-kr-pWg" customClass="DefaultText" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27" y="509" width="321" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-vd-zyD">
-                                <rect key="frame" x="27" y="67" width="321" height="390"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sSK-Rh-KTU" firstAttribute="top" secondItem="Gtg-hP-2f4" secondAttribute="bottom" constant="45" id="63K-LG-n3j"/>
-                            <constraint firstItem="9mN-kr-pWg" firstAttribute="top" secondItem="3Ge-sB-i7a" secondAttribute="bottom" constant="8" id="BvI-QI-tIj"/>
-                            <constraint firstItem="Bhh-cj-xiX" firstAttribute="top" secondItem="bCx-v6-WKA" secondAttribute="top" constant="20" id="G8I-sJ-9fb"/>
-                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="Iyx-uK-GsA"/>
-                            <constraint firstAttribute="trailing" secondItem="IGs-vd-zyD" secondAttribute="trailing" constant="27" id="Jch-VQ-A86"/>
-                            <constraint firstAttribute="trailing" secondItem="9mN-kr-pWg" secondAttribute="trailing" constant="27" id="KzX-sY-7hx"/>
-                            <constraint firstItem="ZA6-a1-SPp" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="REz-oz-074"/>
-                            <constraint firstItem="Bhh-cj-xiX" firstAttribute="leading" secondItem="vWG-i1-Cg5" secondAttribute="trailing" constant="8" id="RTk-b0-4RW"/>
-                            <constraint firstItem="9mN-kr-pWg" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="V7L-Rq-eWQ"/>
-                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="top" secondItem="Bhh-cj-xiX" secondAttribute="top" id="Wjz-Z2-JCw"/>
-                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="IGs-vd-zyD" secondAttribute="bottom" constant="23" id="fCw-8c-enO"/>
-                            <constraint firstAttribute="trailing" secondItem="3Ge-sB-i7a" secondAttribute="trailing" constant="27" id="ho2-Jg-iUF"/>
-                            <constraint firstItem="sSK-Rh-KTU" firstAttribute="top" secondItem="ZA6-a1-SPp" secondAttribute="bottom" constant="10" id="iLq-4s-ucv"/>
-                            <constraint firstItem="IGs-vd-zyD" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="27" id="jHr-UD-a3o"/>
-                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="top" secondItem="9mN-kr-pWg" secondAttribute="bottom" constant="35" id="lMF-FT-Ifu"/>
-                            <constraint firstItem="IGs-vd-zyD" firstAttribute="top" secondItem="vWG-i1-Cg5" secondAttribute="bottom" constant="24" id="ndi-Db-rmZ"/>
-                            <constraint firstItem="vWG-i1-Cg5" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leading" constant="130" id="oAe-jS-bia"/>
-                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="pJp-Mi-mia"/>
+                            <constraint firstItem="RuI-49-V41" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="8dk-FN-7ob"/>
+                            <constraint firstItem="sSK-Rh-KTU" firstAttribute="top" secondItem="ZA6-a1-SPp" secondAttribute="bottom" constant="10" id="AGL-KT-CBi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9mN-kr-pWg" secondAttribute="trailing" constant="11" id="DyW-MO-AqH"/>
+                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leadingMargin" constant="11" id="FHJ-Ml-Otu"/>
+                            <constraint firstItem="IGs-vd-zyD" firstAttribute="top" secondItem="RuI-49-V41" secondAttribute="bottom" constant="10" id="KUT-ek-Vrf"/>
+                            <constraint firstItem="9mN-kr-pWg" firstAttribute="top" secondItem="3Ge-sB-i7a" secondAttribute="bottom" constant="8" id="Lwp-T0-p0h"/>
+                            <constraint firstItem="Gtg-hP-2f4" firstAttribute="trailing" secondItem="9mN-kr-pWg" secondAttribute="trailing" id="R25-4T-UF7"/>
+                            <constraint firstItem="3Ge-sB-i7a" firstAttribute="top" secondItem="IGs-vd-zyD" secondAttribute="bottom" constant="18" id="ayj-A7-CVv"/>
+                            <constraint firstItem="ZA6-a1-SPp" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="dsV-DL-KZM"/>
+                            <constraint firstItem="RuI-49-V41" firstAttribute="top" secondItem="bCx-v6-WKA" secondAttribute="top" constant="20" id="lFW-Og-rbc"/>
+                            <constraint firstItem="sSK-Rh-KTU" firstAttribute="top" secondItem="Gtg-hP-2f4" secondAttribute="bottom" constant="45" id="peB-sO-k2b"/>
+                            <constraint firstItem="9mN-kr-pWg" firstAttribute="leading" secondItem="bCx-v6-WKA" secondAttribute="leadingMargin" constant="11" id="q3g-rX-xet"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ge-sB-i7a" secondAttribute="trailing" constant="11" id="qVD-xO-rFF"/>
+                            <constraint firstItem="IGs-vd-zyD" firstAttribute="centerX" secondItem="bCx-v6-WKA" secondAttribute="centerX" id="vlb-we-LE0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -926,7 +936,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SewerViewCell" id="P4C-09-HoN" customClass="SewerViewCell" customModule="Eazip" customModuleProvider="target">
-                                        <rect key="frame" x="77.5" y="0.0" width="170" height="206"/>
+                                        <rect key="frame" x="77" y="0.0" width="170" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="206"/>
@@ -1074,25 +1084,19 @@
     </scenes>
     <resources>
         <image name="ciseaux" width="23" height="31"/>
-        <image name="ferrandine_white_logo" width="68" height="61.5"/>
-        <image name="grey_back_btn" width="18" height="10.5"/>
+        <image name="ferrandine_white_logo" width="68" height="61"/>
+        <image name="grey_back_btn" width="18" height="10"/>
         <image name="retouches" width="31" height="19"/>
-        <image name="starRating" width="5.5" height="5"/>
-        <image name="white_back_btn" width="41" height="23.5"/>
+        <image name="starRating" width="5" height="5"/>
+        <image name="white_back_btn" width="41" height="23"/>
         <namedColor name="backgroundLightGrey">
             <color red="0.96899998190000003" green="0.97299999000000004" blue="0.98400002720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="backgroundLightGrey">
-            <color red="0.96899998188018799" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="eazipLightPeachColor">
             <color red="0.98000001907348633" green="0.68599998950958252" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightGrey">
             <color red="0.62400001289999996" green="0.62400001289999996" blue="0.62400001289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightGrey">
-            <color red="0.62400001287460327" green="0.62400001287460327" blue="0.62400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
