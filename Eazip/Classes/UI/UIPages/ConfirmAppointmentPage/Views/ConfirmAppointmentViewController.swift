@@ -20,11 +20,12 @@ class ConfirmAppointmentViewController: UIViewController {
     let alertHelper = AlertHelper()
     
     //Data
-    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "")
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0)
     var totalPrice : Int = 0
     var appointmentSections : Int = 0
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
     var appointmentDate: Date? = nil
+    var selectedClothes: [[String: Any]] = []
 
     
     @IBAction func nextStep(_ sender: Any) {
@@ -44,7 +45,7 @@ class ConfirmAppointmentViewController: UIViewController {
     }
     
     func initAppointmentData() -> Appointment {
-        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity)
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity, day: appointmentDate?.currentDay ?? 0, month: "Juin", year: appointmentDate?.currentYear ?? 0)
     }
     
     func setUpHeaderView() {
@@ -123,5 +124,6 @@ class ConfirmAppointmentViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! AppointmentDetailsViewController
         vc.self.currentProfile = currentProfile
+        vc.self.appointmentDate = appointmentDate
     }
 }

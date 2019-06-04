@@ -161,6 +161,7 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         if segue.identifier == "currentSewerAvailability" {
             let vc = segue.destination as! SewerAvailabilityViewController
             vc.self.currentProfile = currentProfile
+            vc.self.selectedClothes = selectedClothes
         }
         
         if segue.identifier == "selectedClothesBackToSewers" {

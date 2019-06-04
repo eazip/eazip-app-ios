@@ -13,8 +13,8 @@ class AppointmentsListViewController: UIViewController {
     @IBOutlet weak var headerviewLabel: EazipLabel!
     @IBOutlet weak var appointmentsListCollectionView: UICollectionView!
 
-    let lastAppointments : [[String : Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: ""), "status": 2], ["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: ""), "status": 2]]
-    let nextAppointments : [[String: Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: ""), "status": 1]]
+    let lastAppointments : [[String : Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0), "status": 2], ["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0), "status": 2]]
+    let nextAppointments : [[String: Any]] = [["appointment": Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0), "status": 1]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

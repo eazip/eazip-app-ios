@@ -610,6 +610,9 @@
                                             <constraint firstAttribute="height" constant="11" id="ebn-On-OA7"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="EQc-9y-Z18" eventType="touchUpInside" id="v8z-gu-NDN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundLightGrey"/>
@@ -1103,7 +1106,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dXe-Mt-tAK"/>
         <segue reference="PdR-SA-dGL"/>
         <segue reference="cvf-bd-Qh9"/>
         <segue reference="sdN-NF-bBs"/>

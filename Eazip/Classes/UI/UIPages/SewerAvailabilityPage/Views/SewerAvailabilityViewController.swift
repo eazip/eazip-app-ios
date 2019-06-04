@@ -15,9 +15,12 @@ class SewerAvailabilityViewController: UIViewController {
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
+    
+    // Data
     var appointment : Date? = nil
     var navigationAllowed : Bool = false
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
+    var selectedClothes: [[String: Any]] = []
     
     @IBAction func newAppointment(_ sender: UIButton) {
         createAppointmentFromData()
@@ -187,8 +190,24 @@ class SewerAvailabilityViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "currentSewerBackToProfile", sender: self)
+        goToScreen(identifier: "SewerProfileViewController")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ConfirmAppointmentViewController
-        vc.self.currentProfile = currentProfile
+        if segue.identifier == "confirmAppointmentSegue" {
+            let vc = segue.destination as! ConfirmAppointmentViewController
+            vc.self.currentProfile = currentProfile
+            vc.self.selectedClothes = selectedClothes
+            vc.self.appointmentDate = appointment
+        }
+        
+        if segue.identifier == "currentSewerBackToProfile" {
+            let vc = segue.destination as! SewerProfileViewController
+            vc.self.currentProfile = currentProfile
+            vc.self.selectedClothes = selectedClothes
+        }
     }
 }
