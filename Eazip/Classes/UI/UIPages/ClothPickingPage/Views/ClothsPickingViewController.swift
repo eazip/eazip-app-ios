@@ -11,9 +11,9 @@ import UIKit
 class ClothsPickingViewController: UIViewController {
     @IBOutlet weak var clothsTableView: UITableView!
     @IBOutlet weak var validationButton: UIButton!
-    @IBOutlet weak var clothsPickingScreenTitle: UILabel!
     @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var validationButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var headerviewLabel: EazipLabel!
     
     var clothsList: [ClothItem] = []
     var navigationAllowed : Bool = false
@@ -21,10 +21,15 @@ class ClothsPickingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         getCloths()
-        setUpTitleScreen()
         setUpValidationButton()
         makeNextStepUnavailable()
+    }
+    
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Choisissez vos" + "\n" + "vêtements à retoucher"
     }
     
     func getCloths() {
@@ -89,12 +94,6 @@ class ClothsPickingViewController: UIViewController {
         default:
             return ""
         }
-    }
-    
-    func setUpTitleScreen() {
-        clothsPickingScreenTitle.text = "Choisissez vos vêtements à retoucher"
-        clothsPickingScreenTitle.textColor = UIColor(named: "lightGrey")
-        clothsPickingScreenTitle.textAlignment = .center
     }
     
     func initClothsTableView() {

@@ -53,7 +53,7 @@ class OnBoardingPageContentViewController: UIViewController {
         self.startButton.isHidden = false
     }
     @IBAction func startApplication(_ sender: Any) {
-        goToScreen(identifier: "WelcomePageController")
+        self.performSegue(withIdentifier: "TabBar", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
