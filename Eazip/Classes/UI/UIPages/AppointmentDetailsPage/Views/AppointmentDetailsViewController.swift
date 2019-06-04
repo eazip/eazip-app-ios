@@ -112,6 +112,10 @@ class AppointmentDetailsViewController: UIViewController {
         cancellationButton.setTitle("Annuler la retouche", for: .normal)
     }
     
+    @IBAction func resetUserFlow(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToTabBar", sender: self)
+    }
+
     func formatMonthValue(monthCode: Int) -> String {
         switch monthCode {
         case 1:

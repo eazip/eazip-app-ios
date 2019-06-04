@@ -868,6 +868,10 @@
                                             <constraint firstAttribute="width" constant="21" id="SyM-5P-AFQ"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="resetUserFlow:" destination="acj-H6-nEQ" eventType="touchUpInside" id="bC9-Jb-Prg"/>
+                                            <segue destination="Enf-si-2ty" kind="showDetail" identifier="goToTabBar" id="9J6-NE-wtx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="backgroundLightGrey"/>
@@ -912,7 +916,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oF-QH-LBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="1176"/>
+            <point key="canvasLocation" x="-615.20000000000005" y="1175.2623688155923"/>
         </scene>
         <!--Sewers View Controller-->
         <scene sceneID="HrH-iI-Yhp">
@@ -1113,6 +1117,7 @@
         <segue reference="PdR-SA-dGL"/>
         <segue reference="wY6-nM-0sw"/>
         <segue reference="cvf-bd-Qh9"/>
+        <segue reference="9J6-NE-wtx"/>
         <segue reference="sdN-NF-bBs"/>
     </inferredMetricsTieBreakers>
 </document>
