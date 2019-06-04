@@ -10,6 +10,7 @@ import UIKit
 
 class WorksByClothViewController: UIViewController {
 
+    @IBOutlet weak var headerviewLabel: EazipLabel!
     @IBOutlet weak var worksDropDownCollectionView: UICollectionView!
     @IBOutlet weak var validationButton: ColoredActionButton!
     
@@ -24,11 +25,17 @@ class WorksByClothViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         initWorksDropDownCollectionView()
         worksDropDownCollectionView.layoutIfNeeded()
         setUpValidationButton()
         toggleNavigationAvailability()
         print("TEST DATA", selectedClothes)
+    }
+    
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Choisissez vos" + "\n" + "types de retouches"
     }
     
     func initWorksDropDownCollectionView() {

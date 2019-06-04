@@ -11,6 +11,7 @@ import UIKit
 class SewersViewController: UIViewController {
     
     @IBOutlet var sewerCollectionView : UICollectionView?
+    @IBOutlet weak var headerviewLabel: EazipLabel!
     
     var collectionView: UICollectionView?
     var screenSize: CGRect!
@@ -21,8 +22,15 @@ class SewersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         getSewersData()
     }
+    
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Découvrez nos" + "\n" + "couturiers à proximité"
+    }
+
     
     private func setUpNavigationBarItems() {
         let backButton = UIButton(type: .system)

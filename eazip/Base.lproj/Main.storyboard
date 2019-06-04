@@ -92,17 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJA-Zp-AIS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem id="Q80-Vs-E19">
-                                        <string key="title">Choisissez vos
-types de retouches</string>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xMJ-dT-ZV3">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dlr-uR-0qT">
                                     <size key="itemSize" width="50" height="50"/>
@@ -113,7 +104,7 @@ types de retouches</string>
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KU-gf-67s" customClass="ColoredActionButton" customModule="Eazip" customModuleProvider="target">
-                                <rect key="frame" x="27.5" y="577" width="320" height="57"/>
+                                <rect key="frame" x="28" y="577" width="320" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="gUr-Eo-JED"/>
                                     <constraint firstAttribute="width" constant="320" id="ltd-IN-Mnp"/>
@@ -123,22 +114,41 @@ types de retouches</string>
                                     <action selector="next:" destination="51n-77-UP6" eventType="touchDown" id="q9V-yS-cqP"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hJ-hs-eFk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGM-hM-dDw" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="63.5" width="321" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="lightGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundLightGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="5ki-u8-Hg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="JGM-hM-dDw" secondAttribute="trailing" constant="27" id="Lca-5J-nXT"/>
+                                    <constraint firstItem="JGM-hM-dDw" firstAttribute="centerY" secondItem="4hJ-hs-eFk" secondAttribute="centerY" id="kPy-fK-lSf"/>
+                                    <constraint firstItem="JGM-hM-dDw" firstAttribute="leading" secondItem="4hJ-hs-eFk" secondAttribute="leading" constant="27" id="ntA-Dc-b3K"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XJA-Zp-AIS" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="9mi-9R-120"/>
+                            <constraint firstItem="4hJ-hs-eFk" firstAttribute="top" secondItem="E2D-VC-R6T" secondAttribute="top" id="BOP-sR-1qY"/>
                             <constraint firstItem="pLH-Ma-hjZ" firstAttribute="top" secondItem="xMJ-dT-ZV3" secondAttribute="bottom" id="Cgr-TG-wbr"/>
                             <constraint firstAttribute="trailing" secondItem="xMJ-dT-ZV3" secondAttribute="trailing" id="GFr-Op-kkK"/>
-                            <constraint firstItem="xMJ-dT-ZV3" firstAttribute="top" secondItem="XJA-Zp-AIS" secondAttribute="bottom" id="V8k-aR-4WX"/>
-                            <constraint firstAttribute="trailing" secondItem="XJA-Zp-AIS" secondAttribute="trailing" id="buR-KS-iZE"/>
+                            <constraint firstAttribute="trailing" secondItem="4hJ-hs-eFk" secondAttribute="trailing" id="Iri-Dd-ZCx"/>
                             <constraint firstItem="xMJ-dT-ZV3" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="d37-VW-Nn9"/>
+                            <constraint firstItem="4hJ-hs-eFk" firstAttribute="leading" secondItem="E2D-VC-R6T" secondAttribute="leading" id="fxZ-Am-110"/>
                             <constraint firstItem="pLH-Ma-hjZ" firstAttribute="top" secondItem="0KU-gf-67s" secondAttribute="bottom" constant="33" id="g2P-WO-vdv"/>
+                            <constraint firstItem="xMJ-dT-ZV3" firstAttribute="top" secondItem="4hJ-hs-eFk" secondAttribute="bottom" id="hTM-ij-s1L"/>
                             <constraint firstItem="0KU-gf-67s" firstAttribute="centerX" secondItem="E2D-VC-R6T" secondAttribute="centerX" id="jPn-Ki-gXb"/>
                             <constraint firstItem="xMJ-dT-ZV3" firstAttribute="width" secondItem="E2D-VC-R6T" secondAttribute="width" id="lBP-FL-ww5"/>
-                            <constraint firstItem="XJA-Zp-AIS" firstAttribute="top" secondItem="E2D-VC-R6T" secondAttribute="top" id="zyc-rL-6KF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerviewLabel" destination="JGM-hM-dDw" id="Cue-Hm-lSW"/>
                         <outlet property="validationButton" destination="0KU-gf-67s" id="doD-Qu-Bhr"/>
                         <outlet property="worksDropDownCollectionView" destination="xMJ-dT-ZV3" id="pUL-Cc-LHr"/>
                     </connections>
@@ -595,15 +605,6 @@ types de retouches</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZn-fS-wxf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="keu-3V-PMy"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Confirmer la réservation" id="NpG-Pt-ztC"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20C-z9-3OV" customClass="ColoredActionButton" customModule="Eazip">
                                 <rect key="frame" x="27.5" y="580" width="320" height="57"/>
                                 <constraints>
@@ -615,8 +616,26 @@ types de retouches</string>
                                     <action selector="nextStep:" destination="SuZ-zp-eLb" eventType="touchDown" id="TXt-cv-vVo"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jW-oC-iP6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-7R-3M4" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="63.5" width="321" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="lightGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundLightGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="9n9-Zi-iZ2"/>
+                                    <constraint firstItem="cWK-7R-3M4" firstAttribute="leading" secondItem="8jW-oC-iP6" secondAttribute="leading" constant="27" id="mag-Fi-SF5"/>
+                                    <constraint firstAttribute="trailing" secondItem="cWK-7R-3M4" secondAttribute="trailing" constant="27" id="ng4-At-XRT"/>
+                                    <constraint firstItem="cWK-7R-3M4" firstAttribute="centerY" secondItem="8jW-oC-iP6" secondAttribute="centerY" id="zC1-gz-GPp"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lwx-jY-f5x">
-                                <rect key="frame" x="0.0" y="50" width="375" height="466"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="389"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jWK-nz-6YR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -657,29 +676,29 @@ types de retouches</string>
                             <constraint firstItem="Jlg-TU-I7k" firstAttribute="trailing" secondItem="qXz-1X-Fek" secondAttribute="trailing" id="0Uy-Ad-Rgt"/>
                             <constraint firstItem="20C-z9-3OV" firstAttribute="centerX" secondItem="qXz-1X-Fek" secondAttribute="centerX" id="6RN-bY-1Rt"/>
                             <constraint firstItem="XuI-Pt-xzg" firstAttribute="top" secondItem="20C-z9-3OV" secondAttribute="bottom" constant="30" id="7li-am-ETk"/>
-                            <constraint firstItem="lwx-jY-f5x" firstAttribute="top" secondItem="iOa-35-5hM" secondAttribute="bottom" constant="30" id="8dU-P3-RK4"/>
-                            <constraint firstItem="dZn-fS-wxf" firstAttribute="trailing" secondItem="qXz-1X-Fek" secondAttribute="trailing" id="MmS-pN-fb8"/>
+                            <constraint firstItem="8jW-oC-iP6" firstAttribute="top" secondItem="qXz-1X-Fek" secondAttribute="top" id="Fku-aN-qlg"/>
                             <constraint firstItem="Jlg-TU-I7k" firstAttribute="top" secondItem="lwx-jY-f5x" secondAttribute="bottom" constant="25" id="QAJ-qd-2qN"/>
-                            <constraint firstItem="dZn-fS-wxf" firstAttribute="top" secondItem="qXz-1X-Fek" secondAttribute="top" id="Ttv-Rw-jwA"/>
                             <constraint firstItem="lwx-jY-f5x" firstAttribute="width" secondItem="qXz-1X-Fek" secondAttribute="width" id="WCR-ZY-o8H"/>
+                            <constraint firstItem="lwx-jY-f5x" firstAttribute="top" secondItem="8jW-oC-iP6" secondAttribute="bottom" id="dU5-Q4-vfm"/>
                             <constraint firstItem="20C-z9-3OV" firstAttribute="top" secondItem="Jlg-TU-I7k" secondAttribute="bottom" constant="20" id="fSt-Vm-BKm"/>
                             <constraint firstItem="Jlg-TU-I7k" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="hHC-WU-i5f"/>
+                            <constraint firstItem="8jW-oC-iP6" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="hmP-dH-zpz"/>
                             <constraint firstAttribute="trailing" secondItem="lwx-jY-f5x" secondAttribute="trailing" id="igc-Vj-ppa"/>
                             <constraint firstItem="lwx-jY-f5x" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="mvS-NC-XvC"/>
-                            <constraint firstItem="dZn-fS-wxf" firstAttribute="leading" secondItem="qXz-1X-Fek" secondAttribute="leading" id="vaf-vj-VfH"/>
+                            <constraint firstAttribute="trailing" secondItem="8jW-oC-iP6" secondAttribute="trailing" id="pkD-CR-xNl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appointmentConfirmationCollectionView" destination="lwx-jY-f5x" id="fJX-ke-VZh"/>
                         <outlet property="confirmAppointmentButton" destination="20C-z9-3OV" id="dfn-zq-w18"/>
-                        <outlet property="navigationItemBar" destination="dZn-fS-wxf" id="0vr-Qg-WNn"/>
+                        <outlet property="headerviewLabel" destination="cWK-7R-3M4" id="5V5-pk-6qo"/>
                         <outlet property="totalPriceNbLabel" destination="3aM-e7-TtQ" id="2xy-h6-V4v"/>
                         <outlet property="totalPriceTitleLabel" destination="9kj-7f-Wu0" id="Ooh-QX-f56"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="110"/>
+            <point key="canvasLocation" x="2821.5999999999999" y="109.29535232383809"/>
         </scene>
         <!--Appointment Details View Controller-->
         <scene sceneID="smS-86-iQE">
@@ -803,7 +822,7 @@ types de retouches</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-Hw-tai">
-                                <rect key="frame" x="25" y="70" width="325" height="589"/>
+                                <rect key="frame" x="25" y="127" width="325" height="532"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="lec-Rp-nAr">
                                     <size key="itemSize" width="170" height="206"/>
@@ -812,7 +831,7 @@ types de retouches</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <view key="backgroundView" contentMode="scaleToFill" ambiguous="YES" id="vMt-7q-rxf">
-                                    <rect key="frame" x="0.0" y="0.0" width="325" height="589"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="532"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
@@ -912,36 +931,39 @@ types de retouches</string>
                                     <outlet property="dataSource" destination="ZcN-0M-wCV" id="KXg-OG-vi7"/>
                                 </connections>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-Yk-HOM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doF-tW-Lou">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ung-Jk-gKH" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="63.5" width="321" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="lightGrey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundLightGrey"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="ZT2-Xj-EYw"/>
+                                    <constraint firstItem="ung-Jk-gKH" firstAttribute="centerY" secondItem="doF-tW-Lou" secondAttribute="centerY" id="6FG-ar-jhY"/>
+                                    <constraint firstAttribute="height" constant="127" id="mh4-2P-pLv"/>
+                                    <constraint firstItem="ung-Jk-gKH" firstAttribute="leading" secondItem="doF-tW-Lou" secondAttribute="leading" constant="27" id="wsw-jE-Bxl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ung-Jk-gKH" secondAttribute="trailing" constant="27" id="ye6-r8-CLg"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Découvrez nos couturiers" id="8zh-du-thx"/>
-                                </items>
-                            </navigationBar>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tN0-Hw-tai" secondAttribute="bottom" constant="8" id="3V3-Qp-cUX"/>
-                            <constraint firstItem="Bip-Yk-HOM" firstAttribute="top" secondItem="bHf-cm-X6i" secondAttribute="top" id="3qA-Vo-O7O"/>
+                            <constraint firstAttribute="trailing" secondItem="doF-tW-Lou" secondAttribute="trailing" id="9Vu-Hb-ZtK"/>
                             <constraint firstAttribute="trailing" secondItem="tN0-Hw-tai" secondAttribute="trailing" constant="25" id="Jsk-Hg-XSh"/>
-                            <constraint firstAttribute="trailing" secondItem="Bip-Yk-HOM" secondAttribute="trailing" id="Kyx-y2-Xnn"/>
-                            <constraint firstItem="tN0-Hw-tai" firstAttribute="top" secondItem="Bip-Yk-HOM" secondAttribute="bottom" id="NBz-7n-ByM"/>
                             <constraint firstItem="tN0-Hw-tai" firstAttribute="centerX" secondItem="bHf-cm-X6i" secondAttribute="centerX" id="O3I-P1-ANE"/>
-                            <constraint firstItem="Bip-Yk-HOM" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" id="cb2-WI-ldK"/>
+                            <constraint firstItem="doF-tW-Lou" firstAttribute="top" secondItem="bHf-cm-X6i" secondAttribute="top" id="lhx-uI-FVB"/>
+                            <constraint firstItem="doF-tW-Lou" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" id="nJQ-U4-g1f"/>
+                            <constraint firstItem="tN0-Hw-tai" firstAttribute="top" secondItem="doF-tW-Lou" secondAttribute="bottom" id="tOn-Sr-tNn"/>
                             <constraint firstItem="tN0-Hw-tai" firstAttribute="leading" secondItem="bHf-cm-X6i" secondAttribute="leading" constant="25" id="u9E-eQ-nEQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerviewLabel" destination="ung-Jk-gKH" id="3xe-rB-EUs"/>
                         <outlet property="sewerCollectionView" destination="tN0-Hw-tai" id="T6F-0d-WwW"/>
                         <segue destination="rLG-pX-Oha" kind="presentation" identifier="currentSewerSegue" id="ayJ-5V-0JF"/>
                     </connections>
@@ -958,8 +980,26 @@ types de retouches</string>
         <image name="retouches" width="31" height="19"/>
         <image name="right_arrow" width="64" height="64"/>
         <image name="starRating" width="5" height="5"/>
+        <namedColor name="backgroundLightGrey">
+            <color red="0.96899998190000003" green="0.97299999000000004" blue="0.98400002720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundLightGrey">
+            <color red="0.96899998188018799" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundLightGrey">
+            <color red="0.96899998190000003" green="0.97299999000000004" blue="0.98400002720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="eazipLightPeachColor">
             <color red="0.98000001907348633" green="0.68599998950958252" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey">
+            <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey">
+            <color red="0.50199997429999998" green="0.50199997429999998" blue="0.50199997429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey">
+            <color red="0.50199997429999998" green="0.50199997429999998" blue="0.50199997429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

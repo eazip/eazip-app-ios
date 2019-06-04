@@ -14,7 +14,8 @@ class ConfirmAppointmentViewController: UIViewController {
     @IBOutlet weak var totalPriceTitleLabel: EazipLabel!
     @IBOutlet weak var totalPriceNbLabel: EazipLabel!
     @IBOutlet weak var confirmAppointmentButton: ColoredActionButton!
-    @IBOutlet weak var navigationItemBar: UINavigationBar!
+    @IBOutlet weak var headerviewLabel: EazipLabel!
+    
     var didAlertAppear : Bool = false
     let alertHelper = AlertHelper()
     
@@ -30,7 +31,7 @@ class ConfirmAppointmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigation()
+        setUpHeaderView()
         initAppointmentConfirmationCollectionView()
         setUpShortProfileView()
         setUpProductsDetailsView()
@@ -39,9 +40,9 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpRegisterButton()
     }
     
-    func setUpNavigation() {
-        navigationItemBar.tintColor = UIColor(named: "lightGrey")
-        navigationItemBar.backgroundColor = UIColor(named: "backgroundLightGrey")
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Confirmer" + "\n" + "la réservation"
     }
     
     func initAppointmentConfirmationCollectionView() {
