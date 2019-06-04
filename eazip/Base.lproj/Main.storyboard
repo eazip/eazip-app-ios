@@ -693,6 +693,9 @@
                                             <constraint firstAttribute="width" constant="21" id="XWA-sC-LT3"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="grey_back_btn"/>
+                                        <connections>
+                                            <action selector="back:" destination="SuZ-zp-eLb" eventType="touchUpInside" id="KYK-jC-qim"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-7R-3M4" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
                                         <rect key="frame" x="27" y="63.5" width="321" height="0.0"/>
@@ -772,6 +775,7 @@
                         <outlet property="totalPriceNbLabel" destination="3aM-e7-TtQ" id="2xy-h6-V4v"/>
                         <outlet property="totalPriceTitleLabel" destination="9kj-7f-Wu0" id="Ooh-QX-f56"/>
                         <segue destination="acj-H6-nEQ" kind="presentation" identifier="currentSewerAppointmentDetails" id="3rm-Q6-DkA"/>
+                        <segue destination="EQc-9y-Z18" kind="showDetail" identifier="currentDateBackToDatePicker" id="wY6-nM-0sw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTi-bI-BzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1107,6 +1111,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PdR-SA-dGL"/>
+        <segue reference="wY6-nM-0sw"/>
         <segue reference="cvf-bd-Qh9"/>
         <segue reference="sdN-NF-bBs"/>
     </inferredMetricsTieBreakers>

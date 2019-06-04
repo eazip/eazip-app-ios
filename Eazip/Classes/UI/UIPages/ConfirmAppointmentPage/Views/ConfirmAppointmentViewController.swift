@@ -20,7 +20,7 @@ class ConfirmAppointmentViewController: UIViewController {
     let alertHelper = AlertHelper()
     
     //Data
-    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0)
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "", day: 0, month: "", year: 0, hour: 0)
     var totalPrice : Int = 0
     var appointmentSections : Int = 0
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
@@ -45,7 +45,7 @@ class ConfirmAppointmentViewController: UIViewController {
     }
     
     func initAppointmentData() -> Appointment {
-        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity, day: appointmentDate?.currentDay ?? 0, month: "Juin", year: appointmentDate?.currentYear ?? 0)
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity, day: appointmentDate?.currentDay ?? 0, month: "Juin", year: appointmentDate?.currentYear ?? 0, hour: appointmentDate?.currentHour ?? 0)
     }
     
     func setUpHeaderView() {
@@ -121,9 +121,22 @@ class ConfirmAppointmentViewController: UIViewController {
         }
     }
     
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "currentDateBackToDatePicker", sender: self)
+        goToScreen(identifier: "SewerAvailabilityViewController")
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! AppointmentDetailsViewController
-        vc.self.currentProfile = currentProfile
-        vc.self.appointmentDate = appointmentDate
+        if segue.identifier == "currentSewerAppointmentDetails" {
+            let vc = segue.destination as! AppointmentDetailsViewController
+            vc.self.currentProfile = currentProfile
+            vc.self.appointmentDate = appointmentDate
+        }
+        
+        if segue.identifier == "currentDateBackToDatePicker" {
+            let vc = segue.destination as! SewerAvailabilityViewController
+            vc.self.currentProfile = currentProfile
+            vc.self.appointment = appointmentDate
+            vc.self.selectedClothes = selectedClothes
+        }
     }
 }
