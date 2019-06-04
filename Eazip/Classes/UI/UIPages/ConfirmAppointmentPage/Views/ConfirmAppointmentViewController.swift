@@ -19,9 +19,10 @@ class ConfirmAppointmentViewController: UIViewController {
     let alertHelper = AlertHelper()
     
     //Data
-    let appointment = Appointment()
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
     let totalPrice : Int = 0
     var appointmentSections : Int = 0
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
 
     
     @IBAction func nextStep(_ sender: Any) {
@@ -37,6 +38,12 @@ class ConfirmAppointmentViewController: UIViewController {
         setUpAppointmentView()
         setUpTotalPriceWrapper()
         setUpRegisterButton()
+        appointment = initAppointmentData()
+        print("Le plus grand profile de ses morts", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
+    }
+    
+    func initAppointmentData() -> Appointment {
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio)
     }
     
     func setUpNavigation() {

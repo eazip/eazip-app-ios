@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZcN-0M-wCV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZcN-0M-wCV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-d9-YWa">
-                                <rect key="frame" x="0.0" y="121" width="375" height="497"/>
+                                <rect key="frame" x="0.0" y="120.5" width="375" height="497.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -437,11 +436,12 @@ types de retouches</string>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="sewerProfileCollectionView" destination="beg-N1-x7V" id="JcH-wP-iUw"/>
+                        <segue destination="EQc-9y-Z18" kind="presentation" identifier="currentSewerAvailability" id="ly9-x0-97Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7J-BD-nVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="110"/>
+            <point key="canvasLocation" x="1170" y="107"/>
         </scene>
         <!--Sewer Availability View Controller-->
         <scene sceneID="A0S-RO-Bkt">
@@ -548,11 +548,12 @@ types de retouches</string>
                         <outlet property="hourPickerTableView" destination="HoF-K9-Nz0" id="K9y-sI-xQb"/>
                         <outlet property="nextMonthButton" destination="m9g-4Z-ibI" id="dpV-sO-lpw"/>
                         <outlet property="previousMonthButton" destination="XVh-DL-bHq" id="VOK-1y-zS9"/>
+                        <segue destination="SuZ-zp-eLb" kind="presentation" identifier="confirmAppointmentSegue" id="CgJ-oW-Knf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoo-Ea-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="108.39580209895054"/>
+            <point key="canvasLocation" x="2374" y="107"/>
         </scene>
         <!--Confirm Appointment View Controller-->
         <scene sceneID="lf3-mz-cLm">
@@ -685,7 +686,7 @@ types de retouches</string>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-MT-iej" customClass="EazipLabel" customModule="Eazip" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="303" height="21"/>
+                                            <rect key="frame" x="8" y="28" width="303" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -994,11 +995,11 @@ types de retouches</string>
     </scenes>
     <resources>
         <image name="ciseaux" width="23" height="31"/>
-        <image name="ferrandine_white_logo" width="68" height="61"/>
+        <image name="ferrandine_white_logo" width="68" height="61.5"/>
         <image name="left_arrow" width="64" height="64"/>
         <image name="retouches" width="31" height="19"/>
         <image name="right_arrow" width="64" height="64"/>
-        <image name="starRating" width="5" height="5"/>
+        <image name="starRating" width="5.5" height="5"/>
         <image name="user" width="26" height="27"/>
         <namedColor name="eazipLightPeachColor">
             <color red="0.98000001907348633" green="0.68599998950958252" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

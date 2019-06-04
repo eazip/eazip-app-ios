@@ -12,7 +12,7 @@ class AppointmentDetailsTemplate {
     var appointment : Appointment
     
     init(data: Appointment) {
-        self.appointment = Appointment()
+        self.appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
     }
     
     func templateWithData() -> [CellConfigurator] {

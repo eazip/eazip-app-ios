@@ -28,8 +28,6 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
         setUpReviewView()
         
         sewerProfileCollectionView?.register(UINib(nibName: "ProfileHeaderReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeaderReusableView")
-
-        print("THE CURRENT PROFILE SA MERE", currentProfile.sewerFirstName + " " + currentProfile.sewerLastName)
     }
     
     func initDataSewer() -> SewerProfile {
@@ -148,6 +146,12 @@ class SewerProfileViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func checkSewerAvailabilities() {
+        performSegue(withIdentifier: "currentSewerAvailability", sender: self)
         goToScreen(identifier: "SewerAvailabilityViewController")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SewerAvailabilityViewController
+        vc.self.currentProfile = currentProfile
     }
 }
