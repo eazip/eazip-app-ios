@@ -19,6 +19,7 @@ class SewersViewController: UIViewController {
     var screenHeight: CGFloat!
     var dataSewers: [Sewer] = []
     var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
+    var selectedClothes: [[String: Any]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,9 +100,25 @@ class SewersViewController: UIViewController {
         sewerCollectionView?.collectionViewLayout = layout
     }
     
+    @IBAction func back(_ sender: Any) {
+        performSegue(withIdentifier: "selectedClothesBackToServicePage", sender: self)
+        previousScreen()
+    }
+    
+    func previousScreen() {
+        goToScreen(identifier: "WorksByClothViewController")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! SewerProfileViewController
-        vc.self.currentProfile = currentSewer
+        if segue.identifier == "currentSewerSegue" {
+            let vc = segue.destination as! SewerProfileViewController
+            vc.self.currentProfile = currentSewer
+        }
+        
+        if segue.identifier == "selectedClothesBackToServicePage" {
+            let backVc = segue.destination as! WorksByClothViewController
+            backVc.self.selectedClothes = selectedClothes
+        }
     }
 }
 

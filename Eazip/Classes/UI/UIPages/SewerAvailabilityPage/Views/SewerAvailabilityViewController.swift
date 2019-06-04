@@ -49,7 +49,7 @@ class SewerAvailabilityViewController: UIViewController {
         dateSelectLabel.textAlignment = .center
         headerviewLabel.textAlignment = .center
         headerviewLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
-        headerviewLabel.text = "Disponibilités d'Alice"
+        headerviewLabel.text = "Disponibilités de \(currentProfile.sewerFirstName)"
     }
     
     @IBAction func previousMonth(_ sender: Any) {

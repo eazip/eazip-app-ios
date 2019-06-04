@@ -24,6 +24,7 @@ class ConfirmAppointmentViewController: UIViewController {
     var totalPrice : Int = 0
     var appointmentSections : Int = 0
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
+    var appointmentDate: Date? = nil
 
     
     @IBAction func nextStep(_ sender: Any) {
