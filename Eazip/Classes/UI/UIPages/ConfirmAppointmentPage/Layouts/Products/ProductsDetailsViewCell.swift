@@ -18,11 +18,6 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
     // Main Colors
     let borderColor : UIColor = UIColor(named: "borderLightGrey")!
     
-    /**
-     /////////////////////
-     Up
-     /////////////////////
-     */
     override func awakeFromNib() {
         super.awakeFromNib()
         initProductsTableView()
@@ -80,6 +75,9 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         for (index, product) in clothsToSew.enumerated() {
             if section == index {
                 number = product.toDo.count
+//                for test in product.toDo {
+//                    print("LE GRAND PRIX DE SES MORTS", test.price)
+//                }
             }
         }
     
@@ -87,7 +85,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var productItem : TodoProduct = TodoProduct()
+        var productItem : TodoProduct = TodoProduct(quantity: 1, price: 15, description: "Raccourcir manches")
         
         for (index, product) in clothsToSew.enumerated() {
             
@@ -95,6 +93,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
                 productItem = product.toDo[indexPath.row]
             }
         }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductItemViewCell") as! ProductItemViewCell
         cell.setData(quantity: productItem.quantity, price: productItem.price, description: productItem.description)
         cell.selectionStyle = .none

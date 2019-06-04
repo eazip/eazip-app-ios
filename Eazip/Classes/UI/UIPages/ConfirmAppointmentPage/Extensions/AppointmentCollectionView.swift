@@ -30,6 +30,17 @@ extension ConfirmAppointmentViewController: UICollectionViewDataSource, UICollec
         let item = itemsInView[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type(of: item).reuseId, for: indexPath)
         item.configure(cell: cell)
+        var finalPrice: Int = 0
+        var i: Int = 0
+        for product in appointment.products {
+            if i < product.toDo.count {
+                i = i + 1
+                for todo in product.toDo {
+                    finalPrice = finalPrice + todo.price
+                    setTotalPrice(totalPrice: finalPrice)
+                }
+            }
+        }
         
         return cell
     }

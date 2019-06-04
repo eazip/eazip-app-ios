@@ -21,7 +21,7 @@ class ConfirmAppointmentViewController: UIViewController {
     
     //Data
     var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
-    let totalPrice : Int = 0
+    var totalPrice : Int = 0
     var appointmentSections : Int = 0
     var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
 
@@ -97,10 +97,11 @@ class ConfirmAppointmentViewController: UIViewController {
     func setUpTotalPriceWrapper() {
         totalPriceTitleLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 15)
         totalPriceTitleLabel.text = "Prix final"
-        setTotalPrice()
+//        setTotalPrice(totalPrice: totalPrice)
     }
     
-    func setTotalPrice() {
+    func setTotalPrice(totalPrice: Int) {
+        print("le petit totalPrice", totalPrice)
         let totalPriceToString = String(describing: totalPrice)
         totalPriceNbLabel.text = totalPriceToString + " €"
     }
