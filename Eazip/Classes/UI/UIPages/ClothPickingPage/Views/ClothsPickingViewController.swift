@@ -105,6 +105,7 @@ class ClothsPickingViewController: UIViewController {
         clothsTableView?.estimatedRowHeight = 80
         clothsTableView?.sectionHeaderHeight = 12
         clothsTableView?.rowHeight = UITableViewAutomaticDimension
+        clothsTableView?.separatorStyle = .none
         clothsTableView?.delegate = self
         clothsTableView?.dataSource = self
     }

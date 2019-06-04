@@ -112,7 +112,7 @@ class WorksByClothViewController: UIViewController {
     
     func makeNextStepUnavailable() {
         navigationAllowed = false
-        validationButton?.isHidden = true
+        //validationButton?.isHidden = true
     }
     
     func makeNextStepAvailable() {
@@ -125,8 +125,8 @@ class WorksByClothViewController: UIViewController {
     }
     
     func nextStep() -> Void {
-        if navigationAllowed {
+        //if navigationAllowed {
             goToScreen(identifier: "SewersViewController")
-        }
+        //}
     }
 }

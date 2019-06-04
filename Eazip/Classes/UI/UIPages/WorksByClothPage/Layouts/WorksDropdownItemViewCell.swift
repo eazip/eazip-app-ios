@@ -83,6 +83,7 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
         worksListTableView?.isScrollEnabled = false
         worksListTableView?.delegate = self
         worksListTableView?.dataSource = self
+        worksListTableView?.separatorStyle = .none
     }
     
     func initWorkChoiceItemCell(cellIdentifier: String) {

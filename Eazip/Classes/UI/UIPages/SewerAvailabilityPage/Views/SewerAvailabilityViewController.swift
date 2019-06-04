@@ -9,10 +9,9 @@
 import UIKit
 
 class SewerAvailabilityViewController: UIViewController {
-
-    @IBOutlet weak var dateSelectLabel: UITextField!
-    @IBOutlet weak var nextMonthButton: UIButton!
-    @IBOutlet weak var previousMonthButton: UIButton!
+    
+    @IBOutlet weak var headerviewLabel: EazipLabel!
+    @IBOutlet weak var dateSelectLabel: UILabel!
     @IBOutlet weak var datePickerCollectionView: UICollectionView!
     @IBOutlet weak var hourPickerTableView: UITableView!
     @IBOutlet weak var continueButton: ColoredActionButton!
@@ -38,10 +37,18 @@ class SewerAvailabilityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         initDatePickerCollectionView()
         initHourPickerTableView()
         setUpContinueButton()
         toggleNavigationAvailability()
+    }
+    
+    func setUpHeaderView() {
+        dateSelectLabel.textAlignment = .center
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.font = FontHelper.eazipDefaultBlackFontWithSize(size: 17)
+        headerviewLabel.text = "Disponibilités d'Alice"
     }
     
     @IBAction func previousMonth(_ sender: Any) {
@@ -109,6 +116,7 @@ class SewerAvailabilityViewController: UIViewController {
         //Init delegate and datasource
         hourPickerTableView?.delegate = self as UITableViewDelegate
         hourPickerTableView?.dataSource = self as UITableViewDataSource
+        hourPickerTableView?.separatorStyle = .none
         hourPickerTableView?.isScrollEnabled = false
     }
   
@@ -120,7 +128,7 @@ class SewerAvailabilityViewController: UIViewController {
         if selectedMonth == Date().currentMonth && firstDay != Date().currentDay {
             daysToDisplay.remove(at: 0)
         }
-        dateSelectLabel.text = calendarData["headerMonthLabel"] as? String
+        dateSelectLabel.text = calendarData["headerMonthLabel"] as! String
     }
     
     func initFirstDay() {
