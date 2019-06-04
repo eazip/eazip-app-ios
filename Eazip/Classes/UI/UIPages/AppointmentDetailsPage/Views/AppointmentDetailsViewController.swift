@@ -39,7 +39,7 @@ class AppointmentDetailsViewController: UIViewController {
     
     func setUpHeaderView() {
         headerviewLabel.textAlignment = .center
-        headerviewLabel.text = appointment.date + String(appointment.hour)
+        headerviewLabel.text = String(appointmentDate?.currentDay ?? 0) + " " + "Juin" + " " + String(appointmentDate?.currentYear ?? 0)
     }
     
     func setUpBanner() {
