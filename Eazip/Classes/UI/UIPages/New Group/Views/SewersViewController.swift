@@ -17,6 +17,8 @@ class SewersViewController: UIViewController {
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
+    
+    // Data
     var dataSewers: [Sewer] = []
     var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
     var selectedClothes: [[String: Any]] = []
@@ -29,7 +31,7 @@ class SewersViewController: UIViewController {
     
     func setUpHeaderView() {
         headerviewLabel.textAlignment = .center
-        headerviewLabel.text = "Découvrez nos" + "\n" + "couturiers à proximité"
+        headerviewLabel.text = "Découvrez nos" + "\n" + "couturiers"
     }
 
     
