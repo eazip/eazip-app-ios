@@ -12,6 +12,6 @@ class Product {
     
     init() {
         self.cloth = "Robe"
-        self.toDo = [TodoProduct(), TodoProduct()]
+        self.toDo = [TodoProduct(quantity: 1, price: 15, description: "Ourlet simple"), TodoProduct(quantity: 1, price: 15, description: "Raccourcir manches")]
     }
 }

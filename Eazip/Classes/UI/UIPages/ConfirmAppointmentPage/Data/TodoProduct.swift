@@ -11,9 +11,9 @@ class TodoProduct {
     var price : Int
     var description : String
     
-    init() {
-        self.quantity = 1
-        self.price = 15
-        self.description = "Raccourcir Manches"
+    init(quantity: Int, price: Int, description: String) {
+        self.quantity = quantity
+        self.price = price
+        self.description = description
     }
 }
