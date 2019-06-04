@@ -1325,6 +1325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQNL3UB6DG;
 				INFOPLIST_FILE = Eazip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eazip.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1342,6 +1343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XQNL3UB6DG;
 				INFOPLIST_FILE = Eazip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eazip.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
