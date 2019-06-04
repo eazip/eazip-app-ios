@@ -16,16 +16,23 @@ class AppointmentDetailsViewController: UIViewController {
     @IBOutlet weak var cancellationWrapper: UIView!
     @IBOutlet weak var cancellationButton: UIButton!
     @IBOutlet weak var cancellationLabel: UILabel!
+    @IBOutlet weak var headerviewLabel: EazipLabel!
     
     //Data
     let appointment = Appointment()
     var appointmentSections : Int = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpHeaderView()
         setUpBanner()
         initAppointmentConfirmationCollectionView()
         setUpCancellationWrapper()
+    }
+    
+    func setUpHeaderView() {
+        headerviewLabel.textAlignment = .center
+        headerviewLabel.text = "Jeudi 13 Janvier · 16h"
     }
     
     func setUpBanner() {

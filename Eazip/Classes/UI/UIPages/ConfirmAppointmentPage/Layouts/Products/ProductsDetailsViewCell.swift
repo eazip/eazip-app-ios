@@ -44,6 +44,7 @@ class ProductsDetailsViewCell: UICollectionViewCell, ConfigurableCell, UITableVi
         //Init delegate and datasource
         productsTableView?.rowHeight = 25
         productsTableView?.isScrollEnabled = false
+        productsTableView?.separatorStyle = .none
         productsTableView?.delegate = self
         productsTableView?.dataSource = self
     }

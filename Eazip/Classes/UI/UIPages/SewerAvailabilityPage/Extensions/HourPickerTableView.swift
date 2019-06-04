@@ -30,6 +30,7 @@ extension SewerAvailabilityViewController: UITableViewDataSource, UITableViewDel
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HourPickerViewCell") as! HourPickerViewCell?
         cell?.setData(hour: hour)
+        cell?.selectionStyle = .none
         
         if offerStatus {
             cell?.initOfferCard()
@@ -70,6 +71,7 @@ extension SewerAvailabilityViewController: UITableViewDataSource, UITableViewDel
             cell.selectionStyle = .none
             cell.tapAnimation()
             if cell.isCellAvailable() {
+                cell.selectionStyle = .none
                 if indexPath.section == 0 {
                     selectedHour = hoursToDisplay["AM"]![indexPath.row]["nb"] as! Int
                 } else {

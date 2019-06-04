@@ -25,7 +25,6 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
         let availabilityStatus = date["status"] as! Bool
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DatePickerViewCell", for: indexPath) as! DatePickerViewCell
-
         cell.setData(dayNb: dateNb, dayTitle: dateDay)
 
         if indexPath.row == (selectedDay! - firstDay!) {
@@ -44,7 +43,7 @@ extension SewerAvailabilityViewController: UICollectionViewDataSource, UICollect
             let cell = isCell as! DatePickerViewCell
             if cell.isCellAvailable() == true {
                 let previousSelectedDay : Int = selectedDay!
-                
+                collectionView.reloadData()
                 collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
                 cell.toggleSelected()
                 
