@@ -20,10 +20,10 @@ class ConfirmAppointmentViewController: UIViewController {
     let alertHelper = AlertHelper()
     
     //Data
-    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "")
+    var appointment = Appointment(sewerFirstName: "", sewerLastName: "", sewerRating: 0, sewerBio: "", sewerStreet: "", sewerCity: "")
     var totalPrice : Int = 0
     var appointmentSections : Int = 0
-    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
+    var currentProfile: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
 
     
     @IBAction func nextStep(_ sender: Any) {
@@ -43,7 +43,7 @@ class ConfirmAppointmentViewController: UIViewController {
     }
     
     func initAppointmentData() -> Appointment {
-        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio)
+        return Appointment(sewerFirstName: currentProfile.sewerFirstName, sewerLastName: currentProfile.sewerLastName, sewerRating: currentProfile.sewerRating, sewerBio: currentProfile.sewerBio, sewerStreet: currentProfile.sewerStreet, sewerCity: currentProfile.sewerCity)
     }
     
     func setUpHeaderView() {
@@ -101,7 +101,6 @@ class ConfirmAppointmentViewController: UIViewController {
     }
     
     func setTotalPrice(totalPrice: Int) {
-        print("le petit totalPrice", totalPrice)
         let totalPriceToString = String(describing: totalPrice)
         totalPriceNbLabel.text = totalPriceToString + " €"
     }

@@ -18,7 +18,7 @@ class SewersViewController: UIViewController {
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     var dataSewers: [Sewer] = []
-    var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0)
+    var currentSewer: Sewer = Sewer(id: 0, bio: "", img: UIImage(named: "sewerPicture1")!, firstName: "", lastName: "", rating: 0, works: 0, street: "", city: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +69,13 @@ class SewersViewController: UIViewController {
                                 let lastName = sewer["last_name"] as! String
                                 let rating: Int = 4
                                 let bio = sewer["description"] as! String
+                                let street = sewer["street"] as! String
+                                let city = sewer["city"] as! String
                                 let picture = "sewerPicture1"
                                 let works = 3
                                 
                                 
-                                tempSewerList.append(Sewer(id: id, bio: bio, img: UIImage(named: picture)!, firstName: firstName, lastName: lastName, rating: rating, works: works))
+                                tempSewerList.append(Sewer(id: id, bio: bio, img: UIImage(named: picture)!, firstName: firstName, lastName: lastName, rating: rating, works: works, street: street, city: city))
                             }
                             completion?(tempSewerList, nil)
                         }

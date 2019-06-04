@@ -13,14 +13,12 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         var sectionCount: Int = 0
         
-        //        print("selectedClothes", selectedClothes)
         for cloth in selectedClothes {
             let clothCount = cloth["count"] as! Int
             
             sectionCount = sectionCount + clothCount
             
         }
-        //        print("sectioncount", sectionCount)
         return selectedClothes.count
     }
     

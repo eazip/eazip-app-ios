@@ -14,12 +14,12 @@ class Appointment {
     var address : [String:String]
     var customer : Customer
     
-    init(sewerFirstName: String, sewerLastName: String, sewerRating: Int, sewerBio: String) {
-        self.sewer = SewerProfile(sewerFirstName: sewerFirstName, sewerLastName: sewerLastName, sewerRating: sewerRating, sewerBiography: sewerBio)
+    init(sewerFirstName: String, sewerLastName: String, sewerRating: Int, sewerBio: String, sewerStreet: String, sewerCity: String) {
+        self.sewer = SewerProfile(sewerFirstName: sewerFirstName, sewerLastName: sewerLastName, sewerRating: sewerRating, sewerBiography: sewerBio, sewerCity: sewerCity, sewerStreet: sewerStreet)
         self.products = [Product()]
         self.date = "Jeudi 13 Janvier 2019"
         self.hour = 16
-        self.address = ["street":"23 rue de Romainville", "city":"93100 Montreuil"]
+        self.address = ["street": sewerStreet, "city": sewerCity]
         self.customer = Customer()
     }
 }

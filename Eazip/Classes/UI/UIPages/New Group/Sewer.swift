@@ -17,8 +17,10 @@ class Sewer {
     var sewerLastName: String
     var sewerRating: Int
     var sewerWorksNb: Int
+    var sewerStreet: String
+    var sewerCity: String
     
-    init(id: Int, bio: String, img: UIImage, firstName: String, lastName: String, rating: Int, works: Int) {
+    init(id: Int, bio: String, img: UIImage, firstName: String, lastName: String, rating: Int, works: Int, street: String, city: String) {
         self.sewerId = id
         self.sewerBio = bio
         self.sewerPicture = img
@@ -26,6 +28,8 @@ class Sewer {
         self.sewerLastName = lastName
         self.sewerRating = rating
         self.sewerWorksNb = works
+        self.sewerStreet = street
+        self.sewerCity = city
     }
 }
 
