@@ -10,6 +10,7 @@ import UIKit
 
 extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ExpandableDropdownDelegate  {
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         var sectionCount: Int = 0
         
@@ -23,12 +24,12 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorksDropdownItemViewCell", for: indexPath as IndexPath) as! WorksDropdownItemViewCell
-        cell.setData(category:formatCategoryTitle(category: servicesList[indexPath.section].serviceCategory))
+        cell.setData(category:categories[indexPath.row])
         cell.indexPath = indexPath
         cell.delegate = self
         
@@ -71,15 +72,6 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
             UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.9, options: UIViewAnimationOptions.curveEaseInOut, animations: {
                 self.worksDropDownCollectionView?.reloadItems(at: [indexPath])
             })
-        }
-    }
-    
-    func formatCategoryTitle(category: String) -> String {
-        switch category {
-        case "commons":
-            return "Communes"
-        default:
-          return "Communes"
         }
     }
 }

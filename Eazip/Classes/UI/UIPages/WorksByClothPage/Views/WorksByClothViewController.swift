@@ -20,6 +20,7 @@ class WorksByClothViewController: UIViewController {
     var navigationAllowed : Bool = true
     var selectedServices : [[String : Any]] = []
     var expandableDropdownStatesByClothe : [[CGFloat]] = []
+    var categories: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class WorksByClothViewController: UIViewController {
             if servicesList != nil {
                 self.servicesList.append(contentsOf: servicesList!)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.updateCategories()
                     self.setUpHeaderView()
                     self.initWorksDropDownCollectionView()
                     self.worksDropDownCollectionView.layoutIfNeeded()
@@ -40,6 +42,26 @@ class WorksByClothViewController: UIViewController {
             }
         }
     }
+    
+    func updateCategories() {
+        var commons: String = ""
+        var shorten: String = ""
+        var extend: String = ""
+        
+        for category in servicesList {
+            if category.serviceCategory == "commons" {
+                commons = "Communes"
+            } else if category.serviceCategory == "shorten" {
+                shorten = "Raccourcir"
+            } else if category.serviceCategory == "extend" {
+                extend = "Agrandir"
+            }
+        }
+            categories.append(commons)
+            categories.append(shorten)
+            categories.append(extend)
+    }
+    
     
     typealias Apicompletion = (_ servicesList: [Service]?, _ errorString: String?) -> Void
     
