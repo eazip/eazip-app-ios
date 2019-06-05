@@ -157,7 +157,7 @@ class ConfirmAppointmentViewController: UIViewController {
                 if let data = data {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        g
+                        print("LE PLUS BEAU DES JSON", json)
                     } catch {
                         print(error.localizedDescription)
                     }
