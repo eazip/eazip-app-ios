@@ -140,6 +140,31 @@ class ConfirmAppointmentViewController: UIViewController {
     
     func nextStep() -> Void {
         if !didAlertAppear {
+            let parameters: NSDictionary = ["command": ["sewer_id": currentProfile.sewerId, "customer_id": 1, "appointment_at": "\(appointmentDate?.currentYear)-\(appointmentDate?.currentMonth)-\(appointmentDate?.currentDay)T\(appointmentDate?.currentHour):00:00+0100", "services": [[1, 2]]]]
+            
+            let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/commands")
+            var request = URLRequest(url: url!)
+            request.httpMethod="POST"
+            guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
+            request.httpBody = httpBody
+            
+            let session = URLSession.shared
+            session.dataTask(with: request) { (data, response, error) in
+                if let response = response {
+                    print("response", response)
+                }
+                
+                if let data = data {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data, options: [])
+                        print("LE PLUS BEAU DES JSON", json)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }.resume()
+            
+            
             let appointmentAlert = alertHelper.appointmentAlert(date: String(appointmentDate?.currentDay ?? 0) + " " + formatMonthValue(monthCode: appointmentDate?.currentMonth ?? 0) + " " + String(appointmentDate?.currentYear ?? 0), sewerName: currentProfile.sewerFirstName, hour: String(appointmentDate?.currentHour ?? 0),status: AlertHelper.AlertAppointmentType.created) {
                 [weak self] in
                 self?.performSegue(withIdentifier: "currentSewerAppointmentDetails", sender: self)
