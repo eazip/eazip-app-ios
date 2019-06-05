@@ -18,16 +18,19 @@ class WorkChoiceItemViewCell: UITableViewCell {
         // Initialization code
     }
     
-    let choiceID : Int = 1
+    var serviceID : Int = 0
+    var clothID : Int = 0
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layoutIfNeeded()
     }
 
-    func setData(label: String, price: String) {
+    func setData(label: String, price: String, serviceId: Int, clothId: Int) {
         workLabel.text = label
         workPrice.text = price
+        serviceID = serviceId
+        clothID = clothId
     }
     
     func toggleSelected() {
@@ -47,7 +50,7 @@ class WorkChoiceItemViewCell: UITableViewCell {
     }
     
     func getChoiceId() -> Int {
-        return choiceID
+        return serviceID
     }
     
     func tapAnimation() {

@@ -8,7 +8,8 @@
 
 import UIKit
 
-extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ExpandableDropdownDelegate {
+extension WorksByClothViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ExpandableDropdownDelegate  {
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         var sectionCount: Int = 0
@@ -23,12 +24,12 @@ extension WorksByClothViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorksDropdownItemViewCell", for: indexPath as IndexPath) as! WorksDropdownItemViewCell
-        cell.setData()
+        cell.setData(category:categories[indexPath.row])
         cell.indexPath = indexPath
         cell.delegate = self
         

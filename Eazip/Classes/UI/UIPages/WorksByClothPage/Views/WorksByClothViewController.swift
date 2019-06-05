@@ -15,20 +15,85 @@ class WorksByClothViewController: UIViewController {
     @IBOutlet weak var validationButton: ColoredActionButton!
     let notExpandedHeight : CGFloat = 70
     
+    var servicesList: [Service] = []
     var selectedClothes: [[String: Any]] = []
-    
-//    let selectedClothes = ["Robe", "Robe"]
     var navigationAllowed : Bool = true
     var selectedServices : [[String : Any]] = []
     var expandableDropdownStatesByClothe : [[CGFloat]] = []
+    var categories: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpHeaderView()
-        initWorksDropDownCollectionView()
-        worksDropDownCollectionView.layoutIfNeeded()
-        setUpValidationButton()
-        toggleNavigationAvailability()
+        getServices()
+    }
+    
+    func getServices() {
+        ApiServicesHelper() { servicesList, error in
+            if servicesList != nil {
+                self.servicesList.append(contentsOf: servicesList!)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.updateCategories()
+                    self.setUpHeaderView()
+                    self.initWorksDropDownCollectionView()
+                    self.worksDropDownCollectionView.layoutIfNeeded()
+                    self.setUpValidationButton()
+                    self.toggleNavigationAvailability()
+                }
+            }
+        }
+    }
+    
+    func updateCategories() {
+        var commons: String = ""
+        var shorten: String = ""
+        var extend: String = ""
+        
+        for category in servicesList {
+            if category.serviceCategory == "commons" {
+                commons = "Communes"
+            } else if category.serviceCategory == "shorten" {
+                shorten = "Raccourcir"
+            } else if category.serviceCategory == "extend" {
+                extend = "Agrandir"
+            }
+        }
+            categories.append(commons)
+            categories.append(shorten)
+            categories.append(extend)
+    }
+    
+    
+    typealias Apicompletion = (_ servicesList: [Service]?, _ errorString: String?) -> Void
+    
+    func ApiServicesHelper(completion: Apicompletion?) {
+        let url = URL(string: "http://ec2-35-180-118-48.eu-west-3.compute.amazonaws.com/services")
+        let session = URLSession.shared
+        
+        session.dataTask(with: url!) { (data, response, error) in
+            var tempServicesList: [Service] = []
+
+            if let data = data {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        if let servicesArray = json["data"] as? NSArray {
+                            for service in servicesArray as! [Dictionary<String, AnyObject>] {
+                                let clothId = service["clothe"]?["id"] as! Int
+                                let serviceId = service["id"] as! Int
+                                let serviceLabel = service["alteration"]?["label"] as! String
+                                let servicePrice = service["value_base"] as! String
+                                let serviceCategory = service["category"]?["type"] as! String
+                                
+                                tempServicesList.append(Service(clothId: clothId, serviceId: serviceId, serviceLabel: serviceLabel, servicePrice: servicePrice, serviceCategory: serviceCategory))
+                            }
+                            completion?(tempServicesList, nil)
+                        }
+                    }
+                } catch {
+                    completion?(nil, error.localizedDescription)
+                }
+            }
+            }.resume()
+        
     }
     
     func setUpHeaderView() {

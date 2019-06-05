@@ -115,6 +115,7 @@
 		0CFED29F225A92F000DDE166 /* DefaultText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFED29E225A92F000DDE166 /* DefaultText.swift */; };
 		2E5C60DC2200B48E00DEA84A /* ClothsPickingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60DB2200B48E00DEA84A /* ClothsPickingViewController.swift */; };
 		2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5C60E42200D15600DEA84A /* ClothsList.swift */; };
+		2E6DFCDC22A7367900B41199 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6DFCDB22A7367900B41199 /* Service.swift */; };
 		5591A3A32273509600DE342D /* PromoCodeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591A3A22273509600DE342D /* PromoCodeViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +243,7 @@
 		0CFED29E225A92F000DDE166 /* DefaultText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultText.swift; sourceTree = "<group>"; };
 		2E5C60DB2200B48E00DEA84A /* ClothsPickingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsPickingViewController.swift; sourceTree = "<group>"; };
 		2E5C60E42200D15600DEA84A /* ClothsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothsList.swift; sourceTree = "<group>"; };
+		2E6DFCDB22A7367900B41199 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5591A3A22273509600DE342D /* PromoCodeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -818,6 +820,7 @@
 			isa = PBXGroup;
 			children = (
 				0CBC129E228A02AB00E7985D /* Cloth.swift */,
+				2E6DFCDB22A7367900B41199 /* Service.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1147,6 +1150,7 @@
 				2E5C60DC2200B48E00DEA84A /* ClothsPickingViewController.swift in Sources */,
 				0C60F22E224963B500E4B5F2 /* SewerReview.swift in Sources */,
 				2E5C60E52200D15600DEA84A /* ClothsList.swift in Sources */,
+				2E6DFCDC22A7367900B41199 /* Service.swift in Sources */,
 				0C93BA5522004E7300400BD2 /* CustomizeButtonHelper.swift in Sources */,
 				0CD685F6225388B7009C9396 /* CollectionCellConfigurator.swift in Sources */,
 				0CDA24B7226F18C800A34AF2 /* Customer.swift in Sources */,

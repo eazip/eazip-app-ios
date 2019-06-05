@@ -90,8 +90,8 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
         worksListTableView?.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
-    func setData() {
-        OpenerButton?.setTitle("Category", for: .normal)
+    func setData(category: String) {
+        OpenerButton?.setTitle(category, for: .normal)
     }
     
     @IBAction func openTable(_ sender: Any) {
@@ -140,8 +140,8 @@ class WorksDropdownItemViewCell: UICollectionViewCell, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkChoiceItemViewCell") as! WorkChoiceItemViewCell
         cell.accessoryType = .none
-        cell.setData(label: "Test", price: "15€")
-        
+        cell.setData(label: "Ourlet simple", price: "15€", serviceId: 1, clothId: 1)
+
         return cell
     }
     
